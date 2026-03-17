@@ -39,21 +39,30 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
 
   return (
     <>
-      {/* Search bar + category filters */}
+      {/* Search + filters */}
       <div className="max-w-6xl mx-auto px-6 pt-8 pb-4 space-y-4">
+        {/* Search input */}
         <div className="relative">
-          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-lg">🔍</span>
+          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-base" style={{ color: 'var(--text-muted)' }}>🔍</span>
           <input
             type="text"
             placeholder="Search agents by name, description, or tags..."
             value={query}
             onChange={e => setQuery(e.target.value)}
-            className="w-full bg-gray-900 border border-gray-700 rounded-xl pl-11 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gray-500 transition-colors"
+            className="w-full rounded-xl pl-11 pr-10 py-3 text-sm transition-all duration-200 outline-none"
+            style={{
+              background: 'var(--bg-surface)',
+              border: '1px solid var(--border)',
+              color: 'var(--text-primary)',
+            }}
+            onFocus={e => (e.currentTarget.style.borderColor = 'var(--cyan-mid)')}
+            onBlur={e => (e.currentTarget.style.borderColor = 'var(--border)')}
           />
           {query && (
             <button
               onClick={() => setQuery('')}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition-colors"
+              className="absolute right-4 top-1/2 -translate-y-1/2 transition-opacity hover:opacity-60"
+              style={{ color: 'var(--text-muted)' }}
             >
               ✕
             </button>
@@ -64,11 +73,12 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setActiveCategory(null)}
-            className={`text-sm px-3 py-1 rounded-full transition-colors ${
+            className="text-sm px-3 py-1 rounded-full transition-all duration-150 font-medium"
+            style={
               activeCategory === null
-                ? 'bg-white text-gray-900 font-medium'
-                : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
-            }`}
+                ? { background: 'var(--cyan-bright)', color: '#0a0f1a' }
+                : { background: 'var(--bg-elevated)', color: 'var(--text-secondary)', border: '1px solid var(--border)' }
+            }
           >
             All
           </button>
@@ -76,23 +86,21 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
             <button
               key={cat}
               onClick={() => setActiveCategory(activeCategory === cat ? null : cat)}
-              className={`text-sm px-3 py-1 rounded-full transition-colors capitalize ${
+              className="text-sm px-3 py-1 rounded-full transition-all duration-150 capitalize"
+              style={
                 activeCategory === cat
-                  ? 'bg-white text-gray-900 font-medium'
-                  : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
-              }`}
+                  ? { background: 'var(--cyan-bright)', color: '#0a0f1a', fontWeight: '600' }
+                  : { background: 'var(--bg-elevated)', color: 'var(--text-secondary)', border: '1px solid var(--border)' }
+              }
             >
               {CATEGORY_ICONS[cat] ?? '📦'} {cat}
             </button>
           ))}
         </div>
 
-        {/* Results count when searching */}
         {(query || activeCategory) && (
-          <p className="text-gray-500 text-sm">
-            {filtered.length === 0
-              ? 'No agents found'
-              : `${filtered.length} agent${filtered.length !== 1 ? 's' : ''} found`}
+          <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
+            {filtered.length === 0 ? 'No agents found' : `${filtered.length} agent${filtered.length !== 1 ? 's' : ''} found`}
           </p>
         )}
       </div>
@@ -100,12 +108,13 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
       {/* Agent grid */}
       <div className="max-w-6xl mx-auto px-6 py-4 space-y-12">
         {filtered.length === 0 ? (
-          <div className="text-center py-24 text-gray-500">
+          <div className="text-center py-24" style={{ color: 'var(--text-muted)' }}>
             <p className="text-5xl mb-4">🤷</p>
             <p className="text-lg">No agents match &quot;{query}&quot;</p>
             <button
               onClick={() => { setQuery(''); setActiveCategory(null) }}
-              className="mt-4 text-sm text-gray-400 hover:text-white underline transition-colors"
+              className="mt-4 text-sm underline transition-opacity hover:opacity-70"
+              style={{ color: 'var(--text-secondary)' }}
             >
               Clear search
             </button>
@@ -113,10 +122,10 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
         ) : (
           Object.entries(byCategory).map(([category, categoryAgents]) => (
             <section key={category}>
-              <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
+              <h2 className="text-lg font-semibold mb-5 flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
                 <span>{CATEGORY_ICONS[category] ?? '📦'}</span>
                 <span className="capitalize">{category}</span>
-                <span className="text-gray-500 text-sm font-normal">({categoryAgents.length})</span>
+                <span className="text-sm font-normal" style={{ color: 'var(--text-muted)' }}>({categoryAgents.length})</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {categoryAgents.map(agent => (
