@@ -42,7 +42,7 @@ export default function FileTabs({ files }: { files: Record<BundleFile, string> 
               active === fname
                 ? {
                     background: 'var(--cyan-bright)',
-                    color: '#0a0f1a',
+                    color: 'var(--btn-text)',
                     fontWeight: '600',
                   }
                 : {

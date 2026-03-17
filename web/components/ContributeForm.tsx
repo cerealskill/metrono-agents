@@ -154,7 +154,7 @@ export default function ContributeForm() {
         <button
           onClick={() => signIn('google')}
           className="inline-flex items-center gap-2 text-sm px-5 py-2.5 rounded-xl font-semibold"
-          style={{ background: 'var(--cyan-bright)', color: '#0a0f1a' }}
+          style={{ background: 'var(--cyan-bright)', color: 'var(--btn-text)' }}
         >
           Sign in with Google
         </button>
@@ -189,9 +189,9 @@ export default function ContributeForm() {
             <div
               className="flex items-center justify-center w-7 h-7 rounded-full text-xs font-bold transition-all"
               style={step > i + 1
-                ? { background: 'var(--cyan-mid)', color: '#0a0f1a' }
+                ? { background: 'var(--cyan-mid)', color: 'var(--btn-text)' }
                 : step === i + 1
-                ? { background: 'var(--cyan-bright)', color: '#0a0f1a' }
+                ? { background: 'var(--cyan-bright)', color: 'var(--btn-text)' }
                 : { background: 'var(--bg-elevated)', color: 'var(--text-muted)', border: '1px solid var(--border)' }
               }
             >
@@ -239,7 +239,7 @@ export default function ContributeForm() {
                     onClick={confirmCustomCategory}
                     disabled={!customCategoryInput.trim()}
                     className="px-3 rounded-xl text-sm font-semibold disabled:opacity-40"
-                    style={{ background: 'var(--cyan-bright)', color: '#0a0f1a', whiteSpace: 'nowrap' }}
+                    style={{ background: 'var(--cyan-bright)', color: 'var(--btn-text)', whiteSpace: 'nowrap' }}
                   >Add</button>
                 </div>
               ) : (
@@ -283,7 +283,7 @@ export default function ContributeForm() {
                     onClick={confirmCustomSubcategory}
                     disabled={!customSubcategoryInput.trim()}
                     className="px-3 rounded-xl text-sm font-semibold disabled:opacity-40"
-                    style={{ background: 'var(--cyan-bright)', color: '#0a0f1a', whiteSpace: 'nowrap' }}
+                    style={{ background: 'var(--cyan-bright)', color: 'var(--btn-text)', whiteSpace: 'nowrap' }}
                   >Add</button>
                 </div>
               ) : (
@@ -320,7 +320,7 @@ export default function ContributeForm() {
             disabled={!form.name || !form.slug || !form.description}
             onClick={() => setStep(2)}
             className="w-full py-3 rounded-xl font-semibold text-sm transition-all disabled:opacity-40"
-            style={{ background: 'var(--cyan-bright)', color: '#0a0f1a' }}
+            style={{ background: 'var(--cyan-bright)', color: 'var(--btn-text)' }}
           >
             Next: Edit files →
           </button>
@@ -353,7 +353,7 @@ export default function ContributeForm() {
             <button onClick={() => setStep(1)} className="flex-1 py-3 rounded-xl font-medium text-sm" style={{ background: 'var(--bg-elevated)', color: 'var(--text-secondary)', border: '1px solid var(--border)' }}>
               ← Back
             </button>
-            <button onClick={() => setStep(3)} className="flex-1 py-3 rounded-xl font-semibold text-sm" style={{ background: 'var(--cyan-bright)', color: '#0a0f1a' }}>
+            <button onClick={() => setStep(3)} className="flex-1 py-3 rounded-xl font-semibold text-sm" style={{ background: 'var(--cyan-bright)', color: 'var(--btn-text)' }}>
               Next: Review →
             </button>
           </div>
@@ -400,7 +400,7 @@ export default function ContributeForm() {
               onClick={handleSubmit}
               disabled={loading}
               className="flex-1 py-3 rounded-xl font-semibold text-sm transition-all disabled:opacity-60"
-              style={{ background: 'var(--cyan-bright)', color: '#0a0f1a' }}
+              style={{ background: 'var(--cyan-bright)', color: 'var(--btn-text)' }}
             >
               {loading ? 'Submitting...' : '🚀 Submit PR'}
             </button>

@@ -25,7 +25,7 @@ export default function Home() {
               <Link
                 href="/contribute"
                 className="text-sm px-3 py-1.5 rounded-lg font-medium transition-all hover:opacity-90"
-                style={{ background: 'var(--cyan-bright)', color: '#0a0f1a' }}
+                style={{ background: 'var(--cyan-bright)', color: 'var(--btn-text)' }}
               >
                 + Contribute
               </Link>

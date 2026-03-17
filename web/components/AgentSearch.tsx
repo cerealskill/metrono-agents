@@ -77,7 +77,7 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
               className="text-sm px-3 py-1 rounded-full transition-all duration-150 font-medium"
               style={
                 activeCategory === null
-                  ? { background: 'var(--cyan-bright)', color: '#0a0f1a' }
+                  ? { background: 'var(--cyan-bright)', color: 'var(--btn-text)' }
                   : { background: 'var(--bg-elevated)', color: 'var(--text-secondary)', border: '1px solid var(--border)' }
               }
             >
@@ -90,7 +90,7 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
                 className="text-sm px-3 py-1 rounded-full transition-all duration-150 capitalize"
                 style={
                   activeCategory === cat
-                    ? { background: 'var(--cyan-bright)', color: '#0a0f1a', fontWeight: '600' }
+                    ? { background: 'var(--cyan-bright)', color: 'var(--btn-text)', fontWeight: '600' }
                     : { background: 'var(--bg-elevated)', color: 'var(--text-secondary)', border: '1px solid var(--border)' }
                 }
               >
