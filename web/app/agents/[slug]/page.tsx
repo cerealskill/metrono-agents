@@ -14,7 +14,7 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
   const agent = getAgentBySlug(slug)
   if (!agent) notFound()
 
-  const installCmd = `cp -r agents/${agent.path}/* ~/.openclaw/workspace/`
+  const installCmd = `curl -fsSL https://raw.githubusercontent.com/cerealskill/metrono-agents/main/install.sh | bash -s ${agent.slug}`
 
   return (
     <main className="min-h-screen" style={{ background: 'var(--bg-deep)', color: 'var(--text-primary)' }}>
