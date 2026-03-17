@@ -27,7 +27,7 @@ export default function Home() {
                 className="text-sm px-3 py-1.5 rounded-lg font-medium transition-all hover:opacity-90"
                 style={{ background: 'var(--cyan-bright)', color: 'var(--btn-text)' }}
               >
-                + Contribute
+                + New Agent
               </Link>
               <a
                 href="https://github.com/cerealskill/metrono-agents"
