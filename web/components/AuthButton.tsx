@@ -39,7 +39,7 @@ export default function AuthButton() {
           {/* Hover overlay */}
           <span
             className="absolute inset-0 flex items-center justify-center text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity"
-            style={{ background: 'rgba(10,15,26,0.75)', color: 'var(--text-primary)' }}
+            style={{ background: 'rgba(10,15,26,0.75)', color: '#ffffff' }}
           >
             out
           </span>
