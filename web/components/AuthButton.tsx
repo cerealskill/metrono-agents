@@ -16,26 +16,33 @@ export default function AuthButton() {
 
   if (session?.user) {
     return (
-      <div className="flex items-center gap-2">
-        {session.user.image && (
-          <Image
-            src={session.user.image}
-            alt={session.user.name ?? ''}
-            width={28}
-            height={28}
-            className="rounded-full"
-          />
-        )}
+      <div className="relative group flex items-center">
         <button
           onClick={() => signOut()}
-          className="text-xs px-3 py-1.5 rounded-lg transition-all hover:opacity-80"
-          style={{
-            background: 'var(--bg-elevated)',
-            color: 'var(--text-muted)',
-            border: '1px solid var(--border)',
-          }}
+          className="relative flex items-center justify-center rounded-full overflow-hidden transition-all"
+          style={{ width: 34, height: 34, border: '2px solid var(--cyan-mid)' }}
+          title={`${session.user.name} · Click to sign out`}
         >
-          Sign out
+          {session.user.image ? (
+            <Image
+              src={session.user.image}
+              alt={session.user.name ?? ''}
+              width={34}
+              height={34}
+              className="rounded-full object-cover"
+            />
+          ) : (
+            <span className="text-sm font-bold" style={{ background: 'var(--bg-elevated)', color: 'var(--cyan-bright)' }}>
+              {session.user.name?.[0]?.toUpperCase() ?? '?'}
+            </span>
+          )}
+          {/* Hover overlay */}
+          <span
+            className="absolute inset-0 flex items-center justify-center text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity"
+            style={{ background: 'rgba(10,15,26,0.75)', color: 'var(--text-primary)' }}
+          >
+            out
+          </span>
         </button>
       </div>
     )
