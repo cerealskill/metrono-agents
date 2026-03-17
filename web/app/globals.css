@@ -24,14 +24,14 @@ html[data-theme="light"] {
   --coral-bright: #ef4b58;
   --coral-mid: #de3f4d;
   --coral-dark: #c43645;
-  --cyan-bright: #008f87;
-  --cyan-mid: #00766e;
-  --cyan-glow: rgba(0, 143, 135, 0.24);
+  --cyan-bright: #e63946;
+  --cyan-mid: #c43645;
+  --cyan-glow: rgba(230, 57, 70, 0.2);
   --text-primary: #0b1220;
   --text-secondary: #2e405c;
   --text-muted: #7a8ba8;
   --border: rgba(0, 0, 0, 0.08);
-  --border-hover: rgba(0, 143, 135, 0.4);
+  --border-hover: rgba(230, 57, 70, 0.35);
 }
 
 body {
