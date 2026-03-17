@@ -1,15 +1,8 @@
-import { getAllAgents, CATEGORY_ICONS } from '@/lib/agents'
-import AgentCard from '@/components/AgentCard'
+import { getAllAgents } from '@/lib/agents'
+import AgentSearch from '@/components/AgentSearch'
 
 export default function Home() {
   const agents = getAllAgents()
-
-  const byCategory = agents.reduce((acc, agent) => {
-    const cat = agent.category
-    if (!acc[cat]) acc[cat] = []
-    acc[cat].push(agent)
-    return acc
-  }, {} as Record<string, typeof agents>)
 
   return (
     <main className="min-h-screen bg-gray-950 text-white">
@@ -38,23 +31,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Agent grid by category */}
-      <div className="max-w-6xl mx-auto px-6 py-12 space-y-12">
-        {Object.entries(byCategory).map(([category, categoryAgents]) => (
-          <section key={category}>
-            <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
-              <span>{CATEGORY_ICONS[category] ?? '📦'}</span>
-              <span className="capitalize">{category}</span>
-              <span className="text-gray-500 text-sm font-normal">({categoryAgents.length})</span>
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {categoryAgents.map(agent => (
-                <AgentCard key={agent.slug} agent={agent} />
-              ))}
-            </div>
-          </section>
-        ))}
-      </div>
+      {/* Search + grid (client component) */}
+      <AgentSearch agents={agents} />
 
       {/* Footer */}
       <footer className="border-t border-gray-800 mt-16">
