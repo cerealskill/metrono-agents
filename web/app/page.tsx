@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <main className="min-h-screen" style={{ background: 'var(--bg-deep)', color: 'var(--text-primary)' }}>
       {/* Hero */}
-      <div style={{ borderBottom: '1px solid var(--border)', background: 'var(--bg-surface)' }}>
-        <div className="max-w-6xl mx-auto px-6 py-16">
+      <div style={{ background: 'var(--bg-surface)' }}>
+        <div className="max-w-6xl mx-auto px-6 pt-16 pb-8">
 
-          {/* Top bar: logo left, actions right */}
+          {/* Top nav */}
           <div className="flex items-center justify-between mb-10">
             <div className="flex items-center gap-2">
               <span className="text-2xl">👾</span>
@@ -39,7 +39,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Main headline */}
+          {/* Headline */}
           <div className="max-w-3xl">
             <div
               className="inline-flex items-center gap-2 text-xs font-mono px-3 py-1 rounded-full mb-6"
@@ -82,11 +82,11 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Search + grid */}
+      {/* Search bar + grid (seamlessly continues the hero bg, then transitions to bg-deep) */}
       <AgentSearch agents={agents} />
 
       {/* Footer */}
-      <footer style={{ borderTop: '1px solid var(--border)', marginTop: '4rem' }}>
+      <footer style={{ borderTop: '1px solid var(--border)' }}>
         <div className="max-w-6xl mx-auto px-6 py-8 text-center text-sm" style={{ color: 'var(--text-muted)' }}>
           <p>
             Built for{' '}
