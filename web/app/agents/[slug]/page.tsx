@@ -1,4 +1,4 @@
-import { getAllAgents, getAgentBySlug, getAgentReadme, CATEGORY_ICONS } from '@/lib/agents'
+import { getAllAgents, getAgentBySlug, CATEGORY_ICONS } from '@/lib/agents'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import CopyInstall from '@/components/CopyInstall'
@@ -12,7 +12,7 @@ export default function AgentPage({ params }: { params: { slug: string } }) {
   const agent = getAgentBySlug(params.slug)
   if (!agent) notFound()
 
-  const soul = getAgentReadme(agent.path)
+  const soul = agent.soul
   const installCmd = `cp -r agents/${agent.path}/* ~/.openclaw/workspace/`
 
   return (

@@ -1,9 +1,3 @@
-import fs from 'fs'
-import path from 'path'
-import yaml from 'js-yaml'
-
-const AGENTS_DIR = path.join(process.cwd(), '..', 'agents')
-
 export interface AgentMeta {
   name: string
   slug: string
@@ -14,46 +8,20 @@ export interface AgentMeta {
   model: string
   author: string
   version: string
-  path: string // relative path in repo
+  path: string
+  soul: string
 }
 
-function walkAgents(dir: string, base = ''): AgentMeta[] {
-  const agents: AgentMeta[] = []
-  if (!fs.existsSync(dir)) return agents
-
-  for (const entry of fs.readdirSync(dir)) {
-    if (entry.startsWith('_')) continue
-    const fullPath = path.join(dir, entry)
-    const relPath = base ? `${base}/${entry}` : entry
-
-    if (fs.statSync(fullPath).isDirectory()) {
-      const metaFile = path.join(fullPath, 'meta.yaml')
-      if (fs.existsSync(metaFile)) {
-        const raw = fs.readFileSync(metaFile, 'utf-8')
-        const meta = yaml.load(raw) as Omit<AgentMeta, 'path'>
-        agents.push({ ...meta, path: relPath })
-      } else {
-        agents.push(...walkAgents(fullPath, relPath))
-      }
-    }
-  }
-  return agents
-}
+// In production (Vercel), agents are read from the pre-built registry JSON.
+// To regenerate: node scripts/build-registry.js from repo root.
+import agentsData from '../public/agents.json'
 
 export function getAllAgents(): AgentMeta[] {
-  return walkAgents(AGENTS_DIR)
+  return agentsData as AgentMeta[]
 }
 
 export function getAgentBySlug(slug: string): AgentMeta | undefined {
   return getAllAgents().find(a => a.slug === slug)
-}
-
-export function getAgentReadme(agentPath: string): string {
-  const soulPath = path.join(AGENTS_DIR, agentPath, 'SOUL.md')
-  if (fs.existsSync(soulPath)) {
-    return fs.readFileSync(soulPath, 'utf-8')
-  }
-  return ''
 }
 
 export const CATEGORY_ICONS: Record<string, string> = {
