@@ -1,3 +1,6 @@
+import fs from 'fs'
+import path from 'path'
+
 export interface AgentMeta {
   name: string
   slug: string
@@ -12,12 +15,18 @@ export interface AgentMeta {
   soul: string
 }
 
-// In production (Vercel), agents are read from the pre-built registry JSON.
-// To regenerate: node scripts/build-registry.js from repo root.
-import agentsData from '../public/agents.json'
+function loadAgents(): AgentMeta[] {
+  try {
+    const jsonPath = path.join(process.cwd(), 'public', 'agents.json')
+    const raw = fs.readFileSync(jsonPath, 'utf-8')
+    return JSON.parse(raw) as AgentMeta[]
+  } catch {
+    return []
+  }
+}
 
 export function getAllAgents(): AgentMeta[] {
-  return agentsData as AgentMeta[]
+  return loadAgents()
 }
 
 export function getAgentBySlug(slug: string): AgentMeta | undefined {
