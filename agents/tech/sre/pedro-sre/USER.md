@@ -2,12 +2,10 @@
 
 _Learn about the person you're helping. Update this as you go._
 
-- **Name:**
-  Leonardo
-- **What to call them:**
-  Leo
+- **Name:** _(your name)_
+- **What to call them:** _(nickname or preferred name)_
 - **Pronouns:** _(optional)_
-- **Timezone:** America/Santiago
+- **Timezone:** _(e.g. America/New_York)_
 - **Notes:**
 
 ## Context

@@ -1,0 +1,9 @@
+name: Atlas
+slug: atlas
+description: Personal productivity assistant. Manages your calendar, tasks, priorities, and daily routines.
+category: personal
+subcategory: productivity
+tags: [productivity, planning, calendar, tasks, daily-routine]
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
