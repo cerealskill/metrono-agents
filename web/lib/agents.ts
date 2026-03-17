@@ -1,5 +1,4 @@
-import fs from 'fs'
-import path from 'path'
+import { AGENTS_DATA } from './agents-data'
 
 export interface AgentMeta {
   name: string
@@ -15,18 +14,8 @@ export interface AgentMeta {
   soul: string
 }
 
-function loadAgents(): AgentMeta[] {
-  try {
-    const jsonPath = path.join(process.cwd(), 'public', 'agents.json')
-    const raw = fs.readFileSync(jsonPath, 'utf-8')
-    return JSON.parse(raw) as AgentMeta[]
-  } catch {
-    return []
-  }
-}
-
 export function getAllAgents(): AgentMeta[] {
-  return loadAgents()
+  return AGENTS_DATA as unknown as AgentMeta[]
 }
 
 export function getAgentBySlug(slug: string): AgentMeta | undefined {
