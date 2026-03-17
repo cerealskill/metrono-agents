@@ -1,6 +1,8 @@
 import { getAllAgents } from '@/lib/agents'
 import AgentSearch from '@/components/AgentSearch'
 import ThemeToggle from '@/components/ThemeToggle'
+import AuthButton from '@/components/AuthButton'
+import Link from 'next/link'
 
 export default function Home() {
   const agents = getAllAgents()
@@ -20,6 +22,13 @@ export default function Home() {
               </span>
             </div>
             <div className="flex items-center gap-3">
+              <Link
+                href="/contribute"
+                className="text-sm px-3 py-1.5 rounded-lg font-medium transition-all hover:opacity-90"
+                style={{ background: 'var(--cyan-bright)', color: '#0a0f1a' }}
+              >
+                + Contribute
+              </Link>
               <a
                 href="https://github.com/cerealskill/metrono-agents"
                 target="_blank"
@@ -35,6 +44,7 @@ export default function Home() {
                 </svg>
                 GitHub
               </a>
+              <AuthButton />
               <ThemeToggle />
             </div>
           </div>
