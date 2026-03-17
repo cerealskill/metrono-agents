@@ -18,7 +18,7 @@ export default function Home() {
             <div className="flex items-center gap-2">
               <span className="text-2xl">🤖</span>
               <span className="text-sm font-mono font-semibold tracking-widest uppercase" style={{ color: 'var(--text-muted)' }}>
-                PickUp! a Agents
+                PickUp! a Agent
               </span>
             </div>
             <div className="flex items-center gap-3">

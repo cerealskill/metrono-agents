@@ -11,9 +11,9 @@ export default function ContributePage() {
         <div style={{ borderBottom: '1px solid var(--border)', background: 'var(--bg-surface)' }}>
           <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <span className="text-xl">👾</span>
+              <span className="text-xl">🤖</span>
               <span className="text-sm font-mono font-semibold tracking-widest uppercase" style={{ color: 'var(--text-muted)' }}>
-                metrono-agents
+                PickUp! a Agent
               </span>
             </Link>
             <ThemeToggle />

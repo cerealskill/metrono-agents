@@ -6,7 +6,7 @@ import './globals.css'
 const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
 
 export const metadata: Metadata = {
-  title: 'metrono-agents — OpenClaw agent bundles',
+  title: 'PickUp! a Agent — OpenClaw agent bundles',
   description: 'Production-ready OpenClaw agent bundles. Drop into your workspace and start working immediately.',
 }
 
