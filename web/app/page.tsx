@@ -16,9 +16,9 @@ export default function Home() {
           {/* Top nav */}
           <div className="flex items-center justify-between mb-10">
             <div className="flex items-center gap-2">
-              <span className="text-2xl">👾</span>
+              <span className="text-2xl">🤖</span>
               <span className="text-sm font-mono font-semibold tracking-widest uppercase" style={{ color: 'var(--text-muted)' }}>
-                metrono-agents
+                PickUp! a Agents
               </span>
             </div>
             <div className="flex items-center gap-3">
