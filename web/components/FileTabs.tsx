@@ -1,0 +1,90 @@
+'use client'
+
+import { useState } from 'react'
+import { BUNDLE_FILES, type BundleFile } from '@/lib/agents'
+
+const FILE_ICONS: Record<BundleFile, string> = {
+  'SOUL.md': '🧠',
+  'IDENTITY.md': '🪪',
+  'USER.md': '👤',
+  'AGENTS.md': '🤖',
+  'HEARTBEAT.md': '💓',
+  'TOOLS.md': '🔧',
+  'BOOTSTRAP.md': '🚀',
+}
+
+const FILE_DESC: Record<BundleFile, string> = {
+  'SOUL.md': 'Personality, tone & core values',
+  'IDENTITY.md': 'Name, creature type & avatar',
+  'USER.md': 'Info about the human this agent helps',
+  'AGENTS.md': 'Workspace rules & memory conventions',
+  'HEARTBEAT.md': 'Periodic background tasks',
+  'TOOLS.md': 'Local tool config & notes',
+  'BOOTSTRAP.md': 'First-run setup guide',
+}
+
+export default function FileTabs({ files }: { files: Record<BundleFile, string> }) {
+  const [active, setActive] = useState<BundleFile>('SOUL.md')
+
+  return (
+    <div>
+      {/* Tab bar */}
+      <div
+        className="flex overflow-x-auto gap-1 pb-1 mb-4"
+        style={{ scrollbarWidth: 'none' }}
+      >
+        {BUNDLE_FILES.map(fname => (
+          <button
+            key={fname}
+            onClick={() => setActive(fname)}
+            className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm whitespace-nowrap transition-all duration-150 shrink-0"
+            style={
+              active === fname
+                ? {
+                    background: 'var(--cyan-bright)',
+                    color: '#0a0f1a',
+                    fontWeight: '600',
+                  }
+                : {
+                    background: 'var(--bg-elevated)',
+                    color: 'var(--text-secondary)',
+                    border: '1px solid var(--border)',
+                  }
+            }
+          >
+            <span>{FILE_ICONS[fname]}</span>
+            <span>{fname.replace('.md', '')}</span>
+          </button>
+        ))}
+      </div>
+
+      {/* File description */}
+      <p className="text-xs mb-3" style={{ color: 'var(--text-muted)' }}>
+        {FILE_DESC[active]}
+      </p>
+
+      {/* Content */}
+      <div
+        className="rounded-xl p-6 overflow-auto"
+        style={{
+          background: 'var(--bg-surface)',
+          border: '1px solid var(--border)',
+          maxHeight: '60vh',
+        }}
+      >
+        {files[active] ? (
+          <pre
+            className="text-sm whitespace-pre-wrap leading-relaxed font-mono"
+            style={{ color: 'var(--text-primary)' }}
+          >
+            {files[active]}
+          </pre>
+        ) : (
+          <p className="text-sm italic" style={{ color: 'var(--text-muted)' }}>
+            This file is empty in the bundle.
+          </p>
+        )}
+      </div>
+    </div>
+  )
+}

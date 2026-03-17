@@ -1,5 +1,8 @@
 import { AGENTS_DATA } from './agents-data'
 
+export const BUNDLE_FILES = ['SOUL.md', 'IDENTITY.md', 'USER.md', 'AGENTS.md', 'HEARTBEAT.md', 'TOOLS.md', 'BOOTSTRAP.md'] as const
+export type BundleFile = typeof BUNDLE_FILES[number]
+
 export interface AgentMeta {
   name: string
   slug: string
@@ -12,6 +15,7 @@ export interface AgentMeta {
   version: string
   path: string
   soul: string
+  files: Record<BundleFile, string>
 }
 
 export function getAllAgents(): AgentMeta[] {
