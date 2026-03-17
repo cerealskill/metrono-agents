@@ -1,15 +1,15 @@
 'use client'
 import { useState } from 'react'
 import { useSession, signIn } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
 
-const CATEGORIES = ['tech', 'business', 'personal', 'creative']
-const SUBCATEGORIES: Record<string, string[]> = {
+const DEFAULT_CATEGORIES = ['tech', 'business', 'personal', 'creative']
+const DEFAULT_SUBCATEGORIES: Record<string, string[]> = {
   tech: ['sre', 'dev', 'security', 'data', 'devops'],
   business: ['sales', 'marketing', 'ops', 'finance'],
   personal: ['productivity', 'health', 'learning', 'finance'],
   creative: ['content', 'design', 'writing', 'music'],
 }
+const OTHER = '__other__'
 const MODELS = ['claude-sonnet-4.5', 'gpt-4o', 'gemini-pro', 'openrouter/auto', 'github-copilot/claude-sonnet-4.6']
 
 const SOUL_TEMPLATE = `# SOUL.md — {name}
@@ -35,12 +35,19 @@ const IDENTITY_TEMPLATE = `# IDENTITY.md
 
 export default function ContributeForm() {
   const { data: session } = useSession()
-  const router = useRouter()
 
   const [step, setStep] = useState(1)
   const [loading, setLoading] = useState(false)
   const [prUrl, setPrUrl] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
+
+  // Custom category/subcategory state
+  const [showNewCategory, setShowNewCategory] = useState(false)
+  const [showNewSubcategory, setShowNewSubcategory] = useState(false)
+  const [customCategoryInput, setCustomCategoryInput] = useState('')
+  const [customSubcategoryInput, setCustomSubcategoryInput] = useState('')
+  const [extraCategories, setExtraCategories] = useState<string[]>([])
+  const [extraSubcategories, setExtraSubcategories] = useState<Record<string, string[]>>({})
 
   const [form, setForm] = useState({
     name: '',
@@ -52,7 +59,7 @@ export default function ContributeForm() {
     model: 'claude-sonnet-4.5',
     soul: SOUL_TEMPLATE,
     identity: IDENTITY_TEMPLATE,
-    user: '# USER.md\n\n- **Name:** (your user\'s name)\n- **Notes:** (add context here)\n',
+    user: "# USER.md\n\n- **Name:** (your user's name)\n- **Notes:** (add context here)\n",
     agents: '# AGENTS.md\n\n## Every Session\n\n1. Read `SOUL.md`\n2. Read `USER.md`\n',
     heartbeat: '# HEARTBEAT.md\n\n# Add periodic tasks here\n',
     tools: '# TOOLS.md\n\n## Local Notes\n\n(Add environment-specific notes here)\n',
@@ -69,6 +76,32 @@ export default function ContributeForm() {
     })
   }
 
+  const allCategories = [...DEFAULT_CATEGORIES, ...extraCategories]
+  const allSubcategories = (cat: string) => [
+    ...(DEFAULT_SUBCATEGORIES[cat] ?? []),
+    ...(extraSubcategories[cat] ?? []),
+  ]
+
+  const confirmCustomCategory = () => {
+    const slug = customCategoryInput.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    if (!slug || allCategories.includes(slug)) return
+    setExtraCategories(prev => [...prev, slug])
+    set('category', slug)
+    set('subcategory', '')
+    setCustomCategoryInput('')
+    setShowNewCategory(false)
+  }
+
+  const confirmCustomSubcategory = () => {
+    const slug = customSubcategoryInput.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    if (!slug) return
+    const cat = form.category
+    setExtraSubcategories(prev => ({ ...prev, [cat]: [...(prev[cat] ?? []), slug] }))
+    set('subcategory', slug)
+    setCustomSubcategoryInput('')
+    setShowNewSubcategory(false)
+  }
+
   const inputStyle = {
     background: 'var(--bg-elevated)',
     border: '1px solid var(--border)',
@@ -83,7 +116,7 @@ export default function ContributeForm() {
   const labelStyle = {
     display: 'block',
     fontSize: '0.75rem',
-    fontWeight: '600',
+    fontWeight: '600' as const,
     color: 'var(--text-secondary)',
     marginBottom: '0.375rem',
     textTransform: 'uppercase' as const,
@@ -187,20 +220,92 @@ export default function ContributeForm() {
             <label style={labelStyle}>Description</label>
             <input style={inputStyle} value={form.description} onChange={e => set('description', e.target.value)} placeholder="A DevOps engineer specialized in CI/CD pipelines" />
           </div>
+
+          {/* Category */}
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label style={labelStyle}>Category</label>
-              <select style={inputStyle} value={form.category} onChange={e => { set('category', e.target.value); set('subcategory', SUBCATEGORIES[e.target.value][0]) }}>
-                {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
-              </select>
+              {showNewCategory ? (
+                <div className="flex gap-2">
+                  <input
+                    style={{ ...inputStyle, flex: 1 }}
+                    autoFocus
+                    placeholder="e.g. education"
+                    value={customCategoryInput}
+                    onChange={e => setCustomCategoryInput(e.target.value)}
+                    onKeyDown={e => { if (e.key === 'Enter') confirmCustomCategory(); if (e.key === 'Escape') setShowNewCategory(false) }}
+                  />
+                  <button
+                    onClick={confirmCustomCategory}
+                    disabled={!customCategoryInput.trim()}
+                    className="px-3 rounded-xl text-sm font-semibold disabled:opacity-40"
+                    style={{ background: 'var(--cyan-bright)', color: '#0a0f1a', whiteSpace: 'nowrap' }}
+                  >Add</button>
+                </div>
+              ) : (
+                <div className="flex gap-2">
+                  <select
+                    style={{ ...inputStyle, flex: 1 }}
+                    value={form.category}
+                    onChange={e => {
+                      const val = e.target.value
+                      if (val === OTHER) { setShowNewCategory(true); return }
+                      set('category', val)
+                      const subs = allSubcategories(val)
+                      set('subcategory', subs[0] ?? '')
+                      setShowNewSubcategory(false)
+                    }}
+                  >
+                    {allCategories.map(c => <option key={c} value={c}>{c}</option>)}
+                    <option value={OTHER}>+ New category…</option>
+                  </select>
+                </div>
+              )}
+              {showNewCategory && (
+                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>Press Enter or click Add · Esc to cancel</p>
+              )}
             </div>
+
+            {/* Subcategory */}
             <div>
               <label style={labelStyle}>Subcategory</label>
-              <select style={inputStyle} value={form.subcategory} onChange={e => set('subcategory', e.target.value)}>
-                {(SUBCATEGORIES[form.category] ?? []).map(s => <option key={s} value={s}>{s}</option>)}
-              </select>
+              {showNewSubcategory ? (
+                <div className="flex gap-2">
+                  <input
+                    style={{ ...inputStyle, flex: 1 }}
+                    autoFocus
+                    placeholder="e.g. mlops"
+                    value={customSubcategoryInput}
+                    onChange={e => setCustomSubcategoryInput(e.target.value)}
+                    onKeyDown={e => { if (e.key === 'Enter') confirmCustomSubcategory(); if (e.key === 'Escape') setShowNewSubcategory(false) }}
+                  />
+                  <button
+                    onClick={confirmCustomSubcategory}
+                    disabled={!customSubcategoryInput.trim()}
+                    className="px-3 rounded-xl text-sm font-semibold disabled:opacity-40"
+                    style={{ background: 'var(--cyan-bright)', color: '#0a0f1a', whiteSpace: 'nowrap' }}
+                  >Add</button>
+                </div>
+              ) : (
+                <select
+                  style={inputStyle}
+                  value={form.subcategory}
+                  onChange={e => {
+                    const val = e.target.value
+                    if (val === OTHER) { setShowNewSubcategory(true); return }
+                    set('subcategory', val)
+                  }}
+                >
+                  {allSubcategories(form.category).map(s => <option key={s} value={s}>{s}</option>)}
+                  <option value={OTHER}>+ New subcategory…</option>
+                </select>
+              )}
+              {showNewSubcategory && (
+                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>Press Enter or click Add · Esc to cancel</p>
+              )}
             </div>
           </div>
+
           <div>
             <label style={labelStyle}>Tags <span style={{ color: 'var(--text-muted)', textTransform: 'none', fontWeight: 400 }}>— comma separated</span></label>
             <input style={inputStyle} value={form.tags} onChange={e => set('tags', e.target.value)} placeholder="devops, ci-cd, kubernetes" />
@@ -225,7 +330,7 @@ export default function ContributeForm() {
       {/* Step 2: Files */}
       {step === 2 && (
         <div className="space-y-5">
-          <p className="text-sm" style={{ color: 'var(--text-muted)' }}>Edit the 7 bundle files. SOUL.md is the most important — it defines the agent's personality.</p>
+          <p className="text-sm" style={{ color: 'var(--text-muted)' }}>Edit the 7 bundle files. SOUL.md is the most important — it defines the agent&apos;s personality.</p>
           {([
             ['soul', '🧠 SOUL.md'],
             ['identity', '🪪 IDENTITY.md'],
