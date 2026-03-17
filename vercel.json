@@ -1,6 +1,4 @@
 {
-  "buildCommand": "node scripts/build-registry.js && cd web && npm run build",
-  "outputDirectory": "web/.next",
-  "installCommand": "npm i js-yaml && cd web && npm install",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "rootDirectory": "web"
 }
