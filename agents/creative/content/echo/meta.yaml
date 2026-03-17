@@ -1,0 +1,9 @@
+name: Echo
+slug: echo
+description: Content writer and social media manager. Blog posts, social copy, newsletters, and content strategy.
+category: creative
+subcategory: content
+tags: [content, writing, social-media, seo, marketing]
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0

@@ -1,0 +1,9 @@
+name: Pipeline
+slug: pipeline
+description: Sales assistant for lead scoring, outreach automation, and pipeline reporting. Keeps deals moving.
+category: business
+subcategory: sales
+tags: [sales, crm, leads, outreach, pipeline]
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0

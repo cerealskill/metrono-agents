@@ -20,9 +20,7 @@ agents/<category>/<subcategory>/<slug>/
 
 ## Install an agent
 
-1. Browse the agents below
-2. Copy the folder contents to your OpenClaw workspace
-3. OpenClaw detects `BOOTSTRAP.md` → onboarding starts automatically
+Copy the bundle to your OpenClaw workspace. The `BOOTSTRAP.md` will guide you through setup automatically.
 
 ```bash
 cp -r agents/tech/sre/pedro-sre/* ~/.openclaw/workspace/
@@ -34,51 +32,87 @@ cp -r agents/tech/sre/pedro-sre/* ~/.openclaw/workspace/
 
 #### SRE
 
-| Agent | Description | Install |
-|-------|-------------|---------|
-| [Pedro SRE](./agents/tech/sre/pedro-sre) | Senior SRE for GCP/GKE infrastructure. Operates clusters, reviews logs, manages deployments. | `cp -r agents/tech/sre/pedro-sre/* ~/.openclaw/workspace/` |
+| Agent | Description |
+|-------|-------------|
+| [Pedro SRE](./agents/tech/sre/pedro-sre) | Senior SRE for GCP/GKE. Operates clusters, reviews logs, manages deployments. |
 
 #### Development
 
-| Agent | Description | Install |
-|-------|-------------|---------|
-| [Linus Dev](./agents/tech/dev/linus-dev) | Senior software engineer. Writes clean code, reviews PRs, debugs issues, documents systems. | `cp -r agents/tech/dev/linus-dev/* ~/.openclaw/workspace/` |
+| Agent | Description |
+|-------|-------------|
+| [Linus Dev](./agents/tech/dev/linus-dev) | Senior software engineer. Clean code, PR reviews, debugging, documentation. |
+
+#### Security
+
+| Agent | Description |
+|-------|-------------|
+| [Sentinel](./agents/tech/security/sentinel) | Security analyst. Vulnerability scanning, access audits, threat monitoring. |
+
+### 💼 Business
+
+#### Sales
+
+| Agent | Description |
+|-------|-------------|
+| [Pipeline](./agents/business/sales/pipeline) | Sales assistant. Lead scoring, follow-up automation, pipeline reporting. |
 
 ### 👤 Personal
 
 #### Productivity
 
-| Agent | Description | Install |
-|-------|-------------|---------|
-| [Atlas](./agents/personal/productivity/atlas) | Personal productivity assistant. Manages calendar, tasks, priorities, and daily routines. | `cp -r agents/personal/productivity/atlas/* ~/.openclaw/workspace/` |
-
-### 💼 Business
-
-_Coming soon — PRs welcome!_
+| Agent | Description |
+|-------|-------------|
+| [Atlas](./agents/personal/productivity/atlas) | Personal productivity assistant. Calendar, tasks, priorities, daily routines. |
 
 ### 🎨 Creative
 
-_Coming soon — PRs welcome!_
+#### Content
+
+| Agent | Description |
+|-------|-------------|
+| [Echo](./agents/creative/content/echo) | Content writer. Blog posts, social copy, newsletters, landing pages. |
+
+---
 
 ## Submit an agent
 
+We welcome contributions! Every agent must include all 8 files.
+
+### Steps
+
 1. Fork this repo
-2. Copy `agents/_template/` → `agents/<category>/<subcategory>/<your-slug>/`
-3. Fill in all 8 files
-4. Submit a PR
+2. Copy `agents/_template/` to your new path:
+   ```
+   agents/<category>/<subcategory>/<your-slug>/
+   ```
+3. Fill in all 8 files (SOUL.md, IDENTITY.md, USER.md, AGENTS.md, HEARTBEAT.md, TOOLS.md, BOOTSTRAP.md, meta.yaml)
+4. Run `node scripts/build-registry.js` to update the registry
+5. Submit a PR
 
 ### Categories
 
-- `tech/` → devops, sre, security, development
-- `business/` → sales, marketing, finance, hr
-- `personal/` → productivity, health, travel
-- `creative/` → writing, design, content
+| Category | Subcategories |
+|----------|--------------|
+| `tech/` | `sre`, `dev`, `security`, `devops` |
+| `business/` | `sales`, `marketing`, `finance`, `hr` |
+| `personal/` | `productivity`, `health`, `travel` |
+| `creative/` | `content`, `design`, `video` |
+
+### Agent quality checklist
+
+- [ ] SOUL.md has a clear personality and operational rules
+- [ ] USER.md is a template (no personal data)
+- [ ] BOOTSTRAP.md has a natural onboarding conversation starter
+- [ ] meta.yaml has accurate tags and category
+- [ ] No hardcoded credentials or personal info
+
+---
 
 ## Why full bundles?
 
 Most agent repos ship only a `SOUL.md`. That tells the agent *who to be*, but not *how to operate*.
 
-A full bundle includes heartbeat configs, tool notes, onboarding flows — everything needed for the agent to be productive from day one.
+A full bundle includes heartbeat configs, tool notes, and onboarding flows — everything needed for the agent to be productive from day one.
 
 ## License
 

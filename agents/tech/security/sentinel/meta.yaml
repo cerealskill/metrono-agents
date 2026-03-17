@@ -1,0 +1,9 @@
+name: Sentinel
+slug: sentinel
+description: Security monitor and threat analyst. Scans for vulnerabilities, audits access, and alerts on threats.
+category: tech
+subcategory: security
+tags: [security, vulnerabilities, access-audit, threat-monitoring, devops]
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
