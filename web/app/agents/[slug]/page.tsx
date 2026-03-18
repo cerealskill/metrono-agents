@@ -20,7 +20,7 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
     <main className="min-h-screen" style={{ background: 'var(--bg-deep)', color: 'var(--text-primary)' }}>
       {/* Header */}
       <div style={{ borderBottom: '1px solid var(--border)', background: 'var(--bg-surface)' }}>
-        <div className="max-w-5xl mx-auto px-6 py-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
           <div className="flex items-start justify-between mb-6">
             <Link
               href="/"
@@ -32,13 +32,13 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
             <ThemeToggle />
           </div>
 
-          <div className="flex items-start justify-between gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
             <div className="flex-1">
               <p className="text-sm capitalize mb-1" style={{ color: 'var(--text-muted)' }}>
                 {CATEGORY_ICONS[agent.category]} {agent.category}
                 {agent.subcategory && ` / ${agent.subcategory}`}
               </p>
-              <h1 className="text-3xl font-bold mb-2" style={{ color: 'var(--text-primary)' }}>
+              <h1 className="text-2xl sm:text-3xl font-bold mb-2" style={{ color: 'var(--text-primary)' }}>
                 {agent.name}
               </h1>
               <p className="max-w-2xl" style={{ color: 'var(--text-secondary)' }}>
@@ -46,7 +46,7 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
               </p>
             </div>
             <span
-              className="text-sm px-3 py-1 rounded-full shrink-0"
+              className="text-sm px-3 py-1 rounded-full self-start shrink-0"
               style={{
                 background: 'var(--bg-elevated)',
                 color: 'var(--cyan-mid)',
@@ -76,7 +76,7 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
       </div>
 
       {/* Content */}
-      <div className="max-w-5xl mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
         {/* Main: File browser */}
         <div className="lg:col-span-2">
           <h2 className="text-base font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>

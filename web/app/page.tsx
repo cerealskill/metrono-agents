@@ -26,20 +26,20 @@ export default async function Home() {
     <main className="min-h-screen" style={{ background: 'var(--bg-deep)', color: 'var(--text-primary)' }}>
       {/* Hero */}
       <div style={{ background: 'var(--bg-surface)' }}>
-        <div className="max-w-6xl mx-auto px-6 pt-16 pb-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-8">
 
           {/* Top nav */}
-          <div className="flex items-center justify-between mb-10">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">🤖</span>
-              <span className="text-sm font-mono font-semibold tracking-widest uppercase" style={{ color: 'var(--text-muted)' }}>
+          <div className="flex items-center justify-between mb-8 sm:mb-10 gap-2">
+            <div className="flex items-center gap-2 min-w-0">
+              <span className="text-2xl shrink-0">🤖</span>
+              <span className="text-xs sm:text-sm font-mono font-semibold tracking-widest uppercase truncate" style={{ color: 'var(--text-muted)' }}>
                 PickUp! a Agent
               </span>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 shrink-0">
               <Link
                 href="/contribute"
-                className="text-sm px-3 py-1.5 rounded-lg font-medium transition-all hover:opacity-90"
+                className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 rounded-lg font-medium transition-all hover:opacity-90 whitespace-nowrap"
                 style={{ background: 'var(--cyan-bright)', color: 'var(--btn-text)' }}
               >
                 + New Agent
@@ -47,7 +47,7 @@ export default async function Home() {
               <a
                 href="https://github.com/cerealskill/metrono-agents"
                 target="_blank"
-                className="flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-lg transition-all hover:opacity-80"
+                className="hidden sm:flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-lg transition-all hover:opacity-80"
                 style={{
                   background: 'var(--bg-elevated)',
                   color: 'var(--text-secondary)',
@@ -89,7 +89,7 @@ export default async function Home() {
             </div>
 
             <h1
-              className="text-5xl font-bold leading-tight mb-4"
+              className="text-3xl sm:text-5xl font-bold leading-tight mb-4"
               style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}
             >
               OpenClaw agents,{' '}
@@ -102,7 +102,7 @@ export default async function Home() {
               </span>
             </h1>
 
-            <p className="text-lg leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+            <p className="text-base sm:text-lg leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
               Drop-in workspace bundles for{' '}
               <a href="https://openclaw.ai" style={{ color: 'var(--cyan-bright)' }} className="hover:opacity-80 transition-opacity">
                 OpenClaw
@@ -119,7 +119,7 @@ export default async function Home() {
 
       {/* Footer */}
       <footer style={{ borderTop: '1px solid var(--border)' }}>
-        <div className="max-w-6xl mx-auto px-6 py-8 text-center text-sm" style={{ color: 'var(--text-muted)' }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-center text-sm" style={{ color: 'var(--text-muted)' }}>
           <p>
             Built for{' '}
             <a href="https://openclaw.ai" style={{ color: 'var(--cyan-bright)' }} className="hover:opacity-80 transition-opacity">

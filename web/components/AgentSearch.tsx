@@ -41,7 +41,7 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
     <>
       {/* Search bar — same bg as hero, seamless continuation */}
       <div style={{ background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
-        <div className="max-w-6xl mx-auto px-6 py-6 space-y-3">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 space-y-3">
           {/* Input */}
           <div className="relative">
             <span className="absolute left-4 top-1/2 -translate-y-1/2 text-base" style={{ color: 'var(--text-muted)' }}>🔍</span>
@@ -107,7 +107,7 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
       </div>
 
       {/* Grid */}
-      <div className="max-w-6xl mx-auto px-6 py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
         {filtered.length === 0 ? (
           <div className="text-center py-24" style={{ color: 'var(--text-muted)' }}>
             <p className="text-5xl mb-4">🤷</p>
