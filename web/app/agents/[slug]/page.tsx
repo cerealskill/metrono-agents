@@ -92,7 +92,7 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
             href="https://www.flow.cl/app/web/pagarBtnPago.php?token=gyd282p"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-sm font-semibold transition-all hover:opacity-90"
+            className="inline-flex items-center gap-2 py-2.5 px-4 rounded-xl text-sm font-semibold transition-all hover:opacity-90"
             style={{ background: 'var(--coral-mid)', color: '#ffffff' }}
           >
             ❤️ Donate to author
