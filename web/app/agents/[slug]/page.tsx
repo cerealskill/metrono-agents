@@ -94,7 +94,7 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 py-2.5 px-4 rounded-xl text-sm font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:brightness-110 active:scale-95"
-            style={{ background: 'var(--coral-mid)', color: '#ffffff' }}
+            style={{ background: '#16a34a', color: '#ffffff' }}
           >
             ❤️ Donate to author
           </a>
