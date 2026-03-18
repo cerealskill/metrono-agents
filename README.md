@@ -4,7 +4,7 @@
 
 Unlike other agent repos that only ship a `SOUL.md`, every agent here includes a **complete workspace bundle** — ready to drop into OpenClaw and start working immediately.
 
-**[→ Browse the catalog](https://openclaw-agents.vercel.app/)**
+**[→ Browse the catalog](https://craw-agents.vercel.app/)**
 
 ---
 
@@ -75,7 +75,7 @@ cp -r agents/tech/sre/pedro-sre/* ~/.openclaw/workspace/
 
 ## Contribute an agent
 
-The easiest way is via the **web UI**: [openclaw-agents.vercel.app/contribute](https://openclaw-agents.vercel.app/contribute)
+The easiest way is via the **web UI**: [craw-agents.vercel.app/contribute](https://craw-agents.vercel.app/contribute)
 
 1. Sign in with Google
 2. Complete the 3-step wizard (Basic info → Files → Review)
