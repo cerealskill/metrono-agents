@@ -87,6 +87,34 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
 
         {/* Sidebar */}
         <div className="space-y-5">
+          {/* Download & Donate */}
+          <div
+            className="rounded-xl p-5 space-y-3"
+            style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)' }}
+          >
+            <a
+              href={`/api/download/${agent.slug}`}
+              download={`${agent.slug}.tar.gz`}
+              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-sm font-semibold transition-all hover:opacity-90"
+              style={{ background: 'var(--bg-elevated)', color: 'var(--text-primary)', border: '1px solid var(--border)' }}
+            >
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"/>
+                <path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.97a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.779a.749.749 0 1 1 1.06-1.06l1.97 1.97Z"/>
+              </svg>
+              Download .tar.gz
+            </a>
+            <a
+              href="https://www.flow.cl/app/web/pagarBtnPago.php?token=gyd282p"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-sm font-semibold transition-all hover:opacity-90"
+              style={{ background: 'var(--coral-mid)', color: '#ffffff' }}
+            >
+              ❤️ Donar
+            </a>
+          </div>
+
           {/* Install */}
           <div
             className="rounded-xl p-5"

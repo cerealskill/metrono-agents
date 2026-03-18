@@ -154,7 +154,7 @@ export default function ContributeForm({ categoriesFromRepo = {} }: { categories
         <p className="text-lg mb-2" style={{ color: 'var(--text-primary)' }}>Sign in to contribute</p>
         <p className="text-sm mb-6" style={{ color: 'var(--text-muted)' }}>You need a Google account to submit an agent</p>
         <button
-          onClick={() => signIn('google')}
+          onClick={() => signIn('google', { callbackUrl: '/contribute' })}
           className="inline-flex items-center gap-2 text-sm px-5 py-2.5 rounded-xl font-semibold"
           style={{ background: 'var(--cyan-bright)', color: 'var(--btn-text)' }}
         >

@@ -8,12 +8,22 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
   ],
+  session: {
+    strategy: 'jwt',
+  },
+  trustHost: true,
   callbacks: {
     async session({ session, token }) {
       if (session.user && token.sub) {
         (session.user as any).id = token.sub
       }
       return session
+    },
+    async jwt({ token, account, profile }) {
+      if (account) {
+        token.accessToken = account.access_token
+      }
+      return token
     },
   },
 })
