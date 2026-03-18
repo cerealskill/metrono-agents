@@ -95,7 +95,7 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
             className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-sm font-semibold transition-all hover:opacity-90"
             style={{ background: 'var(--coral-mid)', color: '#ffffff' }}
           >
-            ❤️ Donar al autor
+            ❤️ Donate to author
           </a>
 
           {/* Install */}
