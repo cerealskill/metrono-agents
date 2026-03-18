@@ -19,11 +19,26 @@ fi
 echo -e "${BOLD}${CYAN}metrono-agents installer${RESET}"
 echo ""
 
-# Find agent path from GitHub tree
+# Find agent directory path from GitHub tree
 echo "→ Looking up agent '${SLUG}'..."
-AGENT_PATH=$(curl -fsSL "$API" | grep -o '"path":"[^"]*'"${SLUG}"'[^"]*"' | head -1 | sed 's/"path":"//;s/"//' | sed "s|/${SLUG}.*||")/${SLUG}
+TREE_JSON=$(curl -fsSL "$API")
 
-if [ -z "$AGENT_PATH" ] || [ "$AGENT_PATH" = "/${SLUG}" ]; then
+# Parse with python3 (most reliable), fallback to jq, then grep
+if command -v python3 &>/dev/null; then
+  AGENT_PATH=$(echo "$TREE_JSON" | python3 -c "
+import json, sys
+slug = '${SLUG}'
+tree = json.load(sys.stdin).get('tree', [])
+paths = [x['path'] for x in tree if x['path'] == slug or x['path'].endswith('/' + slug)]
+print(paths[0] if paths else '')
+" 2>/dev/null)
+elif command -v jq &>/dev/null; then
+  AGENT_PATH=$(echo "$TREE_JSON" | jq -r --arg slug "$SLUG" '.tree[].path | select(. == $slug or endswith("/" + $slug))' | head -1)
+else
+  AGENT_PATH=$(echo "$TREE_JSON" | tr ',' '\n' | grep '"path"' | sed 's/.*"path":"\([^"]*\)".*/\1/' | grep -E "(^|/)${SLUG}$" | head -1)
+fi
+
+if [ -z "$AGENT_PATH" ]; then
   echo -e "${RED}✗ Agent '${SLUG}' not found in metrono-agents${RESET}"
   exit 1
 fi
