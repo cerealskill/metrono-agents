@@ -22,7 +22,7 @@ export default function ContributePage() {
       <div style={{ borderBottom: '1px solid var(--border)', background: 'var(--bg-surface)' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-5 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <img src="/findbot-logo.png" alt="FindBOT" style={{ width: 35, height: 35, objectFit: 'contain' }} />
+            <img src="/findbot-logo.png" alt="FindBOT" style={{ width: 100, height: 100, objectFit: 'contain' }} />
             <div className="flex flex-col leading-none">
               <span className="text-sm font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>FindBOT</span>
               <span className="text-xs font-mono tracking-widest uppercase" style={{ color: 'var(--cyan-bright)' }}>AI AGENTS</span>

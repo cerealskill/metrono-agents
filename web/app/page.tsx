@@ -31,7 +31,7 @@ export default async function Home() {
           {/* Top nav */}
           <div className="flex items-center justify-between mb-8 sm:mb-10 gap-2">
             <div className="flex items-center gap-3 min-w-0">
-              <img src="/findbot-logo.png" alt="FindBOT logo" className="shrink-0" style={{ width: 45, height: 45, objectFit: 'contain' }} />
+              <img src="/findbot-logo.png" alt="FindBOT logo" className="shrink-0" style={{ width: 100, height: 100, objectFit: 'contain' }} />
               <div className="flex flex-col leading-none">
                 <span className="text-base sm:text-lg font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>
                   FindBOT
