@@ -27,10 +27,10 @@ export default function CopyInstall({ command }: { command: string }) {
         onClick={handleCopy}
         className="w-full text-white text-sm font-semibold py-3 px-4 rounded-xl transition-all active:scale-95"
         style={{
-          background: copied ? '#1a7f37' : '#2563eb',
+          background: copied ? '#1a7f37' : 'var(--coral-mid)',
         }}
       >
-        {copied ? '✓ Copied!' : 'Install direct into OpenClaw'}
+        {copied ? '✓ Copied!' : '🦀 Install direct into OpenClaw'}
       </button>
     </div>
   )
