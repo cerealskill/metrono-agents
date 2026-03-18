@@ -56,8 +56,26 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
                 border: '1px solid var(--border)',
                 color: 'var(--text-primary)',
               }}
-              onFocus={e => (e.currentTarget.style.borderColor = 'var(--cyan-mid)')}
-              onBlur={e => (e.currentTarget.style.borderColor = 'var(--border)')}
+              onFocus={e => {
+                e.currentTarget.style.borderColor = 'var(--border-hover)'
+                e.currentTarget.style.boxShadow = '0 0 20px var(--cyan-glow)'
+              }}
+              onBlur={e => {
+                e.currentTarget.style.borderColor = 'var(--border)'
+                e.currentTarget.style.boxShadow = 'none'
+              }}
+              onMouseEnter={e => {
+                if (document.activeElement !== e.currentTarget) {
+                  e.currentTarget.style.borderColor = 'var(--border-hover)'
+                  e.currentTarget.style.boxShadow = '0 0 20px var(--cyan-glow)'
+                }
+              }}
+              onMouseLeave={e => {
+                if (document.activeElement !== e.currentTarget) {
+                  e.currentTarget.style.borderColor = 'var(--border)'
+                  e.currentTarget.style.boxShadow = 'none'
+                }
+              }}
             />
             {query && (
               <button
