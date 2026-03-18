@@ -14,7 +14,7 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
   const agent = getAgentBySlug(slug)
   if (!agent) notFound()
 
-  const installCmd = `curl -fsSL https://raw.githubusercontent.com/cerealskill/metrono-agents/main/install.sh | bash -s ${agent.slug}`
+  const installCmd = `curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/install.sh | bash -s ${agent.slug}`
 
   return (
     <main className="min-h-screen" style={{ background: 'var(--bg-deep)', color: 'var(--text-primary)' }}>
@@ -171,7 +171,7 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
             </a>
             {' '}·{' '}
             <a
-              href="https://github.com/cerealskill/metrono-agents"
+              href="https://github.com/cerealskill/openclaw-agents"
               style={{ color: 'var(--text-secondary)' }}
               className="hover:opacity-80 transition-opacity"
             >

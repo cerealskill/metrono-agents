@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # install.sh — metrono-agents installer
-# Usage: curl -fsSL https://raw.githubusercontent.com/cerealskill/metrono-agents/main/install.sh | bash -s <slug>
+# Usage: curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/install.sh | bash -s <slug>
 set -e
 
 SLUG="${1:-}"
-REPO="cerealskill/metrono-agents"
+REPO="cerealskill/openclaw-agents"
 BRANCH="main"
 RAW="https://raw.githubusercontent.com/${REPO}/${BRANCH}"
 API="https://api.github.com/repos/${REPO}/git/trees/${BRANCH}?recursive=1"

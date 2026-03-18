@@ -32,7 +32,7 @@ export async function POST(req: Request) {
   }
 
   const token = process.env.GITHUB_TOKEN
-  const repo = 'cerealskill/metrono-agents'
+  const repo = 'cerealskill/openclaw-agents'
   const branch = `contrib/${slug}-${Date.now()}`
   const basePath = `agents/${body.category}/${body.subcategory}/${slug}`
 

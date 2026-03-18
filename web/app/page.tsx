@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 async function getStars(): Promise<number | null> {
   try {
-    const res = await fetch('https://api.github.com/repos/cerealskill/metrono-agents', {
+    const res = await fetch('https://api.github.com/repos/cerealskill/openclaw-agents', {
       next: { revalidate: 300 },
       headers: { Accept: 'application/vnd.github+json' },
     })
@@ -45,7 +45,7 @@ export default async function Home() {
                 + New Agent
               </Link>
               <a
-                href="https://github.com/cerealskill/metrono-agents"
+                href="https://github.com/cerealskill/openclaw-agents"
                 target="_blank"
                 className="hidden sm:flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-lg transition-all hover:opacity-80"
                 style={{
@@ -127,7 +127,7 @@ export default async function Home() {
             </a>
             {' '}·{' '}
             <a
-              href="https://github.com/cerealskill/metrono-agents"
+              href="https://github.com/cerealskill/openclaw-agents"
               style={{ color: 'var(--text-secondary)' }}
               className="hover:opacity-80 transition-opacity"
             >

@@ -4,7 +4,7 @@
 
 Unlike other agent repos that only ship a `SOUL.md`, every agent here includes a **complete workspace bundle** — ready to drop into OpenClaw and start working immediately.
 
-**[→ Browse the catalog](https://metrono-agents.vercel.app/)**
+**[→ Browse the catalog](https://openclaw-agents.vercel.app/)**
 
 ---
 
@@ -29,7 +29,7 @@ agents/<category>/<subcategory>/<slug>/
 ### One-liner (recommended)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/cerealskill/metrono-agents/main/install.sh | bash -s <slug>
+curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/install.sh | bash -s <slug>
 ```
 
 The script downloads all bundle files and registers the workspace with `openclaw agents add`.
@@ -75,7 +75,7 @@ cp -r agents/tech/sre/pedro-sre/* ~/.openclaw/workspace/
 
 ## Contribute an agent
 
-The easiest way is via the **web UI**: [metrono-agents.vercel.app/contribute](https://metrono-agents.vercel.app/contribute)
+The easiest way is via the **web UI**: [openclaw-agents.vercel.app/contribute](https://openclaw-agents.vercel.app/contribute)
 
 1. Sign in with Google
 2. Complete the 3-step wizard (Basic info → Files → Review)
