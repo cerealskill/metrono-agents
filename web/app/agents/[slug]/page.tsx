@@ -93,7 +93,7 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
             href="https://www.flow.cl/app/web/pagarBtnPago.php?token=gyd282p"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 py-2.5 px-4 rounded-xl text-sm font-semibold transition-all hover:opacity-90"
+            className="inline-flex items-center gap-2 py-2.5 px-4 rounded-xl text-sm font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:brightness-110 active:scale-95"
             style={{ background: 'var(--coral-mid)', color: '#ffffff' }}
           >
             ❤️ Donate to author
@@ -113,7 +113,7 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
             <a
               href={`/api/download/${agent.slug}`}
               download={`${agent.slug}.tar.gz`}
-              className="flex items-center justify-center gap-2 w-full mt-3 py-2.5 rounded-lg text-sm font-semibold transition-all hover:opacity-90"
+              className="flex items-center justify-center gap-2 w-full mt-3 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 hover:scale-[1.02] hover:shadow-md hover:brightness-110 active:scale-95"
               style={{ background: 'var(--bg-elevated)', color: 'var(--text-primary)', border: '1px solid var(--border)' }}
             >
               <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
