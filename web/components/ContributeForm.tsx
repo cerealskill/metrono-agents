@@ -2,8 +2,7 @@
 import { useState } from 'react'
 import { useSession, signIn } from 'next-auth/react'
 
-const DEFAULT_CATEGORIES = ['tech', 'business', 'personal', 'creative']
-const DEFAULT_SUBCATEGORIES: Record<string, string[]> = {
+const FALLBACK_SUBCATEGORIES: Record<string, string[]> = {
   tech: ['sre', 'dev', 'security', 'data', 'devops'],
   business: ['sales', 'marketing', 'ops', 'finance'],
   personal: ['productivity', 'health', 'learning', 'finance'],
@@ -33,7 +32,7 @@ const IDENTITY_TEMPLATE = `# IDENTITY.md
 - **Emoji:** 🤖
 `
 
-export default function ContributeForm() {
+export default function ContributeForm({ categoriesFromRepo = {} }: { categoriesFromRepo?: Record<string, string[]> }) {
   const { data: session } = useSession()
 
   const [step, setStep] = useState(1)
@@ -76,10 +75,13 @@ export default function ContributeForm() {
     })
   }
 
-  const allCategories = [...DEFAULT_CATEGORIES, ...extraCategories]
+  const allCategories = [...new Set([...Object.keys(categoriesFromRepo), ...Object.keys(FALLBACK_SUBCATEGORIES), ...extraCategories])]
   const allSubcategories = (cat: string) => [
-    ...(DEFAULT_SUBCATEGORIES[cat] ?? []),
-    ...(extraSubcategories[cat] ?? []),
+    ...new Set([
+      ...(categoriesFromRepo[cat] ?? []),
+      ...(FALLBACK_SUBCATEGORIES[cat] ?? []),
+      ...(extraSubcategories[cat] ?? []),
+    ]),
   ]
 
   const confirmCustomCategory = () => {

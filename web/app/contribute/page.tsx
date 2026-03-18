@@ -2,8 +2,21 @@ import ContributeForm from '@/components/ContributeForm'
 import ThemeToggle from '@/components/ThemeToggle'
 import Link from 'next/link'
 import { SessionProvider } from 'next-auth/react'
+import { getAllAgents } from '@/lib/agents'
 
 export default function ContributePage() {
+  const agents = getAllAgents()
+
+  // Build category/subcategory map from existing agents
+  const categoryMap: Record<string, Set<string>> = {}
+  for (const agent of agents) {
+    if (!categoryMap[agent.category]) categoryMap[agent.category] = new Set()
+    if (agent.subcategory) categoryMap[agent.category].add(agent.subcategory)
+  }
+  const categoriesFromRepo = Object.fromEntries(
+    Object.entries(categoryMap).map(([cat, subs]) => [cat, Array.from(subs).sort()])
+  )
+
   return (
     <SessionProvider>
       <main className="min-h-screen" style={{ background: 'var(--bg-deep)', color: 'var(--text-primary)' }}>
@@ -31,7 +44,7 @@ export default function ContributePage() {
             </p>
           </div>
 
-          <ContributeForm />
+          <ContributeForm categoriesFromRepo={categoriesFromRepo} />
         </div>
       </main>
     </SessionProvider>
