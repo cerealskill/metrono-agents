@@ -50,12 +50,12 @@ fi
 echo -e "  Found: ${CYAN}${AGENT_PATH}${RESET}"
 echo ""
 
-# Ask for workspace name and path
-read -p "Workspace name [${SLUG}]: " WS_NAME
+# Ask for workspace name and path (force /dev/tty for interactive input when piped)
+read -p "Workspace name [${SLUG}]: " WS_NAME </dev/tty
 WS_NAME="${WS_NAME:-$SLUG}"
 
 DEFAULT_PATH="${HOME}/.openclaw/workspace-${WS_NAME}"
-read -p "Install path [${DEFAULT_PATH}]: " WS_PATH
+read -p "Install path [${DEFAULT_PATH}]: " WS_PATH </dev/tty
 WS_PATH="${WS_PATH:-$DEFAULT_PATH}"
 
 echo ""
