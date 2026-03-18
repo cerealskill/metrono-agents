@@ -30,7 +30,7 @@ export default function CopyInstall({ command }: { command: string }) {
           background: copied ? '#1a7f37' : '#2563eb',
         }}
       >
-        {copied ? '✓ Copied!' : 'Copy install command'}
+        {copied ? '✓ Copied!' : 'Install direct into OpenClaw'}
       </button>
     </div>
   )
