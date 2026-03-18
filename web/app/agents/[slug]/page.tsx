@@ -88,6 +88,7 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
         {/* Sidebar */}
         <div className="space-y-5">
           {/* Donate */}
+          <div className="flex justify-center">
           <a
             href="https://www.flow.cl/app/web/pagarBtnPago.php?token=gyd282p"
             target="_blank"
@@ -97,6 +98,7 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
           >
             ❤️ Donate to author
           </a>
+          </div>
 
           {/* Install */}
           <div
