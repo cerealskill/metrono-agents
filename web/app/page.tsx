@@ -30,11 +30,16 @@ export default async function Home() {
 
           {/* Top nav */}
           <div className="flex items-center justify-between mb-8 sm:mb-10 gap-2">
-            <div className="flex items-center gap-2 min-w-0">
-              <span className="text-2xl shrink-0">🤖</span>
-              <span className="text-xs sm:text-sm font-mono font-semibold tracking-widest uppercase truncate" style={{ color: 'var(--text-muted)' }}>
-                PickUp! a Agent
-              </span>
+            <div className="flex items-center gap-3 min-w-0">
+              <img src="/findbot-logo.png" alt="FindBOT logo" className="shrink-0" style={{ width: 36, height: 36, objectFit: 'contain' }} />
+              <div className="flex flex-col leading-none">
+                <span className="text-base sm:text-lg font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>
+                  FindBOT
+                </span>
+                <span className="text-xs font-mono tracking-widest uppercase" style={{ color: 'var(--cyan-bright)' }}>
+                  AI AGENTS
+                </span>
+              </div>
             </div>
             <div className="flex items-center gap-2 shrink-0">
               <Link
