@@ -50,13 +50,12 @@ fi
 echo -e "  Found: ${CYAN}${AGENT_PATH}${RESET}"
 echo ""
 
-# Ask for workspace name and path (force /dev/tty for interactive input when piped)
-read -p "Workspace name [${SLUG}]: " WS_NAME </dev/tty
-WS_NAME="${WS_NAME:-$SLUG}"
+# Use slug as workspace name and default install path (no interactive prompts when piped)
+WS_NAME="$SLUG"
+WS_PATH="${HOME}/.openclaw/workspace-${WS_NAME}"
 
-DEFAULT_PATH="${HOME}/.openclaw/workspace-${WS_NAME}"
-read -p "Install path [${DEFAULT_PATH}]: " WS_PATH </dev/tty
-WS_PATH="${WS_PATH:-$DEFAULT_PATH}"
+echo -e "  Workspace name: ${CYAN}${WS_NAME}${RESET}"
+echo -e "  Install path:   ${CYAN}${WS_PATH}${RESET}"
 
 echo ""
 echo "→ Downloading bundle files..."
