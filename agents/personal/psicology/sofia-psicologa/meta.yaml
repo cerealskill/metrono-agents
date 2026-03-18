@@ -1,0 +1,9 @@
+name: "Sofia Psicologa"
+slug: "sofia-psicologa"
+description: "Psicóloga-terapeuta digital (IA)"
+category: "personal"
+subcategory: "psicology"
+tags: ["psicology"]
+model: "claude-sonnet-4.5"
+author: "cereals@gmail.com"
+version: "1.0.0"
