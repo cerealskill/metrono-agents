@@ -160,6 +160,36 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer style={{ borderTop: '1px solid var(--border)' }}>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 text-center text-sm" style={{ color: 'var(--text-muted)' }}>
+          <p>
+            Built for{' '}
+            <a href="https://openclaw.ai" style={{ color: 'var(--cyan-bright)' }} className="hover:opacity-80 transition-opacity">
+              OpenClaw
+            </a>
+            {' '}·{' '}
+            <a
+              href="https://github.com/cerealskill/metrono-agents"
+              style={{ color: 'var(--text-secondary)' }}
+              className="hover:opacity-80 transition-opacity"
+            >
+              Contribute on GitHub
+            </a>
+            {' '}·{' '}
+            <a
+              href="https://soul.md/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#e63946' }}
+              className="hover:opacity-80 transition-opacity font-semibold"
+            >
+              Soul.md
+            </a>
+          </p>
+        </div>
+      </footer>
     </main>
   )
 }

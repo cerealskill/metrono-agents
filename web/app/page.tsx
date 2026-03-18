@@ -133,6 +133,16 @@ export default async function Home() {
             >
               Contribute on GitHub
             </a>
+            {' '}·{' '}
+            <a
+              href="https://soul.md/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#e63946' }}
+              className="hover:opacity-80 transition-opacity font-semibold"
+            >
+              Soul.md
+            </a>
           </p>
         </div>
       </footer>
