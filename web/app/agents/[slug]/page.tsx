@@ -4,6 +4,7 @@ import Link from 'next/link'
 import CopyInstall from '@/components/CopyInstall'
 import FileTabs from '@/components/FileTabs'
 import ThemeToggle from '@/components/ThemeToggle'
+import StarRating from '@/components/StarRating'
 
 export async function generateStaticParams() {
   return getAllAgents().map(a => ({ slug: a.slug }))
@@ -123,6 +124,9 @@ export default async function AgentPage({ params }: { params: Promise<{ slug: st
               Download .tar.gz
             </a>
           </div>
+
+          {/* Star Rating */}
+          <StarRating slug={agent.slug} />
 
           {/* Bundle includes */}
           <div
