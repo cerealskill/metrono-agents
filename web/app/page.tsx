@@ -44,10 +44,10 @@ export default async function Home() {
             <div className="flex items-center gap-2 shrink-0">
               <Link
                 href="/contribute"
-                className="text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 rounded-lg font-medium transition-all hover:opacity-90 whitespace-nowrap"
+                className="add-agent-btn text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap"
                 style={{ background: 'var(--cyan-bright)', color: 'var(--btn-text)' }}
               >
-                + New Agent
+                + Add Agent
               </Link>
               <a
                 href="https://github.com/cerealskill/openclaw-agents"
