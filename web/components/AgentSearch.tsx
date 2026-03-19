@@ -42,7 +42,7 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
     <>
       {/* Search bar — same bg as hero, seamless continuation */}
       <div style={{ background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 space-y-3">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-3 pb-6 space-y-3">
           {/* Input */}
           <div className="relative search-shell rounded-2xl">
             <span
