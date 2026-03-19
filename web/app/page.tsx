@@ -126,6 +126,7 @@ export default async function Home() {
       <footer style={{ borderTop: '1px solid var(--border)' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-center text-sm" style={{ color: 'var(--text-muted)' }}>
           <p>
+            © 2026 FindBOT - {' '}
             Built for{' '}
             <a href="https://openclaw.ai" style={{ color: '#e63946' }} className="hover:opacity-80 transition-opacity">
               OpenClaw
