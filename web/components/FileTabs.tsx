@@ -28,7 +28,7 @@ function renderInlineMarkdown(line: string) {
   return parts.map((part, i) => {
     if (/^\*\*[^*]+\*\*$/.test(part)) {
       return (
-        <strong key={i} style={{ color: '#2F6FDB', fontWeight: 700 }}>
+        <strong key={i} style={{ color: 'var(--md-strong-color)', fontWeight: 700 }}>
           {part}
         </strong>
       )

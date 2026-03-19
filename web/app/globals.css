@@ -68,6 +68,7 @@ html[data-theme="light"] {
 
   --pulse-ring: rgba(170, 178, 194, 0.32);
   --pulse-shadow: rgba(170, 178, 194, 0.24);
+  --md-strong-color: #000000;
 }
 
 body {
