@@ -25,7 +25,7 @@ export default function CopyInstall({ command }: { command: string }) {
       </div>
       <button
         onClick={handleCopy}
-        className="w-full text-white text-sm font-semibold py-3 px-4 rounded-xl transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:brightness-110 active:scale-95"
+        className="install-btn-fx w-full text-white text-sm font-semibold py-3 px-4 rounded-xl transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:brightness-110 active:scale-95"
         style={{
           background: copied ? '#1a7f37' : 'var(--coral-mid)',
         }}

@@ -50,7 +50,7 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
               placeholder="Search by name, description or tags..."
               value={query}
               onChange={e => setQuery(e.target.value)}
-              className="w-full rounded-xl pl-11 pr-10 py-3 text-sm transition-all duration-200 outline-none"
+              className="search-fx w-full rounded-xl pl-11 pr-10 py-3 text-sm transition-all duration-200 outline-none"
               style={{
                 background: 'var(--bg-elevated)',
                 border: '1px solid var(--border)',
