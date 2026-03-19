@@ -127,7 +127,7 @@ export default async function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-center text-sm" style={{ color: 'var(--text-muted)' }}>
           <p>
             Built for{' '}
-            <a href="https://openclaw.ai" style={{ color: 'var(--cyan-bright)' }} className="hover:opacity-80 transition-opacity">
+            <a href="https://openclaw.ai" style={{ color: '#e63946' }} className="hover:opacity-80 transition-opacity">
               OpenClaw
             </a>
             {' '}·{' '}
@@ -143,7 +143,7 @@ export default async function Home() {
               href="https://soul.md/"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: '#e63946' }}
+              style={{ color: '#FF4FA3' }}
               className="hover:opacity-80 transition-opacity font-semibold"
             >
               Soul.md
