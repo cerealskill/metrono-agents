@@ -82,13 +82,13 @@ export default async function Home() {
               className="inline-flex items-center gap-2 text-xs font-mono px-3 py-1 rounded-full mb-6"
               style={{
                 background: 'var(--bg-elevated)',
-                color: 'var(--cyan-bright)',
+                color: '#4FB3D8',
                 border: '1px solid var(--border-hover)',
               }}
             >
               <span
                 className="w-1.5 h-1.5 rounded-full animate-pulse"
-                style={{ background: 'var(--cyan-bright)' }}
+                style={{ background: '#4FB3D8' }}
               />
               {agents.length} production-ready bundles
             </div>
