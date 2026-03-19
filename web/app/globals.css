@@ -169,3 +169,15 @@ body {
     box-shadow: 0 0 6px var(--user-heartbeat-glow);
   }
 }
+
+.bundles-rainbow {
+  background: linear-gradient(90deg, #ff4d4d 0%, #ff9f43 20%, #feca57 40%, #1dd1a1 60%, #54a0ff 80%, #c56cf0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+html[data-theme="light"] .bundles-rainbow {
+  background: none;
+  color: var(--bundles-accent);
+}

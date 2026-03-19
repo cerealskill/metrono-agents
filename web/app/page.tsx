@@ -90,7 +90,7 @@ export default async function Home() {
                 className="w-1.5 h-1.5 rounded-full animate-pulse"
                 style={{ background: 'var(--bundles-accent)' }}
               />
-              {agents.length} production-ready bundles
+              <span className="bundles-rainbow">{agents.length} production-ready bundles</span>
             </div>
 
             <h1
