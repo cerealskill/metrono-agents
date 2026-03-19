@@ -88,7 +88,7 @@ export default async function Home() {
             >
               <span
                 className="w-1.5 h-1.5 rounded-full animate-pulse"
-                style={{ background: '#4FB3D8' }}
+                style={{ background: 'var(--bundles-accent)' }}
               />
               {agents.length} production-ready bundles
             </div>

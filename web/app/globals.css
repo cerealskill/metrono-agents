@@ -16,6 +16,23 @@
   --border: rgba(255, 255, 255, 0.07);
   --border-hover: rgba(230, 57, 70, 0.4);
   --btn-text: #ffffff;
+
+  /* theme-specific UI tokens */
+  --bundles-accent: #FF4FA3;
+  --bundles-border: rgba(255, 255, 255, 0.3);
+  --user-circle: #1DB954;
+  --google-signin-bg: #4285F4;
+
+  --search-hover-border: var(--border); /* no hover effect in dark */
+  --search-hover-glow: transparent;
+  --search-focus-border: rgba(255, 255, 255, 0.7);
+  --search-focus-glow: rgba(255, 255, 255, 0.22);
+
+  --card-hover-border: #FF4FA3;
+  --card-hover-glow: rgba(255, 79, 163, 0.4);
+
+  --pulse-ring: rgba(255, 79, 163, 0.42);
+  --pulse-shadow: rgba(255, 79, 163, 0.35);
 }
 
 html[data-theme="light"] {
@@ -34,6 +51,22 @@ html[data-theme="light"] {
   --border: rgba(0, 0, 0, 0.08);
   --border-hover: rgba(230, 57, 70, 0.35);
   --btn-text: #ffffff;
+
+  --bundles-accent: #e63946;
+  --bundles-border: rgba(230, 57, 70, 0.35);
+  --user-circle: #FF4FA3;
+  --google-signin-bg: #e63946;
+
+  --search-hover-border: rgba(120, 130, 148, 0.45);
+  --search-hover-glow: rgba(120, 130, 148, 0.2);
+  --search-focus-border: rgba(120, 130, 148, 0.6);
+  --search-focus-glow: rgba(120, 130, 148, 0.24);
+
+  --card-hover-border: rgba(120, 130, 148, 0.45);
+  --card-hover-glow: rgba(120, 130, 148, 0.16);
+
+  --pulse-ring: rgba(170, 178, 194, 0.32);
+  --pulse-shadow: rgba(170, 178, 194, 0.24);
 }
 
 body {
@@ -46,14 +79,14 @@ body {
 .add-agent-btn,
 .install-btn-fx,
 .search-fx {
-  box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.45);
+  box-shadow: 0 0 0 0 var(--pulse-ring);
   animation: add-agent-pulse 2.1s ease-in-out infinite;
 }
 
 .add-agent-btn:hover,
 .install-btn-fx:hover {
   transform: translateY(-1px) scale(1.03);
-  box-shadow: 0 10px 26px rgba(230, 57, 70, 0.35);
+  box-shadow: 0 10px 26px var(--pulse-shadow);
 }
 
 .add-agent-btn:active,
@@ -68,31 +101,12 @@ body {
 
 @keyframes add-agent-pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.38);
+    box-shadow: 0 0 0 0 var(--pulse-ring);
   }
   70% {
-    box-shadow: 0 0 0 12px rgba(230, 57, 70, 0);
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
-
-
-.search-fx:focus {
-  box-shadow: 0 0 0 3px rgba(255, 79, 163, 0.2), 0 0 24px rgba(255, 79, 163, 0.32) !important;
-}
-
-@keyframes add-agent-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.38);
-  }
-  70% {
-    box-shadow: 0 0 0 12px rgba(230, 57, 70, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
-  }
-}
-
-

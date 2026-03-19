@@ -57,8 +57,8 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
                 color: 'var(--text-primary)',
               }}
               onFocus={e => {
-                e.currentTarget.style.borderColor = '#FF4FA3'
-                e.currentTarget.style.boxShadow = '0 0 20px rgba(255, 79, 163, 0.45)'
+                e.currentTarget.style.borderColor = 'var(--search-focus-border)'
+                e.currentTarget.style.boxShadow = '0 0 20px var(--search-focus-glow)'
               }}
               onBlur={e => {
                 e.currentTarget.style.borderColor = 'var(--border)'
