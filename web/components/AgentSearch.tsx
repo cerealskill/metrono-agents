@@ -57,8 +57,8 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
                 color: 'var(--text-primary)',
               }}
               onFocus={e => {
-                e.currentTarget.style.borderColor = 'var(--border-hover)'
-                e.currentTarget.style.boxShadow = '0 0 20px var(--cyan-glow)'
+                e.currentTarget.style.borderColor = '#FF4FA3'
+                e.currentTarget.style.boxShadow = '0 0 20px rgba(255, 79, 163, 0.45)'
               }}
               onBlur={e => {
                 e.currentTarget.style.borderColor = 'var(--border)'
@@ -66,8 +66,8 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
               }}
               onMouseEnter={e => {
                 if (document.activeElement !== e.currentTarget) {
-                  e.currentTarget.style.borderColor = 'var(--border-hover)'
-                  e.currentTarget.style.boxShadow = '0 0 20px var(--cyan-glow)'
+                  e.currentTarget.style.borderColor = '#FF4FA3'
+                  e.currentTarget.style.boxShadow = '0 0 20px rgba(255, 79, 163, 0.45)'
                 }
               }}
               onMouseLeave={e => {
