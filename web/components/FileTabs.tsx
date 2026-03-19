@@ -71,7 +71,6 @@ export default function FileTabs({ files }: { files: Record<BundleFile, string> 
         style={{
           background: 'var(--bg-surface)',
           border: '1px solid var(--border)',
-          maxHeight: '60vh',
         }}
       >
         {activeContent ? (
