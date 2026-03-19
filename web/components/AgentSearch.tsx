@@ -69,12 +69,14 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
                   e.currentTarget.style.borderColor = 'var(--search-hover-border)'
                   e.currentTarget.style.boxShadow = '0 0 20px var(--search-hover-glow)'
                 }
+                e.currentTarget.style.transform = 'translateY(-4px) scale(1.01)'
               }}
               onMouseLeave={e => {
                 if (document.activeElement !== e.currentTarget) {
                   e.currentTarget.style.borderColor = 'var(--border)'
                   e.currentTarget.style.boxShadow = 'none'
                 }
+                e.currentTarget.style.transform = 'translateY(0) scale(1)'
               }}
             />
             {query && (
