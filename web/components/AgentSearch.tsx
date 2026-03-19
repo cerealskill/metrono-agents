@@ -8,6 +8,7 @@ import type { AgentMeta } from '@/lib/agents'
 export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
   const [query, setQuery] = useState('')
   const [activeCategory, setActiveCategory] = useState<string | null>(null)
+  const [isFocused, setIsFocused] = useState(false)
 
   const categories = useMemo(
     () => Array.from(new Set(agents.map(a => a.category))).sort(),
@@ -44,7 +45,9 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 space-y-3">
           {/* Input */}
           <div className="relative">
-            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-base z-10 pointer-events-none" style={{ color: 'var(--text-muted)' }}>🔍</span>
+            {!isFocused && (
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-base z-10 pointer-events-none" style={{ color: 'var(--text-muted)' }}>🔍</span>
+            )}
             <input
               type="text"
               placeholder="Search by name, description or tags..."
@@ -57,10 +60,12 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
                 color: 'var(--text-primary)',
               }}
               onFocus={e => {
+                setIsFocused(true)
                 e.currentTarget.style.borderColor = 'var(--search-focus-border)'
                 e.currentTarget.style.boxShadow = '0 0 20px var(--search-focus-glow)'
               }}
               onBlur={e => {
+                setIsFocused(false)
                 e.currentTarget.style.borderColor = 'var(--border)'
                 e.currentTarget.style.boxShadow = 'none'
               }}
