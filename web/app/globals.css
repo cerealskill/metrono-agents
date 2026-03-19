@@ -55,7 +55,7 @@ html[data-theme="light"] {
   --bundles-accent: #e63946;
   --bundles-border: rgba(230, 57, 70, 0.35);
   --user-circle: #FF4FA3;
-  --google-signin-bg: #e63946;
+  --google-signin-bg: #4285F4;
 
   --search-hover-border: rgba(120, 130, 148, 0.45);
   --search-hover-glow: rgba(120, 130, 148, 0.2);
