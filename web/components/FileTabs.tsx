@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 import { BUNDLE_FILES, type BundleFile } from '@/lib/agents'
 
 const FILE_ICONS: Record<BundleFile, string> = {
@@ -21,6 +21,37 @@ const FILE_DESC: Record<BundleFile, string> = {
   'HEARTBEAT.md': 'Periodic background tasks',
   'TOOLS.md': 'Local tool config & notes',
   'BOOTSTRAP.md': 'First-run setup guide',
+}
+
+function renderInlineMarkdown(line: string) {
+  const parts = line.split(/(\*\*[^*]+\*\*)/g)
+  return parts.map((part, i) => {
+    if (/^\*\*[^*]+\*\*$/.test(part)) {
+      return (
+        <strong key={i} style={{ color: 'var(--text-primary)', fontWeight: 700 }}>
+          {part.slice(2, -2)}
+        </strong>
+      )
+    }
+    return <Fragment key={i}>{part}</Fragment>
+  })
+}
+
+function renderLineMarkdown(line: string) {
+  const headingMatch = line.match(/^(#{1,6})\s+(.*)$/)
+  if (headingMatch) {
+    const level = headingMatch[1].length
+    const text = headingMatch[2]
+    const size = level === 1 ? '1.05rem' : level === 2 ? '1rem' : '0.95rem'
+    return (
+      <span style={{ color: 'var(--cyan-bright)', fontWeight: 700, fontSize: size }}>
+        <span style={{ opacity: 0.8 }}>{'#'.repeat(level)} </span>
+        {renderInlineMarkdown(text)}
+      </span>
+    )
+  }
+
+  return renderInlineMarkdown(line)
 }
 
 export default function FileTabs({ files }: { files: Record<BundleFile, string> }) {
@@ -85,7 +116,7 @@ export default function FileTabs({ files }: { files: Record<BundleFile, string> 
                 >
                   {idx + 1}
                 </span>
-                <span className="pl-2 whitespace-pre-wrap break-words">{line || ' '}</span>
+                <span className="pl-2 whitespace-pre-wrap break-words">{line ? renderLineMarkdown(line) : ' '}</span>
               </div>
             ))}
           </div>
