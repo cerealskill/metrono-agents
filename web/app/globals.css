@@ -4,12 +4,12 @@
   --bg-deep: #050810;
   --bg-surface: #0a0f1a;
   --bg-elevated: #111827;
-  --coral-bright: #ff4d4d;
-  --coral-mid: #e63946;
-  --coral-dark: #991b1b;
-  --cyan-bright: #e63946;
-  --cyan-mid: #c43645;
-  --cyan-glow: rgba(230, 57, 70, 0.25);
+  --coral-bright: #FF4FA3;
+  --coral-mid: #FF4FA3;
+  --coral-dark: #c73f80;
+  --cyan-bright: #FF4FA3;
+  --cyan-mid: #e24793;
+  --cyan-glow: rgba(255, 79, 163, 0.25);
   --text-primary: #f0f4ff;
   --text-secondary: #8892b0;
   --text-muted: #5a6480;
