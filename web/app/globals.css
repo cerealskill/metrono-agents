@@ -33,6 +33,7 @@
 
   --pulse-ring: rgba(255, 79, 163, 0.42);
   --pulse-shadow: rgba(255, 79, 163, 0.35);
+  --md-strong-color: #2F6FDB;
 }
 
 html[data-theme="light"] {
