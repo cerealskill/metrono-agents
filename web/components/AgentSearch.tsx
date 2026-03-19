@@ -66,8 +66,8 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
               }}
               onMouseEnter={e => {
                 if (document.activeElement !== e.currentTarget) {
-                  e.currentTarget.style.borderColor = '#FF4FA3'
-                  e.currentTarget.style.boxShadow = '0 0 20px rgba(255, 79, 163, 0.45)'
+                  e.currentTarget.style.borderColor = 'var(--search-hover-border)'
+                  e.currentTarget.style.boxShadow = '0 0 20px var(--search-hover-glow)'
                 }
               }}
               onMouseLeave={e => {

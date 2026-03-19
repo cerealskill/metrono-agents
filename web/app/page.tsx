@@ -82,8 +82,8 @@ export default async function Home() {
               className="inline-flex items-center gap-2 text-xs font-mono px-3 py-1 rounded-full mb-6"
               style={{
                 background: 'var(--bg-elevated)',
-                color: '#4FB3D8',
-                border: '1px solid var(--border-hover)',
+                color: 'var(--bundles-accent)',
+                border: '1px solid var(--bundles-border)',
               }}
             >
               <span

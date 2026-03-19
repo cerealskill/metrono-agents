@@ -20,7 +20,7 @@ export default function AuthButton() {
         <button
           onClick={() => signOut()}
           className="relative flex items-center justify-center rounded-full overflow-hidden transition-all"
-          style={{ width: 34, height: 34, border: '2px solid #4FB3D8' }}
+          style={{ width: 34, height: 34, border: '2px solid var(--user-circle)' }}
           title={`${session.user.name} · Click to sign out`}
         >
           {session.user.image ? (

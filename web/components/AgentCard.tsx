@@ -11,8 +11,8 @@ export default function AgentCard({ agent }: { agent: AgentMeta }) {
           border: '1px solid var(--border)',
         }}
         onMouseEnter={e => {
-          (e.currentTarget as HTMLDivElement).style.borderColor = '#FF4FA3'
-          ;(e.currentTarget as HTMLDivElement).style.boxShadow = '0 0 20px rgba(255, 79, 163, 0.4)'
+          (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--card-hover-border)'
+          ;(e.currentTarget as HTMLDivElement).style.boxShadow = '0 0 20px var(--card-hover-glow)'
         }}
         onMouseLeave={e => {
           (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--border)'
