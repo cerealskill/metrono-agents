@@ -20,7 +20,7 @@
   /* theme-specific UI tokens */
   --bundles-accent: #ffffff;
   --bundles-border: rgba(255, 255, 255, 0.3);
-  --user-circle: #1DB954;
+  --user-circle: #ffffff;
   --google-signin-bg: #4285F4;
 
   --search-hover-border: var(--border); /* no hover effect in dark */

@@ -125,6 +125,13 @@ export default async function Home() {
       {/* Footer */}
       <footer style={{ borderTop: '1px solid var(--border)' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-center text-sm" style={{ color: 'var(--text-muted)' }}>
+          <p className="mb-3">
+            <a href="/" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-80 transition-opacity">Finder</a>
+            {' '}·{' '}
+            <a href="/docs" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-80 transition-opacity">Docs</a>
+            {' '}·{' '}
+            <a href="/privacy" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-80 transition-opacity">Privacy</a>
+          </p>
           <p>
             © 2026 FindBOT - {' '}
             Built for{' '}
