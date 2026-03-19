@@ -77,14 +77,14 @@ export default function FileTabs({ files }: { files: Record<BundleFile, string> 
         {activeContent ? (
           <div className="text-sm leading-relaxed font-mono" style={{ color: 'var(--text-primary)' }}>
             {lines.map((line, idx) => (
-              <div key={idx} className="grid" style={{ gridTemplateColumns: '48px 1fr' }}>
+              <div key={idx} className="grid" style={{ gridTemplateColumns: '36px 1fr' }}>
                 <span
-                  className="select-none pr-3 text-right"
+                  className="select-none pr-2 text-right"
                   style={{ color: 'var(--text-muted)', borderRight: '1px solid var(--border)' }}
                 >
                   {idx + 1}
                 </span>
-                <span className="pl-3 whitespace-pre-wrap break-words">{line || ' '}</span>
+                <span className="pl-2 whitespace-pre-wrap break-words">{line || ' '}</span>
               </div>
             ))}
           </div>
