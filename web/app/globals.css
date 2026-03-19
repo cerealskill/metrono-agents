@@ -25,8 +25,8 @@
 
   --search-hover-border: var(--border); /* no hover effect in dark */
   --search-hover-glow: transparent;
-  --search-focus-border: rgba(255, 255, 255, 0.7);
-  --search-focus-glow: rgba(255, 255, 255, 0.22);
+  --search-focus-border: #FF4FA3;
+  --search-focus-glow: rgba(255, 79, 163, 0.4);
 
   --card-hover-border: #FF4FA3;
   --card-hover-glow: rgba(255, 79, 163, 0.4);
