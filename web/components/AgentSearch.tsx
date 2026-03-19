@@ -44,7 +44,7 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 space-y-3">
           {/* Input */}
           <div className="relative">
-            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-base" style={{ color: 'var(--text-muted)' }}>🔍</span>
+            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-base z-10 pointer-events-none" style={{ color: 'var(--text-muted)' }}>🔍</span>
             <input
               type="text"
               placeholder="Search by name, description or tags..."
