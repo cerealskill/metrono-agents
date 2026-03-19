@@ -97,7 +97,7 @@ export default function FileTabs({ files }: { files: Record<BundleFile, string> 
       </div>
 
       <p className="text-xs mt-3" style={{ color: 'var(--text-muted)' }}>
-        Total Lines: {totalLines} - Total Works: {totalWords}
+        Lines: {totalLines} | Works: {totalWords}
       </p>
     </div>
   )
