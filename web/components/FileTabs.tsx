@@ -29,7 +29,7 @@ function renderInlineMarkdown(line: string) {
     if (/^\*\*[^*]+\*\*$/.test(part)) {
       return (
         <strong key={i} style={{ color: 'var(--text-primary)', fontWeight: 700 }}>
-          {part.slice(2, -2)}
+          {part}
         </strong>
       )
     }
