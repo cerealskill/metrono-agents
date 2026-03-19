@@ -27,6 +27,8 @@ export default function FileTabs({ files }: { files: Record<BundleFile, string> 
   const [active, setActive] = useState<BundleFile>('SOUL.md')
   const activeContent = files[active] ?? ''
   const lines = activeContent.split('\n')
+  const totalLines = activeContent ? lines.length : 0
+  const totalWords = activeContent.trim() ? activeContent.trim().split(/\s+/).length : 0
 
   return (
     <div>
@@ -93,6 +95,10 @@ export default function FileTabs({ files }: { files: Record<BundleFile, string> 
           </p>
         )}
       </div>
+
+      <p className="text-xs mt-3" style={{ color: 'var(--text-muted)' }}>
+        Total Lines: {String(totalLines).padStart(2, '0')} - Total Works: {String(totalWords).padStart(2, '0')}
+      </p>
     </div>
   )
 }
