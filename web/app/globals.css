@@ -54,7 +54,8 @@ html[data-theme="light"] {
 
   --bundles-accent: #000000;
   --bundles-border: rgba(0, 0, 0, 0.55);
-  --user-circle: #FF4FA3;
+  --user-circle: #ffffff;
+  --user-heartbeat-glow: rgba(255, 255, 255, 0.42);
   --google-signin-bg: #4285F4;
 
   --search-hover-border: rgba(120, 130, 148, 0.45);
@@ -126,6 +127,11 @@ body {
   filter: drop-shadow(0 0 0 rgba(255, 79, 163, 0));
 }
 
+.user-heartbeat {
+  transform-origin: center;
+  animation: user-heartbeat 3.2s ease-in-out infinite;
+}
+
 @keyframes logo-heartbeat {
   0%, 40%, 100% {
     transform: scale(1);
@@ -142,5 +148,24 @@ body {
   60% {
     transform: scale(1.03);
     filter: drop-shadow(0 0 8px rgba(255, 79, 163, 0.24));
+  }
+}
+
+@keyframes user-heartbeat {
+  0%, 40%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  45% {
+    transform: scale(1.04);
+    box-shadow: 0 0 6px var(--user-heartbeat-glow);
+  }
+  52% {
+    transform: scale(1.08);
+    box-shadow: 0 0 10px var(--user-heartbeat-glow);
+  }
+  60% {
+    transform: scale(1.03);
+    box-shadow: 0 0 6px var(--user-heartbeat-glow);
   }
 }
