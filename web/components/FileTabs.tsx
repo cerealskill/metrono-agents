@@ -25,6 +25,8 @@ const FILE_DESC: Record<BundleFile, string> = {
 
 export default function FileTabs({ files }: { files: Record<BundleFile, string> }) {
   const [active, setActive] = useState<BundleFile>('SOUL.md')
+  const activeContent = files[active] ?? ''
+  const lines = activeContent.split('\n')
 
   return (
     <div>
@@ -72,13 +74,20 @@ export default function FileTabs({ files }: { files: Record<BundleFile, string> 
           maxHeight: '60vh',
         }}
       >
-        {files[active] ? (
-          <pre
-            className="text-sm whitespace-pre-wrap leading-relaxed font-mono"
-            style={{ color: 'var(--text-primary)' }}
-          >
-            {files[active]}
-          </pre>
+        {activeContent ? (
+          <div className="text-sm leading-relaxed font-mono" style={{ color: 'var(--text-primary)' }}>
+            {lines.map((line, idx) => (
+              <div key={idx} className="grid" style={{ gridTemplateColumns: '48px 1fr' }}>
+                <span
+                  className="select-none pr-3 text-right"
+                  style={{ color: 'var(--text-muted)', borderRight: '1px solid var(--border)' }}
+                >
+                  {idx + 1}
+                </span>
+                <span className="pl-3 whitespace-pre-wrap break-words">{line || ' '}</span>
+              </div>
+            ))}
+          </div>
         ) : (
           <p className="text-sm italic" style={{ color: 'var(--text-muted)' }}>
             This file is empty in the bundle.
