@@ -44,23 +44,32 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
       <div style={{ background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 space-y-3">
           {/* Input */}
-          <div className="relative">
+          <div className="relative search-shell rounded-2xl">
             <span
-              className={`absolute left-4 top-1/2 -translate-y-1/2 text-base z-10 pointer-events-none transition-opacity duration-200 ${isFocused ? 'opacity-0' : 'opacity-100'}`}
-              style={{ color: 'var(--text-muted)' }}
+              className={`absolute left-3 top-1/2 -translate-y-1/2 z-10 pointer-events-none transition-all duration-200 ${isFocused ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
             >
-              🔍
+              <span
+                className="inline-flex items-center justify-center w-7 h-7 rounded-lg text-sm"
+                style={{
+                  color: 'var(--text-muted)',
+                  background: 'color-mix(in srgb, var(--bg-elevated) 82%, transparent)',
+                  border: '1px solid var(--border)',
+                }}
+              >
+                🔍
+              </span>
             </span>
             <input
               type="text"
               placeholder="Search by name, description or tags..."
               value={query}
               onChange={e => setQuery(e.target.value)}
-              className="search-fx w-full rounded-xl pl-11 pr-10 py-3 text-sm transition-all duration-200 outline-none"
+              className="search-fx w-full rounded-2xl pl-12 pr-10 py-3.5 text-sm transition-all duration-300 outline-none"
               style={{
-                background: 'var(--bg-elevated)',
+                background: 'color-mix(in srgb, var(--bg-elevated) 88%, transparent)',
                 border: '1px solid var(--border)',
                 color: 'var(--text-primary)',
+                backdropFilter: 'blur(8px)',
               }}
               onFocus={e => {
                 setIsFocused(true)
