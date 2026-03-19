@@ -53,7 +53,6 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
                 style={{
                   color: 'var(--text-muted)',
                   background: 'color-mix(in srgb, var(--bg-elevated) 82%, transparent)',
-                  border: '1px solid var(--border)',
                 }}
               >
                 🔍
