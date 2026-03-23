@@ -13,8 +13,8 @@ const translations = {
     bundlesBadge: (n: number) => `${n} production-ready bundles`,
     heroTitle: 'OpenClaw Workflow & Agents,',
     heroTitleHighlight: 'ready to deploy.',
-    heroDesc: 'Drop-in workspace bundles for',
-    heroDescSuffix: '. Each agent ships with SOUL, IDENTITY, MEMORY conventions and a full bootstrap — so you can start working immediately.',
+    heroDesc: 'Production-ready workflows and AI agents for',
+    heroDescSuffix: '. Each bundle ships with SOUL, IDENTITY, MEMORY conventions, orchestration logic, and a full bootstrap — deploy and start working immediately.',
     // Search
     searchPlaceholder: 'Search by name, description or tags...',
     allCategory: 'All',
@@ -89,8 +89,8 @@ const translations = {
     bundlesBadge: (n: number) => `${n} bundles listos para producción`,
     heroTitle: 'OpenClaw Workflow y Agentes,',
     heroTitleHighlight: 'listos para desplegar.',
-    heroDesc: 'Bundles de workspace para',
-    heroDescSuffix: '. Cada agente incluye SOUL, IDENTITY, convenciones de MEMORY y un bootstrap completo — para que empieces a trabajar de inmediato.',
+    heroDesc: 'Workflows y agentes de IA listos para producción en',
+    heroDescSuffix: '. Cada bundle incluye SOUL, IDENTITY, convenciones de MEMORY, lógica de orquestación y un bootstrap completo — desplegá y empezá a trabajar de inmediato.',
     // Search
     searchPlaceholder: 'Buscar por nombre, descripción o tags...',
     allCategory: 'Todos',
