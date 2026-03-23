@@ -1,5 +1,26 @@
 # ORQUESTACION.md
 
+## Diagrama
+
+    ┌──────────┐         ┌──────────┐
+    │  Junior  │────────▶│  Senior  │
+    │ Borrador │         │ Revisión │
+    └──────────┘         └────┬─────┘
+                              │
+                    ┌─────────┴──────────┐
+                    ▼                    ▼
+              ┌──────────┐        ┌──────────┐
+              │ Aprobado │        │ Feedback │
+              │ ✓ Enviar │        │ ↩ Rehacer│
+              └──────────┘        └────┬─────┘
+                                       │
+                                       ▼
+                                 ┌──────────┐
+                                 │  Junior  │
+                                 │ Corrige  │
+                                 └──────────┘
+
+
 ## Workflow
 Modo mentor (senior revisa junior antes de entrega)
 
@@ -28,23 +49,3 @@ Subir calidad de entrega y acelerar aprendizaje mediante revisión guiada.
 ## Entregables
 - Versión final aprobada
 - Feedback breve para aprendizaje
-
-## Diagrama
-
-    ┌──────────┐         ┌──────────┐
-    │  Junior  │────────▶│  Senior  │
-    │ Borrador │         │ Revisión │
-    └──────────┘         └────┬─────┘
-                              │
-                    ┌─────────┴──────────┐
-                    ▼                    ▼
-              ┌──────────┐        ┌──────────┐
-              │ Aprobado │        │ Feedback │
-              │ ✓ Enviar │        │ ↩ Rehacer│
-              └──────────┘        └────┬─────┘
-                                       │
-                                       ▼
-                                 ┌──────────┐
-                                 │  Junior  │
-                                 │ Corrige  │
-                                 └──────────┘

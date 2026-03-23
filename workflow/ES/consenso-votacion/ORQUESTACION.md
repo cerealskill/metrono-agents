@@ -1,5 +1,28 @@
 # ORQUESTACION.md
 
+## Diagrama
+
+    ┌────────────┐
+    │ Proponente │──── define pregunta + opciones
+    └─────┬──────┘
+          ▼
+    ┌───────────┐  ┌───────────┐  ┌───────────┐
+    │ Votante 1 │  │ Votante 2 │  │ Votante N │
+    │  (ciego)  │  │  (ciego)  │  │  (ciego)  │
+    └─────┬─────┘  └─────┬─────┘  └─────┬─────┘
+          │              │              │
+          ▼              ▼              ▼
+    ┌────────────────────────────────────────┐
+    │     Moderador: conteo + quórum         │
+    └──────────────────┬─────────────────────┘
+                       │
+               ┌───────┴───────┐
+               ▼               ▼
+         ┌──────────┐   ┌───────────┐
+         │ Mayoría  │   │ 2da ronda │
+         └──────────┘   └───────────┘
+
+
 ## Workflow
 Consenso / Votación (decisión por voto de N agentes)
 
@@ -37,25 +60,3 @@ Alcanzar una decisión colectiva cuando ningún agente tiene autoridad o visibil
 - Decisión final con conteo de votos
 - Log de disidencias
 - Criterios usados para desempate (si aplica)
-
-## Diagrama
-
-    ┌────────────┐
-    │ Proponente │──── define pregunta + opciones
-    └─────┬──────┘
-          ▼
-    ┌───────────┐  ┌───────────┐  ┌───────────┐
-    │ Votante 1 │  │ Votante 2 │  │ Votante N │
-    │  (ciego)  │  │  (ciego)  │  │  (ciego)  │
-    └─────┬─────┘  └─────┬─────┘  └─────┬─────┘
-          │              │              │
-          ▼              ▼              ▼
-    ┌────────────────────────────────────────┐
-    │     Moderador: conteo + quórum         │
-    └──────────────────┬─────────────────────┘
-                       │
-               ┌───────┴───────┐
-               ▼               ▼
-         ┌──────────┐   ┌───────────┐
-         │ Mayoría  │   │ 2da ronda │
-         └──────────┘   └───────────┘

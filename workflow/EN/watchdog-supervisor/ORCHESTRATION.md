@@ -1,5 +1,25 @@
 # ORCHESTRATION.md
 
+## Diagram
+
+    ┌────────────────────────────────────────┐
+    │             Supervisor                 │
+    │  (heartbeat monitor + progress check) │
+    └───┬────────────┬────────────┬──────────┘
+        │            │            │
+        ▼            ▼            ▼
+    ┌────────┐  ┌────────┐  ┌────────┐
+    │Worker 1│  │Worker 2│  │Worker N│
+    │  ♥ ok  │  │  ♥ ok  │  │ ♥ fail│──┐
+    └────────┘  └────────┘  └────────┘  │
+                                        ▼
+                                 ┌─────────────┐
+                                 │  Recovery   │
+                                 │   Agent     │
+                                 │(resume/redo)│
+                                 └─────────────┘
+
+
 ## Workflow
 Watchdog / Supervisor (monitor and recover)
 
@@ -40,22 +60,3 @@ Continuously monitor agent health and task progress, intervening automatically w
 - Health log per worker
 - Intervention history
 - Uptime and recovery metrics
-
-## Diagram
-
-    ┌────────────────────────────────────────┐
-    │             Supervisor                 │
-    │  (heartbeat monitor + progress check) │
-    └───┬────────────┬────────────┬──────────┘
-        │            │            │
-        ▼            ▼            ▼
-    ┌────────┐  ┌────────┐  ┌────────┐
-    │Worker 1│  │Worker 2│  │Worker N│
-    │  ♥ ok  │  │  ♥ ok  │  │ ♥ fail│──┐
-    └────────┘  └────────┘  └────────┘  │
-                                        ▼
-                                 ┌─────────────┐
-                                 │  Recovery   │
-                                 │   Agent     │
-                                 │(resume/redo)│
-                                 └─────────────┘

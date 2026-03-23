@@ -1,5 +1,26 @@
 # ORCHESTRATION.md
 
+## Diagram
+
+    ┌──────────┐         ┌──────────┐
+    │  Junior  │────────▶│  Senior  │
+    │  Draft   │         │  Review  │
+    └──────────┘         └────┬─────┘
+                              │
+                    ┌─────────┴──────────┐
+                    ▼                    ▼
+              ┌──────────┐        ┌──────────┐
+              │ Approved │        │ Feedback │
+              │  ✓ Ship  │        │ ↩ Redo   │
+              └──────────┘        └────┬─────┘
+                                       │
+                                       ▼
+                                 ┌──────────┐
+                                 │  Junior  │
+                                 │ Corrects │
+                                 └──────────┘
+
+
 ## Workflow
 Mentor Mode (senior reviews junior before delivery)
 
@@ -28,23 +49,3 @@ Raise delivery quality and accelerate learning through guided review.
 ## Deliverables
 - Final approved version
 - Brief feedback for learning
-
-## Diagram
-
-    ┌──────────┐         ┌──────────┐
-    │  Junior  │────────▶│  Senior  │
-    │  Draft   │         │  Review  │
-    └──────────┘         └────┬─────┘
-                              │
-                    ┌─────────┴──────────┐
-                    ▼                    ▼
-              ┌──────────┐        ┌──────────┐
-              │ Approved │        │ Feedback │
-              │  ✓ Ship  │        │ ↩ Redo   │
-              └──────────┘        └────┬─────┘
-                                       │
-                                       ▼
-                                 ┌──────────┐
-                                 │  Junior  │
-                                 │ Corrects │
-                                 └──────────┘

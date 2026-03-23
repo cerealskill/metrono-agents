@@ -1,5 +1,20 @@
 # ORCHESTRATION.md
 
+## Diagram
+
+    ┌────────────┬─────┬─────┬─────┬─────┐
+    │   Task     │  R  │  A  │  C  │  I  │
+    ├────────────┼─────┼─────┼─────┼─────┤
+    │ Define     │  ●  │  ●  │     │     │
+    │ Implement  │  ●  │     │  ●  │     │
+    │ Validate   │  ●  │  ●  │     │  ●  │
+    │ Deliver    │     │  ●  │     │  ●  │
+    └────────────┴─────┴─────┴─────┴─────┘
+
+    R = Responsible   A = Accountable
+    C = Consulted     I = Informed
+
+
 ## Workflow
 RACI Matrix
 
@@ -24,17 +39,3 @@ Define responsibilities without ambiguity: who does, who approves, and who is in
 - Each task must have exactly 1 A.
 - Do not start a task without R and A defined.
 - RACI changes must be versioned.
-
-## Diagram
-
-    ┌────────────┬─────┬─────┬─────┬─────┐
-    │   Task     │  R  │  A  │  C  │  I  │
-    ├────────────┼─────┼─────┼─────┼─────┤
-    │ Define     │  ●  │  ●  │     │     │
-    │ Implement  │  ●  │     │  ●  │     │
-    │ Validate   │  ●  │  ●  │     │  ●  │
-    │ Deliver    │     │  ●  │     │  ●  │
-    └────────────┴─────┴─────┴─────┴─────┘
-
-    R = Responsible   A = Accountable
-    C = Consulted     I = Informed

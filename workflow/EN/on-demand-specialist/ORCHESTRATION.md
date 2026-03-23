@@ -1,5 +1,23 @@
 # ORCHESTRATION.md
 
+## Diagram
+
+    ┌───────────┐                ┌────────────┐
+    │ Core Team │──── trigger ──▶│ Specialist │
+    │ (ongoing) │                │ (limited)  │
+    └─────┬─────┘                └─────┬──────┘
+          │                            │
+          │     ┌──────────────┐       │
+          │     │   Findings   │◀──────┘
+          │     │ + actionable │
+          │     └──────┬───────┘
+          │            │
+          ▼            ▼
+    ┌───────────────────────┐
+    │  Plan updated + close │
+    └───────────────────────┘
+
+
 ## Workflow
 On-demand Specialist
 
@@ -24,20 +42,3 @@ Activate specialists (legal, finance, docs, security, etc.) only when the case r
 ## Deliverable
 - Specialist's report
 - Changes applied to the plan
-
-## Diagram
-
-    ┌───────────┐                ┌────────────┐
-    │ Core Team │──── trigger ──▶│ Specialist │
-    │ (ongoing) │                │ (limited)  │
-    └─────┬─────┘                └─────┬──────┘
-          │                            │
-          │     ┌──────────────┐       │
-          │     │   Findings   │◀──────┘
-          │     │ + actionable │
-          │     └──────┬───────┘
-          │            │
-          ▼            ▼
-    ┌───────────────────────┐
-    │  Plan updated + close │
-    └───────────────────────┘

@@ -1,5 +1,22 @@
 # ORCHESTRATION.md
 
+## Diagram
+
+    Mon             Wed              Fri
+     │               │                │
+     ▼               ▼                ▼
+    ┌──────────┐  ┌────────────┐  ┌───────────┐
+    │ Planning │  │ Checkpoint │  │  Closure  │
+    │          │  │            │  │  + Retro  │
+    └────┬─────┘  └─────┬──────┘  └───────────┘
+         │              │
+         ▼              ▼
+    ┌──────────┐  ┌────────────┐
+    │ Backlog  │  │  Adjust    │
+    │ + Assign │  │  Priorities│
+    └──────────┘  └────────────┘
+
+
 ## Workflow
 Weekly Planning
 
@@ -27,19 +44,3 @@ Turn weekly objectives into an executable plan with priorities, capacity, and ri
 - Top priorities
 - What is deferred and why
 - Risks + plan B
-
-## Diagram
-
-    Mon             Wed              Fri
-     │               │                │
-     ▼               ▼                ▼
-    ┌──────────┐  ┌────────────┐  ┌───────────┐
-    │ Planning │  │ Checkpoint │  │  Closure  │
-    │          │  │            │  │  + Retro  │
-    └────┬─────┘  └─────┬──────┘  └───────────┘
-         │              │
-         ▼              ▼
-    ┌──────────┐  ┌────────────┐
-    │ Backlog  │  │  Adjust    │
-    │ + Assign │  │  Priorities│
-    └──────────┘  └────────────┘

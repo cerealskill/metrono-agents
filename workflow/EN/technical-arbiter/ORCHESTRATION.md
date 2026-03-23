@@ -1,5 +1,26 @@
 # ORCHESTRATION.md
 
+## Diagram
+
+    ┌──────────┐              ┌──────────┐
+    │ Agent A  │              │ Agent B  │
+    │Proposal 1│              │Proposal 2│
+    └────┬─────┘              └────┬─────┘
+         │                         │
+         └────────────┬────────────┘
+                      ▼
+               ┌─────────────┐
+               │   Arbiter   │
+               │  (rubric)   │
+               └──────┬──────┘
+                      │
+                      ▼
+               ┌─────────────┐
+               │  Decision   │
+               │+ justificat.│
+               └─────────────┘
+
+
 ## Workflow
 Technical Arbiter (2 agents propose, 1 decides)
 
@@ -32,23 +53,3 @@ Make robust technical decisions by comparing two independent proposals.
 - Final decision
 - Reasons for discarding
 - Conditions for reevaluation
-
-## Diagram
-
-    ┌──────────┐              ┌──────────┐
-    │ Agent A  │              │ Agent B  │
-    │Proposal 1│              │Proposal 2│
-    └────┬─────┘              └────┬─────┘
-         │                         │
-         └────────────┬────────────┘
-                      ▼
-               ┌─────────────┐
-               │   Arbiter   │
-               │  (rubric)   │
-               └──────┬──────┘
-                      │
-                      ▼
-               ┌─────────────┐
-               │  Decision   │
-               │+ justificat.│
-               └─────────────┘

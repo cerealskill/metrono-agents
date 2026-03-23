@@ -1,5 +1,27 @@
 # ORCHESTRATION.md
 
+## Diagram
+
+                    ┌───────────────┐
+                    │      Hub      │
+                    │ (Orchestrator)│
+                    └──┬────┬────┬──┘
+                       │    │    │
+              ┌────────┘    │    └────────┐
+              ▼             ▼             ▼
+        ┌───────────┐ ┌───────────┐ ┌───────────┐
+        │   Spoke   │ │   Spoke   │ │   Spoke   │
+        │Implement. │ │Validation │ │   Docs    │
+        └─────┬─────┘ └─────┬─────┘ └─────┬─────┘
+              │             │             │
+              └─────────────┼─────────────┘
+                            ▼
+                    ┌───────────────┐
+                    │  Hub merges   │
+                    │  + publishes  │
+                    └───────────────┘
+
+
 ## Workflow
 Hub-and-spoke
 
@@ -31,24 +53,3 @@ Centralize coordination in a hub (orchestrator) and delegate execution to spokes
 - Integrated result
 - Risks + mitigations
 - Recorded technical decisions
-
-## Diagram
-
-                    ┌───────────────┐
-                    │      Hub      │
-                    │ (Orchestrator)│
-                    └──┬────┬────┬──┘
-                       │    │    │
-              ┌────────┘    │    └────────┐
-              ▼             ▼             ▼
-        ┌───────────┐ ┌───────────┐ ┌───────────┐
-        │   Spoke   │ │   Spoke   │ │   Spoke   │
-        │Implement. │ │Validation │ │   Docs    │
-        └─────┬─────┘ └─────┬─────┘ └─────┬─────┘
-              │             │             │
-              └─────────────┼─────────────┘
-                            ▼
-                    ┌───────────────┐
-                    │  Hub merges   │
-                    │  + publishes  │
-                    └───────────────┘

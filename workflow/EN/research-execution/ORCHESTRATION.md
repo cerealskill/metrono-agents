@@ -1,5 +1,25 @@
 # ORCHESTRATION.md
 
+## Diagram
+
+    ┌──────────────────────────────┐
+    │     Phase 1: Research        │
+    │  questions → options → rec.  │
+    └──────────────┬───────────────┘
+                   │
+                   ▼
+    ┌──────────────────────────────┐
+    │      Decision Gate           │
+    │  (approve before building)   │
+    └──────────────┬───────────────┘
+                   │
+                   ▼
+    ┌──────────────────────────────┐
+    │     Phase 2: Execution       │
+    │  implement → validate → doc  │
+    └──────────────────────────────┘
+
+
 ## Workflow
 Research + Execution
 
@@ -25,22 +45,3 @@ Clearly separate research and implementation phases to reduce rework.
 - Technical brief (research)
 - Implementation plan
 - Result + validation
-
-## Diagram
-
-    ┌──────────────────────────────┐
-    │     Phase 1: Research        │
-    │  questions → options → rec.  │
-    └──────────────┬───────────────┘
-                   │
-                   ▼
-    ┌──────────────────────────────┐
-    │      Decision Gate           │
-    │  (approve before building)   │
-    └──────────────┬───────────────┘
-                   │
-                   ▼
-    ┌──────────────────────────────┐
-    │     Phase 2: Execution       │
-    │  implement → validate → doc  │
-    └──────────────────────────────┘

@@ -1,5 +1,26 @@
 # ORQUESTACION.md
 
+## Diagrama
+
+    ┌──────────────────────────────────────────┐
+    │          Incidente Declarado             │
+    └────────────────────┬─────────────────────┘
+                         ▼
+    ┌──────────┐  ┌──────────┐  ┌──────────────┐
+    │Comandante│  │ Cronista │  │  Ejecutores  │
+    │Estrategia│  │ Timeline │  │Mitigaciones  │
+    └────┬─────┘  └────┬─────┘  └──────┬───────┘
+         │             │               │
+         ▼             ▼               ▼
+    ┌──────────────────────────────────────────┐
+    │      Actualizaciones periódicas          │
+    └────────────────────┬─────────────────────┘
+                         ▼
+    ┌──────────────────────────────────────────┐
+    │          Cierre + Postmortem             │
+    └──────────────────────────────────────────┘
+
+
 ## Workflow
 Modo incidente (comandante + cronista + ejecutores)
 
@@ -28,23 +49,3 @@ Resolver incidentes rápido, con mando claro y trazabilidad completa.
 - Acciones y responsables
 - RCA preliminar/final
 - Plan de prevención
-
-## Diagrama
-
-    ┌──────────────────────────────────────────┐
-    │          Incidente Declarado             │
-    └────────────────────┬─────────────────────┘
-                         ▼
-    ┌──────────┐  ┌──────────┐  ┌──────────────┐
-    │Comandante│  │ Cronista │  │  Ejecutores  │
-    │Estrategia│  │ Timeline │  │Mitigaciones  │
-    └────┬─────┘  └────┬─────┘  └──────┬───────┘
-         │             │               │
-         ▼             ▼               ▼
-    ┌──────────────────────────────────────────┐
-    │      Actualizaciones periódicas          │
-    └────────────────────┬─────────────────────┘
-                         ▼
-    ┌──────────────────────────────────────────┐
-    │          Cierre + Postmortem             │
-    └──────────────────────────────────────────┘
