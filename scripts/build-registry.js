@@ -3,20 +3,34 @@ const fs = require('fs')
 const path = require('path')
 const yaml = require('js-yaml')
 
-const AGENTS_DIR = path.join(__dirname, '..', 'agents')
+
+const AGENTS_ROOT = path.join(__dirname, '..', 'agents')
+const WORKFLOW_ROOT = path.join(__dirname, '..', 'workflow')
 const OUT_FILE = path.join(__dirname, '..', 'web', 'public', 'agents.json')
+const OUT_WORKFLOW_FILE = path.join(__dirname, '..', 'web', 'public', 'workflows.json')
 
 const BUNDLE_FILES = ['SOUL.md', 'IDENTITY.md', 'USER.md', 'AGENTS.md', 'HEARTBEAT.md', 'TOOLS.md', 'BOOTSTRAP.md']
 
-function walkAgents(dir, base = '') {
+function walkLangDirs(root, walkFn) {
+  const result = {}
+  if (!fs.existsSync(root)) return result
+  for (const lang of fs.readdirSync(root)) {
+    if (lang.startsWith('_')) continue
+    const langPath = path.join(root, lang)
+    if (fs.statSync(langPath).isDirectory()) {
+      result[lang] = walkFn(langPath, lang)
+    }
+  }
+  return result
+}
+
+function walkAgents(dir, lang, base = '') {
   const agents = []
   if (!fs.existsSync(dir)) return agents
-
   for (const entry of fs.readdirSync(dir)) {
     if (entry.startsWith('_')) continue
     const fullPath = path.join(dir, entry)
     const relPath = base ? `${base}/${entry}` : entry
-
     if (fs.statSync(fullPath).isDirectory()) {
       const metaFile = path.join(fullPath, 'meta.yaml')
       if (fs.existsSync(metaFile)) {
@@ -26,19 +40,50 @@ function walkAgents(dir, base = '') {
           const fpath = path.join(fullPath, fname)
           files[fname] = fs.existsSync(fpath) ? fs.readFileSync(fpath, 'utf-8') : ''
         }
-        agents.push({ ...meta, path: relPath, soul: files['SOUL.md'], files })
+        agents.push({ ...meta, lang, path: relPath, soul: files['SOUL.md'], files })
       } else {
-        agents.push(...walkAgents(fullPath, relPath))
+        agents.push(...walkAgents(fullPath, lang, relPath))
       }
     }
   }
   return agents
 }
 
-const agents = walkAgents(AGENTS_DIR)
+function walkWorkflows(dir, lang, base = '') {
+  const workflows = []
+  if (!fs.existsSync(dir)) return workflows
+  for (const entry of fs.readdirSync(dir)) {
+    if (entry.startsWith('_')) continue
+    const fullPath = path.join(dir, entry)
+    const relPath = base ? `${base}/${entry}` : entry
+    if (fs.statSync(fullPath).isDirectory()) {
+      // Only one file: ORCHESTRATION.md
+      const orchestrationFile = path.join(fullPath, 'ORCHESTRATION.md')
+      if (fs.existsSync(orchestrationFile)) {
+        const content = fs.readFileSync(orchestrationFile, 'utf-8')
+        workflows.push({ lang, path: relPath, orchestration: content })
+      } else {
+        workflows.push(...walkWorkflows(fullPath, lang, relPath))
+      }
+    }
+  }
+  return workflows
+}
+
+const agentsByLang = walkLangDirs(AGENTS_ROOT, walkAgents)
+const workflowsByLang = walkLangDirs(WORKFLOW_ROOT, walkWorkflows)
+
+// Flatten for legacy output
+const agents = Object.values(agentsByLang).flat()
+const workflows = Object.values(workflowsByLang).flat()
+
 fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true })
 fs.writeFileSync(OUT_FILE, JSON.stringify(agents, null, 2))
 console.log(`✓ Generated agents.json with ${agents.length} agents → ${OUT_FILE}`)
+
+fs.mkdirSync(path.dirname(OUT_WORKFLOW_FILE), { recursive: true })
+fs.writeFileSync(OUT_WORKFLOW_FILE, JSON.stringify(workflows, null, 2))
+console.log(`✓ Generated workflows.json with ${workflows.length} workflows → ${OUT_WORKFLOW_FILE}`)
 
 // TypeScript module for static bundling
 const tsOut = path.join(__dirname, '..', 'web', 'lib', 'agents-data.ts')
