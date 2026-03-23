@@ -69,6 +69,17 @@ const translations = {
     // Theme
     switchLight: 'Switch to light mode',
     switchDark: 'Switch to dark mode',
+    // Tabs
+    tabAgents: 'Agents',
+    tabWorkflows: 'Workflows',
+    // Workflow
+    workflowsTitle: 'Workflows',
+    workflowObjective: 'Objective',
+    workflowRoles: 'Roles',
+    workflowProtocol: 'Protocol',
+    workflowOrchestration: 'Orchestration',
+    noWorkflows: (q: string) => `No workflows match "${q}"`,
+    workflowCount: (n: number) => `${n} workflow${n !== 1 ? 's' : ''}`,
   },
   ES: {
     // Nav
@@ -134,6 +145,17 @@ const translations = {
     // Theme
     switchLight: 'Cambiar a modo claro',
     switchDark: 'Cambiar a modo oscuro',
+    // Tabs
+    tabAgents: 'Agentes',
+    tabWorkflows: 'Workflows',
+    // Workflow
+    workflowsTitle: 'Workflows',
+    workflowObjective: 'Objetivo',
+    workflowRoles: 'Roles',
+    workflowProtocol: 'Protocolo',
+    workflowOrchestration: 'Orquestación',
+    noWorkflows: (q: string) => `No hay workflows que coincidan con "${q}"`,
+    workflowCount: (n: number) => `${n} workflow${n !== 1 ? 's' : ''}`,
   },
 } as const satisfies Record<Lang, Record<string, string | ((...args: any[]) => string)>>
 

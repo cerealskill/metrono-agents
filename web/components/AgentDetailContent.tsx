@@ -10,8 +10,11 @@ import ThemeToggle from '@/components/ThemeToggle'
 import LanguageToggle from '@/components/LanguageToggle'
 import StarRating from '@/components/StarRating'
 
-export default function AgentDetailContent({ agent }: { agent: AgentMeta }) {
-  const { t } = useI18n()
+export default function AgentDetailContent({ agents }: { agents: AgentMeta[] }) {
+  const { t, lang } = useI18n()
+
+  // Pick the agent matching current language, fallback to first available
+  const agent = agents.find(a => (a.lang ?? 'EN').toUpperCase() === lang) ?? agents[0]
 
   const installCmd = `curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/install.sh | bash -s ${agent.slug}`
 

@@ -1,18 +1,23 @@
 'use client'
 
+import { useState } from 'react'
 import { useI18n } from '@/lib/i18n'
 import type { AgentMeta } from '@/lib/agents'
+import type { WorkflowMeta } from '@/lib/workflows'
 import AgentSearch from '@/components/AgentSearch'
+import WorkflowGrid from '@/components/WorkflowGrid'
 import ThemeToggle from '@/components/ThemeToggle'
 import LanguageToggle from '@/components/LanguageToggle'
 import AuthButton from '@/components/AuthButton'
 import Link from 'next/link'
 
-export default function HomeContent({ agents, stars }: { agents: AgentMeta[]; stars: number | null }) {
+export default function HomeContent({ agents, workflows, stars }: { agents: AgentMeta[]; workflows: WorkflowMeta[]; stars: number | null }) {
   const { t, lang } = useI18n()
+  const [activeTab, setActiveTab] = useState<'agents' | 'workflows'>('agents')
 
-  // Filter agents by current language
-  const filtered = agents.filter(a => (a.lang ?? 'EN').toUpperCase() === lang)
+  // Filter by current language
+  const filteredAgents = agents.filter(a => (a.lang ?? 'EN').toUpperCase() === lang)
+  const filteredWorkflows = workflows.filter(w => w.lang.toUpperCase() === lang)
 
   return (
     <main className="min-h-screen" style={{ background: 'var(--bg-deep)', color: 'var(--text-primary)' }}>
@@ -83,7 +88,7 @@ export default function HomeContent({ agents, stars }: { agents: AgentMeta[]; st
                 className="w-1.5 h-1.5 rounded-full animate-pulse"
                 style={{ background: 'var(--bundles-accent)' }}
               />
-              <span className="bundles-rainbow">{t.bundlesBadge(filtered.length)}</span>
+              <span className="bundles-rainbow">{t.bundlesBadge(filteredAgents.length + filteredWorkflows.length)}</span>
             </div>
 
             <h1
@@ -112,7 +117,41 @@ export default function HomeContent({ agents, stars }: { agents: AgentMeta[]; st
         </div>
       </div>
 
-      <AgentSearch agents={filtered} />
+      {/* Tabs */}
+      <div style={{ background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="flex gap-1">
+            <button
+              onClick={() => setActiveTab('agents')}
+              className="px-4 py-3 text-sm font-semibold transition-all duration-150 border-b-2"
+              style={
+                activeTab === 'agents'
+                  ? { borderColor: 'var(--cyan-bright)', color: 'var(--cyan-bright)' }
+                  : { borderColor: 'transparent', color: 'var(--text-muted)' }
+              }
+            >
+              🤖 {t.tabAgents} ({filteredAgents.length})
+            </button>
+            <button
+              onClick={() => setActiveTab('workflows')}
+              className="px-4 py-3 text-sm font-semibold transition-all duration-150 border-b-2"
+              style={
+                activeTab === 'workflows'
+                  ? { borderColor: 'var(--cyan-bright)', color: 'var(--cyan-bright)' }
+                  : { borderColor: 'transparent', color: 'var(--text-muted)' }
+              }
+            >
+              ⚡ {t.tabWorkflows} ({filteredWorkflows.length})
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {activeTab === 'agents' ? (
+        <AgentSearch agents={filteredAgents} />
+      ) : (
+        <WorkflowGrid workflows={filteredWorkflows} />
+      )}
 
       {/* Footer */}
       <footer style={{ borderTop: '1px solid var(--border)' }}>

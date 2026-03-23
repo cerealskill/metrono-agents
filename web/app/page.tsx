@@ -1,4 +1,5 @@
 import { getAllAgents } from '@/lib/agents'
+import { getAllWorkflows } from '@/lib/workflows'
 import HomeContent from '@/components/HomeContent'
 
 async function getStars(): Promise<number | null> {
@@ -17,7 +18,8 @@ async function getStars(): Promise<number | null> {
 
 export default async function Home() {
   const agents = getAllAgents()
+  const workflows = getAllWorkflows()
   const stars = await getStars()
 
-  return <HomeContent agents={agents} stars={stars} />
+  return <HomeContent agents={agents} workflows={workflows} stars={stars} />
 }
