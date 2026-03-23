@@ -110,8 +110,8 @@ export default function WorkflowDetailContent({ workflows }: { workflows: Workfl
             </div>
 
             {/* File content */}
-            <div className="p-6 overflow-auto">
-              <div className="text-sm leading-relaxed font-mono" style={{ color: 'var(--text-primary)' }}>
+            <div className="p-6 overflow-x-auto">
+              <div className="text-sm leading-relaxed font-mono min-w-max" style={{ color: 'var(--text-primary)' }}>
                 {lines.map((line, idx) => (
                   <div key={idx} className="grid" style={{ gridTemplateColumns: '36px 1fr' }}>
                     <span
@@ -120,7 +120,7 @@ export default function WorkflowDetailContent({ workflows }: { workflows: Workfl
                     >
                       {idx + 1}
                     </span>
-                    <span className="pl-2 whitespace-pre-wrap break-words">{line ? renderLineMarkdown(line) : ' '}</span>
+                    <span className="pl-2 whitespace-pre">{line ? renderLineMarkdown(line) : ' '}</span>
                   </div>
                 ))}
               </div>
