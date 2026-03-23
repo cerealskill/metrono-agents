@@ -2,25 +2,24 @@
 
 ## Diagram
 
-    ┌──────────┐          ┌───────────┐
-    │  Driver  │◀────────▶│ Navigator │
-    │  (code)  │  review  │ (strategy)│
-    └────┬─────┘          └─────┬─────┘
-         │                      │
-         ▼                      ▼
-    ┌──────────┐          ┌───────────┐
-    │  Writes  │          │  Reviews  │
-    │  code    │          │  in real  │
-    │          │          │  time     │
-    └────┬─────┘          └─────┬─────┘
-         │                      │
-         └──────────┬───────────┘
-                    ▼
-              ┌───────────┐
-              │ Swap roles│
-              │  & repeat │
-              └───────────┘
-
+    ┌──────────┐            ┌───────────┐
+    │  Driver  │<──────────>│ Navigator │
+    │  (code)  │   review   │(strategy) │
+    └────┬─────┘            └─────┬─────┘
+         │                        │
+         v                        v
+    ┌──────────┐            ┌───────────┐
+    │  Writes  │            │  Reviews  │
+    │  code    │            │  in real  │
+    │          │            │  time     │
+    └────┬─────┘            └─────┬─────┘
+         │                        │
+         └───────────┬────────────┘
+                     v
+               ┌───────────┐
+               │ Swap roles│
+               │ + repeat  │
+               └───────────┘
 
 ## Workflow
 Pair Programming (driver + navigator)

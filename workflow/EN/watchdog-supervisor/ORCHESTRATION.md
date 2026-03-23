@@ -2,23 +2,22 @@
 
 ## Diagram
 
-    ┌────────────────────────────────────────┐
-    │             Supervisor                 │
-    │  (heartbeat monitor + progress check) │
-    └───┬────────────┬────────────┬──────────┘
-        │            │            │
-        ▼            ▼            ▼
-    ┌────────┐  ┌────────┐  ┌────────┐
-    │Worker 1│  │Worker 2│  │Worker N│
-    │  ♥ ok  │  │  ♥ ok  │  │ ♥ fail│──┐
-    └────────┘  └────────┘  └────────┘  │
-                                        ▼
-                                 ┌─────────────┐
-                                 │  Recovery   │
-                                 │   Agent     │
-                                 │(resume/redo)│
-                                 └─────────────┘
-
+    ┌──────────────────────────────────────────┐
+    │              Supervisor                  │
+    │   (heartbeat monitor + progress check)  │
+    └────┬─────────────┬─────────────┬─────────┘
+         │             │             │
+         v             v             v
+    ┌─────────┐  ┌─────────┐  ┌─────────┐
+    │Worker 1 │  │Worker 2 │  │Worker N │
+    │  [ok]   │  │  [ok]   │  │ [fail]  │──┐
+    └─────────┘  └─────────┘  └─────────┘  │
+                                           v
+                                    ┌────────────┐
+                                    │  Recovery  │
+                                    │   Agent    │
+                                    │(resume/redo│
+                                    └────────────┘
 
 ## Workflow
 Watchdog / Supervisor (monitor and recover)

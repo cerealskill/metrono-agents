@@ -2,24 +2,23 @@
 
 ## Diagrama
 
-    ┌──────────┐         ┌──────────┐
-    │  Junior  │────────▶│  Senior  │
-    │ Borrador │         │ Revisión │
-    └──────────┘         └────┬─────┘
-                              │
-                    ┌─────────┴──────────┐
-                    ▼                    ▼
-              ┌──────────┐        ┌──────────┐
-              │ Aprobado │        │ Feedback │
-              │ ✓ Enviar │        │ ↩ Rehacer│
-              └──────────┘        └────┬─────┘
-                                       │
-                                       ▼
-                                 ┌──────────┐
-                                 │  Junior  │
-                                 │ Corrige  │
-                                 └──────────┘
-
+    ┌──────────┐          ┌──────────┐
+    │  Junior  │─────────>│  Senior  │
+    │ Borrador │          │ Revision │
+    └──────────┘          └────┬─────┘
+                               │
+                     ┌─────────┴──────────┐
+                     v                    v
+               ┌──────────┐        ┌──────────┐
+               │ Aprobado │        │ Feedback │
+               │  Enviar  │        │  Rehacer │
+               └──────────┘        └────┬─────┘
+                                        │
+                                        v
+                                  ┌──────────┐
+                                  │  Junior  │
+                                  │  Corrige │
+                                  └──────────┘
 
 ## Workflow
 Modo mentor (senior revisa junior antes de entrega)

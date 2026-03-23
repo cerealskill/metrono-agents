@@ -2,29 +2,28 @@
 
 ## Diagrama
 
-    ┌──────────┐                  ┌──────────┐
-    │   Blue   │──── entrega ────▶│   Red    │
-    │  Team    │    v1 + docs     │  Team    │
-    └────┬─────┘                  └────┬─────┘
-         │                             │
-         │                             ▼
-         │                       ┌───────────┐
-         │                       │  Atacar /  │
-         │                       │  Probar    │
-         │                       └─────┬─────┘
-         │                             │
-         ▼                             ▼
-    ┌──────────┐  hallazgos ┌───────────────┐
-    │  Blue    │◀───────────│ Reporte Red   │
-    │ Corrige  │            │(sev+evidencia)│
-    └────┬─────┘            └───────────────┘
+    ┌──────────┐                    ┌──────────┐
+    │   Blue   │─── entrega v1 ───>│   Red    │
+    │   Team   │                    │   Team   │
+    └────┬─────┘                    └────┬─────┘
+         │                               │
+         │                               v
+         │                         ┌───────────┐
+         │                         │  Atacar / │
+         │                         │  Probar   │
+         │                         └─────┬─────┘
+         │                               │
+         v                               v
+    ┌──────────┐  hallazgos  ┌───────────────┐
+    │  Blue    │<────────────│  Reporte Red  │
+    │  Corrige │             │(sev+evidencia)│
+    └────┬─────┘             └───────────────┘
          │
-         ▼
+         v
     ┌──────────┐
     │ Re-test  │
     │ + cierre │
     └──────────┘
-
 
 ## Workflow
 Red-team / Blue-team

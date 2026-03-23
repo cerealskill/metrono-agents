@@ -2,24 +2,23 @@
 
 ## Diagram
 
-    ┌──────────┐         ┌──────────┐
-    │  Junior  │────────▶│  Senior  │
-    │  Draft   │         │  Review  │
-    └──────────┘         └────┬─────┘
-                              │
-                    ┌─────────┴──────────┐
-                    ▼                    ▼
-              ┌──────────┐        ┌──────────┐
-              │ Approved │        │ Feedback │
-              │  ✓ Ship  │        │ ↩ Redo   │
-              └──────────┘        └────┬─────┘
-                                       │
-                                       ▼
-                                 ┌──────────┐
-                                 │  Junior  │
-                                 │ Corrects │
-                                 └──────────┘
-
+    ┌──────────┐          ┌──────────┐
+    │  Junior  │─────────>│  Senior  │
+    │  Draft   │          │  Review  │
+    └──────────┘          └────┬─────┘
+                               │
+                     ┌─────────┴──────────┐
+                     v                    v
+               ┌──────────┐        ┌──────────┐
+               │ Approved │        │ Feedback │
+               │   Ship   │        │   Redo   │
+               └──────────┘        └────┬─────┘
+                                        │
+                                        v
+                                  ┌──────────┐
+                                  │  Junior  │
+                                  │ Corrects │
+                                  └──────────┘
 
 ## Workflow
 Mentor Mode (senior reviews junior before delivery)

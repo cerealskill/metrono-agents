@@ -2,18 +2,17 @@
 
 ## Diagram
 
-    ┌───────────┐  gate  ┌────────┐  gate  ┌────────────┐
-    │ Discovery │──────▶│ Design │──────▶│Implementat.│
-    └───────────┘       └────────┘       └──────┬─────┘
-                                                │
-                                           gate │
-                                                ▼
-                                         ┌────────────┐  gate  ┌──────────┐
-                                         │ Validation │──────▶│ Delivery │
-                                         └────────────┘       └──────────┘
+    ┌───────────┐ gate ┌────────┐ gate ┌──────────────┐
+    │ Discovery │─────>│ Design │─────>│ Implement.   │
+    └───────────┘      └────────┘      └──────┬───────┘
+                                              │
+                                         gate │
+                                              v
+                                       ┌────────────┐ gate ┌──────────┐
+                                       │ Validation │─────>│ Delivery │
+                                       └────────────┘      └──────────┘
 
-    ✗ gate fail → rollback to previous stage
-
+    [x] gate fail --> rollback to previous stage
 
 ## Workflow
 Stage Pipeline

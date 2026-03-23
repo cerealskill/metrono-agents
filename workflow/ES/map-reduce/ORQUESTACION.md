@@ -2,22 +2,21 @@
 
 ## Diagrama
 
-    ┌───────────────────────────────┐
-    │           Splitter            │
-    │ (particionar input → trozos)  │
-    └──────┬────────┬────────┬──────┘
-           │        │        │
-           ▼        ▼        ▼
-      ┌────────┐┌────────┐┌────────┐
-      │Mapper 1││Mapper 2││Mapper N│
-      └───┬────┘└───┬────┘└───┬────┘
-          │         │         │
-          ▼         ▼         ▼
-    ┌───────────────────────────────┐
-    │           Reducer             │
-    │  (fusionar parcial → final)  │
-    └───────────────────────────────┘
-
+    ┌─────────────────────────────────┐
+    │            Splitter             │
+    │  (particionar input en trozos)  │
+    └───────┬──────────┬──────────┬───┘
+            │          │          │
+            v          v          v
+       ┌────────┐ ┌────────┐ ┌────────┐
+       │Mapper 1│ │Mapper 2│ │Mapper N│
+       └───┬────┘ └───┬────┘ └───┬────┘
+           │          │          │
+           v          v          v
+    ┌─────────────────────────────────┐
+    │            Reducer              │
+    │   (fusionar parcial en final)   │
+    └─────────────────────────────────┘
 
 ## Workflow
 Map-Reduce (dividir, procesar en paralelo, unificar)

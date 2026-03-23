@@ -2,22 +2,20 @@
 
 ## Diagrama
 
-    ┌───────────┐                ┌─────────────┐
-    │Core Team  │──── trigger ──▶│ Especialista│
-    │ (activo)  │                │ (acotado)   │
-    └─────┬─────┘                └─────┬───────┘
-          │                            │
-          │     ┌──────────────┐       │
-          │     │  Dictamen    │◀──────┘
-          │     │ accionable   │
-          │     └──────┬───────┘
-          │            │
-          ▼            ▼
-    ┌───────────────────────┐
-    │ Plan actualizado +    │
-    │ cierre de activación  │
-    └───────────────────────┘
-
+    ┌────────────┐                  ┌──────────────┐
+    │ Core Team  │─── trigger ─────>│ Especialista │
+    │  (activo)  │                  │  (acotado)   │
+    └─────┬──────┘                  └──────┬───────┘
+          │                                │
+          │       ┌──────────────┐         │
+          │       │   Dictamen   │<────────┘
+          │       │  accionable  │
+          │       └──────┬───────┘
+          │              │
+          v              v
+    ┌────────────────────────────┐
+    │  Plan actualizado + close │
+    └────────────────────────────┘
 
 ## Workflow
 Especialista bajo demanda
