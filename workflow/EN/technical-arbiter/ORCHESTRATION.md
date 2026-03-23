@@ -32,3 +32,23 @@ Make robust technical decisions by comparing two independent proposals.
 - Final decision
 - Reasons for discarding
 - Conditions for reevaluation
+
+## Diagram
+
+    ┌──────────┐              ┌──────────┐
+    │ Agent A  │              │ Agent B  │
+    │Proposal 1│              │Proposal 2│
+    └────┬─────┘              └────┬─────┘
+         │                         │
+         └────────────┬────────────┘
+                      ▼
+               ┌─────────────┐
+               │   Arbiter   │
+               │  (rubric)   │
+               └──────┬──────┘
+                      │
+                      ▼
+               ┌─────────────┐
+               │  Decision   │
+               │+ justificat.│
+               └─────────────┘

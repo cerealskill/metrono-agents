@@ -36,3 +36,21 @@ Descomponer un problema grande en sub-tareas independientes, procesarlas concurr
 - Esquema fijo reforzado antes de la fase map.
 - Margen de solapamiento en bordes para contexto.
 - Reducer valida completitud antes de finalizar.
+
+## Diagrama
+
+    ┌───────────────────────────────┐
+    │           Splitter            │
+    │ (particionar input → trozos)  │
+    └──────┬────────┬────────┬──────┘
+           │        │        │
+           ▼        ▼        ▼
+      ┌────────┐┌────────┐┌────────┐
+      │Mapper 1││Mapper 2││Mapper N│
+      └───┬────┘└───┬────┘└───┬────┘
+          │         │         │
+          ▼         ▼         ▼
+    ┌───────────────────────────────┐
+    │           Reducer             │
+    │  (fusionar parcial → final)  │
+    └───────────────────────────────┘

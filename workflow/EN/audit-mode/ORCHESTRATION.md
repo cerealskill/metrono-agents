@@ -25,3 +25,14 @@ Ensure independence between execution, control, and final approval.
 ## Closure
 - Explicit signature
 - Exception log (if any)
+
+## Diagram
+
+    ┌──────────┐     ┌──────────┐     ┌──────────┐
+    │ Executor │────▶│ Auditor  │────▶│  Signer  │
+    └──────────┘     └──────────┘     └──────────┘
+         │                │                │
+         ▼                ▼                ▼
+    ┌─────────┐     ┌──────────┐     ┌──────────┐
+    │ Changes │     │ Evidence │     │ Approved │
+    └─────────┘     └──────────┘     └──────────┘

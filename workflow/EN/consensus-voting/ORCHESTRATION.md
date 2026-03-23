@@ -37,3 +37,25 @@ Reach a collective decision when no single agent has full authority or visibilit
 - Final decision with vote tally
 - Dissent log
 - Criteria used for tie-breaking (if any)
+
+## Diagram
+
+    ┌───────────┐
+    │ Proposer  │──── defines question + options
+    └─────┬─────┘
+          ▼
+    ┌───────────┐  ┌───────────┐  ┌───────────┐
+    │  Voter 1  │  │  Voter 2  │  │  Voter N  │
+    │  (blind)  │  │  (blind)  │  │  (blind)  │
+    └─────┬─────┘  └─────┬─────┘  └─────┬─────┘
+          │              │              │
+          ▼              ▼              ▼
+    ┌────────────────────────────────────────┐
+    │       Moderator: tally + quorum        │
+    └──────────────────┬─────────────────────┘
+                       │
+               ┌───────┴───────┐
+               ▼               ▼
+         ┌──────────┐   ┌──────────┐
+         │ Majority │   │  Runoff  │
+         └──────────┘   └──────────┘

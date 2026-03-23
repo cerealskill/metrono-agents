@@ -30,3 +30,22 @@ Acelerar ejecución dividiendo trabajo en piezas independientes que corren en pa
 - Plantilla única de salida
 - Convenciones compartidas
 - Reconciliación técnica obligatoria al cierre
+
+## Diagrama
+
+    ┌───────────────────────────────────┐
+    │     Coordinador de Swarm          │
+    │    (particionar + asignar)        │
+    └──────┬──────────┬──────────┬──────┘
+           │          │          │
+           ▼          ▼          ▼
+      ┌────────┐ ┌────────┐ ┌────────┐
+      │Agente 1│ │Agente 2│ │Agente N│
+      │(trozo) │ │(trozo) │ │(trozo) │
+      └───┬────┘ └───┬────┘ └───┬────┘
+          │          │          │
+          ▼          ▼          ▼
+    ┌───────────────────────────────────┐
+    │        Validador Final            │
+    │  (merge + reconciliar + validar)  │
+    └───────────────────────────────────┘

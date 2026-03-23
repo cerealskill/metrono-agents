@@ -26,3 +26,28 @@ Fortalecer calidad/seguridad con un equipo que ataca supuestos (Red) y otro que 
 ## Cierre
 - Lista de hallazgos cerrados
 - Riesgos aceptados explícitamente
+
+## Diagrama
+
+    ┌──────────┐                  ┌──────────┐
+    │   Blue   │──── entrega ────▶│   Red    │
+    │  Team    │    v1 + docs     │  Team    │
+    └────┬─────┘                  └────┬─────┘
+         │                             │
+         │                             ▼
+         │                       ┌───────────┐
+         │                       │  Atacar /  │
+         │                       │  Probar    │
+         │                       └─────┬─────┘
+         │                             │
+         ▼                             ▼
+    ┌──────────┐  hallazgos ┌───────────────┐
+    │  Blue    │◀───────────│ Reporte Red   │
+    │ Corrige  │            │(sev+evidencia)│
+    └────┬─────┘            └───────────────┘
+         │
+         ▼
+    ┌──────────┐
+    │ Re-test  │
+    │ + cierre │
+    └──────────┘

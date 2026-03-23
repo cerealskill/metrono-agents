@@ -24,3 +24,16 @@ Maintain continuous progress through structured handoffs between agents by time 
 
 ## Key metric
 - Downtime between blocks <15 min (target).
+
+## Diagram
+
+    ┌──────────┐  handoff  ┌──────────┐  handoff  ┌──────────┐
+    │ Block A  │─────────▶│ Block B  │─────────▶│ Block C  │
+    │ Execute  │          │ Continue │          │  Close   │
+    └──────────┘          └──────────┘          └──────────┘
+         │                     │                     │
+         ▼                     ▼                     ▼
+    ┌──────────┐          ┌──────────┐          ┌──────────┐
+    │ Handoff  │          │ Handoff  │          │  Final   │
+    │  Report  │          │  Report  │          │  Report  │
+    └──────────┘          └──────────┘          └──────────┘

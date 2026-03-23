@@ -40,3 +40,22 @@ Monitorear continuamente la salud de agentes y progreso de tareas, interviniendo
 - Log de salud por worker
 - Historial de intervenciones
 - Métricas de uptime y recuperación
+
+## Diagrama
+
+    ┌────────────────────────────────────────┐
+    │             Supervisor                 │
+    │  (monitor heartbeat + check progreso) │
+    └───┬────────────┬────────────┬──────────┘
+        │            │            │
+        ▼            ▼            ▼
+    ┌────────┐  ┌────────┐  ┌────────┐
+    │Worker 1│  │Worker 2│  │Worker N│
+    │  ♥ ok  │  │  ♥ ok  │  │ ♥ fallo│─┐
+    └────────┘  └────────┘  └────────┘  │
+                                        ▼
+                                 ┌──────────────┐
+                                 │   Agente de  │
+                                 │ Recuperación │
+                                 │(retomar/redo)│
+                                 └──────────────┘

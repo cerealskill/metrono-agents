@@ -26,3 +26,21 @@ Make decisions by voting among agents with an explicit tiebreaker mechanism.
 - Decision record
 - Votes per option
 - Final justification
+
+## Diagram
+
+    ┌──────────┐  ┌──────────┐  ┌──────────┐
+    │ Member A │  │ Member B │  │ Member C │
+    └────┬─────┘  └────┬─────┘  └────┬─────┘
+         │             │             │
+         ▼             ▼             ▼
+    ┌────────────────────────────────────┐
+    │          Vote Collection           │
+    └─────────────────┬──────────────────┘
+                      │
+              ┌───────┴───────┐
+              ▼               ▼
+        ┌──────────┐   ┌────────────┐
+        │ Majority │   │    Tie     │
+        │  Wins    │   │ Tiebreaker │
+        └──────────┘   └────────────┘

@@ -31,3 +31,20 @@ Respond to incidents automatically with triage, initial mitigation, and human es
 - Timeline
 - Preliminary root cause
 - Actions taken
+
+## Diagram
+
+    ┌─────────┐     ┌────────────┐     ┌───────────┐
+    │  Alert  │────▶│ Dispatcher │────▶│ Classify  │
+    └─────────┘     └────────────┘     └─────┬─────┘
+                                             │
+                         ┌───────────────────┼───────────────────┐
+                         ▼                   ▼                   ▼
+                    ┌─────────┐        ┌─────────┐        ┌─────────┐
+                    │  Sev1   │        │  Sev2   │        │  Sev3   │
+                    └────┬────┘        └────┬────┘        └────┬────┘
+                         ▼                  ▼                  ▼
+                    ┌──────────┐     ┌───────────┐     ┌───────────┐
+                    │ Escalate │     │ Auto-fix  │     │ Auto-fix  │
+                    │ + Human  │     │ + Verify  │     │ + Close   │
+                    └──────────┘     └───────────┘     └───────────┘

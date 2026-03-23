@@ -26,3 +26,28 @@ Strengthen quality/security with one team attacking assumptions (Red) and anothe
 ## Closure
 - List of closed findings
 - Explicitly accepted risks
+
+## Diagram
+
+    ┌──────────┐                  ┌──────────┐
+    │   Blue   │──── delivers ───▶│   Red    │
+    │  Team    │     v1 + docs    │  Team    │
+    └────┬─────┘                  └────┬─────┘
+         │                             │
+         │                             ▼
+         │                       ┌───────────┐
+         │                       │  Attack /  │
+         │                       │  Test      │
+         │                       └─────┬─────┘
+         │                             │
+         ▼                             ▼
+    ┌──────────┐  findings  ┌───────────────┐
+    │  Blue    │◀───────────│  Red Report   │
+    │  Fixes   │            │  (sev+evid.)  │
+    └────┬─────┘            └───────────────┘
+         │
+         ▼
+    ┌──────────┐
+    │ Re-test  │
+    │ + close  │
+    └──────────┘

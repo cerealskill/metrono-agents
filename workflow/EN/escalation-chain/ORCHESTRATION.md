@@ -32,3 +32,18 @@ Route issues through increasingly capable or authoritative tiers until resolutio
 - Resolution record with tier trail
 - Time-per-tier metrics
 - Escalation reason log
+
+## Diagram
+
+    ┌──────────┐     ┌──────────┐     ┌──────────┐
+    │    L1    │────▶│    L2    │────▶│    L3    │
+    │ Routine  │     │ Advanced │     │ Expert   │
+    └────┬─────┘     └────┬─────┘     └────┬─────┘
+         │                │                │
+         ▼                ▼                ▼
+    ┌─────────┐     ┌─────────┐     ┌─────────┐
+    │Resolved?│     │Resolved?│     │Resolved?│
+    │  Yes ✓  │     │  Yes ✓  │     │  Yes ✓  │
+    └─────────┘     └─────────┘     └─────────┘
+
+    ◀─────── Escalation Controller (SLA watch) ───────▶

@@ -26,3 +26,21 @@ Tomar decisiones por votación entre agentes con mecanismo explícito de desempa
 - Acta de decisión
 - Votos por opción
 - Justificación final
+
+## Diagrama
+
+    ┌──────────┐  ┌──────────┐  ┌──────────┐
+    │Miembro A │  │Miembro B │  │Miembro C │
+    └────┬─────┘  └────┬─────┘  └────┬─────┘
+         │             │             │
+         ▼             ▼             ▼
+    ┌────────────────────────────────────┐
+    │       Recolección de votos         │
+    └─────────────────┬──────────────────┘
+                      │
+              ┌───────┴───────┐
+              ▼               ▼
+        ┌──────────┐   ┌────────────┐
+        │ Mayoría  │   │  Empate    │
+        │  gana    │   │ Desempate  │
+        └──────────┘   └────────────┘

@@ -27,3 +27,17 @@ Execute work sequentially by stages with quality gates between phases.
 
 ## Escalation
 - 2 consecutive gate failures => design review.
+
+## Diagram
+
+    ┌───────────┐  gate  ┌────────┐  gate  ┌────────────┐
+    │ Discovery │──────▶│ Design │──────▶│Implementat.│
+    └───────────┘       └────────┘       └──────┬─────┘
+                                                │
+                                           gate │
+                                                ▼
+                                         ┌────────────┐  gate  ┌──────────┐
+                                         │ Validation │──────▶│ Delivery │
+                                         └────────────┘       └──────────┘
+
+    ✗ gate fail → rollback to previous stage

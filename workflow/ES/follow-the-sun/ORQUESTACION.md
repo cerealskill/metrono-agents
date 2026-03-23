@@ -24,3 +24,16 @@ Mantener avance continuo mediante traspasos estructurados entre agentes por bloq
 
 ## Métrica clave
 - Tiempo muerto entre bloques <15 min (objetivo).
+
+## Diagrama
+
+    ┌──────────┐  handoff  ┌──────────┐  handoff  ┌──────────┐
+    │ Bloque A │─────────▶│ Bloque B │─────────▶│ Bloque C │
+    │ Ejecutar │          │ Continuar│          │  Cerrar  │
+    └──────────┘          └──────────┘          └──────────┘
+         │                     │                     │
+         ▼                     ▼                     ▼
+    ┌──────────┐          ┌──────────┐          ┌──────────┐
+    │ Reporte  │          │ Reporte  │          │ Reporte  │
+    │ handoff  │          │ handoff  │          │  final   │
+    └──────────┘          └──────────┘          └──────────┘

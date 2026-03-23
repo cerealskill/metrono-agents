@@ -31,3 +31,20 @@ Responder incidentes automáticamente con triage, mitigación inicial y escalami
 - Timeline
 - Root cause preliminar
 - Acciones tomadas
+
+## Diagrama
+
+    ┌─────────┐     ┌────────────┐     ┌───────────┐
+    │ Alerta  │────▶│ Dispatcher │────▶│ Clasificar│
+    └─────────┘     └────────────┘     └─────┬─────┘
+                                             │
+                         ┌───────────────────┼───────────────────┐
+                         ▼                   ▼                   ▼
+                    ┌─────────┐        ┌─────────┐        ┌─────────┐
+                    │  Sev1   │        │  Sev2   │        │  Sev3   │
+                    └────┬────┘        └────┬────┘        └────┬────┘
+                         ▼                  ▼                  ▼
+                    ┌──────────┐     ┌───────────┐     ┌───────────┐
+                    │ Escalar  │     │ Auto-fix  │     │ Auto-fix  │
+                    │ + Humano │     │ + Verify  │     │ + Cerrar  │
+                    └──────────┘     └───────────┘     └───────────┘

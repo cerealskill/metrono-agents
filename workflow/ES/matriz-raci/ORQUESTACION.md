@@ -24,3 +24,17 @@ Definir responsabilidades sin ambigüedad: quién hace, quién aprueba y quién 
 - Cada tarea debe tener exactamente 1 A.
 - No iniciar tarea sin R y A definidos.
 - Cambios de RACI deben quedar versionados.
+
+## Diagrama
+
+    ┌────────────┬─────┬─────┬─────┬─────┐
+    │   Tarea    │  R  │  A  │  C  │  I  │
+    ├────────────┼─────┼─────┼─────┼─────┤
+    │ Definir    │  ●  │  ●  │     │     │
+    │ Implementar│  ●  │     │  ●  │     │
+    │ Validar    │  ●  │  ●  │     │  ●  │
+    │ Entregar   │     │  ●  │     │  ●  │
+    └────────────┴─────┴─────┴─────┴─────┘
+
+    R = Responsable     A = Aprobador
+    C = Consultado      I = Informado

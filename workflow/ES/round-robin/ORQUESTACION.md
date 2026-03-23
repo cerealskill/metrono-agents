@@ -37,3 +37,20 @@ Distribuir tareas entrantes equitativamente entre un pool de agentes usando asig
 - Log de asignación (tarea → agente)
 - Reporte de distribución de carga
 - Timeline de disponibilidad de agentes
+
+## Diagrama
+
+    ┌───────────┐
+    │  Tareas   │
+    │ entrantes │
+    └─────┬─────┘
+          ▼
+    ┌────────────┐
+    │Despachador │─── índice de rotación
+    └──┬──┬──┬───┘
+       │  │  │
+       ▼  ▼  ▼     ┌ ─ ─ ─ ─ ─ ─ ─ ┐
+    ┌──┐┌──┐┌──┐     ciclo se repite
+    │A1││A2││A3│   │ A1 → A2 → A3 → │
+    └──┘└──┘└──┘
+                   └ ─ ─ ─ ─ ─ ─ ─ ┘

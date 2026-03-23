@@ -25,3 +25,14 @@ Asegurar independencia entre ejecución, control y aprobación final.
 ## Cierre
 - Firma explícita
 - Registro de excepciones (si existen)
+
+## Diagrama
+
+    ┌──────────┐     ┌──────────┐     ┌──────────┐
+    │ Ejecutor │────▶│ Auditor  │────▶│ Firmante │
+    └──────────┘     └──────────┘     └──────────┘
+         │                │                │
+         ▼                ▼                ▼
+    ┌──────────┐     ┌──────────┐     ┌──────────┐
+    │ Cambios  │     │Evidencia │     │ Aprobado │
+    └──────────┘     └──────────┘     └──────────┘

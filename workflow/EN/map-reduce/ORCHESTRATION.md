@@ -36,3 +36,21 @@ Decompose a large problem into independent sub-tasks, process them concurrently,
 - Fixed schema enforced before map phase.
 - Overlap margin at chunk edges for context.
 - Reducer validates completeness before finalizing.
+
+## Diagram
+
+    ┌───────────────────────────────┐
+    │           Splitter            │
+    │  (partition input → chunks)   │
+    └──────┬────────┬────────┬──────┘
+           │        │        │
+           ▼        ▼        ▼
+      ┌────────┐┌────────┐┌────────┐
+      │Mapper 1││Mapper 2││Mapper N│
+      └───┬────┘└───┬────┘└───┬────┘
+          │         │         │
+          ▼         ▼         ▼
+    ┌───────────────────────────────┐
+    │           Reducer             │
+    │  (merge partial → final)     │
+    └───────────────────────────────┘

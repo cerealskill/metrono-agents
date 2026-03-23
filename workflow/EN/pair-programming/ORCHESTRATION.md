@@ -37,3 +37,24 @@ Improve quality and reduce defects by having two agents collaborate in real-time
 - Completed artifact (code, document, config)
 - Inline notes from navigator review
 - Summary of key decisions made during session
+
+## Diagram
+
+    ┌──────────┐          ┌───────────┐
+    │  Driver  │◀────────▶│ Navigator │
+    │  (code)  │  review  │ (strategy)│
+    └────┬─────┘          └─────┬─────┘
+         │                      │
+         ▼                      ▼
+    ┌──────────┐          ┌───────────┐
+    │  Writes  │          │  Reviews  │
+    │  code    │          │  in real  │
+    │          │          │  time     │
+    └────┬─────┘          └─────┬─────┘
+         │                      │
+         └──────────┬───────────┘
+                    ▼
+              ┌───────────┐
+              │ Swap roles│
+              │  & repeat │
+              └───────────┘

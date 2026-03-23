@@ -32,3 +32,18 @@ Enrutar problemas a través de niveles con capacidad o autoridad creciente hasta
 - Registro de resolución con traza por nivel
 - Métricas de tiempo por nivel
 - Log de razones de escalamiento
+
+## Diagrama
+
+    ┌──────────┐     ┌──────────┐     ┌──────────┐
+    │    L1    │────▶│    L2    │────▶│    L3    │
+    │ Rutina   │     │ Avanzado │     │ Experto  │
+    └────┬─────┘     └────┬─────┘     └────┬─────┘
+         │                │                │
+         ▼                ▼                ▼
+    ┌──────────┐     ┌──────────┐     ┌──────────┐
+    │Resuelto? │     │Resuelto? │     │Resuelto? │
+    │  Sí ✓    │     │  Sí ✓    │     │  Sí ✓    │
+    └──────────┘     └──────────┘     └──────────┘
+
+    ◀── Controlador de escalamiento (SLA watch) ──▶

@@ -25,3 +25,22 @@ Separar claramente fase de investigación y fase de implementación para reducir
 - Brief técnico (research)
 - Plan de implementación
 - Resultado + validación
+
+## Diagrama
+
+    ┌──────────────────────────────┐
+    │   Fase 1: Research           │
+    │ preguntas → opciones → rec.  │
+    └──────────────┬───────────────┘
+                   │
+                   ▼
+    ┌──────────────────────────────┐
+    │       Gate de Decisión       │
+    │  (aprobar antes de construir)│
+    └──────────────┬───────────────┘
+                   │
+                   ▼
+    ┌──────────────────────────────┐
+    │   Fase 2: Ejecución          │
+    │ implementar → validar → doc  │
+    └──────────────────────────────┘

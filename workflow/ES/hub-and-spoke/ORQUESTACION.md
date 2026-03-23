@@ -31,3 +31,24 @@ Centralizar coordinación en un hub (orquestador) y delegar ejecución a spokes 
 - Resultado integrado
 - Riesgos + mitigaciones
 - Decisiones técnicas registradas
+
+## Diagrama
+
+                    ┌───────────────┐
+                    │      Hub      │
+                    │(Orquestador)  │
+                    └──┬────┬────┬──┘
+                       │    │    │
+              ┌────────┘    │    └────────┐
+              ▼             ▼             ▼
+        ┌───────────┐ ┌───────────┐ ┌───────────┐
+        │   Spoke   │ │   Spoke   │ │   Spoke   │
+        │Implement. │ │Validación │ │   Docs    │
+        └─────┬─────┘ └─────┬─────┘ └─────┬─────┘
+              │             │             │
+              └─────────────┼─────────────┘
+                            ▼
+                    ┌───────────────┐
+                    │  Hub integra  │
+                    │  + publica    │
+                    └───────────────┘

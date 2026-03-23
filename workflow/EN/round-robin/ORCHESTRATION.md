@@ -37,3 +37,20 @@ Distribute incoming tasks evenly across a pool of agents using cyclic assignment
 - Assignment log (task → agent mapping)
 - Load distribution report
 - Agent availability timeline
+
+## Diagram
+
+    ┌───────────┐
+    │  Tasks    │
+    │ incoming  │
+    └─────┬─────┘
+          ▼
+    ┌───────────┐
+    │Dispatcher │─── rotation index
+    └──┬──┬──┬──┘
+       │  │  │
+       ▼  ▼  ▼     ┌ ─ ─ ─ ─ ─ ─ ─ ┐
+    ┌──┐┌──┐┌──┐     cycle repeats
+    │A1││A2││A3│   │ A1 → A2 → A3 → │
+    └──┘└──┘└──┘
+                   └ ─ ─ ─ ─ ─ ─ ─ ┘

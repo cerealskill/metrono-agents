@@ -30,3 +30,22 @@ Accelerate execution by dividing work into independent pieces that run in parall
 - Unique output template
 - Shared conventions
 - Mandatory technical reconciliation at closure
+
+## Diagram
+
+    ┌───────────────────────────────────┐
+    │        Swarm Coordinator          │
+    │       (partition + assign)        │
+    └──────┬──────────┬──────────┬──────┘
+           │          │          │
+           ▼          ▼          ▼
+      ┌────────┐ ┌────────┐ ┌────────┐
+      │Agent 1 │ │Agent 2 │ │Agent N │
+      │(chunk) │ │(chunk) │ │(chunk) │
+      └───┬────┘ └───┬────┘ └───┬────┘
+          │          │          │
+          ▼          ▼          ▼
+    ┌───────────────────────────────────┐
+    │        Final Validator            │
+    │  (merge + reconcile + validate)   │
+    └───────────────────────────────────┘

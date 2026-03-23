@@ -28,3 +28,23 @@ Resolve incidents quickly, with clear command and complete traceability.
 - Actions and owners
 - Preliminary/final RCA
 - Prevention plan
+
+## Diagram
+
+    ┌──────────────────────────────────────────┐
+    │            Incident Declared             │
+    └────────────────────┬─────────────────────┘
+                         ▼
+    ┌──────────┐  ┌──────────┐  ┌──────────────┐
+    │Commander │  │  Scribe  │  │  Executors   │
+    │ Strategy │  │ Timeline │  │ Mitigations  │
+    └────┬─────┘  └────┬─────┘  └──────┬───────┘
+         │             │               │
+         ▼             ▼               ▼
+    ┌──────────────────────────────────────────┐
+    │         Periodic Status Updates          │
+    └────────────────────┬─────────────────────┘
+                         ▼
+    ┌──────────────────────────────────────────┐
+    │          Closure + Postmortem            │
+    └──────────────────────────────────────────┘
