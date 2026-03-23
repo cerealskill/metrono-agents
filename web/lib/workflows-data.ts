@@ -29,6 +29,24 @@ export const WORKFLOWS_DATA = [
   },
   {
     "lang": "EN",
+    "slug": "consensus-voting",
+    "path": "consensus-voting",
+    "name": "Consensus / Voting (decision by N-agent vote)",
+    "objective": "Reach a collective decision when no single agent has full authority or visibility.",
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nConsensus / Voting (decision by N-agent vote)\n\n## Objective\nReach a collective decision when no single agent has full authority or visibility.\n\n## Roles\n- **Proposer:** frames the question and options.\n- **N Voters:** each evaluates independently and casts a vote.\n- **Moderator:** tallies, detects ties, and declares outcome.\n\n## When to use\n- Subjective or high-impact decisions.\n- Multiple equally valid perspectives.\n- Need to reduce single-agent bias.\n\n## Protocol\n1. Proposer defines question, options, and evaluation criteria.\n2. Each voter reviews evidence and submits a structured ballot.\n3. Moderator collects ballots, checks quorum.\n4. Majority wins; ties resolved by weighted criteria or runoff.\n5. Dissenting opinions recorded for the record.\n\n## Ballot format\n- Choice\n- Confidence (high / medium / low)\n- Reasoning (1-3 sentences)\n\n## Rules\n- Voters must not see each other's ballots before submitting.\n- Quorum: at least ⌈N/2⌉ + 1 votes required.\n- Abstentions count toward quorum but not toward majority.\n\n## Deliverables\n- Final decision with vote tally\n- Dissent log\n- Criteria used for tie-breaking (if any)\n",
+    "groupId": "consensus-voting"
+  },
+  {
+    "lang": "EN",
+    "slug": "escalation-chain",
+    "path": "escalation-chain",
+    "name": "Escalation Chain (progressive level escalation)",
+    "objective": "Route issues through increasingly capable or authoritative tiers until resolution.",
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nEscalation Chain (progressive level escalation)\n\n## Objective\nRoute issues through increasingly capable or authoritative tiers until resolution.\n\n## Roles\n- **L1 Agent:** first responder, handles known patterns.\n- **L2 Agent:** deeper diagnosis, broader tooling.\n- **L3 Agent:** specialist, access to root systems.\n- **Escalation controller:** monitors SLA and triggers promotion.\n\n## When to use\n- Support or ops with tiered expertise.\n- Need to protect senior capacity from routine work.\n\n## Protocol\n1. L1 receives and attempts resolution within SLA window.\n2. If unresolved or out of scope, escalate to L2 with context summary.\n3. L2 repeats; escalate to L3 if needed.\n4. Each tier adds findings to a shared ticket.\n5. Resolution confirmed at originating tier.\n\n## Rules\n- Never skip tiers without explicit override.\n- Each escalation must include: what was tried, what failed, relevant evidence.\n- De-escalation is allowed once root cause is identified.\n\n## Deliverables\n- Resolution record with tier trail\n- Time-per-tier metrics\n- Escalation reason log\n",
+    "groupId": "escalation-chain"
+  },
+  {
+    "lang": "EN",
     "slug": "follow-the-sun",
     "path": "follow-the-sun",
     "name": "Follow-the-sun (handoff by blocks)",
@@ -56,6 +74,15 @@ export const WORKFLOWS_DATA = [
   },
   {
     "lang": "EN",
+    "slug": "map-reduce",
+    "path": "map-reduce",
+    "name": "Map-Reduce (split, process in parallel, unify)",
+    "objective": "Decompose a large problem into independent sub-tasks, process them concurrently, and merge results into a coherent output.",
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nMap-Reduce (split, process in parallel, unify)\n\n## Objective\nDecompose a large problem into independent sub-tasks, process them concurrently, and merge results into a coherent output.\n\n## Roles\n- **Splitter:** partitions input into chunks with clear boundaries.\n- **N Mappers:** each processes one chunk independently.\n- **Reducer:** merges all mapper outputs into a single result.\n\n## When to use\n- Large datasets or document collections.\n- Repetitive analysis across many items.\n- Output can be aggregated (counts, summaries, rankings).\n\n## Protocol\n1. Splitter defines chunk boundaries and output schema.\n2. Each mapper receives its chunk + shared instructions.\n3. Mappers produce structured partial results.\n4. Reducer collects all partials, resolves conflicts, produces final output.\n\n## Rules\n- Chunks must not overlap.\n- Every mapper uses the same output schema.\n- Reducer must handle missing or malformed partials gracefully.\n\n## Common risks\n- Uneven chunk sizes causing bottlenecks.\n- Schema drift between mappers.\n- Lost context at chunk boundaries.\n\n## Mitigation\n- Fixed schema enforced before map phase.\n- Overlap margin at chunk edges for context.\n- Reducer validates completeness before finalizing.\n",
+    "groupId": "map-reduce"
+  },
+  {
+    "lang": "EN",
     "slug": "mentor-mode",
     "path": "mentor-mode",
     "name": "Mentor Mode (senior reviews junior before delivery)",
@@ -71,6 +98,15 @@ export const WORKFLOWS_DATA = [
     "objective": "Activate specialists (legal, finance, docs, security, etc.) only when the case requires it.",
     "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nOn-demand Specialist\n\n## Objective\nActivate specialists (legal, finance, docs, security, etc.) only when the case requires it.\n\n## Activation Trigger\n- Regulatory/compliance requirement\n- Significant financial impact\n- Formal external delivery\n- High risk not covered by the core team\n\n## Roles\n- **Core team:** executes the main path.\n- **Specialist:** intervenes for a limited window.\n\n## Rules\n- Every activation must state reason + scope.\n- Specialist delivers actionable, not generic, findings.\n- Close activation once the trigger condition is resolved.\n\n## Deliverable\n- Specialist's report\n- Changes applied to the plan",
     "groupId": "on-demand-specialist"
+  },
+  {
+    "lang": "EN",
+    "slug": "pair-programming",
+    "path": "pair-programming",
+    "name": "Pair Programming (driver + navigator)",
+    "objective": "Improve quality and reduce defects by having two agents collaborate in real-time on the same task.",
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nPair Programming (driver + navigator)\n\n## Objective\nImprove quality and reduce defects by having two agents collaborate in real-time on the same task.\n\n## Roles\n- **Driver:** writes code/content, focuses on implementation details.\n- **Navigator:** reviews in real-time, thinks ahead, catches issues early.\n\n## When to use\n- Complex or high-risk changes.\n- Knowledge transfer between agents.\n- Tasks where mistakes are expensive to fix later.\n\n## Protocol\n1. Agree on the goal and approach before starting.\n2. Driver implements; navigator reviews continuously.\n3. Navigator flags issues, suggests improvements, tracks the plan.\n4. Swap roles at regular intervals or natural breakpoints.\n5. Both sign off on the final output.\n\n## Rules\n- Navigator does not dictate keystrokes — focuses on strategy and correctness.\n- Driver explains intent when navigator asks.\n- Role swaps are mandatory, not optional.\n- Disagreements resolved by quick discussion; if stuck, time-box and escalate.\n\n## Benefits\n- Real-time quality gate\n- Shared context and knowledge\n- Fewer defects reaching review\n\n## Deliverables\n- Completed artifact (code, document, config)\n- Inline notes from navigator review\n- Summary of key decisions made during session\n",
+    "groupId": "pair-programming"
   },
   {
     "lang": "EN",
@@ -110,6 +146,15 @@ export const WORKFLOWS_DATA = [
   },
   {
     "lang": "EN",
+    "slug": "round-robin",
+    "path": "round-robin",
+    "name": "Round-Robin (rotational load distribution)",
+    "objective": "Distribute incoming tasks evenly across a pool of agents using cyclic assignment.",
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nRound-Robin (rotational load distribution)\n\n## Objective\nDistribute incoming tasks evenly across a pool of agents using cyclic assignment.\n\n## Roles\n- **Dispatcher:** receives tasks and assigns using rotation index.\n- **N Worker agents:** execute assigned tasks.\n- **Monitor (optional):** tracks load balance and agent availability.\n\n## When to use\n- Homogeneous tasks that any agent can handle.\n- Need to prevent overloading a single agent.\n- Simple, predictable distribution without complex routing logic.\n\n## Protocol\n1. Dispatcher maintains an ordered list of available agents.\n2. Each new task is assigned to the next agent in the cycle.\n3. Agent acknowledges and executes.\n4. If an agent is unavailable, skip to the next; mark as inactive.\n5. Reactivate agents when they signal readiness.\n\n## Rules\n- Assignment order is deterministic (no randomness).\n- Skipped agents are retried on the next full cycle.\n- If all agents are unavailable, queue the task and alert.\n- No task is assigned to more than one agent.\n\n## Variants\n- **Weighted round-robin:** agents with more capacity get proportionally more tasks.\n- **Sticky round-robin:** same requester always routes to the same agent (for continuity).\n\n## Deliverables\n- Assignment log (task → agent mapping)\n- Load distribution report\n- Agent availability timeline\n",
+    "groupId": "round-robin"
+  },
+  {
+    "lang": "EN",
     "slug": "stage-pipeline",
     "path": "stage-pipeline",
     "name": "Stage Pipeline",
@@ -128,6 +173,24 @@ export const WORKFLOWS_DATA = [
   },
   {
     "lang": "EN",
+    "slug": "triage",
+    "path": "triage",
+    "name": "Triage (classify, prioritize, route)",
+    "objective": "Quickly categorize incoming work and route it to the right handler with correct priority.",
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nTriage (classify, prioritize, route)\n\n## Objective\nQuickly categorize incoming work and route it to the right handler with correct priority.\n\n## Roles\n- **Triage agent:** classifies and prioritizes.\n- **Router:** assigns to the correct queue or agent.\n- **Handlers:** domain-specific agents that execute.\n\n## When to use\n- High volume of heterogeneous incoming requests.\n- Need consistent prioritization criteria.\n- Multiple specialized teams or agents downstream.\n\n## Protocol\n1. Triage agent receives raw request.\n2. Classify by type (bug, feature, question, incident, etc.).\n3. Assign priority (P0-P3) using defined criteria.\n4. Router sends to appropriate handler queue.\n5. Handler acknowledges receipt within SLA.\n\n## Priority criteria\n| Priority | Description | Response SLA |\n|----------|-------------|--------------|\n| P0 | Critical / outage | Immediate |\n| P1 | High impact, workaround exists | < 1 hour |\n| P2 | Medium, no urgency | < 4 hours |\n| P3 | Low / informational | Best effort |\n\n## Rules\n- Every request gets a classification — no silent drops.\n- Ambiguous requests default to P2 and flag for human review.\n- Re-triage allowed if new information surfaces.\n\n## Deliverables\n- Classification record per request\n- Routing log\n- Triage accuracy metrics over time\n",
+    "groupId": "triage"
+  },
+  {
+    "lang": "EN",
+    "slug": "watchdog-supervisor",
+    "path": "watchdog-supervisor",
+    "name": "Watchdog / Supervisor (monitor and recover)",
+    "objective": "Continuously monitor agent health and task progress, intervening automatically when failures or stalls are detected.",
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nWatchdog / Supervisor (monitor and recover)\n\n## Objective\nContinuously monitor agent health and task progress, intervening automatically when failures or stalls are detected.\n\n## Roles\n- **Supervisor:** monitors heartbeats, progress, and output quality.\n- **Worker agents:** execute assigned tasks and report status.\n- **Recovery agent:** takes over or restarts failed work.\n\n## When to use\n- Long-running or unattended agent workflows.\n- Critical tasks that cannot silently fail.\n- Environments where agents may hang or produce degraded output.\n\n## Protocol\n1. Workers register with supervisor and begin tasks.\n2. Workers send periodic heartbeats with progress updates.\n3. Supervisor checks heartbeat intervals and progress thresholds.\n4. On missed heartbeat or stalled progress:\n   - Alert and wait one grace period.\n   - If still unresponsive, trigger recovery agent.\n5. Recovery agent resumes from last checkpoint or restarts task.\n6. Supervisor logs all interventions.\n\n## Health checks\n- **Heartbeat:** expected every N seconds.\n- **Progress:** must advance past checkpoint within timeout.\n- **Output quality:** spot-check outputs against baseline.\n\n## Rules\n- Supervisor never executes work directly — only monitors and delegates.\n- Recovery must be idempotent (safe to retry).\n- All interventions logged with timestamp and reason.\n\n## Deliverables\n- Health log per worker\n- Intervention history\n- Uptime and recovery metrics\n",
+    "groupId": "watchdog-supervisor"
+  },
+  {
+    "lang": "EN",
     "slug": "weekly-planning",
     "path": "weekly-planning",
     "name": "Weekly Planning",
@@ -143,6 +206,24 @@ export const WORKFLOWS_DATA = [
     "objective": "Tomar decisiones técnicas robustas comparando dos propuestas independientes.",
     "orchestration": "# ORQUESTACION.md\n\n## Workflow\nÁrbitro técnico (2 agentes proponen, 1 decide)\n\n## Objetivo\nTomar decisiones técnicas robustas comparando dos propuestas independientes.\n\n## Roles\n- **Agente A:** propuesta 1\n- **Agente B:** propuesta 2\n- **Árbitro:** evalúa y decide\n\n## Protocolo\n1. A y B trabajan sin influenciarse.\n2. Entregan formato estándar:\n   - enfoque\n   - pros/contras\n   - riesgo\n   - costo/tiempo\n3. Árbitro puntúa con rúbrica.\n4. Selección final + justificación escrita.\n\n## Rúbrica sugerida (0-5)\n- Correctitud técnica\n- Simplicidad\n- Mantenibilidad\n- Riesgo operativo\n- Tiempo de entrega\n\n## Cierre\n- Decisión final\n- Razones de descarte\n- Condiciones para reevaluar\n",
     "groupId": "technical-arbiter"
+  },
+  {
+    "lang": "ES",
+    "slug": "cadena-escalamiento",
+    "path": "cadena-escalamiento",
+    "name": "Cadena de escalamiento (escalamiento progresivo por niveles)",
+    "objective": "Enrutar problemas a través de niveles con capacidad o autoridad creciente hasta su resolución.",
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nCadena de escalamiento (escalamiento progresivo por niveles)\n\n## Objetivo\nEnrutar problemas a través de niveles con capacidad o autoridad creciente hasta su resolución.\n\n## Roles\n- **Agente L1:** primer respondedor, maneja patrones conocidos.\n- **Agente L2:** diagnóstico más profundo, herramientas más amplias.\n- **Agente L3:** especialista, acceso a sistemas raíz.\n- **Controlador de escalamiento:** monitorea SLA y dispara la promoción.\n\n## Cuándo usar\n- Soporte u operaciones con expertise escalonado.\n- Necesidad de proteger capacidad senior del trabajo rutinario.\n\n## Protocolo\n1. L1 recibe e intenta resolver dentro de la ventana de SLA.\n2. Si no resuelve o está fuera de alcance, escala a L2 con resumen de contexto.\n3. L2 repite; escala a L3 si es necesario.\n4. Cada nivel agrega hallazgos al ticket compartido.\n5. Resolución confirmada en el nivel de origen.\n\n## Reglas\n- Nunca saltar niveles sin override explícito.\n- Cada escalamiento debe incluir: qué se intentó, qué falló, evidencia relevante.\n- El de-escalamiento se permite una vez identificada la causa raíz.\n\n## Entregables\n- Registro de resolución con traza por nivel\n- Métricas de tiempo por nivel\n- Log de razones de escalamiento\n",
+    "groupId": "escalation-chain"
+  },
+  {
+    "lang": "ES",
+    "slug": "consenso-votacion",
+    "path": "consenso-votacion",
+    "name": "Consenso / Votación (decisión por voto de N agentes)",
+    "objective": "Alcanzar una decisión colectiva cuando ningún agente tiene autoridad o visibilidad completa.",
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nConsenso / Votación (decisión por voto de N agentes)\n\n## Objetivo\nAlcanzar una decisión colectiva cuando ningún agente tiene autoridad o visibilidad completa.\n\n## Roles\n- **Proponente:** enmarca la pregunta y las opciones.\n- **N Votantes:** cada uno evalúa independientemente y emite voto.\n- **Moderador:** contabiliza, detecta empates y declara resultado.\n\n## Cuándo usar\n- Decisiones subjetivas o de alto impacto.\n- Múltiples perspectivas igualmente válidas.\n- Necesidad de reducir sesgo de un solo agente.\n\n## Protocolo\n1. Proponente define pregunta, opciones y criterios de evaluación.\n2. Cada votante revisa evidencia y envía boleta estructurada.\n3. Moderador recolecta boletas, verifica quórum.\n4. Mayoría gana; empates resueltos por criterios ponderados o segunda ronda.\n5. Opiniones disidentes registradas para el acta.\n\n## Formato de boleta\n- Elección\n- Confianza (alta / media / baja)\n- Razonamiento (1-3 oraciones)\n\n## Reglas\n- Los votantes no deben ver boletas ajenas antes de enviar la propia.\n- Quórum: mínimo ⌈N/2⌉ + 1 votos requeridos.\n- Las abstenciones cuentan para quórum pero no para mayoría.\n\n## Entregables\n- Decisión final con conteo de votos\n- Log de disidencias\n- Criterios usados para desempate (si aplica)\n",
+    "groupId": "consensus-voting"
   },
   {
     "lang": "ES",
@@ -170,6 +251,15 @@ export const WORKFLOWS_DATA = [
     "objective": "Centralizar coordinación en un hub (orquestador) y delegar ejecución a spokes (agentes especialistas), minimizando desalineación.",
     "orchestration": "# ORQUESTACION.md\n\n## Workflow\nHub-and-spoke\n\n## Objetivo\nCentralizar coordinación en un hub (orquestador) y delegar ejecución a spokes (agentes especialistas), minimizando desalineación.\n\n## Roles\n- **Hub / Orquestador:** prioriza, divide, integra, decide trade-offs.\n- **Spoke Implementación:** construye solución.\n- **Spoke Validación:** pruebas, QA, compliance.\n- **Spoke Documentación:** runbook/changelog/entrega.\n\n## Cuándo usar\n- Múltiples frentes de trabajo con dependencia de una sola dirección técnica.\n- Necesidad de control fuerte de alcance y calidad.\n\n## Política de operación\n1. Hub define backlog en tareas atómicas.\n2. Cada spoke toma 1-2 tareas con owner explícito.\n3. Todo vuelve al hub para integración.\n4. Hub publica estado consolidado por hitos.\n\n## SLA sugerido\n- Update operativo cada 60-90 min.\n- Bloqueo >30 min => escalar al hub.\n\n## Entregables\n- Plan consolidado\n- Resultado integrado\n- Riesgos + mitigaciones\n- Decisiones técnicas registradas\n",
     "groupId": "hub-and-spoke"
+  },
+  {
+    "lang": "ES",
+    "slug": "map-reduce",
+    "path": "map-reduce",
+    "name": "Map-Reduce (dividir, procesar en paralelo, unificar)",
+    "objective": "Descomponer un problema grande en sub-tareas independientes, procesarlas concurrentemente y fusionar resultados en una salida coherente.",
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nMap-Reduce (dividir, procesar en paralelo, unificar)\n\n## Objetivo\nDescomponer un problema grande en sub-tareas independientes, procesarlas concurrentemente y fusionar resultados en una salida coherente.\n\n## Roles\n- **Splitter:** particiona la entrada en fragmentos con límites claros.\n- **N Mappers:** cada uno procesa un fragmento independientemente.\n- **Reducer:** fusiona todas las salidas parciales en un resultado único.\n\n## Cuándo usar\n- Grandes datasets o colecciones de documentos.\n- Análisis repetitivo sobre muchos ítems.\n- La salida se puede agregar (conteos, resúmenes, rankings).\n\n## Protocolo\n1. Splitter define límites de fragmentos y esquema de salida.\n2. Cada mapper recibe su fragmento + instrucciones compartidas.\n3. Mappers producen resultados parciales estructurados.\n4. Reducer recolecta todos los parciales, resuelve conflictos, produce salida final.\n\n## Reglas\n- Los fragmentos no deben solaparse.\n- Todos los mappers usan el mismo esquema de salida.\n- Reducer debe manejar parciales faltantes o malformados con gracia.\n\n## Riesgos comunes\n- Fragmentos desiguales causando cuellos de botella.\n- Drift de esquema entre mappers.\n- Pérdida de contexto en bordes de fragmento.\n\n## Mitigación\n- Esquema fijo reforzado antes de la fase map.\n- Margen de solapamiento en bordes para contexto.\n- Reducer valida completitud antes de finalizar.\n",
+    "groupId": "map-reduce"
   },
   {
     "lang": "ES",
@@ -227,6 +317,15 @@ export const WORKFLOWS_DATA = [
   },
   {
     "lang": "ES",
+    "slug": "pair-programming",
+    "path": "pair-programming",
+    "name": "Pair Programming (driver + navegante)",
+    "objective": "Mejorar calidad y reducir defectos haciendo que dos agentes colaboren en tiempo real sobre la misma tarea.",
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nPair Programming (driver + navegante)\n\n## Objetivo\nMejorar calidad y reducir defectos haciendo que dos agentes colaboren en tiempo real sobre la misma tarea.\n\n## Roles\n- **Driver:** escribe código/contenido, se enfoca en detalles de implementación.\n- **Navegante:** revisa en tiempo real, piensa adelante, detecta problemas temprano.\n\n## Cuándo usar\n- Cambios complejos o de alto riesgo.\n- Transferencia de conocimiento entre agentes.\n- Tareas donde los errores son costosos de corregir después.\n\n## Protocolo\n1. Acordar objetivo y enfoque antes de empezar.\n2. Driver implementa; navegante revisa continuamente.\n3. Navegante señala problemas, sugiere mejoras, lleva el plan.\n4. Intercambiar roles en intervalos regulares o puntos naturales.\n5. Ambos firman la salida final.\n\n## Reglas\n- Navegante no dicta cada tecla — se enfoca en estrategia y correctitud.\n- Driver explica intención cuando navegante pregunta.\n- Los intercambios de rol son obligatorios, no opcionales.\n- Desacuerdos resueltos por discusión rápida; si se traban, time-box y escalar.\n\n## Beneficios\n- Gate de calidad en tiempo real\n- Contexto y conocimiento compartido\n- Menos defectos llegan a revisión\n\n## Entregables\n- Artefacto completado (código, documento, config)\n- Notas inline de la revisión del navegante\n- Resumen de decisiones clave tomadas durante la sesión\n",
+    "groupId": "pair-programming"
+  },
+  {
+    "lang": "ES",
     "slug": "pipeline-por-etapas",
     "path": "pipeline-por-etapas",
     "name": "Pipeline por etapas",
@@ -263,11 +362,38 @@ export const WORKFLOWS_DATA = [
   },
   {
     "lang": "ES",
+    "slug": "round-robin",
+    "path": "round-robin",
+    "name": "Round-Robin (distribución rotativa de carga)",
+    "objective": "Distribuir tareas entrantes equitativamente entre un pool de agentes usando asignación cíclica.",
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nRound-Robin (distribución rotativa de carga)\n\n## Objetivo\nDistribuir tareas entrantes equitativamente entre un pool de agentes usando asignación cíclica.\n\n## Roles\n- **Despachador:** recibe tareas y asigna usando índice de rotación.\n- **N Agentes worker:** ejecutan tareas asignadas.\n- **Monitor (opcional):** rastrea balance de carga y disponibilidad de agentes.\n\n## Cuándo usar\n- Tareas homogéneas que cualquier agente puede manejar.\n- Necesidad de evitar sobrecargar un solo agente.\n- Distribución simple y predecible sin lógica de routing compleja.\n\n## Protocolo\n1. Despachador mantiene lista ordenada de agentes disponibles.\n2. Cada nueva tarea se asigna al siguiente agente en el ciclo.\n3. Agente confirma y ejecuta.\n4. Si un agente no está disponible, saltar al siguiente; marcar como inactivo.\n5. Reactivar agentes cuando señalan disponibilidad.\n\n## Reglas\n- El orden de asignación es determinístico (sin aleatoriedad).\n- Agentes saltados se reintentan en el siguiente ciclo completo.\n- Si todos los agentes están inactivos, encolar la tarea y alertar.\n- Ninguna tarea se asigna a más de un agente.\n\n## Variantes\n- **Round-robin ponderado:** agentes con más capacidad reciben proporcionalmente más tareas.\n- **Round-robin sticky:** el mismo solicitante siempre se enruta al mismo agente (por continuidad).\n\n## Entregables\n- Log de asignación (tarea → agente)\n- Reporte de distribución de carga\n- Timeline de disponibilidad de agentes\n",
+    "groupId": "round-robin"
+  },
+  {
+    "lang": "ES",
     "slug": "swarm-paralelo",
     "path": "swarm-paralelo",
     "name": "Swarm paralelo",
     "objective": "Acelerar ejecución dividiendo trabajo en piezas independientes que corren en paralelo.",
     "orchestration": "# ORQUESTACION.md\n\n## Workflow\nSwarm paralelo\n\n## Objetivo\nAcelerar ejecución dividiendo trabajo en piezas independientes que corren en paralelo.\n\n## Roles\n- **Coordinador de swarm:** particiona y consolida.\n- **N agentes ejecutores:** cada uno en subproblema aislado.\n- **Validador final:** detecta inconsistencias cruzadas.\n\n## Cuándo usar\n- Tareas altamente paralelizables.\n- Ventana de tiempo corta.\n\n## Reglas\n1. Diseñar partición sin solapamiento.\n2. Definir contrato de salida por agente.\n3. Sincronización en checkpoints fijos.\n4. Merge final con validación de compatibilidad.\n\n## Riesgos comunes\n- Duplicidad de trabajo\n- Incompatibilidad entre salidas\n- Drift de criterios\n\n## Mitigación\n- Plantilla única de salida\n- Convenciones compartidas\n- Reconciliación técnica obligatoria al cierre\n",
     "groupId": "parallel-swarm"
+  },
+  {
+    "lang": "ES",
+    "slug": "triage",
+    "path": "triage",
+    "name": "Triage (clasificar, priorizar, enrutar)",
+    "objective": "Categorizar rápidamente el trabajo entrante y enrutarlo al handler correcto con la prioridad adecuada.",
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nTriage (clasificar, priorizar, enrutar)\n\n## Objetivo\nCategorizar rápidamente el trabajo entrante y enrutarlo al handler correcto con la prioridad adecuada.\n\n## Roles\n- **Agente de triage:** clasifica y prioriza.\n- **Router:** asigna a la cola o agente correcto.\n- **Handlers:** agentes especializados por dominio que ejecutan.\n\n## Cuándo usar\n- Alto volumen de solicitudes heterogéneas entrantes.\n- Necesidad de criterios de priorización consistentes.\n- Múltiples equipos o agentes especializados downstream.\n\n## Protocolo\n1. Agente de triage recibe solicitud cruda.\n2. Clasifica por tipo (bug, feature, pregunta, incidente, etc.).\n3. Asigna prioridad (P0-P3) usando criterios definidos.\n4. Router envía a la cola del handler apropiado.\n5. Handler confirma recepción dentro del SLA.\n\n## Criterios de prioridad\n| Prioridad | Descripción | SLA de respuesta |\n|-----------|-------------|------------------|\n| P0 | Crítico / caída | Inmediato |\n| P1 | Alto impacto, workaround existe | < 1 hora |\n| P2 | Medio, sin urgencia | < 4 horas |\n| P3 | Bajo / informativo | Best effort |\n\n## Reglas\n- Toda solicitud recibe una clasificación — sin drops silenciosos.\n- Solicitudes ambiguas van a P2 por defecto y se marcan para revisión humana.\n- Re-triage permitido si aparece nueva información.\n\n## Entregables\n- Registro de clasificación por solicitud\n- Log de enrutamiento\n- Métricas de exactitud de triage en el tiempo\n",
+    "groupId": "triage"
+  },
+  {
+    "lang": "ES",
+    "slug": "watchdog-supervisor",
+    "path": "watchdog-supervisor",
+    "name": "Watchdog / Supervisor (monitorear y recuperar)",
+    "objective": "Monitorear continuamente la salud de agentes y progreso de tareas, interviniendo automáticamente cuando se detectan fallos o estancamientos.",
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nWatchdog / Supervisor (monitorear y recuperar)\n\n## Objetivo\nMonitorear continuamente la salud de agentes y progreso de tareas, interviniendo automáticamente cuando se detectan fallos o estancamientos.\n\n## Roles\n- **Supervisor:** monitorea heartbeats, progreso y calidad de salida.\n- **Agentes worker:** ejecutan tareas asignadas y reportan estado.\n- **Agente de recuperación:** toma el control o reinicia trabajo fallido.\n\n## Cuándo usar\n- Workflows de agentes de larga duración o desatendidos.\n- Tareas críticas que no pueden fallar silenciosamente.\n- Ambientes donde los agentes pueden colgarse o producir salida degradada.\n\n## Protocolo\n1. Workers se registran con supervisor e inician tareas.\n2. Workers envían heartbeats periódicos con actualizaciones de progreso.\n3. Supervisor verifica intervalos de heartbeat y umbrales de progreso.\n4. Ante heartbeat perdido o progreso estancado:\n   - Alertar y esperar un período de gracia.\n   - Si sigue sin responder, disparar agente de recuperación.\n5. Agente de recuperación retoma desde último checkpoint o reinicia tarea.\n6. Supervisor registra todas las intervenciones.\n\n## Health checks\n- **Heartbeat:** esperado cada N segundos.\n- **Progreso:** debe avanzar más allá del checkpoint dentro del timeout.\n- **Calidad de salida:** spot-check de salidas contra baseline.\n\n## Reglas\n- Supervisor nunca ejecuta trabajo directamente — solo monitorea y delega.\n- La recuperación debe ser idempotente (seguro reintentar).\n- Todas las intervenciones registradas con timestamp y razón.\n\n## Entregables\n- Log de salud por worker\n- Historial de intervenciones\n- Métricas de uptime y recuperación\n",
+    "groupId": "watchdog-supervisor"
   }
 ] as const;
