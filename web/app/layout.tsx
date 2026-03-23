@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist_Mono } from 'next/font/google'
 import { SessionProvider } from 'next-auth/react'
+import { I18nProvider } from '@/lib/i18n'
 import './globals.css'
 
 const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
@@ -29,7 +30,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${geistMono.variable} antialiased`}>
         <SessionProvider>
-          {children}
+          <I18nProvider>
+            {children}
+          </I18nProvider>
         </SessionProvider>
       </body>
     </html>

@@ -1,7 +1,9 @@
 'use client'
 import { useState } from 'react'
+import { useI18n } from '@/lib/i18n'
 
 export default function CopyInstall({ command }: { command: string }) {
+  const { t } = useI18n()
   const [copied, setCopied] = useState(false)
 
   const handleCopy = () => {
@@ -30,7 +32,7 @@ export default function CopyInstall({ command }: { command: string }) {
           background: copied ? '#1a7f37' : '#e63946',
         }}
       >
-        {copied ? '✓ Copied!' : '🦀 Deploy in OpenClaw'}
+        {copied ? t.copied : t.deployBtn}
       </button>
     </div>
   )

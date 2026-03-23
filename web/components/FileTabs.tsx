@@ -2,6 +2,7 @@
 
 import { Fragment, useState } from 'react'
 import { BUNDLE_FILES, type BundleFile } from '@/lib/agents'
+import { useI18n } from '@/lib/i18n'
 
 const FILE_ICONS: Record<BundleFile, string> = {
   'SOUL.md': '🧠',
@@ -13,14 +14,14 @@ const FILE_ICONS: Record<BundleFile, string> = {
   'BOOTSTRAP.md': '🚀',
 }
 
-const FILE_DESC: Record<BundleFile, string> = {
-  'SOUL.md': 'Personality, tone & core values',
-  'IDENTITY.md': 'Name, creature type & avatar',
-  'USER.md': 'Info about the human this agent helps',
-  'AGENTS.md': 'Workspace rules & memory conventions',
-  'HEARTBEAT.md': 'Periodic background tasks',
-  'TOOLS.md': 'Local tool config & notes',
-  'BOOTSTRAP.md': 'First-run setup guide',
+const FILE_DESC_KEYS: Record<BundleFile, string> = {
+  'SOUL.md': 'fileDescSoul',
+  'IDENTITY.md': 'fileDescIdentity',
+  'USER.md': 'fileDescUser',
+  'AGENTS.md': 'fileDescAgents',
+  'HEARTBEAT.md': 'fileDescHeartbeat',
+  'TOOLS.md': 'fileDescTools',
+  'BOOTSTRAP.md': 'fileDescBootstrap',
 }
 
 function renderInlineMarkdown(line: string) {
@@ -55,6 +56,7 @@ function renderLineMarkdown(line: string) {
 }
 
 export default function FileTabs({ files }: { files: Record<BundleFile, string> }) {
+  const { t } = useI18n()
   const [active, setActive] = useState<BundleFile>('SOUL.md')
   const activeContent = files[active] ?? ''
   const lines = activeContent.split('\n')
@@ -95,7 +97,7 @@ export default function FileTabs({ files }: { files: Record<BundleFile, string> 
 
       {/* File description */}
       <p className="text-xs mb-3" style={{ color: 'var(--text-muted)' }}>
-        {FILE_DESC[active]}
+        {(t as any)[FILE_DESC_KEYS[active]]}
       </p>
 
       {/* Content */}
@@ -122,13 +124,13 @@ export default function FileTabs({ files }: { files: Record<BundleFile, string> 
           </div>
         ) : (
           <p className="text-sm italic" style={{ color: 'var(--text-muted)' }}>
-            This file is empty in the bundle.
+            {t.emptyFile}
           </p>
         )}
       </div>
 
       <p className="text-xs mt-3" style={{ color: 'var(--text-muted)' }}>
-        Lines: {totalLines} | Works: {totalWords}
+        {t.linesCount}: {totalLines} | {t.wordsCount}: {totalWords}
       </p>
     </div>
   )

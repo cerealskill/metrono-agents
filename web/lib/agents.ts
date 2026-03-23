@@ -14,12 +14,17 @@ export interface AgentMeta {
   author: string
   version: string
   path: string
+  lang?: string
   soul: string
   files: Record<BundleFile, string>
 }
 
 export function getAllAgents(): AgentMeta[] {
   return AGENTS_DATA as unknown as AgentMeta[]
+}
+
+export function getAgentsByLang(lang: string): AgentMeta[] {
+  return getAllAgents().filter(a => (a.lang ?? 'EN').toUpperCase() === lang.toUpperCase())
 }
 
 export function getAgentBySlug(slug: string): AgentMeta | undefined {

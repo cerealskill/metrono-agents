@@ -1,8 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useI18n } from '@/lib/i18n'
 
 export default function ThemeToggle() {
+  const { t } = useI18n()
   const [theme, setTheme] = useState<'dark' | 'light'>('dark')
 
   useEffect(() => {
@@ -29,7 +31,7 @@ export default function ThemeToggle() {
         border: '1px solid var(--border)',
         color: 'var(--text-secondary)',
       }}
-      title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      title={theme === 'dark' ? t.switchLight : t.switchDark}
     >
       {theme === 'dark' ? '☀️' : '🌙'}
     </button>

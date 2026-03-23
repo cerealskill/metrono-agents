@@ -1,7 +1,11 @@
+'use client'
+
 import type { AgentMeta } from '@/lib/agents'
 import { CATEGORY_ICONS } from '@/lib/agents'
+import { useI18n } from '@/lib/i18n'
 
 export default function AgentCard({ agent }: { agent: AgentMeta }) {
+  const { t } = useI18n()
   return (
     <a href={`/agents/${agent.slug}`} className="block group">
       <div
@@ -68,13 +72,13 @@ export default function AgentCard({ agent }: { agent: AgentMeta }) {
         {/* Footer */}
         <div className="flex items-center justify-between mt-auto pt-3" style={{ borderTop: '1px solid var(--border)' }}>
           <span className="text-xs" style={{ color: 'var(--text-muted)' }}>
-            by {agent.author}
+            {t.byAuthor(agent.author)}
           </span>
           <span
             className="text-xs font-medium transition-colors"
             style={{ color: 'var(--cyan-bright)' }}
           >
-            View →
+            {t.viewAgent}
           </span>
         </div>
       </div>

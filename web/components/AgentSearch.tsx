@@ -4,8 +4,10 @@ import { useState, useMemo } from 'react'
 import AgentCard from './AgentCard'
 import { CATEGORY_ICONS } from '@/lib/agents'
 import type { AgentMeta } from '@/lib/agents'
+import { useI18n } from '@/lib/i18n'
 
 export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
+  const { t } = useI18n()
   const [query, setQuery] = useState('')
   const [activeCategory, setActiveCategory] = useState<string | null>(null)
   const [isFocused, setIsFocused] = useState(false)
@@ -60,7 +62,7 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
             </span>
             <input
               type="text"
-              placeholder="Search by name, description or tags..."
+              placeholder={t.searchPlaceholder}
               value={query}
               onChange={e => setQuery(e.target.value)}
               className="search-fx w-full rounded-2xl pl-12 pr-10 py-3.5 text-sm transition-all duration-300 outline-none"
@@ -117,7 +119,7 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
                   : { background: 'var(--bg-elevated)', color: 'var(--text-secondary)', border: '1px solid var(--border)' }
               }
             >
-              All
+              {t.allCategory}
             </button>
             {categories.map(cat => (
               <button
@@ -135,7 +137,7 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
             ))}
             {(query || activeCategory) && (
               <span className="text-xs ml-1" style={{ color: 'var(--text-muted)' }}>
-                {filtered.length} result{filtered.length !== 1 ? 's' : ''}
+                {t.resultCount(filtered.length)}
               </span>
             )}
           </div>
@@ -147,13 +149,13 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
         {filtered.length === 0 ? (
           <div className="text-center py-24" style={{ color: 'var(--text-muted)' }}>
             <p className="text-5xl mb-4">🤷</p>
-            <p className="text-lg">No agents match &quot;{query}&quot;</p>
+            <p className="text-lg">{t.noResults(query)}</p>
             <button
               onClick={() => { setQuery(''); setActiveCategory(null) }}
               className="mt-4 text-sm underline transition-opacity hover:opacity-70"
               style={{ color: 'var(--text-secondary)' }}
             >
-              Clear search
+              {t.clearSearch}
             </button>
           </div>
         ) : (

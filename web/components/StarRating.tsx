@@ -1,12 +1,14 @@
 'use client'
 import { useSession } from 'next-auth/react'
 import { useEffect, useState } from 'react'
+import { useI18n } from '@/lib/i18n'
 
 interface StarRatingProps {
   slug: string
 }
 
 export default function StarRating({ slug }: StarRatingProps) {
+  const { t } = useI18n()
   const { data: session } = useSession()
   const [total, setTotal] = useState<number | null>(null)
   const [count, setCount] = useState<number>(0)
@@ -54,7 +56,7 @@ export default function StarRating({ slug }: StarRatingProps) {
       style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)' }}
     >
       <h3 className="font-semibold mb-3" style={{ color: 'var(--text-primary)' }}>
-        Rate this agent
+        {t.rateAgent}
       </h3>
 
       {/* Star display */}
@@ -72,7 +74,7 @@ export default function StarRating({ slug }: StarRatingProps) {
               opacity: !session ? 0.5 : 1,
               filter: displayStars >= star ? 'none' : 'grayscale(1)',
             }}
-            title={!session ? 'Sign in to vote' : `Rate ${star} star${star > 1 ? 's' : ''}`}
+            title={!session ? t.signInToVote : t.rateStar(star)}
           >
             {displayStars >= star ? '⭐' : '☆'}
           </button>
@@ -82,15 +84,15 @@ export default function StarRating({ slug }: StarRatingProps) {
       {/* Stats */}
       <div className="text-sm" style={{ color: 'var(--text-muted)' }}>
         {total === null ? (
-          <span>Loading...</span>
+          <span>{t.loading}</span>
         ) : count === 0 ? (
-          <span>No votes yet — be the first!</span>
+          <span>{t.noVotes}</span>
         ) : (
           <span>
             <span style={{ color: '#e3b341', fontWeight: 600 }}>
               {avg.toFixed(1)}
             </span>
-            {' '}/ 5 · {count} vote{count !== 1 ? 's' : ''}
+            {' '}/ 5 · {count} {t.voteCount(count)}
           </span>
         )}
       </div>
@@ -98,12 +100,12 @@ export default function StarRating({ slug }: StarRatingProps) {
       {/* Feedback */}
       {submitted && (
         <p className="text-xs mt-2" style={{ color: 'var(--cyan-bright)' }}>
-          ✓ Thanks for your vote!
+          {t.thanksVote}
         </p>
       )}
       {!session && (
         <p className="text-xs mt-2" style={{ color: 'var(--text-muted)' }}>
-          Sign in to rate this agent
+          {t.signInToRate}
         </p>
       )}
     </div>

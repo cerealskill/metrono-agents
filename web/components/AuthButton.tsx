@@ -1,8 +1,10 @@
 'use client'
 import { useSession, signIn, signOut } from 'next-auth/react'
 import Image from 'next/image'
+import { useI18n } from '@/lib/i18n'
 
 export default function AuthButton() {
+  const { t } = useI18n()
   const { data: session, status } = useSession()
 
   if (status === 'loading') {
@@ -41,7 +43,7 @@ export default function AuthButton() {
             className="absolute inset-0 flex items-center justify-center text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity"
             style={{ background: 'rgba(10,15,26,0.75)', color: '#ffffff' }}
           >
-            out
+            {t.signOut}
           </span>
         </button>
       </div>
@@ -63,7 +65,7 @@ export default function AuthButton() {
         <path d="M3.964 10.707A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.707V4.961H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.039l3.007-2.332z" fill="#FBBC05"/>
         <path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.961L3.964 7.293C4.672 5.163 6.656 3.58 9 3.58z" fill="#EA4335"/>
       </svg>
-      Sign in with Google
+      {t.signInGoogle}
     </button>
   )
 }
