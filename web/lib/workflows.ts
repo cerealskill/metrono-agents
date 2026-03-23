@@ -3,6 +3,7 @@ import { WORKFLOWS_DATA } from './workflows-data'
 export interface WorkflowMeta {
   lang: string
   slug: string
+  groupId: string
   path: string
   name: string
   objective: string

@@ -6,7 +6,8 @@ export const WORKFLOWS_DATA = [
     "path": "audit-mode",
     "name": "Audit Mode (one executes, another audits, another signs)",
     "objective": "Ensure independence between execution, control, and final approval.",
-    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nAudit Mode (one executes, another audits, another signs)\n\n## Objective\nEnsure independence between execution, control, and final approval.\n\n## Roles\n- **Executor:** makes changes.\n- **Auditor:** validates technical/process compliance.\n- **Signer:** approves final release.\n\n## Rules\n- Auditor cannot be the executor.\n- Signer reviews auditor's evidence, not just summary.\n- No signature without complete evidence.\n\n## Minimum evidence\n- What changed\n- Why it changed\n- What tests were run\n- Audit result\n\n## Closure\n- Explicit signature\n- Exception log (if any)"
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nAudit Mode (one executes, another audits, another signs)\n\n## Objective\nEnsure independence between execution, control, and final approval.\n\n## Roles\n- **Executor:** makes changes.\n- **Auditor:** validates technical/process compliance.\n- **Signer:** approves final release.\n\n## Rules\n- Auditor cannot be the executor.\n- Signer reviews auditor's evidence, not just summary.\n- No signature without complete evidence.\n\n## Minimum evidence\n- What changed\n- Why it changed\n- What tests were run\n- Audit result\n\n## Closure\n- Explicit signature\n- Exception log (if any)",
+    "groupId": "audit-mode"
   },
   {
     "lang": "EN",
@@ -14,7 +15,8 @@ export const WORKFLOWS_DATA = [
     "path": "automatic-on-call",
     "name": "Automatic On-call",
     "objective": "Respond to incidents automatically with triage, initial mitigation, and human escalation when appropriate.",
-    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nAutomatic On-call\n\n## Objective\nRespond to incidents automatically with triage, initial mitigation, and human escalation when appropriate.\n\n## Roles\n- **Dispatcher:** classifies alert and assigns flow.\n- **Automatic responder:** executes first response runbook.\n- **Escalator:** notifies human on-call if threshold is exceeded.\n\n## Flow\n1. Alert ingestion\n2. Classification (sev1/sev2/sev3)\n3. Allowed automatic action (safe list)\n4. Post-action verification\n5. Escalation or closure\n\n## Suggested SLA\n- Ack: <5 min\n- Initial mitigation: <15 min\n- Sev1 escalation: immediate\n\n## Guardrails\n- Forbidden to execute destructive automatic actions.\n- Every action must be audited with timestamp.\n\n## Deliverable\n- Timeline\n- Preliminary root cause\n- Actions taken"
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nAutomatic On-call\n\n## Objective\nRespond to incidents automatically with triage, initial mitigation, and human escalation when appropriate.\n\n## Roles\n- **Dispatcher:** classifies alert and assigns flow.\n- **Automatic responder:** executes first response runbook.\n- **Escalator:** notifies human on-call if threshold is exceeded.\n\n## Flow\n1. Alert ingestion\n2. Classification (sev1/sev2/sev3)\n3. Allowed automatic action (safe list)\n4. Post-action verification\n5. Escalation or closure\n\n## Suggested SLA\n- Ack: <5 min\n- Initial mitigation: <15 min\n- Sev1 escalation: immediate\n\n## Guardrails\n- Forbidden to execute destructive automatic actions.\n- Every action must be audited with timestamp.\n\n## Deliverable\n- Timeline\n- Preliminary root cause\n- Actions taken",
+    "groupId": "automatic-on-call"
   },
   {
     "lang": "EN",
@@ -22,7 +24,8 @@ export const WORKFLOWS_DATA = [
     "path": "committee-mode",
     "name": "Committee Mode (voting + tiebreaker)",
     "objective": "Make decisions by voting among agents with an explicit tiebreaker mechanism.",
-    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nCommittee Mode (voting + tiebreaker)\n\n## Objective\nMake decisions by voting among agents with an explicit tiebreaker mechanism.\n\n## Roles\n- **Committee members (odd number ideally).**\n- **Chair/Tiebreaker.**\n\n## Flow\n1. Presentation of options.\n2. Short debate with time limits.\n3. Recorded vote.\n4. If tie: apply tiebreaker criterion.\n\n## Tiebreaker criteria\n- Lower operational risk\n- Greater reversibility\n- Better impact/effort ratio\n- Chair's vote (last resort)\n\n## Deliverable\n- Decision record\n- Votes per option\n- Final justification"
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nCommittee Mode (voting + tiebreaker)\n\n## Objective\nMake decisions by voting among agents with an explicit tiebreaker mechanism.\n\n## Roles\n- **Committee members (odd number ideally).**\n- **Chair/Tiebreaker.**\n\n## Flow\n1. Presentation of options.\n2. Short debate with time limits.\n3. Recorded vote.\n4. If tie: apply tiebreaker criterion.\n\n## Tiebreaker criteria\n- Lower operational risk\n- Greater reversibility\n- Better impact/effort ratio\n- Chair's vote (last resort)\n\n## Deliverable\n- Decision record\n- Votes per option\n- Final justification",
+    "groupId": "committee-mode"
   },
   {
     "lang": "EN",
@@ -30,7 +33,8 @@ export const WORKFLOWS_DATA = [
     "path": "follow-the-sun",
     "name": "Follow-the-sun (handoff by blocks)",
     "objective": "Maintain continuous progress through structured handoffs between agents by time blocks.",
-    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nFollow-the-sun (handoff by blocks)\n\n## Objective\nMaintain continuous progress through structured handoffs between agents by time blocks.\n\n## Blocks\n- **Block A:** initial execution\n- **Block B:** continuity + validation\n- **Block C:** closure/documentation\n\n## Mandatory handoff format\n- Current status\n- Achievements\n- Pending tasks\n- Blockers\n- Next recommended first step\n\n## Rules\n- Without a complete handoff, transfer is not valid.\n- Receiver confirms receipt with a startup plan.\n\n## Key metric\n- Downtime between blocks <15 min (target)."
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nFollow-the-sun (handoff by blocks)\n\n## Objective\nMaintain continuous progress through structured handoffs between agents by time blocks.\n\n## Blocks\n- **Block A:** initial execution\n- **Block B:** continuity + validation\n- **Block C:** closure/documentation\n\n## Mandatory handoff format\n- Current status\n- Achievements\n- Pending tasks\n- Blockers\n- Next recommended first step\n\n## Rules\n- Without a complete handoff, transfer is not valid.\n- Receiver confirms receipt with a startup plan.\n\n## Key metric\n- Downtime between blocks <15 min (target).",
+    "groupId": "follow-the-sun"
   },
   {
     "lang": "EN",
@@ -38,7 +42,8 @@ export const WORKFLOWS_DATA = [
     "path": "hub-and-spoke",
     "name": "Hub-and-spoke",
     "objective": "Centralize coordination in a hub (orchestrator) and delegate execution to spokes (specialist agents), minimizing misalignment.",
-    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nHub-and-spoke\n\n## Objective\nCentralize coordination in a hub (orchestrator) and delegate execution to spokes (specialist agents), minimizing misalignment.\n\n## Roles\n- **Hub / Orchestrator:** prioritizes, divides, integrates, decides trade-offs.\n- **Implementation Spoke:** builds the solution.\n- **Validation Spoke:** testing, QA, compliance.\n- **Documentation Spoke:** runbook/changelog/delivery.\n\n## When to use\n- Multiple work fronts with dependency on a single technical direction.\n- Need for strong control of scope and quality.\n\n## Operating policy\n1. Hub defines backlog in atomic tasks.\n2. Each spoke takes 1-2 tasks with explicit owner.\n3. Everything returns to the hub for integration.\n4. Hub publishes consolidated status by milestones.\n\n## Suggested SLA\n- Operational update every 60-90 min.\n- Blockage >30 min => escalate to hub.\n\n## Deliverables\n- Consolidated plan\n- Integrated result\n- Risks + mitigations\n- Recorded technical decisions"
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nHub-and-spoke\n\n## Objective\nCentralize coordination in a hub (orchestrator) and delegate execution to spokes (specialist agents), minimizing misalignment.\n\n## Roles\n- **Hub / Orchestrator:** prioritizes, divides, integrates, decides trade-offs.\n- **Implementation Spoke:** builds the solution.\n- **Validation Spoke:** testing, QA, compliance.\n- **Documentation Spoke:** runbook/changelog/delivery.\n\n## When to use\n- Multiple work fronts with dependency on a single technical direction.\n- Need for strong control of scope and quality.\n\n## Operating policy\n1. Hub defines backlog in atomic tasks.\n2. Each spoke takes 1-2 tasks with explicit owner.\n3. Everything returns to the hub for integration.\n4. Hub publishes consolidated status by milestones.\n\n## Suggested SLA\n- Operational update every 60-90 min.\n- Blockage >30 min => escalate to hub.\n\n## Deliverables\n- Consolidated plan\n- Integrated result\n- Risks + mitigations\n- Recorded technical decisions",
+    "groupId": "hub-and-spoke"
   },
   {
     "lang": "EN",
@@ -46,7 +51,8 @@ export const WORKFLOWS_DATA = [
     "path": "incident-mode",
     "name": "Incident Mode (commander + scribe + executors)",
     "objective": "Resolve incidents quickly, with clear command and complete traceability.",
-    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nIncident Mode (commander + scribe + executors)\n\n## Objective\nResolve incidents quickly, with clear command and complete traceability.\n\n## Roles\n- **Incident Commander:** directs strategy and priorities.\n- **Scribe:** records timeline, hypotheses, and decisions.\n- **Executors:** apply mitigations and verifications.\n\n## Protocol\n1. Declare incident + severity.\n2. Assign roles immediately.\n3. Mitigate impact first, RCA after.\n4. Periodic updates (fixed cadence).\n5. Closure + postmortem.\n\n## Suggested SLA\n- Sev1: updates every 10 min\n- Sev2: updates every 20 min\n- Sev3: updates every 30-60 min\n\n## Deliverables\n- Complete timeline\n- Actions and owners\n- Preliminary/final RCA\n- Prevention plan"
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nIncident Mode (commander + scribe + executors)\n\n## Objective\nResolve incidents quickly, with clear command and complete traceability.\n\n## Roles\n- **Incident Commander:** directs strategy and priorities.\n- **Scribe:** records timeline, hypotheses, and decisions.\n- **Executors:** apply mitigations and verifications.\n\n## Protocol\n1. Declare incident + severity.\n2. Assign roles immediately.\n3. Mitigate impact first, RCA after.\n4. Periodic updates (fixed cadence).\n5. Closure + postmortem.\n\n## Suggested SLA\n- Sev1: updates every 10 min\n- Sev2: updates every 20 min\n- Sev3: updates every 30-60 min\n\n## Deliverables\n- Complete timeline\n- Actions and owners\n- Preliminary/final RCA\n- Prevention plan",
+    "groupId": "incident-mode"
   },
   {
     "lang": "EN",
@@ -54,7 +60,8 @@ export const WORKFLOWS_DATA = [
     "path": "mentor-mode",
     "name": "Mentor Mode (senior reviews junior before delivery)",
     "objective": "Raise delivery quality and accelerate learning through guided review.",
-    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nMentor Mode (senior reviews junior before delivery)\n\n## Objective\nRaise delivery quality and accelerate learning through guided review.\n\n## Roles\n- **Junior:** executes initial proposal.\n- **Senior/Mentor:** reviews, corrects, teaches.\n\n## Flow\n1. Junior delivers functional draft.\n2. Senior reviews against checklist.\n3. Junior applies corrections.\n4. Senior gives final approval.\n\n## Mentor checklist\n- Technical correctness\n- Clarity and maintainability\n- Risks and edge cases\n- Quality of outgoing communication\n\n## Key rule\n- Nothing is delivered externally without senior review.\n\n## Deliverables\n- Final approved version\n- Brief feedback for learning"
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nMentor Mode (senior reviews junior before delivery)\n\n## Objective\nRaise delivery quality and accelerate learning through guided review.\n\n## Roles\n- **Junior:** executes initial proposal.\n- **Senior/Mentor:** reviews, corrects, teaches.\n\n## Flow\n1. Junior delivers functional draft.\n2. Senior reviews against checklist.\n3. Junior applies corrections.\n4. Senior gives final approval.\n\n## Mentor checklist\n- Technical correctness\n- Clarity and maintainability\n- Risks and edge cases\n- Quality of outgoing communication\n\n## Key rule\n- Nothing is delivered externally without senior review.\n\n## Deliverables\n- Final approved version\n- Brief feedback for learning",
+    "groupId": "mentor-mode"
   },
   {
     "lang": "EN",
@@ -62,7 +69,8 @@ export const WORKFLOWS_DATA = [
     "path": "on-demand-specialist",
     "name": "On-demand Specialist",
     "objective": "Activate specialists (legal, finance, docs, security, etc.) only when the case requires it.",
-    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nOn-demand Specialist\n\n## Objective\nActivate specialists (legal, finance, docs, security, etc.) only when the case requires it.\n\n## Activation Trigger\n- Regulatory/compliance requirement\n- Significant financial impact\n- Formal external delivery\n- High risk not covered by the core team\n\n## Roles\n- **Core team:** executes the main path.\n- **Specialist:** intervenes for a limited window.\n\n## Rules\n- Every activation must state reason + scope.\n- Specialist delivers actionable, not generic, findings.\n- Close activation once the trigger condition is resolved.\n\n## Deliverable\n- Specialist's report\n- Changes applied to the plan"
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nOn-demand Specialist\n\n## Objective\nActivate specialists (legal, finance, docs, security, etc.) only when the case requires it.\n\n## Activation Trigger\n- Regulatory/compliance requirement\n- Significant financial impact\n- Formal external delivery\n- High risk not covered by the core team\n\n## Roles\n- **Core team:** executes the main path.\n- **Specialist:** intervenes for a limited window.\n\n## Rules\n- Every activation must state reason + scope.\n- Specialist delivers actionable, not generic, findings.\n- Close activation once the trigger condition is resolved.\n\n## Deliverable\n- Specialist's report\n- Changes applied to the plan",
+    "groupId": "on-demand-specialist"
   },
   {
     "lang": "EN",
@@ -70,7 +78,8 @@ export const WORKFLOWS_DATA = [
     "path": "parallel-swarm",
     "name": "Parallel Swarm",
     "objective": "Accelerate execution by dividing work into independent pieces that run in parallel.",
-    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nParallel Swarm\n\n## Objective\nAccelerate execution by dividing work into independent pieces that run in parallel.\n\n## Roles\n- **Swarm coordinator:** partitions and consolidates.\n- **N executor agents:** each on an isolated subproblem.\n- **Final validator:** detects cross inconsistencies.\n\n## When to use\n- Highly parallelizable tasks.\n- Short time window.\n\n## Rules\n1. Design partition without overlap.\n2. Define output contract per agent.\n3. Synchronize at fixed checkpoints.\n4. Final merge with compatibility validation.\n\n## Common risks\n- Duplicate work\n- Incompatibility between outputs\n- Criteria drift\n\n## Mitigation\n- Unique output template\n- Shared conventions\n- Mandatory technical reconciliation at closure"
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nParallel Swarm\n\n## Objective\nAccelerate execution by dividing work into independent pieces that run in parallel.\n\n## Roles\n- **Swarm coordinator:** partitions and consolidates.\n- **N executor agents:** each on an isolated subproblem.\n- **Final validator:** detects cross inconsistencies.\n\n## When to use\n- Highly parallelizable tasks.\n- Short time window.\n\n## Rules\n1. Design partition without overlap.\n2. Define output contract per agent.\n3. Synchronize at fixed checkpoints.\n4. Final merge with compatibility validation.\n\n## Common risks\n- Duplicate work\n- Incompatibility between outputs\n- Criteria drift\n\n## Mitigation\n- Unique output template\n- Shared conventions\n- Mandatory technical reconciliation at closure",
+    "groupId": "parallel-swarm"
   },
   {
     "lang": "EN",
@@ -78,7 +87,8 @@ export const WORKFLOWS_DATA = [
     "path": "raci-matrix",
     "name": "RACI Matrix",
     "objective": "Define responsibilities without ambiguity: who does, who approves, and who is informed.",
-    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nRACI Matrix\n\n## Objective\nDefine responsibilities without ambiguity: who does, who approves, and who is informed.\n\n## Definitions\n- **R (Responsible):** executes.\n- **A (Accountable):** approves and is accountable for the result.\n- **C (Consulted):** provides input.\n- **I (Informed):** kept informed.\n\n## Template\n| Task | R | A | C | I |\n|---|---|---|---|---|\n| Define scope |  |  |  |  |\n| Implement |  |  |  |  |\n| Validate |  |  |  |  |\n| Deliver |  |  |  |  |\n\n## Rules\n- Each task must have exactly 1 A.\n- Do not start a task without R and A defined.\n- RACI changes must be versioned."
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nRACI Matrix\n\n## Objective\nDefine responsibilities without ambiguity: who does, who approves, and who is informed.\n\n## Definitions\n- **R (Responsible):** executes.\n- **A (Accountable):** approves and is accountable for the result.\n- **C (Consulted):** provides input.\n- **I (Informed):** kept informed.\n\n## Template\n| Task | R | A | C | I |\n|---|---|---|---|---|\n| Define scope |  |  |  |  |\n| Implement |  |  |  |  |\n| Validate |  |  |  |  |\n| Deliver |  |  |  |  |\n\n## Rules\n- Each task must have exactly 1 A.\n- Do not start a task without R and A defined.\n- RACI changes must be versioned.",
+    "groupId": "raci-matrix"
   },
   {
     "lang": "EN",
@@ -86,7 +96,8 @@ export const WORKFLOWS_DATA = [
     "path": "red-team-blue-team",
     "name": "Red-team / Blue-team",
     "objective": "Strengthen quality/security with one team attacking assumptions (Red) and another defending/correcting (Blue).",
-    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nRed-team / Blue-team\n\n## Objective\nStrengthen quality/security with one team attacking assumptions (Red) and another defending/correcting (Blue).\n\n## Roles\n- **Blue Team:** designs and implements initial solution.\n- **Red Team:** looks for failures, abuse, bypass, and edge cases.\n- **Moderator:** decides severity and priority of fixes.\n\n## Protocol\n1. Blue delivers v1 + assumptions.\n2. Red executes battery of attacks/adversarial tests.\n3. Red reports findings (severity + evidence).\n4. Blue corrects and documents mitigations.\n5. Red retests for closure.\n\n## Severity criteria\n- **Critical:** high risk of outage or compromise.\n- **High:** significant functional impact.\n- **Medium/Low:** improvements or incremental hardening.\n\n## Closure\n- List of closed findings\n- Explicitly accepted risks"
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nRed-team / Blue-team\n\n## Objective\nStrengthen quality/security with one team attacking assumptions (Red) and another defending/correcting (Blue).\n\n## Roles\n- **Blue Team:** designs and implements initial solution.\n- **Red Team:** looks for failures, abuse, bypass, and edge cases.\n- **Moderator:** decides severity and priority of fixes.\n\n## Protocol\n1. Blue delivers v1 + assumptions.\n2. Red executes battery of attacks/adversarial tests.\n3. Red reports findings (severity + evidence).\n4. Blue corrects and documents mitigations.\n5. Red retests for closure.\n\n## Severity criteria\n- **Critical:** high risk of outage or compromise.\n- **High:** significant functional impact.\n- **Medium/Low:** improvements or incremental hardening.\n\n## Closure\n- List of closed findings\n- Explicitly accepted risks",
+    "groupId": "red-team-blue-team"
   },
   {
     "lang": "EN",
@@ -94,7 +105,8 @@ export const WORKFLOWS_DATA = [
     "path": "research-execution",
     "name": "Research + Execution",
     "objective": "Clearly separate research and implementation phases to reduce rework.",
-    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nResearch + Execution\n\n## Objective\nClearly separate research and implementation phases to reduce rework.\n\n## Phase 1: Research\n- Key questions\n- Compared options\n- Recommendation with trade-offs\n- Decision criteria\n\n## Phase 2: Execution\n- Implement approved option\n- Validate against success criteria\n- Document final decisions\n\n## Rules\n- Do not implement without explicit post-research decision.\n- Research must bring evidence (docs, benchmarks, references).\n\n## Deliverables\n- Technical brief (research)\n- Implementation plan\n- Result + validation"
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nResearch + Execution\n\n## Objective\nClearly separate research and implementation phases to reduce rework.\n\n## Phase 1: Research\n- Key questions\n- Compared options\n- Recommendation with trade-offs\n- Decision criteria\n\n## Phase 2: Execution\n- Implement approved option\n- Validate against success criteria\n- Document final decisions\n\n## Rules\n- Do not implement without explicit post-research decision.\n- Research must bring evidence (docs, benchmarks, references).\n\n## Deliverables\n- Technical brief (research)\n- Implementation plan\n- Result + validation",
+    "groupId": "research-execution"
   },
   {
     "lang": "EN",
@@ -102,7 +114,8 @@ export const WORKFLOWS_DATA = [
     "path": "stage-pipeline",
     "name": "Stage Pipeline",
     "objective": "Execute work sequentially by stages with quality gates between phases.",
-    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nStage Pipeline\n\n## Objective\nExecute work sequentially by stages with quality gates between phases.\n\n## Standard stages\n1. **Discovery** (requirements and constraints)\n2. **Design** (solution and plan)\n3. **Implementation**\n4. **Validation** (tests + review)\n5. **Delivery**\n\n## Rules\n- Do not advance to the next stage without meeting exit criteria.\n- Each stage produces a verifiable artifact.\n- If a gate fails, rollback to the previous stage.\n\n## Criteria per stage\n- Discovery: problem defined + scope closed.\n- Design: architecture and risks approved.\n- Implementation: complete changes + lint/build OK.\n- Validation: test plan executed + evidence.\n- Delivery: executive summary + next steps.\n\n## Escalation\n- 2 consecutive gate failures => design review."
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nStage Pipeline\n\n## Objective\nExecute work sequentially by stages with quality gates between phases.\n\n## Standard stages\n1. **Discovery** (requirements and constraints)\n2. **Design** (solution and plan)\n3. **Implementation**\n4. **Validation** (tests + review)\n5. **Delivery**\n\n## Rules\n- Do not advance to the next stage without meeting exit criteria.\n- Each stage produces a verifiable artifact.\n- If a gate fails, rollback to the previous stage.\n\n## Criteria per stage\n- Discovery: problem defined + scope closed.\n- Design: architecture and risks approved.\n- Implementation: complete changes + lint/build OK.\n- Validation: test plan executed + evidence.\n- Delivery: executive summary + next steps.\n\n## Escalation\n- 2 consecutive gate failures => design review.",
+    "groupId": "stage-pipeline"
   },
   {
     "lang": "EN",
@@ -110,7 +123,8 @@ export const WORKFLOWS_DATA = [
     "path": "technical-arbiter",
     "name": "Technical Arbiter (2 agents propose, 1 decides)",
     "objective": "Make robust technical decisions by comparing two independent proposals.",
-    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nTechnical Arbiter (2 agents propose, 1 decides)\n\n## Objective\nMake robust technical decisions by comparing two independent proposals.\n\n## Roles\n- **Agent A:** proposal 1\n- **Agent B:** proposal 2\n- **Arbiter:** evaluates and decides\n\n## Protocol\n1. A and B work independently, without influencing each other.\n2. They deliver a standard format:\n   - approach\n   - pros/cons\n   - risk\n   - cost/time\n3. Arbiter scores using a rubric.\n4. Final selection + written justification.\n\n## Suggested Rubric (0-5)\n- Technical correctness\n- Simplicity\n- Maintainability\n- Operational risk\n- Delivery time\n\n## Closure\n- Final decision\n- Reasons for discarding\n- Conditions for reevaluation"
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nTechnical Arbiter (2 agents propose, 1 decides)\n\n## Objective\nMake robust technical decisions by comparing two independent proposals.\n\n## Roles\n- **Agent A:** proposal 1\n- **Agent B:** proposal 2\n- **Arbiter:** evaluates and decides\n\n## Protocol\n1. A and B work independently, without influencing each other.\n2. They deliver a standard format:\n   - approach\n   - pros/cons\n   - risk\n   - cost/time\n3. Arbiter scores using a rubric.\n4. Final selection + written justification.\n\n## Suggested Rubric (0-5)\n- Technical correctness\n- Simplicity\n- Maintainability\n- Operational risk\n- Delivery time\n\n## Closure\n- Final decision\n- Reasons for discarding\n- Conditions for reevaluation",
+    "groupId": "technical-arbiter"
   },
   {
     "lang": "EN",
@@ -118,7 +132,8 @@ export const WORKFLOWS_DATA = [
     "path": "weekly-planning",
     "name": "Weekly Planning",
     "objective": "Turn weekly objectives into an executable plan with priorities, capacity, and risks.",
-    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nWeekly Planning\n\n## Objective\nTurn weekly objectives into an executable plan with priorities, capacity, and risks.\n\n## Cadence\n- Monday: planning\n- Wednesday: checkpoint\n- Friday: closure and retro\n\n## Roles\n- **Planner:** defines priorities and dependencies.\n- **Estimator:** evaluates effort/capacity.\n- **Risks:** identifies blockers and contingencies.\n\n## Process\n1. Gather candidate backlog.\n2. Prioritize (impact x urgency).\n3. Estimate real capacity.\n4. Confirm weekly commitments.\n5. Publish plan with owners.\n\n## Minimum output\n- Top priorities\n- What is deferred and why\n- Risks + plan B"
+    "orchestration": "# ORCHESTRATION.md\n\n## Workflow\nWeekly Planning\n\n## Objective\nTurn weekly objectives into an executable plan with priorities, capacity, and risks.\n\n## Cadence\n- Monday: planning\n- Wednesday: checkpoint\n- Friday: closure and retro\n\n## Roles\n- **Planner:** defines priorities and dependencies.\n- **Estimator:** evaluates effort/capacity.\n- **Risks:** identifies blockers and contingencies.\n\n## Process\n1. Gather candidate backlog.\n2. Prioritize (impact x urgency).\n3. Estimate real capacity.\n4. Confirm weekly commitments.\n5. Publish plan with owners.\n\n## Minimum output\n- Top priorities\n- What is deferred and why\n- Risks + plan B",
+    "groupId": "weekly-planning"
   },
   {
     "lang": "ES",
@@ -126,7 +141,8 @@ export const WORKFLOWS_DATA = [
     "path": "arbitro-tecnico",
     "name": "Árbitro técnico (2 agentes proponen, 1 decide)",
     "objective": "Tomar decisiones técnicas robustas comparando dos propuestas independientes.",
-    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nÁrbitro técnico (2 agentes proponen, 1 decide)\n\n## Objetivo\nTomar decisiones técnicas robustas comparando dos propuestas independientes.\n\n## Roles\n- **Agente A:** propuesta 1\n- **Agente B:** propuesta 2\n- **Árbitro:** evalúa y decide\n\n## Protocolo\n1. A y B trabajan sin influenciarse.\n2. Entregan formato estándar:\n   - enfoque\n   - pros/contras\n   - riesgo\n   - costo/tiempo\n3. Árbitro puntúa con rúbrica.\n4. Selección final + justificación escrita.\n\n## Rúbrica sugerida (0-5)\n- Correctitud técnica\n- Simplicidad\n- Mantenibilidad\n- Riesgo operativo\n- Tiempo de entrega\n\n## Cierre\n- Decisión final\n- Razones de descarte\n- Condiciones para reevaluar\n"
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nÁrbitro técnico (2 agentes proponen, 1 decide)\n\n## Objetivo\nTomar decisiones técnicas robustas comparando dos propuestas independientes.\n\n## Roles\n- **Agente A:** propuesta 1\n- **Agente B:** propuesta 2\n- **Árbitro:** evalúa y decide\n\n## Protocolo\n1. A y B trabajan sin influenciarse.\n2. Entregan formato estándar:\n   - enfoque\n   - pros/contras\n   - riesgo\n   - costo/tiempo\n3. Árbitro puntúa con rúbrica.\n4. Selección final + justificación escrita.\n\n## Rúbrica sugerida (0-5)\n- Correctitud técnica\n- Simplicidad\n- Mantenibilidad\n- Riesgo operativo\n- Tiempo de entrega\n\n## Cierre\n- Decisión final\n- Razones de descarte\n- Condiciones para reevaluar\n",
+    "groupId": "technical-arbiter"
   },
   {
     "lang": "ES",
@@ -134,7 +150,8 @@ export const WORKFLOWS_DATA = [
     "path": "especialista-bajo-demanda",
     "name": "Especialista bajo demanda",
     "objective": "Activar especialistas (legal, finanzas, docs, seguridad, etc.) solo cuando el caso lo requiere.",
-    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nEspecialista bajo demanda\n\n## Objetivo\nActivar especialistas (legal, finanzas, docs, seguridad, etc.) solo cuando el caso lo requiere.\n\n## Trigger de activación\n- Requisito regulatorio/compliance\n- Impacto financiero relevante\n- Entrega formal externa\n- Riesgo alto no cubierto por equipo base\n\n## Roles\n- **Core team:** ejecuta camino principal.\n- **Especialista:** interviene por ventana acotada.\n\n## Reglas\n- Toda activación debe indicar motivo + alcance.\n- Especialista entrega dictamen accionable, no genérico.\n- Cerrar activación al resolver condición gatillo.\n\n## Entrega\n- Dictamen del especialista\n- Cambios aplicados al plan\n"
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nEspecialista bajo demanda\n\n## Objetivo\nActivar especialistas (legal, finanzas, docs, seguridad, etc.) solo cuando el caso lo requiere.\n\n## Trigger de activación\n- Requisito regulatorio/compliance\n- Impacto financiero relevante\n- Entrega formal externa\n- Riesgo alto no cubierto por equipo base\n\n## Roles\n- **Core team:** ejecuta camino principal.\n- **Especialista:** interviene por ventana acotada.\n\n## Reglas\n- Toda activación debe indicar motivo + alcance.\n- Especialista entrega dictamen accionable, no genérico.\n- Cerrar activación al resolver condición gatillo.\n\n## Entrega\n- Dictamen del especialista\n- Cambios aplicados al plan\n",
+    "groupId": "on-demand-specialist"
   },
   {
     "lang": "ES",
@@ -142,7 +159,8 @@ export const WORKFLOWS_DATA = [
     "path": "follow-the-sun",
     "name": "Follow-the-sun (handoff por bloques)",
     "objective": "Mantener avance continuo mediante traspasos estructurados entre agentes por bloques horarios.",
-    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nFollow-the-sun (handoff por bloques)\n\n## Objetivo\nMantener avance continuo mediante traspasos estructurados entre agentes por bloques horarios.\n\n## Bloques\n- **Bloque A:** ejecución inicial\n- **Bloque B:** continuidad + validación\n- **Bloque C:** cierre/documentación\n\n## Formato de handoff (obligatorio)\n- Estado actual\n- Qué se logró\n- Qué falta\n- Bloqueos\n- Próximo primer paso recomendado\n\n## Reglas\n- Sin handoff completo, no se considera transferencia válida.\n- El receptor confirma recepción con plan de arranque.\n\n## Métrica clave\n- Tiempo muerto entre bloques <15 min (objetivo).\n"
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nFollow-the-sun (handoff por bloques)\n\n## Objetivo\nMantener avance continuo mediante traspasos estructurados entre agentes por bloques horarios.\n\n## Bloques\n- **Bloque A:** ejecución inicial\n- **Bloque B:** continuidad + validación\n- **Bloque C:** cierre/documentación\n\n## Formato de handoff (obligatorio)\n- Estado actual\n- Qué se logró\n- Qué falta\n- Bloqueos\n- Próximo primer paso recomendado\n\n## Reglas\n- Sin handoff completo, no se considera transferencia válida.\n- El receptor confirma recepción con plan de arranque.\n\n## Métrica clave\n- Tiempo muerto entre bloques <15 min (objetivo).\n",
+    "groupId": "follow-the-sun"
   },
   {
     "lang": "ES",
@@ -150,7 +168,8 @@ export const WORKFLOWS_DATA = [
     "path": "hub-and-spoke",
     "name": "Hub-and-spoke",
     "objective": "Centralizar coordinación en un hub (orquestador) y delegar ejecución a spokes (agentes especialistas), minimizando desalineación.",
-    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nHub-and-spoke\n\n## Objetivo\nCentralizar coordinación en un hub (orquestador) y delegar ejecución a spokes (agentes especialistas), minimizando desalineación.\n\n## Roles\n- **Hub / Orquestador:** prioriza, divide, integra, decide trade-offs.\n- **Spoke Implementación:** construye solución.\n- **Spoke Validación:** pruebas, QA, compliance.\n- **Spoke Documentación:** runbook/changelog/entrega.\n\n## Cuándo usar\n- Múltiples frentes de trabajo con dependencia de una sola dirección técnica.\n- Necesidad de control fuerte de alcance y calidad.\n\n## Política de operación\n1. Hub define backlog en tareas atómicas.\n2. Cada spoke toma 1-2 tareas con owner explícito.\n3. Todo vuelve al hub para integración.\n4. Hub publica estado consolidado por hitos.\n\n## SLA sugerido\n- Update operativo cada 60-90 min.\n- Bloqueo >30 min => escalar al hub.\n\n## Entregables\n- Plan consolidado\n- Resultado integrado\n- Riesgos + mitigaciones\n- Decisiones técnicas registradas\n"
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nHub-and-spoke\n\n## Objetivo\nCentralizar coordinación en un hub (orquestador) y delegar ejecución a spokes (agentes especialistas), minimizando desalineación.\n\n## Roles\n- **Hub / Orquestador:** prioriza, divide, integra, decide trade-offs.\n- **Spoke Implementación:** construye solución.\n- **Spoke Validación:** pruebas, QA, compliance.\n- **Spoke Documentación:** runbook/changelog/entrega.\n\n## Cuándo usar\n- Múltiples frentes de trabajo con dependencia de una sola dirección técnica.\n- Necesidad de control fuerte de alcance y calidad.\n\n## Política de operación\n1. Hub define backlog en tareas atómicas.\n2. Cada spoke toma 1-2 tareas con owner explícito.\n3. Todo vuelve al hub para integración.\n4. Hub publica estado consolidado por hitos.\n\n## SLA sugerido\n- Update operativo cada 60-90 min.\n- Bloqueo >30 min => escalar al hub.\n\n## Entregables\n- Plan consolidado\n- Resultado integrado\n- Riesgos + mitigaciones\n- Decisiones técnicas registradas\n",
+    "groupId": "hub-and-spoke"
   },
   {
     "lang": "ES",
@@ -158,7 +177,8 @@ export const WORKFLOWS_DATA = [
     "path": "matriz-raci",
     "name": "Matriz RACI",
     "objective": "Definir responsabilidades sin ambigüedad: quién hace, quién aprueba y quién informa.",
-    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nMatriz RACI\n\n## Objetivo\nDefinir responsabilidades sin ambigüedad: quién hace, quién aprueba y quién informa.\n\n## Definiciones\n- **R (Responsible):** ejecuta.\n- **A (Accountable):** aprueba y responde por el resultado.\n- **C (Consulted):** aporta criterio.\n- **I (Informed):** se mantiene informado.\n\n## Plantilla\n| Tarea | R | A | C | I |\n|---|---|---|---|---|\n| Definir alcance |  |  |  |  |\n| Implementar |  |  |  |  |\n| Validar |  |  |  |  |\n| Entregar |  |  |  |  |\n\n## Reglas\n- Cada tarea debe tener exactamente 1 A.\n- No iniciar tarea sin R y A definidos.\n- Cambios de RACI deben quedar versionados.\n"
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nMatriz RACI\n\n## Objetivo\nDefinir responsabilidades sin ambigüedad: quién hace, quién aprueba y quién informa.\n\n## Definiciones\n- **R (Responsible):** ejecuta.\n- **A (Accountable):** aprueba y responde por el resultado.\n- **C (Consulted):** aporta criterio.\n- **I (Informed):** se mantiene informado.\n\n## Plantilla\n| Tarea | R | A | C | I |\n|---|---|---|---|---|\n| Definir alcance |  |  |  |  |\n| Implementar |  |  |  |  |\n| Validar |  |  |  |  |\n| Entregar |  |  |  |  |\n\n## Reglas\n- Cada tarea debe tener exactamente 1 A.\n- No iniciar tarea sin R y A definidos.\n- Cambios de RACI deben quedar versionados.\n",
+    "groupId": "raci-matrix"
   },
   {
     "lang": "ES",
@@ -166,7 +186,8 @@ export const WORKFLOWS_DATA = [
     "path": "modo-auditoria",
     "name": "Modo auditoría (uno hace, otro audita, otro firma)",
     "objective": "Asegurar independencia entre ejecución, control y aprobación final.",
-    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nModo auditoría (uno hace, otro audita, otro firma)\n\n## Objetivo\nAsegurar independencia entre ejecución, control y aprobación final.\n\n## Roles\n- **Ejecutor:** realiza cambios.\n- **Auditor:** valida cumplimiento técnico/proceso.\n- **Firmante:** aprueba liberación final.\n\n## Reglas\n- Auditor no puede ser el ejecutor.\n- Firmante revisa evidencia del auditor, no solo resumen.\n- Sin evidencia completa no hay firma.\n\n## Evidencia mínima\n- Qué cambió\n- Por qué cambió\n- Qué pruebas se corrieron\n- Resultado de auditoría\n\n## Cierre\n- Firma explícita\n- Registro de excepciones (si existen)\n"
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nModo auditoría (uno hace, otro audita, otro firma)\n\n## Objetivo\nAsegurar independencia entre ejecución, control y aprobación final.\n\n## Roles\n- **Ejecutor:** realiza cambios.\n- **Auditor:** valida cumplimiento técnico/proceso.\n- **Firmante:** aprueba liberación final.\n\n## Reglas\n- Auditor no puede ser el ejecutor.\n- Firmante revisa evidencia del auditor, no solo resumen.\n- Sin evidencia completa no hay firma.\n\n## Evidencia mínima\n- Qué cambió\n- Por qué cambió\n- Qué pruebas se corrieron\n- Resultado de auditoría\n\n## Cierre\n- Firma explícita\n- Registro de excepciones (si existen)\n",
+    "groupId": "audit-mode"
   },
   {
     "lang": "ES",
@@ -174,7 +195,8 @@ export const WORKFLOWS_DATA = [
     "path": "modo-comite",
     "name": "Modo comité (votación + desempate)",
     "objective": "Tomar decisiones por votación entre agentes con mecanismo explícito de desempate.",
-    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nModo comité (votación + desempate)\n\n## Objetivo\nTomar decisiones por votación entre agentes con mecanismo explícito de desempate.\n\n## Roles\n- **Miembros del comité (N impar idealmente).**\n- **Presidencia/Desempate.**\n\n## Flujo\n1. Presentación de opciones.\n2. Debate corto con límites de tiempo.\n3. Votación registrada.\n4. Si empate: aplica criterio de desempate.\n\n## Criterios de desempate\n- Menor riesgo operativo\n- Mayor reversibilidad\n- Mejor relación impacto/esfuerzo\n- Voto de presidencia (último recurso)\n\n## Entrega\n- Acta de decisión\n- Votos por opción\n- Justificación final\n"
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nModo comité (votación + desempate)\n\n## Objetivo\nTomar decisiones por votación entre agentes con mecanismo explícito de desempate.\n\n## Roles\n- **Miembros del comité (N impar idealmente).**\n- **Presidencia/Desempate.**\n\n## Flujo\n1. Presentación de opciones.\n2. Debate corto con límites de tiempo.\n3. Votación registrada.\n4. Si empate: aplica criterio de desempate.\n\n## Criterios de desempate\n- Menor riesgo operativo\n- Mayor reversibilidad\n- Mejor relación impacto/esfuerzo\n- Voto de presidencia (último recurso)\n\n## Entrega\n- Acta de decisión\n- Votos por opción\n- Justificación final\n",
+    "groupId": "committee-mode"
   },
   {
     "lang": "ES",
@@ -182,7 +204,8 @@ export const WORKFLOWS_DATA = [
     "path": "modo-incidente",
     "name": "Modo incidente (comandante + cronista + ejecutores)",
     "objective": "Resolver incidentes rápido, con mando claro y trazabilidad completa.",
-    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nModo incidente (comandante + cronista + ejecutores)\n\n## Objetivo\nResolver incidentes rápido, con mando claro y trazabilidad completa.\n\n## Roles\n- **Comandante de incidente:** dirige estrategia y prioridades.\n- **Cronista:** registra timeline, hipótesis y decisiones.\n- **Ejecutores:** aplican mitigaciones y verificaciones.\n\n## Protocolo\n1. Declarar incidente + severidad.\n2. Asignar roles de inmediato.\n3. Mitigar impacto primero, RCA después.\n4. Actualizaciones periódicas (cadencia fija).\n5. Cierre + postmortem.\n\n## SLA sugerido\n- Sev1: updates cada 10 min\n- Sev2: updates cada 20 min\n- Sev3: updates cada 30-60 min\n\n## Entregables\n- Timeline completo\n- Acciones y responsables\n- RCA preliminar/final\n- Plan de prevención\n"
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nModo incidente (comandante + cronista + ejecutores)\n\n## Objetivo\nResolver incidentes rápido, con mando claro y trazabilidad completa.\n\n## Roles\n- **Comandante de incidente:** dirige estrategia y prioridades.\n- **Cronista:** registra timeline, hipótesis y decisiones.\n- **Ejecutores:** aplican mitigaciones y verificaciones.\n\n## Protocolo\n1. Declarar incidente + severidad.\n2. Asignar roles de inmediato.\n3. Mitigar impacto primero, RCA después.\n4. Actualizaciones periódicas (cadencia fija).\n5. Cierre + postmortem.\n\n## SLA sugerido\n- Sev1: updates cada 10 min\n- Sev2: updates cada 20 min\n- Sev3: updates cada 30-60 min\n\n## Entregables\n- Timeline completo\n- Acciones y responsables\n- RCA preliminar/final\n- Plan de prevención\n",
+    "groupId": "incident-mode"
   },
   {
     "lang": "ES",
@@ -190,7 +213,8 @@ export const WORKFLOWS_DATA = [
     "path": "modo-mentor",
     "name": "Modo mentor (senior revisa junior antes de entrega)",
     "objective": "Subir calidad de entrega y acelerar aprendizaje mediante revisión guiada.",
-    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nModo mentor (senior revisa junior antes de entrega)\n\n## Objetivo\nSubir calidad de entrega y acelerar aprendizaje mediante revisión guiada.\n\n## Roles\n- **Junior:** ejecuta propuesta inicial.\n- **Senior/Mentor:** revisa, corrige, enseña.\n\n## Flujo\n1. Junior entrega borrador funcional.\n2. Senior revisa contra checklist.\n3. Junior aplica correcciones.\n4. Senior da aprobación final.\n\n## Checklist del mentor\n- Correctitud técnica\n- Claridad y mantenibilidad\n- Riesgos y edge cases\n- Calidad de comunicación de salida\n\n## Regla clave\n- Nada se entrega externo sin revisión senior.\n\n## Entregables\n- Versión final aprobada\n- Feedback breve para aprendizaje\n"
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nModo mentor (senior revisa junior antes de entrega)\n\n## Objetivo\nSubir calidad de entrega y acelerar aprendizaje mediante revisión guiada.\n\n## Roles\n- **Junior:** ejecuta propuesta inicial.\n- **Senior/Mentor:** revisa, corrige, enseña.\n\n## Flujo\n1. Junior entrega borrador funcional.\n2. Senior revisa contra checklist.\n3. Junior aplica correcciones.\n4. Senior da aprobación final.\n\n## Checklist del mentor\n- Correctitud técnica\n- Claridad y mantenibilidad\n- Riesgos y edge cases\n- Calidad de comunicación de salida\n\n## Regla clave\n- Nada se entrega externo sin revisión senior.\n\n## Entregables\n- Versión final aprobada\n- Feedback breve para aprendizaje\n",
+    "groupId": "mentor-mode"
   },
   {
     "lang": "ES",
@@ -198,7 +222,8 @@ export const WORKFLOWS_DATA = [
     "path": "on-call-automatico",
     "name": "On-call automático",
     "objective": "Responder incidentes automáticamente con triage, mitigación inicial y escalamiento humano cuando corresponda.",
-    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nOn-call automático\n\n## Objetivo\nResponder incidentes automáticamente con triage, mitigación inicial y escalamiento humano cuando corresponda.\n\n## Roles\n- **Dispatcher:** clasifica alerta y asigna flujo.\n- **Respondedor automático:** ejecuta runbook de primera respuesta.\n- **Escalador:** notifica humano on-call si supera umbral.\n\n## Flujo\n1. Ingesta de alerta\n2. Clasificación (sev1/sev2/sev3)\n3. Acción automática permitida (safe list)\n4. Verificación post-acción\n5. Escalamiento o cierre\n\n## SLA sugerido\n- Ack: <5 min\n- Mitigación inicial: <15 min\n- Escalamiento Sev1: inmediato\n\n## Guardrails\n- Prohibido ejecutar acciones destructivas automáticas.\n- Toda acción debe quedar auditada con timestamp.\n\n## Entrega\n- Timeline\n- Root cause preliminar\n- Acciones tomadas\n"
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nOn-call automático\n\n## Objetivo\nResponder incidentes automáticamente con triage, mitigación inicial y escalamiento humano cuando corresponda.\n\n## Roles\n- **Dispatcher:** clasifica alerta y asigna flujo.\n- **Respondedor automático:** ejecuta runbook de primera respuesta.\n- **Escalador:** notifica humano on-call si supera umbral.\n\n## Flujo\n1. Ingesta de alerta\n2. Clasificación (sev1/sev2/sev3)\n3. Acción automática permitida (safe list)\n4. Verificación post-acción\n5. Escalamiento o cierre\n\n## SLA sugerido\n- Ack: <5 min\n- Mitigación inicial: <15 min\n- Escalamiento Sev1: inmediato\n\n## Guardrails\n- Prohibido ejecutar acciones destructivas automáticas.\n- Toda acción debe quedar auditada con timestamp.\n\n## Entrega\n- Timeline\n- Root cause preliminar\n- Acciones tomadas\n",
+    "groupId": "automatic-on-call"
   },
   {
     "lang": "ES",
@@ -206,7 +231,8 @@ export const WORKFLOWS_DATA = [
     "path": "pipeline-por-etapas",
     "name": "Pipeline por etapas",
     "objective": "Ejecutar trabajo secuencial por etapas con gates de calidad entre fases.",
-    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nPipeline por etapas\n\n## Objetivo\nEjecutar trabajo secuencial por etapas con gates de calidad entre fases.\n\n## Etapas estándar\n1. **Descubrimiento** (requisitos y restricciones)\n2. **Diseño** (solución y plan)\n3. **Implementación**\n4. **Validación** (tests + revisión)\n5. **Entrega**\n\n## Reglas\n- No se avanza de etapa sin criterios de salida cumplidos.\n- Cada etapa produce artefacto verificable.\n- Si falla un gate, rollback a etapa anterior.\n\n## Criterios por etapa\n- Descubrimiento: problema definido + alcance cerrado.\n- Diseño: arquitectura y riesgos aprobados.\n- Implementación: cambios completos + lint/build OK.\n- Validación: test plan ejecutado + evidencia.\n- Entrega: resumen ejecutivo + próximos pasos.\n\n## Escalamiento\n- 2 fallos consecutivos de gate => revisión de diseño.\n"
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nPipeline por etapas\n\n## Objetivo\nEjecutar trabajo secuencial por etapas con gates de calidad entre fases.\n\n## Etapas estándar\n1. **Descubrimiento** (requisitos y restricciones)\n2. **Diseño** (solución y plan)\n3. **Implementación**\n4. **Validación** (tests + revisión)\n5. **Entrega**\n\n## Reglas\n- No se avanza de etapa sin criterios de salida cumplidos.\n- Cada etapa produce artefacto verificable.\n- Si falla un gate, rollback a etapa anterior.\n\n## Criterios por etapa\n- Descubrimiento: problema definido + alcance cerrado.\n- Diseño: arquitectura y riesgos aprobados.\n- Implementación: cambios completos + lint/build OK.\n- Validación: test plan ejecutado + evidencia.\n- Entrega: resumen ejecutivo + próximos pasos.\n\n## Escalamiento\n- 2 fallos consecutivos de gate => revisión de diseño.\n",
+    "groupId": "stage-pipeline"
   },
   {
     "lang": "ES",
@@ -214,7 +240,8 @@ export const WORKFLOWS_DATA = [
     "path": "planeacion-semanal",
     "name": "Planeación semanal",
     "objective": "Convertir objetivos semanales en plan ejecutable con prioridades, capacidad y riesgos.",
-    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nPlaneación semanal\n\n## Objetivo\nConvertir objetivos semanales en plan ejecutable con prioridades, capacidad y riesgos.\n\n## Cadencia\n- Lunes: planificación\n- Miércoles: checkpoint\n- Viernes: cierre y retro\n\n## Roles\n- **Planner:** define prioridades y dependencias.\n- **Estimador:** evalúa esfuerzo/capacidad.\n- **Riesgos:** identifica bloqueos y contingencias.\n\n## Proceso\n1. Recopilar backlog candidato.\n2. Priorizar (impacto x urgencia).\n3. Estimar capacidad real.\n4. Confirmar compromisos semanales.\n5. Publicar plan con owners.\n\n## Salida mínima\n- Top prioridades\n- Qué se difiere y por qué\n- Riesgos + plan B\n"
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nPlaneación semanal\n\n## Objetivo\nConvertir objetivos semanales en plan ejecutable con prioridades, capacidad y riesgos.\n\n## Cadencia\n- Lunes: planificación\n- Miércoles: checkpoint\n- Viernes: cierre y retro\n\n## Roles\n- **Planner:** define prioridades y dependencias.\n- **Estimador:** evalúa esfuerzo/capacidad.\n- **Riesgos:** identifica bloqueos y contingencias.\n\n## Proceso\n1. Recopilar backlog candidato.\n2. Priorizar (impacto x urgencia).\n3. Estimar capacidad real.\n4. Confirmar compromisos semanales.\n5. Publicar plan con owners.\n\n## Salida mínima\n- Top prioridades\n- Qué se difiere y por qué\n- Riesgos + plan B\n",
+    "groupId": "weekly-planning"
   },
   {
     "lang": "ES",
@@ -222,7 +249,8 @@ export const WORKFLOWS_DATA = [
     "path": "red-team-blue-team",
     "name": "Red-team / Blue-team",
     "objective": "Fortalecer calidad/seguridad con un equipo que ataca supuestos (Red) y otro que defiende/corrige (Blue).",
-    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nRed-team / Blue-team\n\n## Objetivo\nFortalecer calidad/seguridad con un equipo que ataca supuestos (Red) y otro que defiende/corrige (Blue).\n\n## Roles\n- **Blue Team:** diseña e implementa solución inicial.\n- **Red Team:** busca fallas, abuso, bypass y edge cases.\n- **Moderador:** decide severidad y prioridad de fixes.\n\n## Protocolo\n1. Blue entrega v1 + supuestos.\n2. Red ejecuta batería de ataques/pruebas adversariales.\n3. Red reporta hallazgos (severidad + evidencia).\n4. Blue corrige y documenta mitigaciones.\n5. Re-test de Red para cierre.\n\n## Criterios de severidad\n- **Crítico:** riesgo de caída o compromiso alto.\n- **Alto:** impacto funcional importante.\n- **Medio/Bajo:** mejoras o hardening incremental.\n\n## Cierre\n- Lista de hallazgos cerrados\n- Riesgos aceptados explícitamente\n"
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nRed-team / Blue-team\n\n## Objetivo\nFortalecer calidad/seguridad con un equipo que ataca supuestos (Red) y otro que defiende/corrige (Blue).\n\n## Roles\n- **Blue Team:** diseña e implementa solución inicial.\n- **Red Team:** busca fallas, abuso, bypass y edge cases.\n- **Moderador:** decide severidad y prioridad de fixes.\n\n## Protocolo\n1. Blue entrega v1 + supuestos.\n2. Red ejecuta batería de ataques/pruebas adversariales.\n3. Red reporta hallazgos (severidad + evidencia).\n4. Blue corrige y documenta mitigaciones.\n5. Re-test de Red para cierre.\n\n## Criterios de severidad\n- **Crítico:** riesgo de caída o compromiso alto.\n- **Alto:** impacto funcional importante.\n- **Medio/Bajo:** mejoras o hardening incremental.\n\n## Cierre\n- Lista de hallazgos cerrados\n- Riesgos aceptados explícitamente\n",
+    "groupId": "red-team-blue-team"
   },
   {
     "lang": "ES",
@@ -230,7 +258,8 @@ export const WORKFLOWS_DATA = [
     "path": "research-ejecucion",
     "name": "Research + ejecución",
     "objective": "Separar claramente fase de investigación y fase de implementación para reducir retrabajo.",
-    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nResearch + ejecución\n\n## Objetivo\nSeparar claramente fase de investigación y fase de implementación para reducir retrabajo.\n\n## Fase 1: Research\n- Preguntas clave\n- Opciones comparadas\n- Recomendación con trade-offs\n- Criterio de decisión\n\n## Fase 2: Ejecución\n- Implementar opción aprobada\n- Validar contra criterios de éxito\n- Documentar decisiones finales\n\n## Reglas\n- No implementar sin decisión explícita post-research.\n- Research debe traer evidencia (docs, benchmarks, referencias).\n\n## Entregables\n- Brief técnico (research)\n- Plan de implementación\n- Resultado + validación\n"
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nResearch + ejecución\n\n## Objetivo\nSeparar claramente fase de investigación y fase de implementación para reducir retrabajo.\n\n## Fase 1: Research\n- Preguntas clave\n- Opciones comparadas\n- Recomendación con trade-offs\n- Criterio de decisión\n\n## Fase 2: Ejecución\n- Implementar opción aprobada\n- Validar contra criterios de éxito\n- Documentar decisiones finales\n\n## Reglas\n- No implementar sin decisión explícita post-research.\n- Research debe traer evidencia (docs, benchmarks, referencias).\n\n## Entregables\n- Brief técnico (research)\n- Plan de implementación\n- Resultado + validación\n",
+    "groupId": "research-execution"
   },
   {
     "lang": "ES",
@@ -238,6 +267,7 @@ export const WORKFLOWS_DATA = [
     "path": "swarm-paralelo",
     "name": "Swarm paralelo",
     "objective": "Acelerar ejecución dividiendo trabajo en piezas independientes que corren en paralelo.",
-    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nSwarm paralelo\n\n## Objetivo\nAcelerar ejecución dividiendo trabajo en piezas independientes que corren en paralelo.\n\n## Roles\n- **Coordinador de swarm:** particiona y consolida.\n- **N agentes ejecutores:** cada uno en subproblema aislado.\n- **Validador final:** detecta inconsistencias cruzadas.\n\n## Cuándo usar\n- Tareas altamente paralelizables.\n- Ventana de tiempo corta.\n\n## Reglas\n1. Diseñar partición sin solapamiento.\n2. Definir contrato de salida por agente.\n3. Sincronización en checkpoints fijos.\n4. Merge final con validación de compatibilidad.\n\n## Riesgos comunes\n- Duplicidad de trabajo\n- Incompatibilidad entre salidas\n- Drift de criterios\n\n## Mitigación\n- Plantilla única de salida\n- Convenciones compartidas\n- Reconciliación técnica obligatoria al cierre\n"
+    "orchestration": "# ORQUESTACION.md\n\n## Workflow\nSwarm paralelo\n\n## Objetivo\nAcelerar ejecución dividiendo trabajo en piezas independientes que corren en paralelo.\n\n## Roles\n- **Coordinador de swarm:** particiona y consolida.\n- **N agentes ejecutores:** cada uno en subproblema aislado.\n- **Validador final:** detecta inconsistencias cruzadas.\n\n## Cuándo usar\n- Tareas altamente paralelizables.\n- Ventana de tiempo corta.\n\n## Reglas\n1. Diseñar partición sin solapamiento.\n2. Definir contrato de salida por agente.\n3. Sincronización en checkpoints fijos.\n4. Merge final con validación de compatibilidad.\n\n## Riesgos comunes\n- Duplicidad de trabajo\n- Incompatibilidad entre salidas\n- Drift de criterios\n\n## Mitigación\n- Plantilla única de salida\n- Convenciones compartidas\n- Reconciliación técnica obligatoria al cierre\n",
+    "groupId": "parallel-swarm"
   }
 ] as const;

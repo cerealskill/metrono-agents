@@ -101,6 +101,32 @@ function walkWorkflows(dir, lang, base = '') {
 const agentsByLang = walkLangDirs(AGENTS_ROOT, walkAgents)
 const workflowsByLang = walkLangDirs(WORKFLOW_ROOT, walkWorkflows)
 
+// Pair workflows across languages using explicit EN↔ES slug mapping.
+const WORKFLOW_PAIR_MAP = {
+  'audit-mode': 'modo-auditoria',
+  'automatic-on-call': 'on-call-automatico',
+  'committee-mode': 'modo-comite',
+  'follow-the-sun': 'follow-the-sun',
+  'hub-and-spoke': 'hub-and-spoke',
+  'incident-mode': 'modo-incidente',
+  'mentor-mode': 'modo-mentor',
+  'on-demand-specialist': 'especialista-bajo-demanda',
+  'parallel-swarm': 'swarm-paralelo',
+  'raci-matrix': 'matriz-raci',
+  'red-team-blue-team': 'red-team-blue-team',
+  'research-execution': 'research-ejecucion',
+  'stage-pipeline': 'pipeline-por-etapas',
+  'technical-arbiter': 'arbitro-tecnico',
+  'weekly-planning': 'planeacion-semanal',
+}
+// Build reverse map ES→EN
+const ES_TO_EN = Object.fromEntries(Object.entries(WORKFLOW_PAIR_MAP).map(([en, es]) => [es, en]))
+
+const enWf = workflowsByLang.EN || []
+const esWf = workflowsByLang.ES || []
+for (const w of enWf) w.groupId = w.slug
+for (const w of esWf) w.groupId = ES_TO_EN[w.slug] || w.slug
+
 // Flatten for legacy output
 const agents = Object.values(agentsByLang).flat()
 const workflows = Object.values(workflowsByLang).flat()

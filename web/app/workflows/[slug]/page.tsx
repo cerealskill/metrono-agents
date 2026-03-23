@@ -9,8 +9,11 @@ export async function generateStaticParams() {
 
 export default async function WorkflowPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const matches = getAllWorkflows().filter(w => w.slug === slug)
-  if (matches.length === 0) notFound()
+  const hit = getAllWorkflows().find(w => w.slug === slug)
+  if (!hit) notFound()
+
+  // Get all language variants via groupId
+  const matches = getAllWorkflows().filter(w => w.groupId === hit.groupId)
 
   return <WorkflowDetailContent workflows={matches} />
 }
