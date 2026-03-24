@@ -234,21 +234,25 @@ cp -r agents/EN/tech/sre/pedro-sre/* ~/.openclaw/workspace-pedro-sre/
 
 ## Workflow Catalog
 
-28 orchestration patterns available in English and Spanish:
+34 orchestration patterns available in English and Spanish:
 
 | Workflow | Description |
 |----------|-------------|
+| [Abogado del Diablo / Devil's Advocate](./workflow/EN/devils-advocate) | Challenge assumptions to harden proposals |
 | [Audit Mode](./workflow/EN/audit-mode) | Executor + Auditor + Signer — 3-way approval |
 | [Automatic On-Call](./workflow/EN/automatic-on-call) | Auto-rotation on-call scheduling |
+| [Blackboard / Pizarrón](./workflow/EN/blackboard) | Shared knowledge space for emergent multi-agent solutions |
 | [Budget Router](./workflow/EN/budget-router) | Route by cost/budget efficiency |
 | [Canary Rollout](./workflow/EN/canary-rollout) | Gradual deployment with staged rollout |
 | [Chain of Thought](./workflow/EN/chain-of-thought) | Sequential reasoning steps |
+| [Checkpoint / Snapshot](./workflow/EN/checkpoint-snapshot) | Save and resume workflow state at any point |
 | [Committee Mode](./workflow/EN/committee-mode) | Multi-agent voting on decisions |
 | [Consensus Voting](./workflow/EN/consensus-voting) | Agreement-based decision making |
 | [Escalation Chain](./workflow/EN/escalation-chain) | Tier-based escalation protocol |
 | [Feedback Loop](./workflow/EN/feedback-loop) | Iterative improvement cycles |
 | [Follow the Sun](./workflow/EN/follow-the-sun) | Global timezone handoff |
 | [Hub and Spoke](./workflow/EN/hub-and-spoke) | Central coordination with distributed execution |
+| [Human-in-the-Loop](./workflow/EN/human-in-the-loop) | Mandatory human approval gates in autonomous workflows |
 | [Incident Mode](./workflow/EN/incident-mode) | Crisis response protocol |
 | [Map Reduce](./workflow/EN/map-reduce) | Divide-and-conquer parallel processing |
 | [Mentor Mode](./workflow/EN/mentor-mode) | Teaching and knowledge transfer |
@@ -260,6 +264,8 @@ cp -r agents/EN/tech/sre/pedro-sre/* ~/.openclaw/workspace-pedro-sre/
 | [Research → Execution](./workflow/EN/research-execution) | Investigate first, then execute |
 | [Retry / Rollback](./workflow/EN/retry-rollback) | Failure recovery with rollback |
 | [Round Robin](./workflow/EN/round-robin) | Sequential agent rotation |
+| [Saga](./workflow/EN/saga) | Distributed multi-step transactions with compensation |
+| [Scatter-Gather](./workflow/EN/scatter-gather) | Broadcast to N solvers, select the best result |
 | [Stage Pipeline](./workflow/EN/stage-pipeline) | Multi-stage sequential workflow |
 | [Technical Arbiter](./workflow/EN/technical-arbiter) | Technical dispute resolution |
 | [Triage](./workflow/EN/triage) | Classify and prioritize incoming work |
