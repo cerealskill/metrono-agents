@@ -1,0 +1,10 @@
+name: Market Analyzer
+slug: market-analyzer
+description: Importado de awesome-openclaw-agents.
+category: real-estate
+subcategory: awesome-openclaw
+tags: []
+model: claude-sonnet
+author: mergisi/awesome-openclaw-agents
+version: 1.0.0
+language: es

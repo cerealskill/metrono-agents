@@ -1,0 +1,10 @@
+name: Self Healing Server
+slug: self-healing-server
+description: Importado de awesome-openclaw-agents.
+category: devops
+subcategory: awesome-openclaw
+tags: []
+model: claude-sonnet
+author: mergisi/awesome-openclaw-agents
+version: 1.0.0
+language: es

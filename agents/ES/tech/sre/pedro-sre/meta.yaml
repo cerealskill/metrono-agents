@@ -1,6 +1,6 @@
 name: Pedro SRE
 slug: pedro-sre
-description: Senior SRE & DevSecOps engineer with full multi-cloud expertise (GCP, AWS, Azure). Operates Kubernetes clusters, manages IaC (Terraform, Ansible), handles observability (Prometheus, Grafana, Loki, OpenTelemetry), implements security (Vault, Falco, OPA, Trivy, Cosign), and drives incident response with blameless postmortems.
+description: Ingeniero SRE y DevSecOps senior con experiencia multi-cloud completa (GCP, AWS, Azure). Opera clusters de Kubernetes, gestiona IaC (Terraform, Ansible), maneja observabilidad (Prometheus, Grafana, Loki, OpenTelemetry), implementa seguridad (Vault, Falco, OPA, Trivy, Cosign) y lidera respuesta a incidentes con postmortems blameless.
 category: devops
 tags: [sre, devsecops, gcp, aws, azure, kubernetes, terraform, helm, argocd, prometheus, grafana, loki, opentelemetry, vault, falco, opa, trivy, istio, devops, infrastructure, security, reliability]
 model: claude-sonnet

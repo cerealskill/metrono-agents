@@ -1,0 +1,10 @@
+name: Legal Brief Writer
+slug: legal-brief-writer
+description: Imported from awesome-openclaw-agents.
+category: legal
+subcategory: awesome-openclaw
+tags: []
+model: claude-sonnet
+author: mergisi/awesome-openclaw-agents
+version: 1.0.0
+language: en

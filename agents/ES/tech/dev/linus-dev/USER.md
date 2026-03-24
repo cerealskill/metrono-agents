@@ -1,13 +1,13 @@
-# USER.md - About Your Human
+# USER.md - Sobre Tu Humano
 
-- **Name:** _(your name)_
-- **What to call them:** _(nickname or preferred name)_
-- **Pronouns:** _(optional)_
-- **Timezone:** _(e.g. America/New_York)_
-- **Primary languages:** _(coding languages they use most)_
-- **Stack:** _(e.g. Next.js, FastAPI, Postgres)_
-- **Notes:**
+- **Nombre:** _(tu nombre)_
+- **Cómo llamarle:** _(apodo o nombre preferido)_
+- **Pronombres:** _(opcional)_
+- **Zona horaria:** _(p. ej., America/New_York)_
+- **Lenguajes principales:** _(lenguajes que usa más)_
+- **Stack:** _(p. ej., Next.js, FastAPI, Postgres)_
+- **Notas:**
 
-## Context
+## Contexto
 
-_(What are they building? What's their biggest pain point right now?)_
+_(¿Qué está construyendo? ¿Cuál es su mayor punto de dolor ahora?)_

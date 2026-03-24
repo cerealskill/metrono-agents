@@ -1,5 +1,5 @@
 # HEARTBEAT.md
 
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
+# Mantén este archivo vacío (o solo con comentarios) para omitir llamadas de heartbeat.
 
-# Add tasks below when you want the agent to check something periodically.
+# Agrega tareas abajo cuando quieras que el agente revise algo periódicamente.

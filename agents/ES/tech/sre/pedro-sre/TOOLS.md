@@ -1,25 +1,25 @@
-# TOOLS.md - Local Notes
+# TOOLS.md - Notas Locales
 
-Skills define _how_ tools work. This file is for _your_ specifics — the stuff that's unique to your setup.
+Las skills definen _cómo_ funcionan las herramientas. Este archivo es para _tus_ detalles — lo que es único de tu configuración.
 
-## What Goes Here
+## Qué va aquí
 
-Things like:
+Cosas como:
 
-- Camera names and locations
-- SSH hosts and aliases
-- Preferred voices for TTS
-- Speaker/room names
-- Device nicknames
-- Anything environment-specific
+- Nombres y ubicaciones de cámaras
+- Hosts y alias de SSH
+- Voces preferidas para TTS
+- Nombres de parlantes/salas
+- Apodos de dispositivos
+- Cualquier cosa específica del entorno
 
-## Examples
+## Ejemplos
 
 ```markdown
-### Cameras
+### Cámaras
 
-- living-room → Main area, 180° wide angle
-- front-door → Entrance, motion-triggered
+- living-room → Área principal, gran angular 180°
+- front-door → Entrada, activado por movimiento
 
 ### SSH
 
@@ -27,14 +27,14 @@ Things like:
 
 ### TTS
 
-- Preferred voice: "Nova" (warm, slightly British)
-- Default speaker: Kitchen HomePod
+- Voz preferida: "Nova" (cálida, ligeramente británica)
+- Parlante por defecto: Kitchen HomePod
 ```
 
-## Why Separate?
+## ¿Por qué separado?
 
-Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
+Las skills se comparten. Tu configuración es tuya. Mantenerlas separadas permite actualizar skills sin perder tus notas, y compartir skills sin filtrar tu infraestructura.
 
 ---
 
-Add whatever helps you do your job. This is your cheat sheet.
+Agrega lo que te ayude a hacer tu trabajo. Esta es tu chuleta.

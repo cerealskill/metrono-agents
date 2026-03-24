@@ -1,0 +1,10 @@
+name: Daily Planner
+slug: daily-planner
+description: Importado de awesome-openclaw-agents.
+category: personal
+subcategory: awesome-openclaw
+tags: []
+model: claude-sonnet
+author: mergisi/awesome-openclaw-agents
+version: 1.0.0
+language: es

@@ -1,0 +1,10 @@
+name: Threat Monitor
+slug: threat-monitor
+description: Importado de awesome-openclaw-agents.
+category: security
+subcategory: awesome-openclaw
+tags: []
+model: claude-sonnet
+author: mergisi/awesome-openclaw-agents
+version: 1.0.0
+language: es

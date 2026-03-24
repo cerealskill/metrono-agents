@@ -1,0 +1,10 @@
+name: Medication Checker
+slug: medication-checker
+description: Imported from awesome-openclaw-agents.
+category: healthcare
+subcategory: awesome-openclaw
+tags: []
+model: claude-sonnet
+author: mergisi/awesome-openclaw-agents
+version: 1.0.0
+language: en

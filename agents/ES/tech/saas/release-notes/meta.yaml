@@ -1,0 +1,10 @@
+name: Release Notes
+slug: release-notes
+description: Importado de awesome-openclaw-agents.
+category: saas
+subcategory: awesome-openclaw
+tags: []
+model: claude-sonnet
+author: mergisi/awesome-openclaw-agents
+version: 1.0.0
+language: es

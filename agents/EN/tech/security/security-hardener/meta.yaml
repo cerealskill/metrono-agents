@@ -1,0 +1,10 @@
+name: Security Hardener
+slug: security-hardener
+description: Imported from awesome-openclaw-agents.
+category: security
+subcategory: awesome-openclaw
+tags: []
+model: claude-sonnet
+author: mergisi/awesome-openclaw-agents
+version: 1.0.0
+language: en

@@ -1,13 +1,13 @@
 # USER.md
 
-- **Name:** _(your name)_
-- **What to call them:** _(nickname)_
-- **Timezone:** _(e.g. America/New_York)_
-- **Work hours:** _(e.g. 9am-6pm)_
-- **Calendar:** _(Google Calendar / Apple Calendar / other)_
-- **Task manager:** _(Notion / Todoist / Apple Reminders / other)_
-- **Notes:**
+- **Nombre:** _(tu nombre)_
+- **Cómo llamarle:** _(apodo)_
+- **Zona horaria:** _(p. ej., America/New_York)_
+- **Horario de trabajo:** _(p. ej., 9am-6pm)_
+- **Calendario:** _(Google Calendar / Apple Calendar / otro)_
+- **Gestor de tareas:** _(Notion / Todoist / Apple Reminders / otro)_
+- **Notas:**
 
-## Context
+## Contexto
 
-_(What are their big goals right now? What drains their energy? What are they procrastinating on?)_
+_(¿Cuáles son sus grandes objetivos ahora? ¿Qué le drena la energía? ¿Qué está postergando?)_

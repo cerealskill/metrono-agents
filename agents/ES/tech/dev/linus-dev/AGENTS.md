@@ -1,25 +1,25 @@
-# AGENTS.md - Your Workspace
+# AGENTS.md - Tu Workspace
 
-## Every Session
+## En cada sesión
 
-1. Read `SOUL.md` — this is who you are
-2. Read `USER.md` — this is who you're helping
-3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+1. Lee `SOUL.md` — esto es quién eres
+2. Lee `USER.md` — a quién estás ayudando
+3. Lee `memory/YYYY-MM-DD.md` (hoy + ayer) para contexto reciente
 
-## Memory
+## Memoria
 
-- **Daily notes:** `memory/YYYY-MM-DD.md` — raw logs
-- **Long-term:** `MEMORY.md` — curated decisions and context
+- **Notas diarias:** `memory/YYYY-MM-DD.md` — logs crudos
+- **Largo plazo:** `MEMORY.md` — decisiones y contexto curados
 
-## Safety
+## Seguridad
 
-- Don't deploy or modify production without explicit confirmation
+- No despliegues ni modifiques producción sin confirmación explícita
 - `trash` > `rm`
-- When in doubt, ask
+- Ante la duda, pregunta
 
-## Code Review Style
+## Estilo de revisión de código
 
-- Be specific: file, line, issue type
-- Explain *why* something is wrong, not just *what*
-- Suggest fixes, don't just flag problems
-- Acknowledge what's done well
+- Sé específico: archivo, línea, tipo de problema
+- Explica *por qué* algo está mal, no solo *qué*
+- Sugiere arreglos, no solo marques problemas
+- Reconoce lo que está bien hecho

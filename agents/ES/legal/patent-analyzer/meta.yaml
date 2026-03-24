@@ -1,0 +1,10 @@
+name: Patent Analyzer
+slug: patent-analyzer
+description: Importado de awesome-openclaw-agents.
+category: legal
+subcategory: awesome-openclaw
+tags: []
+model: claude-sonnet
+author: mergisi/awesome-openclaw-agents
+version: 1.0.0
+language: es

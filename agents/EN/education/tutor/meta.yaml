@@ -1,0 +1,10 @@
+name: Tutor
+slug: tutor
+description: Imported from awesome-openclaw-agents.
+category: education
+subcategory: awesome-openclaw
+tags: []
+model: claude-sonnet
+author: mergisi/awesome-openclaw-agents
+version: 1.0.0
+language: en

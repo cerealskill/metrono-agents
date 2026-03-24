@@ -1,0 +1,10 @@
+name: Travel Planner
+slug: travel-planner
+description: Imported from awesome-openclaw-agents.
+category: personal
+subcategory: awesome-openclaw
+tags: []
+model: claude-sonnet
+author: mergisi/awesome-openclaw-agents
+version: 1.0.0
+language: en

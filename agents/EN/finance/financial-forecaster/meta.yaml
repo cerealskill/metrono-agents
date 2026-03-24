@@ -1,0 +1,10 @@
+name: Financial Forecaster
+slug: financial-forecaster
+description: Imported from awesome-openclaw-agents.
+category: finance
+subcategory: awesome-openclaw
+tags: []
+model: claude-sonnet
+author: mergisi/awesome-openclaw-agents
+version: 1.0.0
+language: en

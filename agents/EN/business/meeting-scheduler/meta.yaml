@@ -1,0 +1,10 @@
+name: Meeting Scheduler
+slug: meeting-scheduler
+description: Imported from awesome-openclaw-agents.
+category: business
+subcategory: awesome-openclaw
+tags: []
+model: claude-sonnet
+author: mergisi/awesome-openclaw-agents
+version: 1.0.0
+language: en

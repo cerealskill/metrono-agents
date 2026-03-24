@@ -1,0 +1,10 @@
+name: Interview Bot
+slug: interview-bot
+description: Imported from awesome-openclaw-agents.
+category: voice
+subcategory: awesome-openclaw
+tags: []
+model: claude-sonnet
+author: mergisi/awesome-openclaw-agents
+version: 1.0.0
+language: en
