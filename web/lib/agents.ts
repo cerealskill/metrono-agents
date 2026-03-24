@@ -32,10 +32,22 @@ export function getAgentBySlug(slug: string): AgentMeta | undefined {
 }
 
 export const CATEGORY_ICONS: Record<string, string> = {
-  tech: '🛠️',
+  tech: '�',
   business: '💼',
-  personal: '👤',
+  personal: '🙋',
   creative: '🎨',
-  finance: '💰',
+  finance: '📊',
+  marketing: '📣',
+  devops: '⚙️',
+  education: '🎓',
+  government: '🏛️',
+  health: '🏥',
+  hospitality: '🏨',
+  legal: '⚖️',
+  logistics: '🚚',
+  manufacturing: '🏭',
+  nonprofit: '🤝',
+  'real-estate': '🏠',
+  sports: '🏆',
   security: '🔐',
 }
