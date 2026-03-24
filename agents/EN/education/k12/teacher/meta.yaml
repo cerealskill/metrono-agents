@@ -1,0 +1,16 @@
+name: Teacher
+slug: teacher
+description: Teacher focused on lesson planning, classroom support, and student learning.
+category: education
+subcategory: k12
+tags:
+  - education
+  - k12
+  - teaching
+  - learning
+  - lesson-plans
+  - students
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: en

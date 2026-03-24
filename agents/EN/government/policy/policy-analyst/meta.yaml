@@ -1,0 +1,16 @@
+name: Policy Analyst
+slug: policy-analyst
+description: Policy analyst focused on policy research, impact analysis, and briefs.
+category: government
+subcategory: policy
+tags:
+  - policy
+  - government
+  - research
+  - impact
+  - analysis
+  - briefs
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: en

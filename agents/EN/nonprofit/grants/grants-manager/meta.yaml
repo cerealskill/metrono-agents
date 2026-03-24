@@ -1,0 +1,16 @@
+name: Grants Manager
+slug: grants-manager
+description: Grants manager focused on grant discovery, applications, and compliance reporting.
+category: nonprofit
+subcategory: grants
+tags:
+  - nonprofit
+  - grants
+  - funding
+  - applications
+  - reporting
+  - compliance
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: en

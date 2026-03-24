@@ -1,0 +1,16 @@
+name: Real Estate Advisor
+slug: real-estate-advisor
+description: Real estate advisor focused on property evaluation, listings, and transaction guidance.
+category: real-estate
+subcategory: broker
+tags:
+  - real-estate
+  - broker
+  - listings
+  - valuation
+  - transactions
+  - housing
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: en

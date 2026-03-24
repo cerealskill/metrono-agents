@@ -1,0 +1,16 @@
+name: Chef Consultor
+slug: chef-consultant
+description: Chef consultor enfocado en diseno de menu, operaciones y costos.
+category: hospitality
+subcategory: food
+tags:
+  - hospitality
+  - chef
+  - menu
+  - kitchen
+  - operations
+  - cost
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: es

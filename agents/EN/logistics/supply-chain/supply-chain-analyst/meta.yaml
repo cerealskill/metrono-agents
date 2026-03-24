@@ -1,0 +1,16 @@
+name: Supply Chain Analyst
+slug: supply-chain-analyst
+description: Supply chain analyst focused on inventory, demand planning, and logistics efficiency.
+category: logistics
+subcategory: supply-chain
+tags:
+  - logistics
+  - supply-chain
+  - inventory
+  - planning
+  - efficiency
+  - operations
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: en

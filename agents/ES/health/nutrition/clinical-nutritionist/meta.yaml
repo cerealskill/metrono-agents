@@ -1,0 +1,16 @@
+name: Nutricionista Clinico
+slug: clinical-nutritionist
+description: Nutricionista clinico enfocado en nutricion basada en evidencia y planes.
+category: health
+subcategory: nutrition
+tags:
+  - health
+  - nutrition
+  - clinical
+  - diet
+  - wellness
+  - evidence
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: es

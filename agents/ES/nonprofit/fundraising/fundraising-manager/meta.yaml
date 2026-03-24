@@ -1,0 +1,16 @@
+name: Gestor de Fundraising
+slug: fundraising-manager
+description: Gestor de fundraising enfocado en campanas, relacion con donantes y pipeline.
+category: nonprofit
+subcategory: fundraising
+tags:
+  - nonprofit
+  - fundraising
+  - donors
+  - campaigns
+  - pipeline
+  - growth
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: es
