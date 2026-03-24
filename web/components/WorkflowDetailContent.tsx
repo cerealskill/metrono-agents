@@ -190,15 +190,16 @@ export default function WorkflowDetailContent({ workflows }: { workflows: Workfl
                     // Regular line
                     const line = lines[i]
                     const idx = i
+                    const diagram = isDiagramLine(line)
                     elements.push(
-                      <div key={idx} className="grid" style={{ gridTemplateColumns: '30px minmax(0, 1fr)' }}>
+                      <div key={idx} className="grid" style={{ gridTemplateColumns: diagram ? '30px auto' : '30px minmax(0, 1fr)' }}>
                         <span
                           className="select-none pr-1 sm:pr-2 text-right"
                           style={{ color: 'var(--text-muted)', borderRight: '1px solid var(--border)' }}
                         >
                           {idx + 1}
                         </span>
-                        <span className={`pl-1 sm:pl-2 ${isDiagramLine(line) ? 'whitespace-pre' : 'whitespace-pre-wrap break-words'} overflow-hidden`}>{line ? renderLineMarkdown(line) : ' '}</span>
+                        <span className={`pl-1 sm:pl-2 ${diagram ? 'whitespace-pre' : 'whitespace-pre-wrap break-words overflow-hidden'}`}>{line ? renderLineMarkdown(line) : ' '}</span>
                       </div>
                     )
                     i++
