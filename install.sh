@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # install.sh — metrono-agents installer
-# Usage: curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/install.sh | bash -s <slug>
+# Usage:
+#   Agent:    curl -fsSL .../install.sh | bash -s <agent-slug> [EN|ES]
+#   Workflow: curl -fsSL .../install.sh | bash -s <workflow-slug> [EN|ES]
+#             (prompts you to select an existing agent workspace)
 set -e
 
 
@@ -108,18 +111,69 @@ fi
 if [ -n "$WORKFLOW_PATH" ]; then
   echo -e "  Found workflow: ${CYAN}${WORKFLOW_PATH}${RESET}"
   echo ""
-  WS_NAME="$SLUG"
-  WS_PATH="${HOME}/.openclaw/workspace-${WS_NAME}"
-  mkdir -p "$WS_PATH"
-  URL="${RAW}/${WORKFLOW_PATH}/ORCHESTRATION.md"
-  if curl -fsSL "$URL" -o "${WS_PATH}/ORCHESTRATION.md" 2>/dev/null; then
-    echo -e "  ${GREEN}✓${RESET} ORCHESTRATION.md"
+
+  # Determine orchestration filename based on language
+  if [ "$LANG_UPPER" = "ES" ]; then
+    ORCH_FILE="ORQUESTACION.md"
+  else
+    ORCH_FILE="ORCHESTRATION.md"
+  fi
+
+  # Discover installed agent workspaces
+  OPENCLAW_DIR="${HOME}/.openclaw"
+  WORKSPACES=()
+  if [ -d "$OPENCLAW_DIR" ]; then
+    while IFS= read -r dir; do
+      ws_name=$(basename "$dir")
+      # Only include workspace dirs that contain a SOUL.md (actual agent workspaces)
+      if [ -f "${dir}/SOUL.md" ]; then
+        WORKSPACES+=("$ws_name")
+      fi
+    done < <(find "$OPENCLAW_DIR" -maxdepth 1 -type d -name "workspace-*" | sort)
+  fi
+
+  if [ ${#WORKSPACES[@]} -eq 0 ]; then
+    echo -e "${RED}✗ No agent workspaces found in ${OPENCLAW_DIR}${RESET}"
+    echo -e "  Install an agent first: ${CYAN}curl -fsSL .../install.sh | bash -s <agent-slug>${RESET}"
+    exit 1
+  fi
+
+  echo -e "${BOLD}Select an agent workspace to install the workflow into:${RESET}"
+  echo ""
+  for i in "${!WORKSPACES[@]}"; do
+    echo -e "  ${CYAN}$((i+1)))${RESET} ${WORKSPACES[$i]}"
+  done
+  echo ""
+
+  # Read selection — handle both interactive and piped stdin
+  if [ -t 0 ]; then
+    read -rp "Enter number [1-${#WORKSPACES[@]}]: " SELECTION
+  else
+    # When piped via curl, reopen /dev/tty for interactive input
+    read -rp "Enter number [1-${#WORKSPACES[@]}]: " SELECTION < /dev/tty
+  fi
+
+  # Validate selection
+  if ! [[ "$SELECTION" =~ ^[0-9]+$ ]] || [ "$SELECTION" -lt 1 ] || [ "$SELECTION" -gt ${#WORKSPACES[@]} ]; then
+    echo -e "${RED}✗ Invalid selection${RESET}"
+    exit 1
+  fi
+
+  SELECTED_WS="${WORKSPACES[$((SELECTION-1))]}"
+  WS_PATH="${OPENCLAW_DIR}/${SELECTED_WS}"
+
+  echo ""
+  echo "→ Downloading ${ORCH_FILE} into ${CYAN}${WS_PATH}${RESET}..."
+
+  URL="${RAW}/${WORKFLOW_PATH}/${ORCH_FILE}"
+  if curl -fsSL "$URL" -o "${WS_PATH}/${ORCH_FILE}" 2>/dev/null; then
+    echo -e "  ${GREEN}✓${RESET} ${ORCH_FILE}"
     echo ""
-    echo -e "${GREEN}${BOLD}✓ Workflow installed in agent workspace${RESET}"
-    echo -e "  Workspace: ${CYAN}${WS_PATH}${RESET}"
+    echo -e "${GREEN}${BOLD}✓ Workflow '${SLUG}' installed into ${SELECTED_WS}${RESET}"
+    echo -e "  File: ${CYAN}${WS_PATH}/${ORCH_FILE}${RESET}"
     exit 0
   else
-    echo -e "${RED}✗ Failed to download ORCHESTRATION.md${RESET}"
+    echo -e "${RED}✗ Failed to download ${ORCH_FILE}${RESET}"
     exit 1
   fi
 fi
