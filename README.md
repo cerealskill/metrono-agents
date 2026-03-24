@@ -69,32 +69,166 @@ cp -r agents/EN/tech/sre/pedro-sre/* ~/.openclaw/workspace-pedro-sre/
 
 ## Agent Catalog
 
-### 🛠️ Tech
-
-| Agent | Role | Description | Lang |
-|-------|------|-------------|------|
-| [Pedro SRE](./agents/EN/tech/sre/pedro-sre) | SRE | Multi-cloud SRE (GCP, AWS, Azure). Kubernetes, Terraform, observability. | EN/ES |
-| [Linus Dev](./agents/EN/tech/dev/linus-dev) | Dev | Senior engineer. Code review, debugging, architecture design. Python, TS, Go, SQL. | EN/ES |
-| [Sentinel](./agents/EN/tech/security/sentinel) | Security | Threat modeling, infra/code audit, CVE management, incident response. | EN/ES |
+**146 agents** available in English and Spanish across 17 categories.
 
 ### 💼 Business
 
-| Agent | Role | Description | Lang |
-|-------|------|-------------|------|
-| [Pipeline](./agents/EN/business/sales/pipeline) | Sales | Lead scoring, outreach sequences, deal analysis, pipeline reporting. | EN/ES |
-
-### 👤 Personal
-
-| Agent | Role | Description | Lang |
-|-------|------|-------------|------|
-| [Atlas](./agents/ES/personal/productivity/atlas) | Productivity | GTD, time blocking, Eisenhower matrix, Pomodoro, daily routines. | ES |
-| [Sofía](./agents/ES/personal/psicology/sofia-psicologa) | Psicología | CBT, humanist approach, mindfulness, ACT. Emotional support and wellbeing. | ES |
+| Agent | Slug | Description |
+|-------|------|-------------|
+| Customer Success Manager | `customer-success-manager` | Onboarding, retention, and account health. |
+| Accountant | `accountant` | Bookkeeping, reconciliations, cash flow, and financial reporting. |
+| People Ops | `people-ops` | Hiring, onboarding, and team operations. |
+| Legal Advisor | `legal-advisor` | General guidance and risk spotting (not legal counsel). |
+| Business Ops | `business-ops` | Process design, KPIs, and execution. |
+| Partnerships Manager | `partnerships-manager` | Strategic alliances and co-marketing initiatives. |
+| Procurement Analyst | `procurement-analyst` | Vendor evaluation, sourcing, and cost control. |
+| Product Owner | `product-owner` | Backlog clarity, discovery, prioritization, and stakeholder alignment. |
+| RevOps Analyst | `revops-analyst` | Revenue systems, process alignment, and reporting. |
+| Account Executive | `account-exec` | Discovery, pipeline progression, and closing. |
+| Pipeline | `pipeline` | Full-cycle pipeline management, lead scoring, and deal analysis. |
 
 ### 🎨 Creative
 
-| Agent | Role | Description | Lang |
-|-------|------|-------------|------|
-| [Echo](./agents/EN/creative/content/echo) | Content | Blog posts, social copy, newsletters, landing pages. | EN/ES |
+| Agent | Slug | Description |
+|-------|------|-------------|
+| Podcast Producer | `podcast-producer` | Show structure, scripts, and audio production. |
+| Echo | `echo` | Blog posts, social copy, newsletters, and landing pages. |
+| Visual Designer | `visual-designer` | Brand systems, layouts, and visual consistency. |
+| Screenwriter | `screenwriter` | Film and series — structure, character arcs, and cinematic dialogue. |
+| Illustrator | `illustrator` | Visual storytelling and brand illustration systems. |
+| Video Producer | `video-producer` | Scripts, shot lists, and post-production planning. |
+
+### ⚙️ DevOps
+
+| Agent | Slug | Description |
+|-------|------|-------------|
+| Pedro SRE | `pedro-sre` | Multi-cloud SRE (GCP, AWS, Azure). Kubernetes, Terraform, observability. |
+
+### 🎓 Education
+
+| Agent | Slug | Description |
+|-------|------|-------------|
+| Academic Advisor | `academic-advisor` | Course planning, academic progress, and student guidance. |
+| Teacher | `teacher` | Lesson planning, classroom support, and student learning. |
+| Research Assistant | `research-assistant` | Literature review, data collection, and summaries. |
+
+### 📊 Finance
+
+| Agent | Slug | Description |
+|-------|------|-------------|
+| FP&A Analyst | `fpna-analyst` | Budgeting, forecasting, and performance analysis. |
+
+### 🏛️ Government
+
+| Agent | Slug | Description |
+|-------|------|-------------|
+| Policy Analyst | `policy-analyst` | Policy research, impact analysis, and briefs. |
+
+### 🏥 Health
+
+| Agent | Slug | Description |
+|-------|------|-------------|
+| Clinical Nutritionist | `clinical-nutritionist` | Evidence-based nutrition guidance and plans. |
+| Pharmacy Assistant | `pharmacy-assistant` | Medication guidance and safety reminders (non-prescriptive). |
+| Physio Assistant | `physio-assistant` | Rehab guidance, mobility, and safe exercise routines. |
+
+### 🏨 Hospitality
+
+| Agent | Slug | Description |
+|-------|------|-------------|
+| Chef Consultant | `chef-consultant` | Menu design, kitchen ops, and cost control. |
+| Hotel Manager | `hotel-manager` | Operations, guest experience, and staffing. |
+
+### ⚖️ Legal
+
+| Agent | Slug | Description |
+|-------|------|-------------|
+| Privacy Officer | `privacy-officer` | Privacy frameworks, compliance checklists, and risk spotting. |
+| IP Specialist | `ip-specialist` | Intellectual property basics, filings, and risk checks. |
+
+### 🚚 Logistics
+
+| Agent | Slug | Description |
+|-------|------|-------------|
+| Supply Chain Analyst | `supply-chain-analyst` | Inventory, demand planning, and logistics efficiency. |
+
+### 🏭 Manufacturing
+
+| Agent | Slug | Description |
+|-------|------|-------------|
+| Operations Supervisor | `operations-supervisor` | Plant execution, safety, and throughput. |
+| Quality Manager | `quality-manager` | QA systems, audits, and continuous improvement. |
+
+### 📣 Marketing
+
+| Agent | Slug | Description |
+|-------|------|-------------|
+| Brand Manager | `brand-manager` | Brand identity, voice, and consistency. |
+| Community Manager | `community-manager` | Engagement, moderation, and community growth. |
+| Content Strategist | `content-strategist` | Content systems, pillars, and distribution. |
+| Marketing Lead | `marketing-lead` | Positioning, go-to-market, and growth strategy. |
+| Lifecycle Marketer | `lifecycle-marketer` | Activation, retention, and lifecycle journeys. |
+| Performance Marketer | `performance-marketer` | Paid channels, ROAS, and optimization. |
+| SEO Specialist | `seo-specialist` | Technical SEO, content optimization, and growth. |
+
+### 🤝 Nonprofit
+
+| Agent | Slug | Description |
+|-------|------|-------------|
+| Fundraising Manager | `fundraising-manager` | Campaigns, donor relations, and pipeline growth. |
+| Grants Manager | `grants-manager` | Grant discovery, applications, and compliance reporting. |
+
+### 🙋 Personal
+
+| Agent | Slug | Description |
+|-------|------|-------------|
+| Fortnite Coach | `fortnite-coach` | Mechanics, game sense, rotations, and ranked improvement. |
+| Gym Coach | `gym-coach` | Safe programming, progressive overload, and sustainable training. |
+| General Doctor | `general-doctor` | Triage, health education, and guidance on when to seek in-person care. |
+| Mental Health Coach | `mental-health-coach` | Coping skills and support (not therapy). |
+| Nutrition Coach | `nutrition-coach` | Sustainable eating habits and basic plans. |
+| Productivity Coach | `productivity-coach` | Routines, prioritization, and execution. |
+| Travel Planner | `travel-planner` | Itineraries, budgets, and logistics. |
+| Atlas | `atlas` | GTD, time blocking, Eisenhower matrix, Pomodoro. *(ES)* |
+| Sofía | `sofia-psicologa` | CBT, humanist approach, mindfulness, ACT. Emotional support. *(ES)* |
+
+### 🏠 Real Estate
+
+| Agent | Slug | Description |
+|-------|------|-------------|
+| Real Estate Advisor | `real-estate-advisor` | Property evaluation, listings, and transaction guidance. |
+| Property Manager | `property-manager` | Operations, tenant relations, and maintenance planning. |
+
+### 🏆 Sports
+
+| Agent | Slug | Description |
+|-------|------|-------------|
+| Sports Analyst | `sports-analyst` | Performance breakdowns, stats, and insights. |
+| Performance Coach | `performance-coach` | Training plans, conditioning, and recovery. |
+
+### 💻 Tech
+
+| Agent | Slug | Description |
+|-------|------|-------------|
+| Backend Engineer | `backend-engineer` | APIs, data models, and scalable services. |
+| BI Analyst | `bi-analyst` | Dashboards, KPI definitions, and business reporting. |
+| Data Analyst | `data-analyst` | SQL analysis, dashboards, and actionable insights. |
+| Data Engineer | `data-engineer` | Pipelines, data quality, and reliable data platforms. |
+| Data Scientist | `data-scientist` | Modeling, experimentation, and statistical analysis. |
+| Linus Dev | `linus-dev` | Pragmatic senior engineer. Code review, debugging, architecture. Python, TS, Go, SQL. |
+| CI/CD Engineer | `ci-cd-engineer` | Pipelines, build systems, and release automation. |
+| Frontend Engineer | `frontend-engineer` | UI performance, accessibility, and client architecture. |
+| Cloud Architect | `cloud-architect` | Scalable architectures, cost efficiency, and security. |
+| Platform Engineer | `platform-engineer` | Internal platforms, developer experience, and reliability. |
+| ML Engineer | `ml-engineer` | Model deployment, evaluation, and MLOps reliability. |
+| Mobile Engineer | `mobile-engineer` | iOS/Android development, performance, and reliability. |
+| Technical PM | `technical-pm` | Roadmap, requirements, and cross-team alignment. |
+| QA Engineer | `qa-engineer` | Test strategy, automation, and release quality. |
+| AppSec Engineer | `appsec-engineer` | Secure development, threat modeling, and secure code review. |
+| Sentinel | `sentinel` | Threat modeling, infra/code audit, CVE management, incident response. |
+| SOC Analyst | `soc-analyst` | Monitoring, triage, and incident response coordination. |
+| UX Researcher | `ux-researcher` | User studies, insights, and research plans. |
+| UX Writer | `ux-writer` | Clear product microcopy and consistent voice. |
 
 ---
 
@@ -161,12 +295,25 @@ The easiest way is via the **web UI**: [craw-agents.vercel.app/contribute](https
 
 ### Categories
 
-| Category | Subcategories |
-|----------|--------------|
-| `tech/` | `sre`, `dev`, `security`, `devops`, `data` |
-| `business/` | `sales`, `marketing`, `finance`, `ops` |
-| `personal/` | `productivity`, `health`, `learning`, `psicology` |
-| `creative/` | `content`, `design`, `writing`, `music` |
+| Category | Emoji | Examples |
+|----------|-------|---------|
+| `tech/` | 💻 | `dev`, `sre`, `security`, `devops`, `data`, `frontend`, `backend`, `ml`, `mobile`, `qa`, `ux` |
+| `business/` | 💼 | `sales`, `ops`, `product`, `hr`, `procurement`, `revops`, `partnerships`, `customer-success` |
+| `marketing/` | 📣 | `lead`, `brand`, `seo`, `content`, `community`, `performance`, `lifecycle` |
+| `creative/` | 🎨 | `content`, `film`, `design`, `audio`, `video`, `illustration` |
+| `personal/` | 🙋 | `gym`, `gaming`, `medical`, `nutrition`, `mental-health`, `productivity`, `travel` |
+| `finance/` | 📊 | `fpna`, `accounting` |
+| `education/` | 🎓 | `academic`, `teacher`, `research` |
+| `health/` | 🏥 | `nutrition`, `physio`, `pharmacy` |
+| `legal/` | ⚖️ | `privacy`, `ip` |
+| `logistics/` | 🚚 | `supply-chain` |
+| `manufacturing/` | 🏭 | `operations`, `quality` |
+| `nonprofit/` | 🤝 | `fundraising`, `grants` |
+| `real-estate/` | 🏠 | `advisory`, `property-management` |
+| `sports/` | 🏆 | `analytics`, `coaching` |
+| `hospitality/` | 🏨 | `chef`, `hotel-management` |
+| `government/` | 🏛️ | `policy` |
+| `devops/` | ⚙️ | `sre`, `ci-cd`, `platform`, `cloud` |
 
 ### Quality checklist
 
