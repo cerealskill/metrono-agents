@@ -23,6 +23,10 @@ function renderInlineMarkdown(line: string) {
   })
 }
 
+function isDiagramLine(line: string): boolean {
+  return /[┌┐└┘│─┬┴├┤▼▲►◄╔╗╚╝║═╠╣╦╩╬┼]/.test(line) || (/^\s{4,}/.test(line) && /[|\\/<>+\-v^]/.test(line))
+}
+
 function renderLineMarkdown(line: string) {
   const headingMatch = line.match(/^(#{1,6})\s+(.*)$/)
   if (headingMatch) {
@@ -110,8 +114,8 @@ export default function WorkflowDetailContent({ workflows }: { workflows: Workfl
             </div>
 
             {/* File content */}
-            <div className="px-3 py-4 sm:p-6 overflow-x-hidden">
-              <div className="text-xs sm:text-sm leading-relaxed font-mono" style={{ color: 'var(--text-primary)' }}>
+            <div className="px-3 py-4 sm:p-6 overflow-x-auto">
+              <div className="text-xs sm:text-sm leading-relaxed font-mono" style={{ color: 'var(--text-primary)', minWidth: 0 }}>
                 {lines.map((line, idx) => (
                   <div key={idx} className="grid" style={{ gridTemplateColumns: '30px minmax(0, 1fr)' }}>
                     <span
@@ -120,7 +124,7 @@ export default function WorkflowDetailContent({ workflows }: { workflows: Workfl
                     >
                       {idx + 1}
                     </span>
-                    <span className="pl-1 sm:pl-2 whitespace-pre-wrap break-words overflow-hidden">{line ? renderLineMarkdown(line) : ' '}</span>
+                    <span className={`pl-1 sm:pl-2 ${isDiagramLine(line) ? 'whitespace-pre' : 'whitespace-pre-wrap break-words'} overflow-hidden`}>{line ? renderLineMarkdown(line) : ' '}</span>
                   </div>
                 ))}
               </div>
