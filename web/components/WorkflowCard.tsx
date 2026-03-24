@@ -26,6 +26,12 @@ const WORKFLOW_EMOJI: Record<string, string> = {
   'triage': '🏥',
   'watchdog-supervisor': '👁️',
   'weekly-planning': '📅',
+  'retry-rollback': '🔁',
+  'feedback-loop': '🔃',
+  'chain-of-thought': '🔗',
+  'canary-rollout': '🐤',
+  'workflow-composition': '🧩',
+  'budget-router': '💰',
 }
 
 export default function WorkflowCard({ workflow }: { workflow: WorkflowMeta }) {

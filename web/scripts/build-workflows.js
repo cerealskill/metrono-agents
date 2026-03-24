@@ -43,7 +43,13 @@ const enToEs = {
   'triage': 'triage',
   'pair-programming': 'pair-programming',
   'watchdog-supervisor': 'watchdog-supervisor',
-  'round-robin': 'round-robin'
+  'round-robin': 'round-robin',
+  'retry-rollback': 'reintentos-rollback',
+  'feedback-loop': 'bucle-retroalimentacion',
+  'chain-of-thought': 'cadena-pensamiento',
+  'canary-rollout': 'despliegue-canario',
+  'workflow-composition': 'composicion-workflows',
+  'budget-router': 'ruteo-por-costo'
 };
 const esToEn = {};
 for (const [en, es] of Object.entries(enToEs)) {
