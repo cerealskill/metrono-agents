@@ -1,0 +1,17 @@
+name: Product Owner
+slug: product-owner
+description: Product Owner enfocado en claridad de backlog, discovery, priorizacion y alineamiento con stakeholders.
+category: business
+subcategory: product
+tags:
+  - product
+  - backlog
+  - roadmap
+  - discovery
+  - prioritization
+  - requirements
+  - agile
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: es
