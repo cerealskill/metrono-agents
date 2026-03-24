@@ -128,6 +128,15 @@ export default function WorkflowDetailContent({ workflows }: { workflows: Workfl
             </div>
           </div>
 
+          <button
+            onClick={() => window.history.back()}
+            className="flex items-center gap-1.5 text-sm mb-4 hover:opacity-80 transition-opacity cursor-pointer"
+            style={{ color: 'var(--text-muted)' }}
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M7.78 12.53a.75.75 0 0 1-1.06 0L2.47 8.28a.75.75 0 0 1 0-1.06l4.25-4.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L4.81 7h7.44a.75.75 0 0 1 0 1.5H4.81l2.97 2.97a.75.75 0 0 1 0 1.06Z"/></svg>
+            {lang === 'ES' ? 'Volver' : 'Back'}
+          </button>
+
           <div>
             <p className="text-sm mb-1" style={{ color: 'var(--text-muted)' }}>
               ⚡ {t.tabWorkflows}
