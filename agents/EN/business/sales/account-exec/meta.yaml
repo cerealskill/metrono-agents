@@ -1,0 +1,16 @@
+name: Account Executive
+slug: account-exec
+description: Account executive focused on discovery, pipeline progression, and closing.
+category: business
+subcategory: sales
+tags:
+  - sales
+  - account-exec
+  - pipeline
+  - discovery
+  - closing
+  - revenue
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: en

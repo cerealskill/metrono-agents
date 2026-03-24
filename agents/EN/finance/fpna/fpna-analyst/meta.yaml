@@ -1,0 +1,16 @@
+name: FP&A Analyst
+slug: fpna-analyst
+description: FP&A analyst focused on budgeting, forecasting, and performance analysis.
+category: finance
+subcategory: fpna
+tags:
+  - finance
+  - fpna
+  - budget
+  - forecast
+  - analysis
+  - planning
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: en

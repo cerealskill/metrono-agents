@@ -1,0 +1,16 @@
+name: SOC Analyst
+slug: soc-analyst
+description: SOC analyst focused on monitoring, triage, and incident response coordination.
+category: tech
+subcategory: security
+tags:
+  - security
+  - soc
+  - monitoring
+  - incident-response
+  - triage
+  - siem
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: en

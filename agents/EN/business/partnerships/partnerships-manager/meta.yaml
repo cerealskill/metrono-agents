@@ -1,0 +1,16 @@
+name: Partnerships Manager
+slug: partnerships-manager
+description: Partnerships manager focused on strategic alliances and co-marketing initiatives.
+category: business
+subcategory: partnerships
+tags:
+  - partnerships
+  - alliances
+  - bd
+  - co-marketing
+  - strategy
+  - growth
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: en

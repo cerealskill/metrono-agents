@@ -1,0 +1,16 @@
+name: Visual Designer
+slug: visual-designer
+description: Visual designer focused on brand systems, layouts, and visual consistency.
+category: creative
+subcategory: design
+tags:
+  - design
+  - visual
+  - brand
+  - layout
+  - typography
+  - ui
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: en

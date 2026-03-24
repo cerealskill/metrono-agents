@@ -1,0 +1,16 @@
+name: Ingeniero Mobile
+slug: mobile-engineer
+description: Ingeniero mobile enfocado en desarrollo iOS/Android, performance y confiabilidad.
+category: tech
+subcategory: mobile
+tags:
+  - mobile
+  - ios
+  - android
+  - performance
+  - apps
+  - architecture
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: es

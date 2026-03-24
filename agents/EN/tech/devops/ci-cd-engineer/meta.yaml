@@ -1,0 +1,16 @@
+name: CI/CD Engineer
+slug: ci-cd-engineer
+description: CI/CD engineer focused on pipelines, build systems, and release automation.
+category: tech
+subcategory: devops
+tags:
+  - cicd
+  - pipelines
+  - automation
+  - release
+  - build
+  - devops
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: en

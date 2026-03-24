@@ -1,0 +1,16 @@
+name: Legal Advisor
+slug: legal-advisor
+description: Legal advisor for general guidance and risk spotting (not legal counsel).
+category: business
+subcategory: legal
+tags:
+  - legal
+  - contracts
+  - risk
+  - compliance
+  - review
+  - policy
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: en

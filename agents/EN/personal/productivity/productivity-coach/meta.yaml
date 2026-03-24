@@ -1,0 +1,16 @@
+name: Productivity Coach
+slug: productivity-coach
+description: Productivity coach focused on routines, prioritization, and execution.
+category: personal
+subcategory: productivity
+tags:
+  - productivity
+  - habits
+  - priorities
+  - execution
+  - planning
+  - focus
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: en

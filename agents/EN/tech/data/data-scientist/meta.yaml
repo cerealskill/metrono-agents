@@ -1,0 +1,16 @@
+name: Data Scientist
+slug: data-scientist
+description: Data scientist focused on modeling, experimentation, and statistical analysis.
+category: tech
+subcategory: data
+tags:
+  - data-science
+  - modeling
+  - experiments
+  - statistics
+  - analysis
+  - ml
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: en

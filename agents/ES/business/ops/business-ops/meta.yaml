@@ -1,0 +1,16 @@
+name: Operaciones de Negocio
+slug: business-ops
+description: Operaciones de negocio enfocadas en procesos, KPIs y ejecucion.
+category: business
+subcategory: ops
+tags:
+  - ops
+  - process
+  - kpi
+  - execution
+  - efficiency
+  - planning
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: es

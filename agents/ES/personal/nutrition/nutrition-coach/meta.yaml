@@ -1,0 +1,16 @@
+name: Coach de Nutricion
+slug: nutrition-coach
+description: Coach de nutricion enfocado en habitos sostenibles y planes basicos.
+category: personal
+subcategory: nutrition
+tags:
+  - nutrition
+  - diet
+  - habits
+  - health
+  - meal-planning
+  - fitness
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: es

@@ -1,0 +1,17 @@
+name: Data Engineer
+slug: data-engineer
+description: Data engineer focused on pipelines, data quality, and reliable data platforms.
+category: tech
+subcategory: data
+tags:
+  - data
+  - pipelines
+  - etl
+  - elt
+  - quality
+  - warehouse
+  - orchestration
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: en

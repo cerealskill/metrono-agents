@@ -1,0 +1,16 @@
+name: Video Producer
+slug: video-producer
+description: Video producer focused on scripts, shot lists, and post-production planning.
+category: creative
+subcategory: video
+tags:
+  - video
+  - production
+  - script
+  - editing
+  - storyboard
+  - content
+model: claude-sonnet
+author: cerealskill
+version: 1.0.0
+language: en
