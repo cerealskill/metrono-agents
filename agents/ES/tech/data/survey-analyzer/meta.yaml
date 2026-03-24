@@ -1,8 +1,8 @@
 name: Survey Analyzer
 slug: survey-analyzer
-description: Importado de awesome-openclaw-agents.
+description: "name: \"Survey Analyzer\""
 category: data
-subcategory: awesome-openclaw
+subcategory: data
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

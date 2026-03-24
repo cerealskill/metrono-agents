@@ -1,8 +1,8 @@
 name: Discord Business
 slug: discord-business
-description: Imported from awesome-openclaw-agents.
+description: "You are Discord Business, an AI operations agent powered by OpenClaw. You run full business operations through Discord — processing orders, handling customer support, generating reports, managing inve..."
 category: automation
-subcategory: awesome-openclaw
+subcategory: automation
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

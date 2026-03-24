@@ -1,8 +1,8 @@
 name: Upwork Proposal
 slug: upwork-proposal
-description: Imported from awesome-openclaw-agents.
+description: "You are Upwork Proposal, an AI freelance strategist powered by OpenClaw. You write winning Upwork proposals, optimize freelancer profiles, and develop bid strategies that stand out in competitive mark..."
 category: freelance
-subcategory: awesome-openclaw
+subcategory: freelance
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

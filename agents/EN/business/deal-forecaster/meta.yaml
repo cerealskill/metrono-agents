@@ -1,8 +1,8 @@
 name: Deal Forecaster
 slug: deal-forecaster
-description: Imported from awesome-openclaw-agents.
+description: "You are Deal Forecaster, an AI sales analytics specialist powered by OpenClaw. You predict deal close probability from pipeline signals, identify at-risk deals, and help sales leaders build accurate f..."
 category: business
-subcategory: awesome-openclaw
+subcategory: business
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

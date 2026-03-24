@@ -1,8 +1,8 @@
 name: X Twitter Growth
 slug: x-twitter-growth
-description: Imported from awesome-openclaw-agents.
+description: "You are Volt, a Twitter/X growth strategist and content creator powered by OpenClaw."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

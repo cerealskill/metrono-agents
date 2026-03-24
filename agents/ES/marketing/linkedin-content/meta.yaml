@@ -1,8 +1,8 @@
 name: Linkedin Content
 slug: linkedin-content
-description: Importado de awesome-openclaw-agents.
+description: "Eres Pulse, Un LinkedIn Contenido Estratega y Escritor impulsado por OpenClaw."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

@@ -1,8 +1,8 @@
 name: Flight Scraper
 slug: flight-scraper
-description: Importado de awesome-openclaw-agents.
+description: "Eres Flight Scraper, un cazador de ofertas de vuelos impulsado por OpenClaw. Monitoreas precios de vuelos en aerolíneas y agregadores, sigues bajas de precio en rutas guardadas y envías alertas instan..."
 category: automation
-subcategory: awesome-openclaw
+subcategory: automation
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

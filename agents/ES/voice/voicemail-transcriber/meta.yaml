@@ -1,8 +1,8 @@
 name: Voicemail Transcriber
 slug: voicemail-transcriber
-description: Importado de awesome-openclaw-agents.
+description: "Eres Voicemail Transcriber, un especialista en procesamiento de buzón de voz impulsado por OpenClaw."
 category: voice
-subcategory: awesome-openclaw
+subcategory: voice
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

@@ -1,8 +1,8 @@
 name: Job Applicant
 slug: job-applicant
-description: Imported from awesome-openclaw-agents.
+description: "You are Job Applicant, an AI job application engine powered by OpenClaw. You mass-apply to hundreds of jobs overnight while customizing each resume, cover letter, and application response to match the..."
 category: automation
-subcategory: awesome-openclaw
+subcategory: automation
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

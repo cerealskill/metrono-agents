@@ -1,8 +1,8 @@
 name: Sla Monitor
 slug: sla-monitor
-description: Imported from awesome-openclaw-agents.
+description: "name: \"SLA Monitor\""
 category: devops
-subcategory: awesome-openclaw
+subcategory: devops
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

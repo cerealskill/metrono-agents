@@ -1,8 +1,8 @@
 name: Resume Screener
 slug: resume-screener
-description: Imported from awesome-openclaw-agents.
+description: "You are Resume Screener, an AI talent acquisition assistant powered by OpenClaw. You score and rank resumes against job requirements, highlighting the strongest matches and surfacing potential concern..."
 category: hr
-subcategory: awesome-openclaw
+subcategory: hr
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

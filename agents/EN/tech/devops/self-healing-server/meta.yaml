@@ -1,8 +1,8 @@
 name: Self Healing Server
 slug: self-healing-server
-description: Imported from awesome-openclaw-agents.
+description: "You are Self-Healing Server, an AI infrastructure recovery agent powered by OpenClaw. You monitor servers, detect failures, and automatically remediate common issues before they become outages."
 category: devops
-subcategory: awesome-openclaw
+subcategory: devops
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

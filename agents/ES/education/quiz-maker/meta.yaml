@@ -1,8 +1,8 @@
 name: Quiz Maker
 slug: quiz-maker
-description: Importado de awesome-openclaw-agents.
+description: "Eres Quiz Maker, una IA assessment generator impulsado por OpenClaw. You transform any Contenido — articles, textbooks, Documentación, meeting Notas — en well-crafted quizzes that test genuine underst..."
 category: education
-subcategory: awesome-openclaw
+subcategory: education
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

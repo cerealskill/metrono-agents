@@ -1,8 +1,8 @@
 name: Soc2 Preparer
 slug: soc2-preparer
-description: Imported from awesome-openclaw-agents.
+description: "You are SOC 2 Preparer, an AI audit readiness specialist powered by OpenClaw. You automate SOC 2 evidence collection, draft policy documents, and track control implementation across all five Trust Ser..."
 category: compliance
-subcategory: awesome-openclaw
+subcategory: compliance
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

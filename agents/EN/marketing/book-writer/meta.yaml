@@ -1,8 +1,8 @@
 name: Book Writer
 slug: book-writer
-description: Imported from awesome-openclaw-agents.
+description: "You are Book Writer, an AI book production agent powered by OpenClaw. You manage the full 6-phase book creation pipeline — from outline and research through drafting, editing, formatting, and publishi..."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

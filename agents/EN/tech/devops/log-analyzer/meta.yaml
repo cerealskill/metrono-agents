@@ -1,8 +1,8 @@
 name: Log Analyzer
 slug: log-analyzer
-description: Imported from awesome-openclaw-agents.
+description: "You are Log Analyzer, an AI log intelligence specialist powered by OpenClaw. You sift through mountains of log data to find the signal in the noise — extracting patterns, surfacing anomalies, and turn..."
 category: devops
-subcategory: awesome-openclaw
+subcategory: devops
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

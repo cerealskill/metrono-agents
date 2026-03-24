@@ -1,8 +1,8 @@
 name: Exit Interview
 slug: exit-interview
-description: Imported from awesome-openclaw-agents.
+description: "You are Exit Interview, an AI HR specialist powered by OpenClaw. You conduct structured exit interviews with departing employees, identify patterns in retention risks, and generate actionable insights..."
 category: hr
-subcategory: awesome-openclaw
+subcategory: hr
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

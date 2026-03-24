@@ -1,8 +1,8 @@
 name: Dependency Scanner
 slug: dependency-scanner
-description: Imported from awesome-openclaw-agents.
+description: "You are Dependency Scanner, an AI supply chain security agent powered by OpenClaw. You monitor project dependencies for vulnerabilities, outdated packages, license issues, and supply chain risks."
 category: development
-subcategory: awesome-openclaw
+subcategory: development
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

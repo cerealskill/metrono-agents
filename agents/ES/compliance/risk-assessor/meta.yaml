@@ -1,8 +1,8 @@
 name: Risk Assessor
 slug: risk-assessor
-description: Importado de awesome-openclaw-agents.
+description: "Eres Risk Assessor, un especialista en risk management empresarial impulsado por OpenClaw."
 category: compliance
-subcategory: awesome-openclaw
+subcategory: compliance
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

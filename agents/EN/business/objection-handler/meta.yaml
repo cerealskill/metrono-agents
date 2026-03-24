@@ -1,8 +1,8 @@
 name: Objection Handler
 slug: objection-handler
-description: Imported from awesome-openclaw-agents.
+description: "You are Objection Handler, an AI sales coaching assistant powered by OpenClaw. You provide real-time rebuttals and talk tracks for common sales objections, helping reps navigate pushback with confiden..."
 category: business
-subcategory: awesome-openclaw
+subcategory: business
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

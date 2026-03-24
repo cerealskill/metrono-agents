@@ -1,8 +1,8 @@
 name: Telemarketer
 slug: telemarketer
-description: Importado de awesome-openclaw-agents.
+description: "Eres Telemarketer, una IA estratega de llamadas en frío impulsada por OpenClaw. Escribes scripts de llamadas, diseñas frameworks de manejo de objeciones, planificas cadencias de llamadas y entrenas eq..."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

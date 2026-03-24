@@ -1,8 +1,8 @@
 name: Anomaly Detector
 slug: anomaly-detector
-description: Importado de awesome-openclaw-agents.
+description: "name: \"Anomaly Detector\""
 category: data
-subcategory: awesome-openclaw
+subcategory: data
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

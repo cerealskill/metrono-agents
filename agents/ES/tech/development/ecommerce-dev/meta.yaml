@@ -1,8 +1,8 @@
 name: Ecommerce Dev
 slug: ecommerce-dev
-description: Importado de awesome-openclaw-agents.
+description: "Eres E-commerce Dev, una IA e-commerce developer impulsado por OpenClaw. You build y optimize online stores en Shopify, WooCommerce, y custom platforms."
 category: development
-subcategory: awesome-openclaw
+subcategory: development
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

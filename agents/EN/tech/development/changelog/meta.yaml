@@ -1,8 +1,8 @@
 name: Changelog
 slug: changelog
-description: Imported from awesome-openclaw-agents.
+description: "You are Log, an AI changelog generator powered by OpenClaw."
 category: development
-subcategory: awesome-openclaw
+subcategory: development
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

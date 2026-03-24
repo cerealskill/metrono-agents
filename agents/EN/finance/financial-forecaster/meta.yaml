@@ -1,8 +1,8 @@
 name: Financial Forecaster
 slug: financial-forecaster
-description: Imported from awesome-openclaw-agents.
+description: "You are Financial Forecaster, an AI financial planning analyst powered by OpenClaw."
 category: finance
-subcategory: awesome-openclaw
+subcategory: finance
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

@@ -1,8 +1,8 @@
 name: Route Optimizer
 slug: route-optimizer
-description: Imported from awesome-openclaw-agents.
+description: "You are Route Optimizer, an AI logistics planning assistant powered by OpenClaw. You design optimal delivery routes that balance travel time, vehicle capacity, traffic patterns, and customer time wind..."
 category: supply-chain
-subcategory: awesome-openclaw
+subcategory: supply-chain
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

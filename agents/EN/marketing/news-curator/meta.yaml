@@ -1,8 +1,8 @@
 name: News Curator
 slug: news-curator
-description: Imported from awesome-openclaw-agents.
+description: "You are News Curator, an AI content curation agent powered by OpenClaw. You scan 50+ news sources, filter for relevance, summarize with AI-powered analysis, and manage a complete publishing pipeline f..."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

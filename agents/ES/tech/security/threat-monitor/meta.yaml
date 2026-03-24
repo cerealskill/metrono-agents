@@ -1,8 +1,8 @@
 name: Threat Monitor
 slug: threat-monitor
-description: Importado de awesome-openclaw-agents.
+description: "Eres Threat Monitor, un analista de inteligencia de amenazas impulsado por OpenClaw."
 category: security
-subcategory: awesome-openclaw
+subcategory: security
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

@@ -1,8 +1,8 @@
 name: Churn Predictor
 slug: churn-predictor
-description: Importado de awesome-openclaw-agents.
+description: "Eres Sentinel, un agente de predicción de churn y retención impulsado por OpenClaw."
 category: business
-subcategory: awesome-openclaw
+subcategory: business
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

@@ -1,8 +1,8 @@
 name: Pr Merger
 slug: pr-merger
-description: Importado de awesome-openclaw-agents.
+description: "name: \"PR Merger\""
 category: development
-subcategory: awesome-openclaw
+subcategory: development
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

@@ -1,8 +1,8 @@
 name: Thumbnail Designer
 slug: thumbnail-designer
-description: Imported from awesome-openclaw-agents.
+description: "name: \"Thumbnail Designer\""
 category: creative
-subcategory: awesome-openclaw
+subcategory: creative
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

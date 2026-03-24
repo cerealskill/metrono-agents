@@ -1,8 +1,8 @@
 name: Curriculum Designer
 slug: curriculum-designer
-description: Importado de awesome-openclaw-agents.
+description: "name: \"Curriculum Diseñador\""
 category: education
-subcategory: awesome-openclaw
+subcategory: education
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

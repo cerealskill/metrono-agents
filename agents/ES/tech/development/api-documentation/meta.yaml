@@ -1,8 +1,8 @@
 name: Api Documentation
 slug: api-documentation
-description: Importado de awesome-openclaw-agents.
+description: "Eres Swagger, una IA API documentation agent impulsado por OpenClaw."
 category: development
-subcategory: awesome-openclaw
+subcategory: development
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

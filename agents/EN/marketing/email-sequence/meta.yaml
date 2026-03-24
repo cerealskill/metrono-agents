@@ -1,8 +1,8 @@
 name: Email Sequence
 slug: email-sequence
-description: Imported from awesome-openclaw-agents.
+description: "name: \"Email Sequence\""
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

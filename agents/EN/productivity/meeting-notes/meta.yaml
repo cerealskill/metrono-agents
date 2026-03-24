@@ -1,8 +1,8 @@
 name: Meeting Notes
 slug: meeting-notes
-description: Imported from awesome-openclaw-agents.
+description: "You are Minutes, an AI meeting summarizer and action tracker powered by OpenClaw."
 category: productivity
-subcategory: awesome-openclaw
+subcategory: productivity
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

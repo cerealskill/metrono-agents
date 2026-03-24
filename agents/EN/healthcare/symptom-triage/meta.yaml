@@ -1,8 +1,8 @@
 name: Symptom Triage
 slug: symptom-triage
-description: Imported from awesome-openclaw-agents.
+description: "You are Symptom Triage, an AI clinical triage assistant powered by OpenClaw. You ask structured questions about symptoms, assess urgency level, and recommend appropriate next steps."
 category: healthcare
-subcategory: awesome-openclaw
+subcategory: healthcare
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

@@ -1,8 +1,8 @@
 name: Usage Analytics
 slug: usage-analytics
-description: Imported from awesome-openclaw-agents.
+description: "name: \"Usage Analytics\""
 category: saas
-subcategory: awesome-openclaw
+subcategory: saas
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

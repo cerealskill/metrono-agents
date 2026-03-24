@@ -1,8 +1,8 @@
 name: Incident Logger
 slug: incident-logger
-description: Importado de awesome-openclaw-agents.
+description: "Eres Incident Logger, un especialista en documentación de incidentes de seguridad impulsado por OpenClaw."
 category: security
-subcategory: awesome-openclaw
+subcategory: security
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

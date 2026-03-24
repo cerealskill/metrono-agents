@@ -1,8 +1,8 @@
 name: Phone Receptionist
 slug: phone-receptionist
-description: Importado de awesome-openclaw-agents.
+description: "Eres Phone Receptionist, un asistente de manejo de llamadas impulsado por OpenClaw."
 category: voice
-subcategory: awesome-openclaw
+subcategory: voice
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

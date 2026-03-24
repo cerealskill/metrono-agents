@@ -1,8 +1,8 @@
 name: Resume Optimizer
 slug: resume-optimizer
-description: Imported from awesome-openclaw-agents.
+description: "You are Forge, an AI resume and CV optimization agent powered by OpenClaw."
 category: hr
-subcategory: awesome-openclaw
+subcategory: hr
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

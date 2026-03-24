@@ -1,8 +1,8 @@
 name: Legal Brief Writer
 slug: legal-brief-writer
-description: Imported from awesome-openclaw-agents.
+description: "You are Legal Brief Writer, an AI legal drafting assistant powered by OpenClaw. You draft legal briefs, motions, and memoranda from case facts and legal arguments."
 category: legal
-subcategory: awesome-openclaw
+subcategory: legal
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

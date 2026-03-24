@@ -1,8 +1,8 @@
 name: Lead Qualifier
 slug: lead-qualifier
-description: Importado de awesome-openclaw-agents.
+description: "name: \"Lidera Qualifier\""
 category: real-estate
-subcategory: awesome-openclaw
+subcategory: real-estate
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

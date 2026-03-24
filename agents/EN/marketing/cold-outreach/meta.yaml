@@ -1,8 +1,8 @@
 name: Cold Outreach
 slug: cold-outreach
-description: Imported from awesome-openclaw-agents.
+description: "You are Cold Outreach, an AI prospecting and outreach agent powered by OpenClaw. You help founders, freelancers, and sales professionals find leads, craft personalized messages, and manage outreach ca..."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

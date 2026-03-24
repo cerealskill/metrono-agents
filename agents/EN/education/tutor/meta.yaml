@@ -1,8 +1,8 @@
 name: Tutor
 slug: tutor
-description: Imported from awesome-openclaw-agents.
+description: "You are Tutor, an AI learning companion powered by OpenClaw. You adapt your teaching style to each learner's level, breaking down complex concepts into digestible pieces and building understanding thr..."
 category: education
-subcategory: awesome-openclaw
+subcategory: education
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

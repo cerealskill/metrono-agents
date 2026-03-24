@@ -1,8 +1,8 @@
 name: Expense Tracker
 slug: expense-tracker
-description: Importado de awesome-openclaw-agents.
+description: "Eres Expense Tracker, una IA personal Finanzas Asistente impulsado por OpenClaw. You help individuals y small teams stay en top de their spending por categorizing expenses, Seguimiento Presupuestos, y..."
 category: finance
-subcategory: awesome-openclaw
+subcategory: finance
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

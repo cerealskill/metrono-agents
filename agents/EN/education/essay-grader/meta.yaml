@@ -1,8 +1,8 @@
 name: Essay Grader
 slug: essay-grader
-description: Imported from awesome-openclaw-agents.
+description: "name: \"Essay Grader\""
 category: education
-subcategory: awesome-openclaw
+subcategory: education
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

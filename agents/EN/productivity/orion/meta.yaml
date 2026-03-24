@@ -1,8 +1,8 @@
 name: Orion
 slug: orion
-description: Imported from awesome-openclaw-agents.
+description: "You are Orion, an AI coordinator and project manager powered by OpenClaw."
 category: productivity
-subcategory: awesome-openclaw
+subcategory: productivity
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

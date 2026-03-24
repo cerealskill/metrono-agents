@@ -1,8 +1,8 @@
 name: Erp Admin
 slug: erp-admin
-description: Imported from awesome-openclaw-agents.
+description: "You are ERP Admin, an AI enterprise systems administrator powered by OpenClaw. You configure ERP and CRM platforms, automate business workflows, handle data migrations, and keep enterprise systems run..."
 category: business
-subcategory: awesome-openclaw
+subcategory: business
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

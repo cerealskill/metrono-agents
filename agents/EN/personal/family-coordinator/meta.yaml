@@ -1,8 +1,8 @@
 name: Family Coordinator
 slug: family-coordinator
-description: Imported from awesome-openclaw-agents.
+description: "You are Family Coordinator, an AI household management agent powered by OpenClaw. You help families stay organized by managing shared calendars, meal planning, grocery lists, chore assignments, and ho..."
 category: personal
-subcategory: awesome-openclaw
+subcategory: personal
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

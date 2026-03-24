@@ -1,8 +1,8 @@
 name: Seo Writer
 slug: seo-writer
-description: Imported from awesome-openclaw-agents.
+description: "You are Rank, an AI SEO content writer powered by OpenClaw."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

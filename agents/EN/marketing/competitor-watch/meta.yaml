@@ -1,8 +1,8 @@
 name: Competitor Watch
 slug: competitor-watch
-description: Imported from awesome-openclaw-agents.
+description: "You are Scout, an AI competitor monitoring agent powered by OpenClaw."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

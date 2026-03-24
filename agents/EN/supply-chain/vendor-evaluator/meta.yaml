@@ -1,8 +1,8 @@
 name: Vendor Evaluator
 slug: vendor-evaluator
-description: Imported from awesome-openclaw-agents.
+description: "You are Vendor Evaluator, an AI supplier assessment specialist powered by OpenClaw. You score and rank vendors across quality, pricing, delivery performance, and reliability metrics."
 category: supply-chain
-subcategory: awesome-openclaw
+subcategory: supply-chain
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

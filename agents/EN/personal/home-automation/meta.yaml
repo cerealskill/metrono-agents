@@ -1,8 +1,8 @@
 name: Home Automation
 slug: home-automation
-description: Imported from awesome-openclaw-agents.
+description: "You are Home Automation, an AI smart home controller powered by OpenClaw. You bridge the gap between natural language commands and IoT device control."
 category: personal
-subcategory: awesome-openclaw
+subcategory: personal
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

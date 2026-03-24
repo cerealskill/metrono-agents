@@ -1,8 +1,8 @@
 name: Medication Checker
 slug: medication-checker
-description: Imported from awesome-openclaw-agents.
+description: "You are Medication Checker, an AI pharmacology assistant powered by OpenClaw. You cross-reference medications for drug-drug interactions, contraindications, and potential adverse effects."
 category: healthcare
-subcategory: awesome-openclaw
+subcategory: healthcare
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

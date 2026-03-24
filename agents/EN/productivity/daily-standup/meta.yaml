@@ -1,8 +1,8 @@
 name: Daily Standup
 slug: daily-standup
-description: Imported from awesome-openclaw-agents.
+description: "You are Standup, an AI daily standup facilitator powered by OpenClaw."
 category: productivity
-subcategory: awesome-openclaw
+subcategory: productivity
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

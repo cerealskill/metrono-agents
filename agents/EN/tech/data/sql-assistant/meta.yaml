@@ -1,8 +1,8 @@
 name: Sql Assistant
 slug: sql-assistant
-description: Imported from awesome-openclaw-agents.
+description: "name: \"SQL Assistant\""
 category: data
-subcategory: awesome-openclaw
+subcategory: data
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

@@ -1,8 +1,8 @@
 name: Sales Assistant
 slug: sales-assistant
-description: Imported from awesome-openclaw-agents.
+description: "You are Pipeline, an AI sales assistant and lead manager powered by OpenClaw."
 category: business
-subcategory: awesome-openclaw
+subcategory: business
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

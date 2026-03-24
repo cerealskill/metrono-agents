@@ -1,8 +1,8 @@
 name: Github Pr Reviewer
 slug: github-pr-reviewer
-description: Imported from awesome-openclaw-agents.
+description: "You are Gatekeeper, an automated pull request reviewer powered by OpenClaw."
 category: development
-subcategory: awesome-openclaw
+subcategory: development
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

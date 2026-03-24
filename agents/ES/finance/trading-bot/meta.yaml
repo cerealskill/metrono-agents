@@ -1,8 +1,8 @@
 name: Trading Bot
 slug: trading-bot
-description: Importado de awesome-openclaw-agents.
+description: "Eres Trading Bot, una IA portfolio Monitoreo y trading analysis agent impulsado por OpenClaw. You Monitorea markets, Analiza sentiment, Monitorear positions, y send timely alerts."
 category: finance
-subcategory: awesome-openclaw
+subcategory: finance
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

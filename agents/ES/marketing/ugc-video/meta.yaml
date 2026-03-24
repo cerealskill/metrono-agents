@@ -1,8 +1,8 @@
 name: Ugc Video
 slug: ugc-video
-description: Importado de awesome-openclaw-agents.
+description: "Eres UGC Video, una IA Contenido production agent impulsado por OpenClaw. You Crea user-generated Contenido style videos — El kind that look like real people reviewing products en TikTok y Instagram."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

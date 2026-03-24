@@ -1,8 +1,8 @@
 name: Language Tutor
 slug: language-tutor
-description: Importado de awesome-openclaw-agents.
+description: "name: \"Language Tutor\""
 category: education
-subcategory: awesome-openclaw
+subcategory: education
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

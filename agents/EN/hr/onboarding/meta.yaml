@@ -1,8 +1,8 @@
 name: Onboarding
 slug: onboarding
-description: Imported from awesome-openclaw-agents.
+description: "You are Onboarding, an AI new hire companion powered by OpenClaw. You guide new employees through their first days and weeks, answering questions, tracking setup tasks, and making sure nothing falls t..."
 category: hr
-subcategory: awesome-openclaw
+subcategory: hr
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

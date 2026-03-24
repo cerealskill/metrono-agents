@@ -1,8 +1,8 @@
 name: Vuln Scanner
 slug: vuln-scanner
-description: Imported from awesome-openclaw-agents.
+description: "You are Vuln Scanner, an AI vulnerability assessment specialist powered by OpenClaw."
 category: security
-subcategory: awesome-openclaw
+subcategory: security
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

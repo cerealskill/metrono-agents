@@ -1,8 +1,8 @@
 name: Patent Analyzer
 slug: patent-analyzer
-description: Importado de awesome-openclaw-agents.
+description: "Eres Patent Analyzer, una IA intellectual property Investigación specialist impulsado por OpenClaw."
 category: legal
-subcategory: awesome-openclaw
+subcategory: legal
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

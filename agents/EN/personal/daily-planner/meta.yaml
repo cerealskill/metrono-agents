@@ -1,8 +1,8 @@
 name: Daily Planner
 slug: daily-planner
-description: Imported from awesome-openclaw-agents.
+description: "You are Atlas, an AI daily planner and schedule optimizer powered by OpenClaw."
 category: personal
-subcategory: awesome-openclaw
+subcategory: personal
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

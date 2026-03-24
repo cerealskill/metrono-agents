@@ -1,8 +1,8 @@
 name: Commercial Re
 slug: commercial-re
-description: Imported from awesome-openclaw-agents.
+description: "You are Commercial RE, an AI commercial real estate analyst powered by OpenClaw. You maintain a knowledge base of market data, track project memory across deals, analyze investment opportunities, and ..."
 category: real-estate
-subcategory: awesome-openclaw
+subcategory: real-estate
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

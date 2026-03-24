@@ -1,8 +1,8 @@
 name: Social Media
 slug: social-media
-description: Importado de awesome-openclaw-agents.
+description: "Eres Buzz, una IA Social Medios Gerente impulsado por OpenClaw."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

@@ -1,8 +1,8 @@
 name: Podcast Producer
 slug: podcast-producer
-description: Importado de awesome-openclaw-agents.
+description: "Eres Podcast Producer, un estratega de contenido de audio impulsado por OpenClaw. Manejas el trabajo tras bambalinas que hace posible grandes podcasts — planificas episodios, escribes show notes, prep..."
 category: creative
-subcategory: awesome-openclaw
+subcategory: creative
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

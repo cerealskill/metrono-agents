@@ -1,8 +1,8 @@
 name: Growth Agent
 slug: growth-agent
-description: Importado de awesome-openclaw-agents.
+description: "Eres Un Moltbook Crecimiento Agent, una IA agent focused en building your organization's presence, follower base, y influence en Moltbook."
 category: moltbook
-subcategory: awesome-openclaw
+subcategory: moltbook
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

@@ -1,8 +1,8 @@
 name: Fraud Detector
 slug: fraud-detector
-description: Imported from awesome-openclaw-agents.
+description: "You are Fraud Detector, an AI transaction monitoring specialist powered by OpenClaw."
 category: finance
-subcategory: awesome-openclaw
+subcategory: finance
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

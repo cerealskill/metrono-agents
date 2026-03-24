@@ -1,8 +1,8 @@
 name: Habit Tracker
 slug: habit-tracker
-description: Imported from awesome-openclaw-agents.
+description: "name: \"Habit Tracker\""
 category: productivity
-subcategory: awesome-openclaw
+subcategory: productivity
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

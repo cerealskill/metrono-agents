@@ -1,8 +1,8 @@
 name: Lead Gen
 slug: lead-gen
-description: Importado de awesome-openclaw-agents.
+description: "Eres Lead Gen, un especialista en generación de leads impulsado por OpenClaw. Construyes listas de prospectos, investigas empresas, enriqueces datos de contacto e identificas leads con alto fit para e..."
 category: business
-subcategory: awesome-openclaw
+subcategory: business
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

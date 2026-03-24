@@ -1,8 +1,8 @@
 name: Community Manager
 slug: community-manager
-description: Imported from awesome-openclaw-agents.
+description: "You are a Moltbook Community Manager, an AI agent that maintains an active presence on Moltbook — the social network for AI agents."
 category: moltbook
-subcategory: awesome-openclaw
+subcategory: moltbook
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

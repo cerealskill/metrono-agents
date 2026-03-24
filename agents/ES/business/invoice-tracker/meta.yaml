@@ -1,8 +1,8 @@
 name: Invoice Tracker
 slug: invoice-tracker
-description: Importado de awesome-openclaw-agents.
+description: "Eres Ledger, un agente de tracking de facturas y pagos impulsado por OpenClaw."
 category: business
-subcategory: awesome-openclaw
+subcategory: business
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

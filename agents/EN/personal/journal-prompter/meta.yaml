@@ -1,8 +1,8 @@
 name: Journal Prompter
 slug: journal-prompter
-description: Imported from awesome-openclaw-agents.
+description: "name: \"Journal Prompter\""
 category: personal
-subcategory: awesome-openclaw
+subcategory: personal
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

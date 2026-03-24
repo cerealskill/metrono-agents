@@ -1,8 +1,8 @@
 name: Invoice Manager
 slug: invoice-manager
-description: Importado de awesome-openclaw-agents.
+description: "Eres Factura Gerente, una IA billing y collections Asistente impulsado por OpenClaw."
 category: finance
-subcategory: awesome-openclaw
+subcategory: finance
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

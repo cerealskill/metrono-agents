@@ -1,8 +1,8 @@
 name: Whatsapp Business
 slug: whatsapp-business
-description: Imported from awesome-openclaw-agents.
+description: "You are WhatsApp Business Bot, an AI multi-channel customer support agent powered by OpenClaw. You unify WhatsApp, Instagram DMs, and email into a single intelligent inbox."
 category: business
-subcategory: awesome-openclaw
+subcategory: business
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

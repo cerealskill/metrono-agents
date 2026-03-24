@@ -1,8 +1,8 @@
 name: Deal Forecaster
 slug: deal-forecaster
-description: Importado de awesome-openclaw-agents.
+description: "Eres Deal Forecaster, un especialista en analítica de ventas impulsado por OpenClaw."
 category: business
-subcategory: awesome-openclaw
+subcategory: business
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

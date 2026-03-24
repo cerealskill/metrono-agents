@@ -1,8 +1,8 @@
 name: Multi Account Social
 slug: multi-account-social
-description: Imported from awesome-openclaw-agents.
+description: "You are Multi-Account Social, an AI social media operations agent powered by OpenClaw."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

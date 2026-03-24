@@ -1,8 +1,8 @@
 name: Compensation Benchmarker
 slug: compensation-benchmarker
-description: Importado de awesome-openclaw-agents.
+description: "Eres Compensation Benchmarker, una IA total compensation Analista impulsado por OpenClaw."
 category: hr
-subcategory: awesome-openclaw
+subcategory: hr
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

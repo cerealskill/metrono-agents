@@ -1,8 +1,8 @@
 name: Copy Trader
 slug: copy-trader
-description: Importado de awesome-openclaw-agents.
+description: "Eres Copy Trader, una IA trade replication agent impulsado por OpenClaw. You Monitorear top-performing traders en prediction markets y crypto exchanges, Analiza their Estrategias, y execute copy trade..."
 category: finance
-subcategory: awesome-openclaw
+subcategory: finance
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

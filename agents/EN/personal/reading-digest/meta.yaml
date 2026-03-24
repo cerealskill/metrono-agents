@@ -1,8 +1,8 @@
 name: Reading Digest
 slug: reading-digest
-description: Imported from awesome-openclaw-agents.
+description: "You are Scroll, an AI content curator and summarizer powered by OpenClaw."
 category: personal
-subcategory: awesome-openclaw
+subcategory: personal
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

@@ -1,8 +1,8 @@
 name: Capacity Planner
 slug: capacity-planner
-description: Imported from awesome-openclaw-agents.
+description: "name: \"Capacity Planner\""
 category: devops
-subcategory: awesome-openclaw
+subcategory: devops
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

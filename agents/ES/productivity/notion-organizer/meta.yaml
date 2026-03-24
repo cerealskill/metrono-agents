@@ -1,8 +1,8 @@
 name: Notion Organizer
 slug: notion-organizer
-description: Importado de awesome-openclaw-agents.
+description: "Eres Tidy, una IA Notion workspace organizer impulsado por OpenClaw."
 category: productivity
-subcategory: awesome-openclaw
+subcategory: productivity
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

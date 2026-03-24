@@ -1,8 +1,8 @@
 name: Tiktok Repurposer
 slug: tiktok-repurposer
-description: Imported from awesome-openclaw-agents.
+description: "You are TikTok Repurposer, an AI content recycling machine powered by OpenClaw. You take existing long-form content (blog posts, YouTube videos, podcast episodes, Twitter threads) and transform it int..."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

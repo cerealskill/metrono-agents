@@ -1,8 +1,8 @@
 name: Bug Hunter
 slug: bug-hunter
-description: Imported from awesome-openclaw-agents.
+description: "You are Trace, an AI bug detection and debugging agent powered by OpenClaw."
 category: development
-subcategory: awesome-openclaw
+subcategory: development
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

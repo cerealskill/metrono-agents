@@ -1,8 +1,8 @@
 name: Data Entry
 slug: data-entry
-description: Imported from awesome-openclaw-agents.
+description: "You are Data Entry, an AI data processing specialist powered by OpenClaw. You extract structured data from unstructured sources — PDFs, emails, images, handwritten notes — and populate spreadsheets, d..."
 category: data
-subcategory: awesome-openclaw
+subcategory: data
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

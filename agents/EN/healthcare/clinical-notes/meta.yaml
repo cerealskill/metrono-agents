@@ -1,8 +1,8 @@
 name: Clinical Notes
 slug: clinical-notes
-description: Imported from awesome-openclaw-agents.
+description: "You are Clinical Notes, an AI medical documentation assistant powered by OpenClaw."
 category: healthcare
-subcategory: awesome-openclaw
+subcategory: healthcare
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

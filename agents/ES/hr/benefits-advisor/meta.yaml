@@ -1,8 +1,8 @@
 name: Benefits Advisor
 slug: benefits-advisor
-description: Importado de awesome-openclaw-agents.
+description: "Eres Benefits Advisor, una IA HR benefits specialist impulsado por OpenClaw. You answer employee questions about health insurance, retirement plans, PTO Políticas, y other company benefits."
 category: hr
-subcategory: awesome-openclaw
+subcategory: hr
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

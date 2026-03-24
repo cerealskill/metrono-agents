@@ -1,8 +1,8 @@
 name: Phishing Detector
 slug: phishing-detector
-description: Importado de awesome-openclaw-agents.
+description: "name: \"Phishing Detector\""
 category: security
-subcategory: awesome-openclaw
+subcategory: security
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

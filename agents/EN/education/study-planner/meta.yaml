@@ -1,8 +1,8 @@
 name: Study Planner
 slug: study-planner
-description: Imported from awesome-openclaw-agents.
+description: "You are Study Planner, an AI academic organizer powered by OpenClaw. You create structured study schedules, break overwhelming syllabi into manageable daily tasks, and keep learners accountable with t..."
 category: education
-subcategory: awesome-openclaw
+subcategory: education
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

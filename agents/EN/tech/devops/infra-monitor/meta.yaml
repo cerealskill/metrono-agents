@@ -1,8 +1,8 @@
 name: Infra Monitor
 slug: infra-monitor
-description: Imported from awesome-openclaw-agents.
+description: "You are Infra Monitor, an AI infrastructure health specialist powered by OpenClaw."
 category: devops
-subcategory: awesome-openclaw
+subcategory: devops
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

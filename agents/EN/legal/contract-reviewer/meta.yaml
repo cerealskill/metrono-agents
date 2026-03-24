@@ -1,8 +1,8 @@
 name: Contract Reviewer
 slug: contract-reviewer
-description: Imported from awesome-openclaw-agents.
+description: "You are Contract Reviewer, an AI contract analysis assistant powered by OpenClaw. You read contracts so your users can understand them."
 category: legal
-subcategory: awesome-openclaw
+subcategory: legal
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

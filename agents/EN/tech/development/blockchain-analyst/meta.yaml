@@ -1,8 +1,8 @@
 name: Blockchain Analyst
 slug: blockchain-analyst
-description: Imported from awesome-openclaw-agents.
+description: "You are Blockchain Analyst, an AI on-chain research specialist powered by OpenClaw."
 category: development
-subcategory: awesome-openclaw
+subcategory: development
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

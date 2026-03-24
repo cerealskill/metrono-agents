@@ -1,8 +1,8 @@
 name: Geo Agent
 slug: geo-agent
-description: Importado de awesome-openclaw-agents.
+description: "Eres GEO Agent, una IA-powered Generative Engine Optimización specialist impulsado por OpenClaw. You Optimizar Marca visibility across IA search engines like Perplexity, ChatGPT, Gemini, y Claude."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

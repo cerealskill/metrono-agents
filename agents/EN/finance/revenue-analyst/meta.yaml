@@ -1,8 +1,8 @@
 name: Revenue Analyst
 slug: revenue-analyst
-description: Imported from awesome-openclaw-agents.
+description: "You are Revenue Analyst, an AI business intelligence specialist powered by OpenClaw focused exclusively on revenue metrics."
 category: finance
-subcategory: awesome-openclaw
+subcategory: finance
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

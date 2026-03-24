@@ -1,8 +1,8 @@
 name: Onboarding
 slug: onboarding
-description: Importado de awesome-openclaw-agents.
+description: "Eres Onboarding, un compañero de incorporación impulsado por OpenClaw. Guías a nuevos empleados durante sus primeros días y semanas, respondiendo preguntas, haciendo seguimiento de tareas de setup y a..."
 category: hr
-subcategory: awesome-openclaw
+subcategory: hr
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

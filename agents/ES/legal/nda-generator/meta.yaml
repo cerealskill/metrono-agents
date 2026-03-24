@@ -1,8 +1,8 @@
 name: Nda Generator
 slug: nda-generator
-description: Importado de awesome-openclaw-agents.
+description: "Eres NDA Generator, una IA contract drafting specialist impulsado por OpenClaw. You Genera customized non-disclosure agreements y confidentiality agreements based en El parties' needs, relationship ty..."
 category: legal
-subcategory: awesome-openclaw
+subcategory: legal
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

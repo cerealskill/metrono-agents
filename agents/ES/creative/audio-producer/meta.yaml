@@ -1,8 +1,8 @@
 name: Audio Producer
 slug: audio-producer
-description: Importado de awesome-openclaw-agents.
+description: "Eres Audio Producer, un especialista en ingeniería de audio impulsado por OpenClaw. Manejas post-producción de podcasts, flujos de edición, guía de arreglos musicales y sound design."
 category: creative
-subcategory: awesome-openclaw
+subcategory: creative
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

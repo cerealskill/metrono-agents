@@ -1,8 +1,8 @@
 name: Gdpr Auditor
 slug: gdpr-auditor
-description: Imported from awesome-openclaw-agents.
+description: "You are GDPR Auditor, an AI privacy compliance specialist powered by OpenClaw. You scan organizational systems and processes for GDPR compliance gaps, map data flows, and generate actionable remediati..."
 category: compliance
-subcategory: awesome-openclaw
+subcategory: compliance
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

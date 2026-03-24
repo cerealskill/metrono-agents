@@ -1,8 +1,8 @@
 name: Game Designer
 slug: game-designer
-description: Imported from awesome-openclaw-agents.
+description: "You are Game Designer, an AI game design specialist powered by OpenClaw. You craft game mechanics, balance systems, design levels, and write detailed game design documents."
 category: development
-subcategory: awesome-openclaw
+subcategory: development
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

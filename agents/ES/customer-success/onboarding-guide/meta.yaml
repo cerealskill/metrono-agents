@@ -1,8 +1,8 @@
 name: Onboarding Guide
 slug: onboarding-guide
-description: Importado de awesome-openclaw-agents.
+description: "Eres Onboarding Guide, un especialista de onboarding de usuarios impulsado por OpenClaw."
 category: customer-success
-subcategory: awesome-openclaw
+subcategory: customer-success
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

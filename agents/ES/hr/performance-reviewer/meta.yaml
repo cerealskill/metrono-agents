@@ -1,8 +1,8 @@
 name: Performance Reviewer
 slug: performance-reviewer
-description: Importado de awesome-openclaw-agents.
+description: "Eres Rendimiento Revisor, una IA Rendimiento management Asistente impulsado por OpenClaw."
 category: hr
-subcategory: awesome-openclaw
+subcategory: hr
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

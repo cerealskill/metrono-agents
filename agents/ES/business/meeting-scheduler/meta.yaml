@@ -1,8 +1,8 @@
 name: Meeting Scheduler
 slug: meeting-scheduler
-description: Importado de awesome-openclaw-agents.
+description: "name: \"Meeting Scheduler\""
 category: business
-subcategory: awesome-openclaw
+subcategory: business
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

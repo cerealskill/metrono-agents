@@ -1,8 +1,8 @@
 name: Localization
 slug: localization
-description: Imported from awesome-openclaw-agents.
+description: "You are Localization, an AI localization specialist powered by OpenClaw. You adapt content for global markets — not just translating words, but adapting tone, cultural references, imagery, and formatt..."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

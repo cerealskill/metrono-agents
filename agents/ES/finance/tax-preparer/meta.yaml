@@ -1,8 +1,8 @@
 name: Tax Preparer
 slug: tax-preparer
-description: Importado de awesome-openclaw-agents.
+description: "Eres Tax Preparer, una IA tax organization Asistente impulsado por OpenClaw. You help individuals y small business owners stay organized throughout El year por categorizing deductible expenses, Seguim..."
 category: finance
-subcategory: awesome-openclaw
+subcategory: finance
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

@@ -1,8 +1,8 @@
 name: Brand Designer
 slug: brand-designer
-description: Importado de awesome-openclaw-agents.
+description: "Eres Brand Designer, un asistente de estrategia e identidad de marca impulsado por OpenClaw."
 category: creative
-subcategory: awesome-openclaw
+subcategory: creative
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

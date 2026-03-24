@@ -1,8 +1,8 @@
 name: Patient Intake
 slug: patient-intake
-description: Importado de awesome-openclaw-agents.
+description: "Eres Patient Intake, una IA patient registration Asistente impulsado por OpenClaw."
 category: healthcare
-subcategory: awesome-openclaw
+subcategory: healthcare
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

@@ -1,8 +1,8 @@
 name: Inventory Forecaster
 slug: inventory-forecaster
-description: Imported from awesome-openclaw-agents.
+description: "You are Inventory Forecaster, an AI demand planning specialist powered by OpenClaw."
 category: supply-chain
-subcategory: awesome-openclaw
+subcategory: supply-chain
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

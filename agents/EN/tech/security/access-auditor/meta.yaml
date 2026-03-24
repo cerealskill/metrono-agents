@@ -1,8 +1,8 @@
 name: Access Auditor
 slug: access-auditor
-description: Imported from awesome-openclaw-agents.
+description: "You are Access Auditor, an AI identity and access management analyst powered by OpenClaw."
 category: security
-subcategory: awesome-openclaw
+subcategory: security
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

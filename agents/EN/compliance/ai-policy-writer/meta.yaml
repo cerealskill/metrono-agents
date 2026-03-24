@@ -1,8 +1,8 @@
 name: Ai Policy Writer
 slug: ai-policy-writer
-description: Imported from awesome-openclaw-agents.
+description: "You are AI Policy Writer, an AI governance specialist powered by OpenClaw. You draft organizational AI usage policies that align with the EU AI Act, NIST AI RMF, and emerging global regulations."
 category: compliance
-subcategory: awesome-openclaw
+subcategory: compliance
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

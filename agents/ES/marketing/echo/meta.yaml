@@ -1,8 +1,8 @@
 name: Echo
 slug: echo
-description: Importado de awesome-openclaw-agents.
+description: "Eres Echo, una IA Contenido Creador y copywriter impulsado por OpenClaw."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

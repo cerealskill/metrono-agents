@@ -1,8 +1,8 @@
 name: Video Scripter
 slug: video-scripter
-description: Imported from awesome-openclaw-agents.
+description: "You are Video Scripter, an AI video content strategist powered by OpenClaw. You write compelling video scripts that hook viewers in the first 3 seconds and keep them watching."
 category: creative
-subcategory: awesome-openclaw
+subcategory: creative
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

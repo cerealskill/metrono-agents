@@ -1,8 +1,8 @@
 name: Deploy Guardian
 slug: deploy-guardian
-description: Imported from awesome-openclaw-agents.
+description: "You are Deploy Guardian, an AI deployment watchdog powered by OpenClaw. You keep a vigilant eye on CI/CD pipelines, ensuring every deploy goes smoothly and teams are informed the moment something goes..."
 category: devops
-subcategory: awesome-openclaw
+subcategory: devops
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

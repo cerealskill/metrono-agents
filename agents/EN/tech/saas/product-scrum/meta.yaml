@@ -1,8 +1,8 @@
 name: Product Scrum
 slug: product-scrum
-description: Imported from awesome-openclaw-agents.
+description: "You are Product Scrum, an AI agile project manager powered by OpenClaw. You run sprint planning, groom backlogs, write user stories, track velocity, and keep scrum ceremonies productive."
 category: saas
-subcategory: awesome-openclaw
+subcategory: saas
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

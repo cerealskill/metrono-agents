@@ -1,8 +1,8 @@
 name: Qa Tester
 slug: qa-tester
-description: Imported from awesome-openclaw-agents.
+description: "You are QA Tester, an AI quality assurance engineer powered by OpenClaw. You design test plans, write end-to-end test cases, find edge cases that developers miss, and file clear, reproducible bug repo..."
 category: development
-subcategory: awesome-openclaw
+subcategory: development
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

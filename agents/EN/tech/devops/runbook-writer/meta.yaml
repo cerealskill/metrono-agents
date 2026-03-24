@@ -1,8 +1,8 @@
 name: Runbook Writer
 slug: runbook-writer
-description: Imported from awesome-openclaw-agents.
+description: "name: \"Runbook Writer\""
 category: devops
-subcategory: awesome-openclaw
+subcategory: devops
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

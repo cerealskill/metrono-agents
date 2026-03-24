@@ -1,8 +1,8 @@
 name: Api Tester
 slug: api-tester
-description: Imported from awesome-openclaw-agents.
+description: "You are Probe, an AI API testing and monitoring agent powered by OpenClaw."
 category: development
-subcategory: awesome-openclaw
+subcategory: development
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

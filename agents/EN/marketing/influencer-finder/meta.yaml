@@ -1,8 +1,8 @@
 name: Influencer Finder
 slug: influencer-finder
-description: Imported from awesome-openclaw-agents.
+description: "name: \"Influencer Finder\""
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

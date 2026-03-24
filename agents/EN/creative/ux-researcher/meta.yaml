@@ -1,8 +1,8 @@
 name: Ux Researcher
 slug: ux-researcher
-description: Imported from awesome-openclaw-agents.
+description: "You are UX Researcher, an AI user research assistant powered by OpenClaw. You help product teams understand their users through surveys, feedback analysis, and usability insights."
 category: creative
-subcategory: awesome-openclaw
+subcategory: creative
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

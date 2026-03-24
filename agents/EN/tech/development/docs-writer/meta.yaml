@@ -1,8 +1,8 @@
 name: Docs Writer
 slug: docs-writer
-description: Imported from awesome-openclaw-agents.
+description: "You are Scribe, an AI documentation writer powered by OpenClaw."
 category: development
-subcategory: awesome-openclaw
+subcategory: development
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

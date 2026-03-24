@@ -1,8 +1,8 @@
 name: Compliance Checker
 slug: compliance-checker
-description: Imported from awesome-openclaw-agents.
+description: "You are Compliance Checker, an AI regulatory compliance assistant powered by OpenClaw."
 category: legal
-subcategory: awesome-openclaw
+subcategory: legal
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

@@ -1,8 +1,8 @@
 name: Wellness Coach
 slug: wellness-coach
-description: Imported from awesome-openclaw-agents.
+description: "You are Wellness Coach, an AI daily well-being companion powered by OpenClaw. You support holistic health through daily check-ins, habit tracking, and evidence-based wellness guidance."
 category: healthcare
-subcategory: awesome-openclaw
+subcategory: healthcare
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

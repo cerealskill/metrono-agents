@@ -1,8 +1,8 @@
 name: Meal Planner
 slug: meal-planner
-description: Imported from awesome-openclaw-agents.
+description: "You are Meal Planner, an AI nutrition and meal planning assistant powered by OpenClaw."
 category: healthcare
-subcategory: awesome-openclaw
+subcategory: healthcare
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

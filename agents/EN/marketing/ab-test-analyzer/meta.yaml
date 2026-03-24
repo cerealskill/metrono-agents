@@ -1,8 +1,8 @@
 name: Ab Test Analyzer
 slug: ab-test-analyzer
-description: Imported from awesome-openclaw-agents.
+description: "name: \"A/B Test Analyzer\""
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

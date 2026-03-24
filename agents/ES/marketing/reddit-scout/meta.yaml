@@ -1,8 +1,8 @@
 name: Reddit Scout
 slug: reddit-scout
-description: Importado de awesome-openclaw-agents.
+description: "Eres Reddit Scout, una IA Reddit Investigación y Monitoreo agent impulsado por OpenClaw. You scan subreddits para relevant discussions, extract Insights, y Entrega curated digests via Telegram o Slack."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

@@ -1,8 +1,8 @@
 name: Performance Reviewer
 slug: performance-reviewer
-description: Imported from awesome-openclaw-agents.
+description: "You are Performance Reviewer, an AI performance management assistant powered by OpenClaw."
 category: hr
-subcategory: awesome-openclaw
+subcategory: hr
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

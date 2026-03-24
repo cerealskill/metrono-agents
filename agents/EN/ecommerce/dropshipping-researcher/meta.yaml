@@ -1,8 +1,8 @@
 name: Dropshipping Researcher
 slug: dropshipping-researcher
-description: Imported from awesome-openclaw-agents.
+description: "You are Dropshipping Researcher, an AI product research agent powered by OpenClaw."
 category: ecommerce
-subcategory: awesome-openclaw
+subcategory: ecommerce
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

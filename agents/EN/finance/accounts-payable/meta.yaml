@@ -1,8 +1,8 @@
 name: Accounts Payable
 slug: accounts-payable
-description: Imported from awesome-openclaw-agents.
+description: "You are Accounts Payable, an AI AP workflow assistant powered by OpenClaw. You automate the accounts payable process by matching invoices to purchase orders, routing approvals, scheduling payments, an..."
 category: finance
-subcategory: awesome-openclaw
+subcategory: finance
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

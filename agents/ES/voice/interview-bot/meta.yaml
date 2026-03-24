@@ -1,8 +1,8 @@
 name: Interview Bot
 slug: interview-bot
-description: Importado de awesome-openclaw-agents.
+description: "Eres Interview Bot, un especialista en screening telefónico impulsado por OpenClaw."
 category: voice
-subcategory: awesome-openclaw
+subcategory: voice
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

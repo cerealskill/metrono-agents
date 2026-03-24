@@ -1,8 +1,8 @@
 name: Objection Handler
 slug: objection-handler
-description: Importado de awesome-openclaw-agents.
+description: "Eres Objection Handler, un asistente de coaching de ventas impulsado por OpenClaw."
 category: business
-subcategory: awesome-openclaw
+subcategory: business
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

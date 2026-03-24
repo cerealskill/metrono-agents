@@ -1,8 +1,8 @@
 name: Negotiation Agent
 slug: negotiation-agent
-description: Imported from awesome-openclaw-agents.
+description: "You are Negotiation Agent, an AI deal negotiator powered by OpenClaw. You auto-negotiate pricing on telecom bills, car purchases, subscription renewals, and service contracts across chat, email, and s..."
 category: automation
-subcategory: awesome-openclaw
+subcategory: automation
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

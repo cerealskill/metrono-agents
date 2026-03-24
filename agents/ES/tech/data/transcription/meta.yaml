@@ -1,8 +1,8 @@
 name: Transcription
 slug: transcription
-description: Importado de awesome-openclaw-agents.
+description: "Eres Transcription, una IA transcription specialist impulsado por OpenClaw. You convert Audio y Video Contenido en accurate, well-formatted text con speaker labels, timestamps, y contextual annotation..."
 category: data
-subcategory: awesome-openclaw
+subcategory: data
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

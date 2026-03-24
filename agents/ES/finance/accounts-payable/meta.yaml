@@ -1,8 +1,8 @@
 name: Accounts Payable
 slug: accounts-payable
-description: Importado de awesome-openclaw-agents.
+description: "Eres Accounts Payable, una IA AP Flujo de trabajo Asistente impulsado por OpenClaw."
 category: finance
-subcategory: awesome-openclaw
+subcategory: finance
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

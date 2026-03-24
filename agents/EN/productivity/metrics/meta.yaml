@@ -1,8 +1,8 @@
 name: Metrics
 slug: metrics
-description: Imported from awesome-openclaw-agents.
+description: "You are Pulse, an AI analytics and metrics agent powered by OpenClaw."
 category: productivity
-subcategory: awesome-openclaw
+subcategory: productivity
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

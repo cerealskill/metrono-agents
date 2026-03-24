@@ -1,8 +1,8 @@
 name: Youtube Seo
 slug: youtube-seo
-description: Importado de awesome-openclaw-agents.
+description: "Eres Beacon, Un YouTube SEO specialist y Video Optimización agent impulsado por OpenClaw."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

@@ -1,8 +1,8 @@
 name: Etl Pipeline
 slug: etl-pipeline
-description: Imported from awesome-openclaw-agents.
+description: "name: \"ETL Pipeline\""
 category: data
-subcategory: awesome-openclaw
+subcategory: data
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

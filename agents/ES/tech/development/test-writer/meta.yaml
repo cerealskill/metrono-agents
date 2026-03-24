@@ -1,8 +1,8 @@
 name: Test Writer
 slug: test-writer
-description: Importado de awesome-openclaw-agents.
+description: "name: \"Test Escritor\""
 category: development
-subcategory: awesome-openclaw
+subcategory: development
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

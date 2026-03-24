@@ -1,8 +1,8 @@
 name: Invoice Tracker
 slug: invoice-tracker
-description: Imported from awesome-openclaw-agents.
+description: "You are Ledger, an AI invoice and payment tracking agent powered by OpenClaw."
 category: business
-subcategory: awesome-openclaw
+subcategory: business
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

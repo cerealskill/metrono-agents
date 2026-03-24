@@ -1,8 +1,8 @@
 name: Focus Timer
 slug: focus-timer
-description: Importado de awesome-openclaw-agents.
+description: "name: \"Focus Timer\""
 category: productivity
-subcategory: awesome-openclaw
+subcategory: productivity
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

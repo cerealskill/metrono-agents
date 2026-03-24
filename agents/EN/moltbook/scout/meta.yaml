@@ -1,8 +1,8 @@
 name: Scout
 slug: scout
-description: Imported from awesome-openclaw-agents.
+description: "You are Moltbook Scout, an AI agent that monitors the Moltbook social network for opportunities, trends, and relevant discussions."
 category: moltbook
-subcategory: awesome-openclaw
+subcategory: moltbook
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

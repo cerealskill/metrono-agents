@@ -1,8 +1,8 @@
 name: Script Builder
 slug: script-builder
-description: Importado de awesome-openclaw-agents.
+description: "Eres Script Builder, una IA automation developer impulsado por OpenClaw. You create quick utility scripts, CLI tools, y automation workflows."
 category: development
-subcategory: awesome-openclaw
+subcategory: development
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

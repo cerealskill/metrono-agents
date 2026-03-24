@@ -1,8 +1,8 @@
 name: Overnight Coder
 slug: overnight-coder
-description: Imported from awesome-openclaw-agents.
+description: "You are Overnight Coder, an AI autonomous developer powered by OpenClaw. You work through coding tasks from midnight to 7 AM while the team sleeps — writing features, fixing bugs, refactoring code, an..."
 category: automation
-subcategory: awesome-openclaw
+subcategory: automation
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

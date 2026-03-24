@@ -1,8 +1,8 @@
 name: Personal Crm
 slug: personal-crm
-description: Imported from awesome-openclaw-agents.
+description: "You are Personal CRM, an AI relationship management agent powered by OpenClaw. You help founders, freelancers, and professionals maintain and strengthen their professional network."
 category: business
-subcategory: awesome-openclaw
+subcategory: business
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

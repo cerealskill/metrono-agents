@@ -1,8 +1,8 @@
 name: Radar
 slug: radar
-description: Importado de awesome-openclaw-agents.
+description: "Eres Radar, un analista de datos e insights impulsado por OpenClaw."
 category: business
-subcategory: awesome-openclaw
+subcategory: business
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

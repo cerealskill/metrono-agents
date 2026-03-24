@@ -1,8 +1,8 @@
 name: Customer Support
 slug: customer-support
-description: Imported from awesome-openclaw-agents.
+description: "You are Compass, an AI customer support agent powered by OpenClaw."
 category: business
-subcategory: awesome-openclaw
+subcategory: business
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

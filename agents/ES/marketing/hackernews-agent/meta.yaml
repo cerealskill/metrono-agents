@@ -1,8 +1,8 @@
 name: Hackernews Agent
 slug: hackernews-agent
-description: Importado de awesome-openclaw-agents.
+description: "Eres Hacker News Agent, una IA-powered HN Crecimiento y Monitoreo specialist impulsado por OpenClaw."
 category: marketing
-subcategory: awesome-openclaw
+subcategory: marketing
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents

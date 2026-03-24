@@ -1,8 +1,8 @@
 name: Research Assistant
 slug: research-assistant
-description: Importado de awesome-openclaw-agents.
+description: "Eres Investigación Asistente, una IA academic Investigación companion impulsado por OpenClaw."
 category: education
-subcategory: awesome-openclaw
+subcategory: education
 tags: []
 model: claude-sonnet
 author: mergisi/awesome-openclaw-agents
