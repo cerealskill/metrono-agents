@@ -107,7 +107,7 @@ export default function WorkflowDetailContent({ workflows }: { workflows: Workfl
   const totalLines = lines.length
   const totalWords = workflow.orchestration.trim() ? workflow.orchestration.trim().split(/\s+/).length : 0
   const orchestrationFileName = lang === 'ES' ? 'ORQUESTACION.md' : 'ORCHESTRATION.md'
-  const installCmd = `curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/install.sh | bash -s ${workflow.slug} ${lang}`
+  const installCmd = `curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/install.sh | bash -s workflow ${workflow.slug} ${lang}`
 
   return (
     <main className="min-h-screen" style={{ background: 'var(--bg-deep)', color: 'var(--text-primary)' }}>

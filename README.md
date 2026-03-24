@@ -36,19 +36,28 @@ Workflows define multi-agent collaboration patterns — how agents coordinate, v
 
 ---
 
-## Install an agent
+## Install
 
 ### One-liner (recommended)
 
 ```bash
-# English (default)
-curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/install.sh | bash -s <slug>
+# Install an agent (English)
+curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/install.sh | bash -s agent <slug> EN
 
-# Spanish
-curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/install.sh | bash -s <slug> ES
+# Install an agent (Spanish)
+curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/install.sh | bash -s agent <slug> ES
+
+# Install a workflow (prompts you to select an agent workspace)
+curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/install.sh | bash -s workflow <slug> EN
 ```
 
-The script downloads all bundle files into `~/.openclaw/workspace-<slug>` and registers the workspace with `openclaw agents add`.
+**Parameters:**
+1. `agent` or `workflow` — what to install
+2. `<slug>` — the agent or workflow name (e.g. `pedro-sre`, `incident-mode`)
+3. `EN` or `ES` — language (defaults to `EN`)
+
+For agents, the script downloads all bundle files into `~/.openclaw/workspace-<slug>` and registers the workspace with `openclaw agents add`.  
+For workflows, the script lists your installed agent workspaces and lets you pick where to copy the orchestration file.
 
 ### Manual
 

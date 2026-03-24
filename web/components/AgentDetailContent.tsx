@@ -16,7 +16,7 @@ export default function AgentDetailContent({ agents }: { agents: AgentMeta[] }) 
   // Pick the agent matching current language, fallback to first available
   const agent = agents.find(a => (a.lang ?? 'EN').toUpperCase() === lang) ?? agents[0]
 
-  const installCmd = `curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/install.sh | bash -s ${agent.slug} ${lang}`
+  const installCmd = `curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/install.sh | bash -s agent ${agent.slug} ${lang}`
 
   return (
     <main className="min-h-screen" style={{ background: 'var(--bg-deep)', color: 'var(--text-primary)' }}>
