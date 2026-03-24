@@ -5,6 +5,7 @@ export interface ContributePayload {
   slug: string
   name: string
   description: string
+  lang: string
   category: string
   subcategory: string
   tags: string[]
@@ -34,7 +35,8 @@ export async function POST(req: Request) {
   const token = process.env.GITHUB_TOKEN
   const repo = 'cerealskill/openclaw-agents'
   const branch = `contrib/${slug}-${Date.now()}`
-  const basePath = `agents/${body.category}/${body.subcategory}/${slug}`
+  const lang = /^(EN|ES)$/.test(body.lang ?? '') ? body.lang : 'EN'
+  const basePath = `agents/${lang}/${body.category}/${body.subcategory}/${slug}`
 
   // Get base SHA for main
   const mainRef = await fetch(`https://api.github.com/repos/${repo}/git/ref/heads/main`, {
@@ -92,7 +94,7 @@ version: "1.0.0"
       title: `New agent: ${body.name} (${slug})`,
       head: branch,
       base: 'main',
-      body: `## New agent contribution\n\n**Name:** ${body.name}\n**Category:** ${body.category}/${body.subcategory}\n**Description:** ${body.description}\n**Tags:** ${body.tags.join(', ')}\n\n**Contributed by:** ${session.user.name} (${session.user.email})`,
+      body: `## New agent contribution\n\n**Name:** ${body.name}\n**Language:** ${lang}\n**Category:** ${body.category}/${body.subcategory}\n**Description:** ${body.description}\n**Tags:** ${body.tags.join(', ')}\n\n**Contributed by:** ${session.user.name} (${session.user.email})`,
     }),
   }).then(r => r.json())
 

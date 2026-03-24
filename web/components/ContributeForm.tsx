@@ -52,6 +52,7 @@ export default function ContributeForm({ categoriesFromRepo = {} }: { categories
     name: '',
     slug: '',
     description: '',
+    lang: 'EN',
     category: 'tech',
     subcategory: 'dev',
     tags: '',
@@ -315,6 +316,25 @@ export default function ContributeForm({ categoriesFromRepo = {} }: { categories
           </div>
 
           <div>
+            <label style={labelStyle}>Language</label>
+            <div className="flex gap-2">
+              {(['EN', 'ES'] as const).map(lang => (
+                <button
+                  key={lang}
+                  type="button"
+                  onClick={() => set('lang', lang)}
+                  className="flex-1 py-2.5 rounded-xl text-sm font-bold transition-all"
+                  style={form.lang === lang
+                    ? { background: 'var(--cyan-bright)', color: 'var(--btn-text)' }
+                    : { background: 'var(--bg-elevated)', color: 'var(--text-muted)', border: '1px solid var(--border)' }
+                  }
+                >
+                  {lang === 'EN' ? '🇺🇸 English' : '🇪🇸 Español'}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div>
             <label style={labelStyle}>Tags <span style={{ color: 'var(--text-muted)', textTransform: 'none', fontWeight: 400 }}>— comma separated</span></label>
             <input style={inputStyle} value={form.tags} onChange={e => set('tags', e.target.value)} placeholder="devops, ci-cd, kubernetes" />
           </div>
@@ -381,8 +401,12 @@ export default function ContributeForm({ categoriesFromRepo = {} }: { categories
               <span style={{ color: 'var(--cyan-bright)', fontFamily: 'monospace' }}>{form.slug}</span>
             </div>
             <div className="flex justify-between text-sm">
+              <span style={{ color: 'var(--text-muted)' }}>Language</span>
+              <span style={{ color: 'var(--cyan-bright)', fontWeight: 600 }}>{form.lang === 'EN' ? '🇺🇸 English' : '🇪🇸 Español'}</span>
+            </div>
+            <div className="flex justify-between text-sm">
               <span style={{ color: 'var(--text-muted)' }}>Path</span>
-              <span style={{ color: 'var(--text-secondary)', fontFamily: 'monospace', fontSize: '0.75rem' }}>agents/{form.category}/{form.subcategory}/{form.slug}/</span>
+              <span style={{ color: 'var(--text-secondary)', fontFamily: 'monospace', fontSize: '0.75rem' }}>agents/{form.lang}/{form.category}/{form.subcategory}/{form.slug}/</span>
             </div>
             <div className="flex justify-between text-sm">
               <span style={{ color: 'var(--text-muted)' }}>Contributor</span>
