@@ -110,17 +110,17 @@ export default function WorkflowDetailContent({ workflows }: { workflows: Workfl
             </div>
 
             {/* File content */}
-            <div className="px-3 py-4 sm:p-6 overflow-x-auto">
+            <div className="px-3 py-4 sm:p-6 overflow-x-hidden">
               <div className="text-xs sm:text-sm leading-relaxed font-mono" style={{ color: 'var(--text-primary)' }}>
                 {lines.map((line, idx) => (
-                  <div key={idx} className="grid" style={{ gridTemplateColumns: '30px 1fr' }}>
+                  <div key={idx} className="grid" style={{ gridTemplateColumns: '30px minmax(0, 1fr)' }}>
                     <span
                       className="select-none pr-1 sm:pr-2 text-right"
                       style={{ color: 'var(--text-muted)', borderRight: '1px solid var(--border)' }}
                     >
                       {idx + 1}
                     </span>
-                    <span className="pl-1 sm:pl-2 whitespace-pre">{line ? renderLineMarkdown(line) : ' '}</span>
+                    <span className="pl-1 sm:pl-2 whitespace-pre-wrap break-words overflow-hidden">{line ? renderLineMarkdown(line) : ' '}</span>
                   </div>
                 ))}
               </div>
