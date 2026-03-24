@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from 'react'
 import AgentCard from './AgentCard'
 import { CATEGORY_ICONS } from '@/lib/agents'
-import type { AgentMeta } from '@/lib/agents'
+import type { AgentListItem } from '@/lib/agents'
 import { useI18n } from '@/lib/i18n'
 
 function useSessionState<T>(key: string, initial: T): [T, (v: T) => void] {
@@ -20,7 +20,7 @@ function useSessionState<T>(key: string, initial: T): [T, (v: T) => void] {
   return [value, setValue]
 }
 
-export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
+export default function AgentSearch({ agents }: { agents: AgentListItem[] }) {
   const { t } = useI18n()
   const [query, setQuery] = useSessionState('agents:query', '')
   const [activeCategory, setActiveCategory] = useSessionState<string | null>('agents:category', null)
@@ -51,7 +51,7 @@ export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
       if (!acc[cat]) acc[cat] = []
       acc[cat].push(agent)
       return acc
-    }, {} as Record<string, AgentMeta[]>)
+    }, {} as Record<string, AgentListItem[]>)
   }, [filtered])
 
   return (

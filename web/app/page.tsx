@@ -1,4 +1,4 @@
-import { getAllAgents } from '@/lib/agents'
+import { getAllAgentsMeta } from '@/lib/agents'
 import { getAllWorkflows } from '@/lib/workflows'
 import HomeContent from '@/components/HomeContent'
 
@@ -17,7 +17,7 @@ async function getStars(): Promise<number | null> {
 }
 
 export default async function Home() {
-  const agents = getAllAgents()
+  const agents = getAllAgentsMeta()
   const workflows = getAllWorkflows()
   const stars = await getStars()
 

@@ -1,10 +1,10 @@
 'use client'
 
-import type { AgentMeta } from '@/lib/agents'
+import type { AgentListItem } from '@/lib/agents'
 import { CATEGORY_ICONS } from '@/lib/agents'
 import { useI18n } from '@/lib/i18n'
 
-export default function AgentCard({ agent }: { agent: AgentMeta }) {
+export default function AgentCard({ agent }: { agent: AgentListItem }) {
   const { t } = useI18n()
   return (
     <a href={`/agents/${agent.slug}`} className="block group">

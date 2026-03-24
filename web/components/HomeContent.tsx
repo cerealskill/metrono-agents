@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useI18n } from '@/lib/i18n'
-import type { AgentMeta } from '@/lib/agents'
+import type { AgentListItem } from '@/lib/agents'
 import type { WorkflowMeta } from '@/lib/workflows'
 import AgentSearch from '@/components/AgentSearch'
 import WorkflowGrid from '@/components/WorkflowGrid'
@@ -25,7 +25,7 @@ function useSessionState<T>(key: string, initial: T): [T, (v: T) => void] {
   return [value, setValue]
 }
 
-export default function HomeContent({ agents, workflows, stars }: { agents: AgentMeta[]; workflows: WorkflowMeta[]; stars: number | null }) {
+export default function HomeContent({ agents, workflows, stars }: { agents: AgentListItem[]; workflows: WorkflowMeta[]; stars: number | null }) {
   const { t, lang } = useI18n()
   const [activeTab, setActiveTab] = useSessionState<'agents' | 'workflows'>('home:tab', 'agents')
 

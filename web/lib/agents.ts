@@ -19,8 +19,16 @@ export interface AgentMeta {
   files: Record<BundleFile, string>
 }
 
+// Lightweight version for listing pages — no soul or files content
+export type AgentListItem = Omit<AgentMeta, 'soul' | 'files'>
+
 export function getAllAgents(): AgentMeta[] {
   return AGENTS_DATA as unknown as AgentMeta[]
+}
+
+/** Strips heavy soul/files fields — use this for listing pages */
+export function getAllAgentsMeta(): AgentListItem[] {
+  return (AGENTS_DATA as unknown as AgentMeta[]).map(({ soul: _soul, files: _files, ...rest }) => rest)
 }
 
 export function getAgentsByLang(lang: string): AgentMeta[] {
@@ -62,4 +70,6 @@ export const CATEGORY_ICONS: Record<string, string> = {
   'supply-chain': '📦',
   moltbook: '📓',
   voice: '🎙️',
+  development: '💻',
+  saas: '☁️',
 }
