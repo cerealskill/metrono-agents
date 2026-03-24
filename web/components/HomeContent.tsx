@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useI18n } from '@/lib/i18n'
 import type { AgentMeta } from '@/lib/agents'
 import type { WorkflowMeta } from '@/lib/workflows'
@@ -11,9 +11,23 @@ import LanguageToggle from '@/components/LanguageToggle'
 import AuthButton from '@/components/AuthButton'
 import Link from 'next/link'
 
+function useSessionState<T>(key: string, initial: T): [T, (v: T) => void] {
+  const [value, setValue] = useState<T>(() => {
+    if (typeof window === 'undefined') return initial
+    try {
+      const stored = sessionStorage.getItem(key)
+      return stored ? JSON.parse(stored) : initial
+    } catch { return initial }
+  })
+  useEffect(() => {
+    try { sessionStorage.setItem(key, JSON.stringify(value)) } catch {}
+  }, [key, value])
+  return [value, setValue]
+}
+
 export default function HomeContent({ agents, workflows, stars }: { agents: AgentMeta[]; workflows: WorkflowMeta[]; stars: number | null }) {
   const { t, lang } = useI18n()
-  const [activeTab, setActiveTab] = useState<'agents' | 'workflows'>('agents')
+  const [activeTab, setActiveTab] = useSessionState<'agents' | 'workflows'>('home:tab', 'agents')
 
   // Filter by current language
   const filteredAgents = agents.filter(a => (a.lang ?? 'EN').toUpperCase() === lang)

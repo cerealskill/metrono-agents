@@ -1,15 +1,29 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import AgentCard from './AgentCard'
 import { CATEGORY_ICONS } from '@/lib/agents'
 import type { AgentMeta } from '@/lib/agents'
 import { useI18n } from '@/lib/i18n'
 
+function useSessionState<T>(key: string, initial: T): [T, (v: T) => void] {
+  const [value, setValue] = useState<T>(() => {
+    if (typeof window === 'undefined') return initial
+    try {
+      const stored = sessionStorage.getItem(key)
+      return stored ? JSON.parse(stored) : initial
+    } catch { return initial }
+  })
+  useEffect(() => {
+    try { sessionStorage.setItem(key, JSON.stringify(value)) } catch {}
+  }, [key, value])
+  return [value, setValue]
+}
+
 export default function AgentSearch({ agents }: { agents: AgentMeta[] }) {
   const { t } = useI18n()
-  const [query, setQuery] = useState('')
-  const [activeCategory, setActiveCategory] = useState<string | null>(null)
+  const [query, setQuery] = useSessionState('agents:query', '')
+  const [activeCategory, setActiveCategory] = useSessionState<string | null>('agents:category', null)
   const [isFocused, setIsFocused] = useState(false)
 
   const categories = useMemo(

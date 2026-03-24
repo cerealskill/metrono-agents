@@ -1,13 +1,27 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import WorkflowCard from './WorkflowCard'
 import type { WorkflowMeta } from '@/lib/workflows'
 import { useI18n } from '@/lib/i18n'
 
+function useSessionState<T>(key: string, initial: T): [T, (v: T) => void] {
+  const [value, setValue] = useState<T>(() => {
+    if (typeof window === 'undefined') return initial
+    try {
+      const stored = sessionStorage.getItem(key)
+      return stored ? JSON.parse(stored) : initial
+    } catch { return initial }
+  })
+  useEffect(() => {
+    try { sessionStorage.setItem(key, JSON.stringify(value)) } catch {}
+  }, [key, value])
+  return [value, setValue]
+}
+
 export default function WorkflowGrid({ workflows }: { workflows: WorkflowMeta[] }) {
   const { t } = useI18n()
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useSessionState('workflows:query', '')
   const [isFocused, setIsFocused] = useState(false)
 
   const filtered = useMemo(() => {
