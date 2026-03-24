@@ -3,8 +3,34 @@
 import type { WorkflowMeta } from '@/lib/workflows'
 import { useI18n } from '@/lib/i18n'
 
+const WORKFLOW_EMOJI: Record<string, string> = {
+  'audit-mode': '🔍',
+  'automatic-on-call': '📟',
+  'committee-mode': '🏛️',
+  'consensus-voting': '🗳️',
+  'escalation-chain': '⬆️',
+  'follow-the-sun': '🌍',
+  'hub-and-spoke': '🕸️',
+  'incident-mode': '🚨',
+  'map-reduce': '🗺️',
+  'mentor-mode': '🎓',
+  'on-demand-specialist': '🧠',
+  'pair-programming': '👥',
+  'parallel-swarm': '🐝',
+  'raci-matrix': '📋',
+  'red-team-blue-team': '🛡️',
+  'research-execution': '🔬',
+  'round-robin': '🔄',
+  'stage-pipeline': '🔧',
+  'technical-arbiter': '⚖️',
+  'triage': '🏥',
+  'watchdog-supervisor': '👁️',
+  'weekly-planning': '📅',
+}
+
 export default function WorkflowCard({ workflow }: { workflow: WorkflowMeta }) {
   const { t } = useI18n()
+  const emoji = WORKFLOW_EMOJI[workflow.groupId] ?? '⚡'
 
   return (
     <a href={`/workflows/${workflow.slug}`} className="block group">
@@ -28,7 +54,7 @@ export default function WorkflowCard({ workflow }: { workflow: WorkflowMeta }) {
         {/* Header */}
         <div className="flex items-start justify-between mb-2">
           <h3 className="font-semibold text-base" style={{ color: 'var(--text-primary)' }}>
-            <span className="mr-2">⚡</span>{workflow.name}
+            <span className="mr-2">{emoji}</span>{workflow.name}
           </h3>
         </div>
 
