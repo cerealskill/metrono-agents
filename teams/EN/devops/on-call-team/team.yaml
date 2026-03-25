@@ -4,7 +4,7 @@ description: Automated incident response squad that detects, triages, and resolv
 category: devops
 tags: [on-call, incident, sre, monitoring, alerting]
 members:
-  - slug: sre
+  - slug: incident-responder
     role: Incident Commander — owns the incident lifecycle and coordinates the response
   - slug: flight-scraper
     role: Data Watchdog — monitors data pipelines and external API health checks

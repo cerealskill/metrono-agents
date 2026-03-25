@@ -4,9 +4,9 @@ description: Equipo colaborativo que investiga, escribe y distribuye contenido e
 category: marketing
 tags: [marketing, contenido, redes-sociales, copywriting, seo]
 members:
-  - slug: marketing
+  - slug: content-strategist
     role: Estratega de Contenido — dueño del calendario editorial y la dirección del contenido
-  - slug: doc
+  - slug: docs-writer
     role: Redactor Técnico — produce contenido long-form, docs y artículos en profundidad
 workflow: research-ejecucion
 author: cerealskill

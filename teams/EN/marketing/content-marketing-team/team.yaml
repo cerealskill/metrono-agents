@@ -4,9 +4,9 @@ description: Collaborative team that research, writes, and distributes content a
 category: marketing
 tags: [marketing, content, social-media, copywriting, seo]
 members:
-  - slug: marketing
+  - slug: content-strategist
     role: Content Strategist — owns the editorial calendar and content direction
-  - slug: doc
+  - slug: docs-writer
     role: Technical Writer — produces long-form content, docs, and deep-dive articles
 workflow: research-execution
 author: cerealskill

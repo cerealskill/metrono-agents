@@ -10,7 +10,7 @@ Detect, triage, and resolve production incidents automatically — escalating to
 
 | Agent | Role | Responsibility |
 |-------|------|----------------|
-| `sre` | Incident Commander | Owns the incident lifecycle: declares, coordinates, delegates, and closes incidents |
+| `incident-responder` | Incident Commander | Owns the incident lifecycle: declares, coordinates, delegates, and closes incidents |
 | `flight-scraper` | Data Watchdog | Monitors external data sources, API health checks, and pipeline integrity |
 
 ## Interaction Model
@@ -20,7 +20,7 @@ Alert fires → Incident Commander triages → assigns tasks → Watchdog verifi
 ```
 ┌───────────────┐      ┌──────────────────────┐
 │  Alert / PD   │─────>│  Incident Commander  │
-│  (trigger)    │      │  (sre)               │
+│  (trigger)    │      │  (incident-responder)│
 └───────────────┘      └──────────┬───────────┘
                                    │
                     ┌──────────────┴──────────────┐

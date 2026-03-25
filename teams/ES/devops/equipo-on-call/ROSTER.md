@@ -10,7 +10,7 @@ Detectar, clasificar y resolver incidentes de producción de forma automática �
 
 | Agente | Rol | Responsabilidad |
 |--------|-----|-----------------|
-| `sre` | Comandante de Incidente | Dueño del ciclo de vida: declara, coordina, delega y cierra incidentes |
+| `incident-responder` | Comandante de Incidente | Dueño del ciclo de vida: declara, coordina, delega y cierra incidentes |
 | `flight-scraper` | Vigilante de Datos | Monitorea fuentes externas, health checks de API e integridad de pipelines |
 
 ## Modelo de Interacción
@@ -20,7 +20,7 @@ Alerta → Comandante clasifica → asigna tareas → Vigilante verifica la solu
 ```
 ┌─────────────────┐      ┌──────────────────────────┐
 │  Alerta / PD    │─────>│  Comandante de Incidente │
-│  (disparador)   │      │  (sre)                   │
+│  (disparador)   │      │  (incident-responder)    │
 └─────────────────┘      └───────────┬──────────────┘
                                       │
                     ┌─────────────────┴─────────────────┐

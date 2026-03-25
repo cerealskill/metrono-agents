@@ -4,11 +4,11 @@ description: Equipo de desarrollo de software de punta a punta que cubre requisi
 category: development
 tags: [development, engineering, code-review, ci-cd, producto]
 members:
-  - slug: dev
+  - slug: backend-engineer
     role: Ingeniero Líder — escribe código, revisa PRs y toma decisiones técnicas
-  - slug: po
+  - slug: product-owner
     role: Product Owner — define requisitos, prioriza el backlog y acepta entregables
-  - slug: sre
+  - slug: platform-engineer
     role: Ingeniero de Release — gestiona CI/CD, infra y deploys a producción
 workflow: pipeline-por-etapas
 author: cerealskill

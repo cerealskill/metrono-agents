@@ -10,24 +10,24 @@ Research, produce, and distribute high-quality content that drives awareness and
 
 | Agent | Role | Responsibility |
 |-------|------|----------------|
-| `marketing` | Content Strategist | Owns editorial calendar, channel strategy, and content briefs |
-| `doc` | Technical Writer | Produces long-form articles, documentation, and deep-dive content |
+| `content-strategist` | Content Strategist | Owns editorial calendar, channel strategy, and content briefs |
+| `docs-writer` | Technical Writer | Produces long-form articles, documentation, and deep-dive content |
 
 ## Interaction Model
 
 Strategist briefs → Writer drafts → Strategist reviews → Strategist distributes.
 
 ```
-┌──────────────────────┐      ┌──────────────────┐
-│  Content Strategist  │─────>│ Technical Writer │
-│  (brief + direction) │      │  (draft content) │
-└──────────────────────┘      └────────┬─────────┘
-                                        │ draft ready
-                                        v
-                              ┌──────────────────────┐
-                              │  Content Strategist  │
-                              │  (review + publish)  │
-                              └──────────────────────┘
+┌──────────────────────────┐      ┌────────────────────┐
+│    Content Strategist    │─────>│    Docs Writer     │
+│  (content-strategist)    │      │   (docs-writer)    │
+└──────────────────────────┘      └─────────┬──────────┘
+                                             │ draft ready
+                                             v
+                                  ┌──────────────────────────┐
+                                  │    Content Strategist    │
+                                  │    (review + publish)    │
+                                  └──────────────────────────┘
 ```
 
 ## When to use

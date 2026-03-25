@@ -10,9 +10,9 @@ Entregar features de software listas para producción desde los requisitos hasta
 
 | Agente | Rol | Responsabilidad |
 |--------|-----|-----------------|
-| `dev` | Ingeniero Líder | Escribe, revisa y refactoriza código; dueño de las decisiones de arquitectura técnica |
-| `po` | Product Owner | Escribe specs y criterios de aceptación; gestiona el backlog; firma los entregables |
-| `sre` | Ingeniero de Release | Gestiona CI/CD, provisioning de infra, deploys canary y rollbacks |
+| `backend-engineer` | Ingeniero Líder | Escribe, revisa y refactoriza código; dueño de las decisiones de arquitectura técnica |
+| `product-owner` | Product Owner | Escribe specs y criterios de aceptación; gestiona el backlog; firma los entregables |
+| `platform-engineer` | Ingeniero de Release | Gestiona CI/CD, provisioning de infra, deploys canary y rollbacks |
 
 ## Modelo de Interacción
 

@@ -4,11 +4,11 @@ description: End-to-end software development team covering requirements, impleme
 category: development
 tags: [development, engineering, code-review, ci-cd, product]
 members:
-  - slug: dev
+  - slug: backend-engineer
     role: Lead Engineer — writes code, reviews PRs, and drives technical decisions
-  - slug: po
+  - slug: product-owner
     role: Product Owner — defines requirements, prioritizes backlog, and accepts deliverables
-  - slug: sre
+  - slug: platform-engineer
     role: Release Engineer — manages CI/CD pipelines, infra, and production deployments
 workflow: stage-pipeline
 author: cerealskill

@@ -10,8 +10,8 @@ Investigar, producir y distribuir contenido de alta calidad que impulse el conoc
 
 | Agente | Rol | Responsabilidad |
 |--------|-----|-----------------|
-| `marketing` | Estratega de Contenido | Dueño del calendario editorial, estrategia de canales y briefs de contenido |
-| `doc` | Redactor Técnico | Produce artículos long-form, documentación y contenido en profundidad |
+| `content-strategist` | Estratega de Contenido | Dueño del calendario editorial, estrategia de canales y briefs de contenido |
+| `docs-writer` | Redactor Técnico | Produce artículos long-form, documentación y contenido en profundidad |
 
 ## Modelo de Interacción
 

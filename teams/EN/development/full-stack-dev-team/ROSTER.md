@@ -10,31 +10,31 @@ Deliver production-ready software features from requirements to deployment using
 
 | Agent | Role | Responsibility |
 |-------|------|----------------|
-| `dev` | Lead Engineer | Writes, reviews, and refactors code; owns technical architecture decisions |
-| `po` | Product Owner | Writes specs and acceptance criteria; grooms backlog; signs off on deliverables |
-| `sre` | Release Engineer | Manages CI/CD, infra provisioning, canary deployments, and rollbacks |
+| `backend-engineer` | Lead Engineer | Writes, reviews, and refactors code; owns technical architecture decisions |
+| `product-owner` | Product Owner | Writes specs and acceptance criteria; grooms backlog; signs off on deliverables |
+| `platform-engineer` | Release Engineer | Manages CI/CD, infra provisioning, canary deployments, and rollbacks |
 
 ## Interaction Model
 
 PO defines → Dev implements → SRE releases → PO accepts.
 
 ```
-┌─────────────────┐      ┌─────────────────┐
-│  Product Owner  │─────>│  Lead Engineer  │
-│  (requirements) │      │  (code + review)│
-└─────────────────┘      └────────┬────────┘
-                                   │ PR merged
-                                   v
-                          ┌─────────────────┐
-                          │ Release Engineer│
-                          │ (CI/CD + deploy)│
-                          └────────┬────────┘
-                                   │ deployed
-                                   v
-                          ┌─────────────────┐
-                          │  Product Owner  │
-                          │  (acceptance)   │
-                          └─────────────────┘
+┌─────────────────┐      ┌──────────────────────┐
+│  Product Owner  │─────>│  Backend Engineer    │
+│ (product-owner) │      │ (backend-engineer)   │
+└─────────────────┘      └──────────┬───────────┘
+                                     │ PR merged
+                                     v
+                          ┌──────────────────────┐
+                          │  Platform Engineer   │
+                          │ (platform-engineer)  │
+                          └──────────┬───────────┘
+                                     │ deployed
+                                     v
+                          ┌──────────────────────┐
+                          │  Product Owner       │
+                          │  (acceptance)        │
+                          └──────────────────────┘
 ```
 
 ## When to use
