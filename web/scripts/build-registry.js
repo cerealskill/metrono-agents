@@ -39,7 +39,10 @@ function walkAgents(dir, base = '') {
           files[f] = fs.existsSync(fp) ? fs.readFileSync(fp, 'utf-8') : ''
         }
         const soul = files['SOUL.md']
-        agents.push({ ...meta, path: relPath, soul, files })
+        // Derive lang from path prefix (EN/... or ES/...)
+        const langFromPath = relPath.split('/')[0].toUpperCase()
+        const lang = ['EN', 'ES'].includes(langFromPath) ? langFromPath : (meta.language === 'es' ? 'ES' : 'EN')
+        agents.push({ ...meta, lang, path: relPath, soul, files })
       } else {
         agents.push(...walkAgents(fullPath, relPath))
       }
