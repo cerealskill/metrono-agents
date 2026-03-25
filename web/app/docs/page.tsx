@@ -84,6 +84,7 @@ const NAV_ITEMS = [
   { id: 'install-agent', label: 'Install an Agent' },
   { id: 'bundle-structure', label: 'Bundle Structure' },
   { id: 'use-workflows', label: 'Using Workflows' },
+  { id: 'teams', label: 'Teams' },
   { id: 'workflow-patterns', label: 'Workflow Patterns' },
   { id: 'contribute', label: 'Contributing' },
   { id: 'faq', label: 'FAQ' },
@@ -173,11 +174,12 @@ export default function DocsPage() {
             <Prose>
               Unlike repos that only ship a single prompt file, every agent here includes a <strong>complete workspace bundle</strong> — SOUL, IDENTITY, USER context, memory conventions, periodic tasks, tool config, and a bootstrap guide — ready to drop into OpenClaw and start working immediately.
             </Prose>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 mb-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 mb-4">
               {[
                 { icon: '🦀', label: 'Agents', desc: '146+ production-ready bundles across 17 categories' },
                 { icon: '🔀', label: 'Workflows', desc: '34 orchestration patterns for multi-agent coordination' },
-                { icon: '🌐', label: 'Bilingual', desc: 'Every agent and workflow available in EN and ES' },
+                { icon: '👥', label: 'Teams', desc: '9 pre-built agent rosters ready to deploy together' },
+                { icon: '🌐', label: 'Bilingual', desc: 'Every agent, workflow, and team available in EN and ES' },
               ].map(card => (
                 <div key={card.label} className="rounded-2xl p-4 text-center" style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)' }}>
                   <div className="text-3xl mb-2">{card.icon}</div>
@@ -328,6 +330,78 @@ curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/in
 
             <Callout icon="🔀">
               Workflows are <strong>language-agnostic protocols</strong> — they describe coordination logic, not content. You can use an EN workflow with ES agents, or mix languages freely. The pattern is what matters.
+            </Callout>
+          </Section>
+
+          <div style={{ borderTop: '1px solid var(--border)' }} />
+
+          {/* Teams */}
+          <Section id="teams">
+            <SectionTitle>Teams</SectionTitle>
+            <Prose>
+              A <strong>Team</strong> is a pre-configured roster of agents that work together toward a shared goal, optionally wired to a workflow pattern. Teams are a first-class concept in FindBOT — you can browse them in the catalog, deploy all members at once, and drop them straight into OpenClaw.
+            </Prose>
+            <Prose>
+              Each team ships as two files: a <InlineCode>team.yaml</InlineCode> that declares the roster and metadata, and a <InlineCode>ROSTER.md</InlineCode> that explains the objective, interaction model, and use cases in human-readable form.
+            </Prose>
+
+            <SubTitle>team.yaml structure</SubTitle>
+            <CodeBlock>{`teams/<lang>/<category>/<slug>/
+  ├── team.yaml    ← roster metadata
+  └── ROSTER.md   ← human-readable interaction guide`}
+            </CodeBlock>
+            <div className="rounded-xl overflow-hidden mb-6" style={{ border: '1px solid var(--border)' }}>
+              <table className="w-full text-sm">
+                <thead>
+                  <tr style={{ background: 'var(--bg-elevated)', borderBottom: '1px solid var(--border)' }}>
+                    <th className="text-left px-4 py-3 text-xs uppercase tracking-wider font-semibold" style={{ color: 'var(--text-muted)' }}>Field</th>
+                    <th className="text-left px-4 py-3 text-xs uppercase tracking-wider font-semibold" style={{ color: 'var(--text-muted)' }}>Description</th>
+                    <th className="text-left px-4 py-3 text-xs uppercase tracking-wider font-semibold" style={{ color: 'var(--text-muted)' }}>Required</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { f: 'name', d: 'Display name of the team', r: true },
+                    { f: 'slug', d: 'URL-safe identifier used in installs and registry', r: true },
+                    { f: 'description', d: 'One-line summary of what the team does together', r: true },
+                    { f: 'category', d: 'Team category (devops, development, marketing, security, …)', r: true },
+                    { f: 'members', d: 'List of agent slugs with their role in this team', r: true },
+                    { f: 'workflow', d: 'Workflow slug this team follows (e.g. incident-mode)', r: false },
+                    { f: 'tags', d: 'Array of searchable tags', r: false },
+                    { f: 'language', d: 'en or es', r: true },
+                    { f: 'version', d: 'Semver string (1.0.0)', r: true },
+                  ].map((row, i) => (
+                    <tr key={row.f} style={{ background: i % 2 === 0 ? 'var(--bg-surface)' : 'var(--bg-elevated)', borderBottom: i < 8 ? '1px solid var(--border)' : undefined }}>
+                      <td className="px-4 py-3 font-mono text-xs" style={{ color: 'var(--cyan-bright)', whiteSpace: 'nowrap' }}>{row.f}</td>
+                      <td className="px-4 py-3 text-sm" style={{ color: 'var(--text-secondary)' }}>{row.d}</td>
+                      <td className="px-4 py-3 text-xs font-bold" style={{ color: row.r ? '#3fb950' : 'var(--text-muted)' }}>{row.r ? 'Yes' : 'Optional'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <SubTitle>ROSTER.md structure</SubTitle>
+            <Prose>
+              The <InlineCode>ROSTER.md</InlineCode> is a markdown document that describes the team in detail. It follows a standard template with sections for <strong>Team</strong>, <strong>Objective</strong>, <strong>Members</strong> (table with agent, role, and responsibility), <strong>Interaction Model</strong> (ASCII flow diagram), <strong>When to Use</strong>, <strong>Use Cases</strong>, and <strong>Rules</strong>.
+            </Prose>
+
+            <SubTitle>Deploying a team</SubTitle>
+            <Prose>
+              Open any team page in the FindBOT catalog and click <strong>Deploy Team</strong>. This installs all member agents into your OpenClaw instance at once. You can also install members individually using the standard agent install command:
+            </Prose>
+            <CodeBlock>{`# Install each team member individually
+curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/install.sh \\
+  | bash -s agent <member-slug> EN`}
+            </CodeBlock>
+
+            <SubTitle>Activating the team workflow</SubTitle>
+            <Prose>
+              Most teams reference a workflow in their <InlineCode>team.yaml</InlineCode>. After installing all members, install the linked workflow into your coordinator agent workspace. Then instruct the coordinator: <em>&quot;Use the [workflow name] defined in ORCHESTRATION.md — the full team roster is in ROSTER.md.&quot;</em>
+            </Prose>
+
+            <Callout icon="👥">
+              Teams are declarative — they define <strong>who</strong> collaborates and <strong>how</strong>, but each member agent retains its full individual identity, SOUL, and expertise. A team is a coordination contract on top of existing agents.
             </Callout>
           </Section>
 
