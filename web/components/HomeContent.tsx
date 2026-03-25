@@ -4,8 +4,10 @@ import { useState, useEffect } from 'react'
 import { useI18n } from '@/lib/i18n'
 import type { AgentListItem } from '@/lib/agents'
 import type { WorkflowMeta } from '@/lib/workflows'
+import type { TeamMeta } from '@/lib/teams'
 import AgentSearch from '@/components/AgentSearch'
 import WorkflowGrid from '@/components/WorkflowGrid'
+import TeamGrid from '@/components/TeamGrid'
 import ThemeToggle from '@/components/ThemeToggle'
 import LanguageToggle from '@/components/LanguageToggle'
 import AuthButton from '@/components/AuthButton'
@@ -25,13 +27,14 @@ function useSessionState<T>(key: string, initial: T): [T, (v: T) => void] {
   return [value, setValue]
 }
 
-export default function HomeContent({ agents, workflows, stars }: { agents: AgentListItem[]; workflows: WorkflowMeta[]; stars: number | null }) {
+export default function HomeContent({ agents, workflows, teams, stars }: { agents: AgentListItem[]; workflows: WorkflowMeta[]; teams: TeamMeta[]; stars: number | null }) {
   const { t, lang } = useI18n()
-  const [activeTab, setActiveTab] = useSessionState<'agents' | 'workflows'>('home:tab', 'agents')
+  const [activeTab, setActiveTab] = useSessionState<'agents' | 'workflows' | 'teams'>('home:tab', 'agents')
 
   // Filter by current language
   const filteredAgents = agents.filter(a => (a.lang ?? 'EN').toUpperCase() === lang)
   const filteredWorkflows = workflows.filter(w => w.lang.toUpperCase() === lang)
+  const filteredTeams = teams.filter(t => (t.lang ?? 'EN').toUpperCase() === lang)
 
   return (
     <main className="min-h-screen" style={{ background: 'var(--bg-deep)', color: 'var(--text-primary)' }}>
@@ -102,7 +105,7 @@ export default function HomeContent({ agents, workflows, stars }: { agents: Agen
                 className="w-1.5 h-1.5 rounded-full animate-pulse"
                 style={{ background: 'var(--bundles-accent)' }}
               />
-              <span className="bundles-rainbow">{t.bundlesBadge(filteredAgents.length + filteredWorkflows.length)}</span>
+              <span className="bundles-rainbow">{t.bundlesBadge(filteredAgents.length + filteredWorkflows.length + filteredTeams.length)}</span>
             </div>
 
             <h1
@@ -157,14 +160,27 @@ export default function HomeContent({ agents, workflows, stars }: { agents: Agen
             >
               ⚡ {t.tabWorkflows} ({filteredWorkflows.length})
             </button>
+            <button
+              onClick={() => setActiveTab('teams')}
+              className="px-4 py-3 text-sm font-semibold transition-all duration-150 border-b-2"
+              style={
+                activeTab === 'teams'
+                  ? { borderColor: 'var(--cyan-bright)', color: 'var(--cyan-bright)' }
+                  : { borderColor: 'transparent', color: 'var(--text-muted)' }
+              }
+            >
+              👥 {t.tabTeams} ({filteredTeams.length})
+            </button>
           </div>
         </div>
       </div>
 
       {activeTab === 'agents' ? (
         <AgentSearch agents={filteredAgents} />
-      ) : (
+      ) : activeTab === 'workflows' ? (
         <WorkflowGrid workflows={filteredWorkflows} />
+      ) : (
+        <TeamGrid teams={filteredTeams} />
       )}
 
       {/* Footer */}

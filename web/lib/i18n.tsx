@@ -80,6 +80,14 @@ const translations = {
     workflowOrchestration: 'Orchestration',
     noWorkflows: (q: string) => `No workflows match "${q}"`,
     workflowCount: (n: number) => `${n} workflow${n !== 1 ? 's' : ''}`,
+    // Teams
+    tabTeams: 'Teams',
+    teamSearchPlaceholder: 'Search by name, description, agent or tags...',
+    noTeams: (q: string) => `No teams match "${q}"`,
+    teamCount: (n: number) => `${n} team${n !== 1 ? 's' : ''}`,
+    teamMembers: 'members',
+    teamMembersTitle: 'Members',
+    teamRosterDesc: 'Team roster & interaction model',
   },
   ES: {
     // Nav
@@ -156,6 +164,14 @@ const translations = {
     workflowOrchestration: 'Orquestación',
     noWorkflows: (q: string) => `No hay workflows que coincidan con "${q}"`,
     workflowCount: (n: number) => `${n} workflow${n !== 1 ? 's' : ''}`,
+    // Teams
+    tabTeams: 'Equipos',
+    teamSearchPlaceholder: 'Buscar por nombre, descripción, agente o tags...',
+    noTeams: (q: string) => `No hay equipos que coincidan con "${q}"`,
+    teamCount: (n: number) => `${n} equipo${n !== 1 ? 's' : ''}`,
+    teamMembers: 'miembros',
+    teamMembersTitle: 'Miembros',
+    teamRosterDesc: 'Roster del equipo y modelo de interacción',
   },
 } as const satisfies Record<Lang, Record<string, string | ((...args: any[]) => string)>>
 
