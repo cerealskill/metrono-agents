@@ -32,9 +32,14 @@ function walkAgents(dir, base = '') {
       const metaFile = path.join(fullPath, 'meta.yaml')
       if (fs.existsSync(metaFile)) {
         const meta = yaml.load(fs.readFileSync(metaFile, 'utf-8'))
-        const soulFile = path.join(fullPath, 'SOUL.md')
-        const soul = fs.existsSync(soulFile) ? fs.readFileSync(soulFile, 'utf-8') : ''
-        agents.push({ ...meta, path: relPath, soul })
+        const BUNDLE_FILES = ['SOUL.md', 'IDENTITY.md', 'USER.md', 'AGENTS.md', 'HEARTBEAT.md', 'TOOLS.md', 'BOOTSTRAP.md']
+        const files = {}
+        for (const f of BUNDLE_FILES) {
+          const fp = path.join(fullPath, f)
+          files[f] = fs.existsSync(fp) ? fs.readFileSync(fp, 'utf-8') : ''
+        }
+        const soul = files['SOUL.md']
+        agents.push({ ...meta, path: relPath, soul, files })
       } else {
         agents.push(...walkAgents(fullPath, relPath))
       }
