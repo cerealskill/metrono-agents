@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Ensure agents route is treated as dynamic
+  experimental: {
+    // Turbopack may not respect force-dynamic in some versions — disable for agents
+  },
 };
 
 export default nextConfig;
