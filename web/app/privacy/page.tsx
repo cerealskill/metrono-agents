@@ -7,9 +7,9 @@ export default function PrivacyPage() {
       <header style={{ background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
           <Link href="/" className="flex items-center gap-3 min-w-0">
-            <img src="/soulid-logo.png" alt="SOUL ID.io logo" className="shrink-0" style={{ width: 42, height: 42, objectFit: 'contain' }} />
+            <img src="/soulid-logo.png" alt="Soul ID logo" className="shrink-0" style={{ width: 42, height: 42, objectFit: 'contain' }} />
             <div className="flex flex-col leading-none">
-              <span className="text-sm sm:text-base font-bold" style={{ color: 'var(--text-primary)' }}>SOUL ID.io</span>
+              <span className="text-sm sm:text-base font-bold" style={{ color: 'var(--text-primary)' }}>Soul ID</span>
               <span className="text-[10px] sm:text-xs font-mono tracking-widest uppercase" style={{ color: 'var(--cyan-bright)' }}>Privacy</span>
             </div>
           </Link>
@@ -67,7 +67,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-xl font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>✉️ Contact</h2>
             <p>
-              Si tienes dudas de privacidad, contáctanos en: <a href="mailto:privacy@SOUL ID.io.ai" style={{ color: 'var(--cyan-bright)' }}>privacy@SOUL ID.io.ai</a>
+              Si tienes dudas de privacidad, contáctanos en: <a href="mailto:privacy@Soul ID.ai" style={{ color: 'var(--cyan-bright)' }}>privacy@Soul ID.ai</a>
             </p>
           </section>
         </div>
@@ -83,7 +83,7 @@ export default function PrivacyPage() {
             <a href="/privacy" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-80 transition-opacity">Privacy</a>
           </p>
           <p>
-            © 2026 SOUL ID.io - Built for{' '}
+            © 2026 Soul ID - Built for{' '}
             <a href="https://openclaw.ai" style={{ color: '#e63946' }} className="hover:opacity-80 transition-opacity">
               OpenClaw
             </a>

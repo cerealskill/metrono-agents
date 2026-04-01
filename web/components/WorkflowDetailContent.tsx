@@ -116,9 +116,9 @@ export default function WorkflowDetailContent({ workflows }: { workflows: Workfl
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
           <div className="flex items-start justify-between mb-6">
             <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <img src="/soulid-logo.png" alt="SOUL ID.io" style={{ width: 100, height: 100, objectFit: 'contain' }} />
+              <img src="/soulid-logo.png" alt="Soul ID" style={{ width: 100, height: 100, objectFit: 'contain' }} />
               <div className="flex flex-col leading-none">
-                <span className="text-sm font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>SOUL ID.io</span>
+                <span className="text-sm font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>Soul ID</span>
                 <span className="text-xs font-mono tracking-widest uppercase" style={{ color: 'var(--cyan-bright)' }}>AI AGENTS</span>
               </div>
             </Link>

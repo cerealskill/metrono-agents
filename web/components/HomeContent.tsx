@@ -45,10 +45,10 @@ export default function HomeContent({ agents, workflows, teams, stars }: { agent
           {/* Top nav */}
           <div className="flex items-center justify-between mb-8 sm:mb-10 gap-2">
             <div className="flex items-center gap-3 min-w-0">
-              <img src="/soulid-logo.png" alt="SOUL ID.io logo" className="shrink-0 logo-heartbeat" style={{ width: 100, height: 100, objectFit: 'contain' }} />
+              <img src="/soulid-logo.png" alt="Soul ID logo" className="shrink-0 logo-heartbeat" style={{ width: 100, height: 100, objectFit: 'contain' }} />
               <div className="flex flex-col leading-none">
                 <span className="text-base sm:text-lg font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>
-                  SOUL ID.io
+                  Soul ID
                 </span>
                 <span className="text-xs font-mono tracking-widest uppercase" style={{ color: 'var(--cyan-bright)' }}>
                   AI AGENTS
@@ -194,7 +194,7 @@ export default function HomeContent({ agents, workflows, teams, stars }: { agent
             <a href="/privacy" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-80 transition-opacity">{t.privacy}</a>
           </p>
           <p>
-            © 2026 SOUL ID.io - {' '}
+            © 2026 Soul ID - {' '}
             {t.builtFor}{' '}
             <a href="https://openclaw.ai" style={{ color: '#e63946' }} className="hover:opacity-80 transition-opacity">
               OpenClaw
