@@ -2,8 +2,12 @@ import { getAllAgents } from '@/lib/agents'
 import { notFound } from 'next/navigation'
 import AgentDetailContent from '@/components/AgentDetailContent'
 
-// Fully dynamic — rendered on-demand server-side
-export const dynamic = 'force-dynamic'
+export async function generateStaticParams() {
+  const slugs = [...new Set(getAllAgents().map(a => a.slug))]
+  return slugs.map(slug => ({ slug }))
+}
+
+export const dynamicParams = true
 
 export default async function AgentPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
