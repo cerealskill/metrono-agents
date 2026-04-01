@@ -80,7 +80,7 @@ function FileTable({ rows }: { rows: { file: string; desc: string; required: boo
 }
 
 const NAV_ITEMS = [
-  { id: 'what-is', label: 'What is FindBOT?' },
+  { id: 'what-is', label: 'What is SOUL ID.io?' },
   { id: 'install-agent', label: 'Install an Agent' },
   { id: 'bundle-structure', label: 'Bundle Structure' },
   { id: 'use-workflows', label: 'Using Workflows' },
@@ -108,9 +108,9 @@ export default function DocsPage() {
       <header style={{ background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
           <Link href="/" className="flex items-center gap-3 min-w-0">
-            <img src="/findbot-logo.png" alt="FindBOT logo" className="shrink-0" style={{ width: 42, height: 42, objectFit: 'contain' }} />
+            <img src="/SOUL ID.io-logo.png" alt="SOUL ID.io logo" className="shrink-0" style={{ width: 42, height: 42, objectFit: 'contain' }} />
             <div className="flex flex-col leading-none">
-              <span className="text-sm sm:text-base font-bold" style={{ color: 'var(--text-primary)' }}>FindBOT</span>
+              <span className="text-sm sm:text-base font-bold" style={{ color: 'var(--text-primary)' }}>SOUL ID.io</span>
               <span className="text-[10px] sm:text-xs font-mono tracking-widest uppercase" style={{ color: 'var(--cyan-bright)' }}>Docs</span>
             </div>
           </Link>
@@ -157,7 +157,7 @@ export default function DocsPage() {
           {/* Hero */}
           <div className="mb-10">
             <p className="text-xs font-mono tracking-widest uppercase mb-3" style={{ color: 'var(--text-muted)' }}>Documentation</p>
-            <h1 className="text-3xl sm:text-5xl font-bold mb-4">FindBOT Docs</h1>
+            <h1 className="text-3xl sm:text-5xl font-bold mb-4">SOUL ID.io Docs</h1>
             <p className="text-base sm:text-lg" style={{ color: 'var(--text-secondary)' }}>
               Everything you need to install agents, run multi-agent workflows, and contribute back to the catalog.
             </p>
@@ -165,11 +165,11 @@ export default function DocsPage() {
 
           <div style={{ borderTop: '1px solid var(--border)' }} />
 
-          {/* What is FindBOT */}
+          {/* What is SOUL ID.io */}
           <Section id="what-is">
-            <SectionTitle>What is FindBOT?</SectionTitle>
+            <SectionTitle>What is SOUL ID.io?</SectionTitle>
             <Prose>
-              FindBOT is a curated marketplace of production-ready <strong>OpenClaw agent bundles</strong> and <strong>multi-agent workflow patterns</strong> — available in English and Spanish.
+              SOUL ID.io is a curated marketplace of production-ready <strong>OpenClaw agent bundles</strong> and <strong>multi-agent workflow patterns</strong> — available in English and Spanish.
             </Prose>
             <Prose>
               Unlike repos that only ship a single prompt file, every agent here includes a <strong>complete workspace bundle</strong> — SOUL, IDENTITY, USER context, memory conventions, periodic tasks, tool config, and a bootstrap guide — ready to drop into OpenClaw and start working immediately.
@@ -196,7 +196,7 @@ export default function DocsPage() {
           <Section id="install-agent">
             <SectionTitle>Install an Agent</SectionTitle>
             <Prose>
-              The fastest way to install an agent is directly from the FindBOT UI. Open any agent page, click <strong>Deploy in OpenClaw</strong>, and the install command is copied to your clipboard. Then paste it into OpenClaw.
+              The fastest way to install an agent is directly from the SOUL ID.io UI. Open any agent page, click <strong>Deploy in OpenClaw</strong>, and the install command is copied to your clipboard. Then paste it into OpenClaw.
             </Prose>
 
             <SubTitle>One-line CLI install</SubTitle>
@@ -339,7 +339,7 @@ curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/in
           <Section id="teams">
             <SectionTitle>Teams</SectionTitle>
             <Prose>
-              A <strong>Team</strong> is a pre-configured roster of agents that work together toward a shared goal, optionally wired to a workflow pattern. Teams are a first-class concept in FindBOT — you can browse them in the catalog, deploy all members at once, and drop them straight into OpenClaw.
+              A <strong>Team</strong> is a pre-configured roster of agents that work together toward a shared goal, optionally wired to a workflow pattern. Teams are a first-class concept in SOUL ID.io — you can browse them in the catalog, deploy all members at once, and drop them straight into OpenClaw.
             </Prose>
             <Prose>
               Each team ships as two files: a <InlineCode>team.yaml</InlineCode> that declares the roster and metadata, and a <InlineCode>ROSTER.md</InlineCode> that explains the objective, interaction model, and use cases in human-readable form.
@@ -388,7 +388,7 @@ curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/in
 
             <SubTitle>Deploying a team</SubTitle>
             <Prose>
-              Open any team page in the FindBOT catalog and click <strong>Deploy Team</strong>. This installs all member agents into your OpenClaw instance at once. You can also install members individually using the standard agent install command:
+              Open any team page in the SOUL ID.io catalog and click <strong>Deploy Team</strong>. This installs all member agents into your OpenClaw instance at once. You can also install members individually using the standard agent install command:
             </Prose>
             <CodeBlock>{`# Install each team member individually
 curl -fsSL https://raw.githubusercontent.com/cerealskill/openclaw-agents/main/install.sh \\
@@ -600,7 +600,7 @@ mkdir -p agents/EN/<category>/<subcategory>/<your-slug>
             <a href="/privacy" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-80 transition-opacity">Privacy</a>
           </p>
           <p>
-            © 2026 FindBOT — Built for{' '}
+            © 2026 SOUL ID.io — Built for{' '}
             <a href="https://openclaw.ai" style={{ color: '#e63946' }} className="hover:opacity-80 transition-opacity">OpenClaw</a>
           </p>
         </div>
