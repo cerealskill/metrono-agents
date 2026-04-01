@@ -1,4 +1,4 @@
-import { TEAMS_DATA } from './teams-data'
+import TEAMS_JSON from '../public/teams.json'
 
 export interface TeamMember {
   slug: string
@@ -24,7 +24,7 @@ export interface TeamMeta {
 }
 
 export function getAllTeams(): TeamMeta[] {
-  return TEAMS_DATA as unknown as TeamMeta[]
+  return TEAMS_JSON as unknown as TeamMeta[]
 }
 
 export function getTeamsByLang(lang: string): TeamMeta[] {

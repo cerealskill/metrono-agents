@@ -1,4 +1,4 @@
-import { AGENTS_DATA } from './agents-data'
+import AGENTS_JSON from '../public/agents.json'
 
 export const BUNDLE_FILES = ['SOUL.md', 'IDENTITY.md', 'USER.md', 'AGENTS.md', 'HEARTBEAT.md', 'TOOLS.md', 'BOOTSTRAP.md'] as const
 export type BundleFile = typeof BUNDLE_FILES[number]
@@ -23,12 +23,12 @@ export interface AgentMeta {
 export type AgentListItem = Omit<AgentMeta, 'soul' | 'files'>
 
 export function getAllAgents(): AgentMeta[] {
-  return AGENTS_DATA as unknown as AgentMeta[]
+  return AGENTS_JSON as unknown as AgentMeta[]
 }
 
 /** Strips heavy soul/files fields — use this for listing pages */
 export function getAllAgentsMeta(): AgentListItem[] {
-  return (AGENTS_DATA as unknown as AgentMeta[]).map(({ soul: _soul, files: _files, ...rest }) => rest)
+  return (AGENTS_JSON as unknown as AgentMeta[]).map(({ soul: _soul, files: _files, ...rest }) => rest)
 }
 
 export function getAgentsByLang(lang: string): AgentMeta[] {
