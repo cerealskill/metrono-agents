@@ -13,8 +13,8 @@ const translations = {
     bundlesBadge: (n: number) => `${n} production-ready bundles`,
     heroTitle: 'The Agent Store for Soul ID.',
     heroTitleHighlight: 'Every agent, workflow, and team — production-ready.',
-    heroDesc: 'Browse and deploy curated AI agents built for',
-    heroDescSuffix: '. Each bundle ships with SOUL, IDENTITY, and MEMORY conventions, full orchestration logic, and bootstrap included. From install to running in under a minute.',
+    heroDesc: '',
+    heroDescSuffix: '',
     // Search
     searchPlaceholder: 'Search by name, description or tags...',
     allCategory: 'All',
@@ -97,8 +97,8 @@ const translations = {
     bundlesBadge: (n: number) => `${n} bundles listos para producción`,
     heroTitle: 'El Agent Store de Soul ID.',
     heroTitleHighlight: 'Agentes, workflows y equipos — listos para producción.',
-    heroDesc: 'Explorá y desplegá agentes de IA para',
-    heroDescSuffix: '. Cada bundle incluye SOUL, IDENTITY y MEMORY, lógica de orquestación completa y bootstrap incluido. De instalar a ejecutar en menos de un minuto.',
+    heroDesc: '',
+    heroDescSuffix: '',
     // Search
     searchPlaceholder: 'Buscar por nombre, descripción o tags...',
     allCategory: 'Todos',

@@ -122,13 +122,7 @@ export default function HomeContent({ agents, workflows, teams, stars }: { agent
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-              {t.heroDesc}{' '}
-              <a href="https://openclaw.ai" style={{ color: 'var(--cyan-bright)' }} className="hover:opacity-80 transition-opacity">
-                OpenClaw
-              </a>
-              {t.heroDescSuffix}
-            </p>
+
           </div>
 
         </div>
