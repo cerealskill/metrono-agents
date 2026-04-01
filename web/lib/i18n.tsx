@@ -11,10 +11,10 @@ const translations = {
     github: 'GitHub',
     // Hero
     bundlesBadge: (n: number) => `${n} production-ready bundles`,
-    heroTitle: 'OpenClaw Workflow & Agents,',
-    heroTitleHighlight: 'ready to deploy.',
-    heroDesc: 'Production-ready AI workflows and agents for',
-    heroDescSuffix: '. Deploy complete bundles with SOUL, IDENTITY, MEMORY conventions, orchestration logic, and full bootstrap included. Go from install to execution fast.',
+    heroTitle: 'The Agent Store for Soul ID.',
+    heroTitleHighlight: 'Every agent, workflow, and team — production-ready.',
+    heroDesc: 'Browse and deploy curated AI agents built for',
+    heroDescSuffix: '. Each bundle ships with SOUL, IDENTITY, and MEMORY conventions, full orchestration logic, and bootstrap included. From install to running in under a minute.',
     // Search
     searchPlaceholder: 'Search by name, description or tags...',
     allCategory: 'All',
@@ -95,10 +95,10 @@ const translations = {
     github: 'GitHub',
     // Hero
     bundlesBadge: (n: number) => `${n} bundles listos para producción`,
-    heroTitle: 'OpenClaw Workflow y Agentes,',
-    heroTitleHighlight: 'listos para desplegar.',
-    heroDesc: 'Workflows de IA y agentes listos para producción en',
-    heroDescSuffix: '. Desplegá bundles completos con SOUL, IDENTITY, convenciones de MEMORY, lógica de orquestación y bootstrap incluido. De instalar a ejecutar, rápido.',
+    heroTitle: 'El Agent Store de Soul ID.',
+    heroTitleHighlight: 'Agentes, workflows y equipos — listos para producción.',
+    heroDesc: 'Explorá y desplegá agentes de IA para',
+    heroDescSuffix: '. Cada bundle incluye SOUL, IDENTITY y MEMORY, lógica de orquestación completa y bootstrap incluido. De instalar a ejecutar en menos de un minuto.',
     // Search
     searchPlaceholder: 'Buscar por nombre, descripción o tags...',
     allCategory: 'Todos',
