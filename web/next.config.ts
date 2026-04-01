@@ -13,10 +13,16 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Ensure agents route is treated as dynamic
-  experimental: {
-    // Turbopack may not respect force-dynamic in some versions — disable for agents
-  },
+  headers: async () => [
+    {
+      source: '/agents/:slug',
+      headers: [{ key: 'Cache-Control', value: 'no-cache, no-store, must-revalidate' }],
+    },
+    {
+      source: '/teams/:slug',
+      headers: [{ key: 'Cache-Control', value: 'no-cache, no-store, must-revalidate' }],
+    },
+  ],
 };
 
 export default nextConfig;
