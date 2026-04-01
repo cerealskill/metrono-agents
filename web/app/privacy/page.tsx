@@ -7,7 +7,7 @@ export default function PrivacyPage() {
       <header style={{ background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
           <Link href="/" className="flex items-center gap-3 min-w-0">
-            <img src="/SOUL ID.io-logo.png" alt="SOUL ID.io logo" className="shrink-0" style={{ width: 42, height: 42, objectFit: 'contain' }} />
+            <img src="/soulid-logo.png" alt="SOUL ID.io logo" className="shrink-0" style={{ width: 42, height: 42, objectFit: 'contain' }} />
             <div className="flex flex-col leading-none">
               <span className="text-sm sm:text-base font-bold" style={{ color: 'var(--text-primary)' }}>SOUL ID.io</span>
               <span className="text-[10px] sm:text-xs font-mono tracking-widest uppercase" style={{ color: 'var(--cyan-bright)' }}>Privacy</span>
