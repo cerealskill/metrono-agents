@@ -7,7 +7,7 @@ import './globals.css'
 const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
 
 export const metadata: Metadata = {
-  title: 'Soul ID — MarketPlace for AI Agents',
+  title: 'SOUL ID - MarketPlace for AI Agents',
   description: 'The Agent Store for Soul ID. Agents, Workflows and Teams — ready for production.',
   icons: {
     icon: [
