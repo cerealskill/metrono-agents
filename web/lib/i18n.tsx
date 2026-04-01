@@ -11,8 +11,8 @@ const translations = {
     github: 'GitHub',
     // Hero
     bundlesBadge: (n: number) => `${n} production-ready bundles`,
-    heroTitle: 'The Agent Store for Soul ID.',
-    heroTitleHighlight: 'Every agent, workflow, and team — production-ready.',
+    heroTitle: 'The Agent Store',
+    heroTitleHighlight: 'Agents, Workflows and Teams — ready for production.',
     heroDesc: '',
     heroDescSuffix: '',
     // Search
@@ -95,8 +95,8 @@ const translations = {
     github: 'GitHub',
     // Hero
     bundlesBadge: (n: number) => `${n} bundles listos para producción`,
-    heroTitle: 'El Agent Store de Soul ID.',
-    heroTitleHighlight: 'Agentes, workflows y equipos — listos para producción.',
+    heroTitle: 'El Agent Store',
+    heroTitleHighlight: 'Agentes, Workflows y Equipos — listos para producción.',
     heroDesc: '',
     heroDescSuffix: '',
     // Search

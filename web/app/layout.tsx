@@ -8,7 +8,7 @@ const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono'
 
 export const metadata: Metadata = {
   title: 'Soul ID — MarketPlace for AI Agents',
-  description: 'The Agent Store for Soul ID. Browse and deploy curated AI agents, workflows, and teams for OpenClaw — production-ready bundles with SOUL, IDENTITY, and MEMORY included.',
+  description: 'The Agent Store for Soul ID. Agents, Workflows and Teams — ready for production.',
   icons: {
     icon: [
       { url: '/favicon.ico', type: 'image/x-icon' },
