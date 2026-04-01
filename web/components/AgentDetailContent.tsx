@@ -1,8 +1,8 @@
 'use client'
 
 import { useI18n } from '@/lib/i18n'
-import { CATEGORY_ICONS, BUNDLE_FILES } from '@/lib/agents'
-import type { AgentMeta } from '@/lib/agents'
+import { CATEGORY_ICONS, BUNDLE_FILES } from '@/lib/agents-types'
+import type { AgentMeta } from '@/lib/agents-types'
 import Link from 'next/link'
 import CopyInstall from '@/components/CopyInstall'
 import FileTabs from '@/components/FileTabs'

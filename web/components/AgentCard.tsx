@@ -1,7 +1,7 @@
 'use client'
 
-import type { AgentListItem } from '@/lib/agents'
-import { CATEGORY_ICONS } from '@/lib/agents'
+import type { AgentListItem } from '@/lib/agents-types'
+import { CATEGORY_ICONS } from '@/lib/agents-types'
 import { useI18n } from '@/lib/i18n'
 
 export default function AgentCard({ agent }: { agent: AgentListItem }) {

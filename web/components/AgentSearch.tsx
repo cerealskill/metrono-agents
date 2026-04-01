@@ -2,8 +2,8 @@
 
 import { useState, useMemo, useEffect } from 'react'
 import AgentCard from './AgentCard'
-import { CATEGORY_ICONS } from '@/lib/agents'
-import type { AgentListItem } from '@/lib/agents'
+import { CATEGORY_ICONS } from '@/lib/agents-types'
+import type { AgentListItem } from '@/lib/agents-types'
 import { useI18n } from '@/lib/i18n'
 
 function useSessionState<T>(key: string, initial: T): [T, (v: T) => void] {

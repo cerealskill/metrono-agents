@@ -1,7 +1,7 @@
 'use client'
 
 import { Fragment, useState } from 'react'
-import { BUNDLE_FILES, type BundleFile } from '@/lib/agents'
+import { BUNDLE_FILES, type BundleFile } from '@/lib/agents-types'
 import { useI18n } from '@/lib/i18n'
 
 const FILE_ICONS: Record<BundleFile, string> = {

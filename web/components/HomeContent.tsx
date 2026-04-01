@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useI18n } from '@/lib/i18n'
-import type { AgentListItem } from '@/lib/agents'
+import type { AgentListItem } from '@/lib/agents-types'
 import type { WorkflowMeta } from '@/lib/workflows'
 import type { TeamMeta } from '@/lib/teams'
 import AgentSearch from '@/components/AgentSearch'
