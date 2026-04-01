@@ -2,10 +2,7 @@ import { getAllTeams } from '@/lib/teams'
 import { notFound } from 'next/navigation'
 import TeamDetailContent from '@/components/TeamDetailContent'
 
-export async function generateStaticParams() {
-  const slugs = new Set(getAllTeams().map(t => t.slug))
-  return Array.from(slugs).map(slug => ({ slug }))
-}
+export const dynamic = 'force-dynamic'
 
 export default async function TeamPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
