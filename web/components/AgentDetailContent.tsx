@@ -86,6 +86,25 @@ export default function AgentDetailContent({ agents }: { agents: AgentMeta[] }) 
               </span>
             ))}
           </div>
+
+          {agent.soul_id && (
+            <div className="mt-4">
+              <a
+                href={`https://registry.soulid.io/resolve/${agent.soul_id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-mono transition-opacity hover:opacity-80"
+                style={{
+                  background: 'rgba(167, 139, 250, 0.08)',
+                  border: '1px solid rgba(167, 139, 250, 0.3)',
+                  color: '#a78bfa',
+                }}
+              >
+                <span>⚡</span>
+                <span>{agent.soul_id}</span>
+              </a>
+            </div>
+          )}
         </div>
       </div>
 
