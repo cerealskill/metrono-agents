@@ -14,6 +14,7 @@ export interface AgentMeta {
   version: string
   path: string
   lang?: string
+  soul_id?: string
   soul: string
   files: Record<BundleFile, string>
 }

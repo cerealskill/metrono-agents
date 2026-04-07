@@ -6,3 +6,4 @@ tags: [sre, devsecops, gcp, aws, azure, kubernetes, terraform, helm, argocd, pro
 model: claude-sonnet
 author: cerealskill
 version: 1.0.1
+soul_id: soulid:pedro-sre:v1:001

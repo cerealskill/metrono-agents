@@ -69,6 +69,25 @@ export default function AgentCard({ agent }: { agent: AgentListItem }) {
           ))}
         </div>
 
+        {/* SOUL ID Badge */}
+        {agent.soul_id && (
+          <a
+            href={`https://registry.soulid.io/resolve/${agent.soul_id}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={e => e.stopPropagation()}
+            className="flex items-center gap-1.5 mb-3 w-fit px-2 py-1 rounded-full text-xs font-mono transition-opacity hover:opacity-80"
+            style={{
+              background: 'rgba(167, 139, 250, 0.08)',
+              border: '1px solid rgba(167, 139, 250, 0.3)',
+              color: '#a78bfa',
+            }}
+          >
+            <span>⚡</span>
+            <span>{agent.soul_id}</span>
+          </a>
+        )}
+
         {/* Footer */}
         <div className="flex items-center justify-between mt-auto pt-3" style={{ borderTop: '1px solid var(--border)' }}>
           <span className="text-xs" style={{ color: 'var(--text-muted)' }}>
