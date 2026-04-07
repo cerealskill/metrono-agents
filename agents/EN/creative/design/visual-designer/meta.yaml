@@ -14,3 +14,5 @@ model: claude-sonnet
 author: cerealskill
 version: 1.0.0
 language: en
+
+soul_id: soulid:visual-designer:v1:001

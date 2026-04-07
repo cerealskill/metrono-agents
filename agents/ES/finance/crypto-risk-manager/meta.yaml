@@ -15,3 +15,5 @@ model: claude-sonnet
 author: metrono/metrono-agents
 version: 1.0.0
 language: es
+
+soul_id: soulid:crypto-risk-manager:v1:001
