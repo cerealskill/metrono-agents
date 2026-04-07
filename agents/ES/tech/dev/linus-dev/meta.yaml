@@ -40,3 +40,4 @@ use_cases:
   - Documentar decisiones técnicas (ADRs, comentarios)
   - Identificar vulnerabilidades de seguridad (OWASP Top 10)
   - Revisar queries SQL y modelado de datos
+soul_id: soulid:linus-dev-es:v1:001
