@@ -157,6 +157,55 @@ export default function AgentDetailContent({ agents }: { agents: AgentMeta[] }) 
             </a>
           </div>
 
+          {/* Multi-runtime download */}
+          {agent.soul_id && (
+            <div
+              className="rounded-xl p-5"
+              style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)' }}
+            >
+              <h3 className="font-semibold mb-1" style={{ color: 'var(--text-primary)' }}>
+                {lang === 'ES' ? 'Descargar para otro runtime' : 'Download for runtime'}
+              </h3>
+              <p className="text-xs mb-3" style={{ color: 'var(--text-muted)' }}>
+                {lang === 'ES'
+                  ? 'Genera el archivo de identidad para tu herramienta preferida'
+                  : 'Generate the identity file for your preferred tool'}
+              </p>
+              <div className="grid grid-cols-2 gap-2">
+                {[
+                  { id: 'openclaw',    label: 'OpenClaw',    file: 'SOUL.md',         icon: '🦞' },
+                  { id: 'codex',       label: 'Codex CLI',   file: 'AGENTS.md',       icon: '🤖' },
+                  { id: 'claude-code', label: 'Claude Code', file: 'CLAUDE.md',       icon: '🟣' },
+                  { id: 'gemini-cli',  label: 'Gemini CLI',  file: 'GEMINI.md',       icon: '🔵' },
+                  { id: 'aider',       label: 'Aider',       file: 'CONVENTIONS.md',  icon: '⚙️' },
+                  { id: 'continue',    label: 'Continue',    file: '.continuerules',  icon: '▶️' },
+                  { id: 'cursor',      label: 'Cursor',      file: '.cursorrules',    icon: '🎯' },
+                  { id: 'raw',         label: 'soul.json',   file: 'soul.json',       icon: '📄' },
+                ].map(({ id, label, file, icon }) => (
+                  <a
+                    key={id}
+                    href={`https://registry.soulid.io/download/${agent.soul_id}?runtime=${id}`}
+                    download={file}
+                    className="flex items-center gap-1.5 px-2.5 py-2 rounded-lg text-xs font-medium transition-all hover:scale-[1.02] hover:brightness-110"
+                    style={{
+                      background: 'var(--bg-elevated)',
+                      color: 'var(--text-secondary)',
+                      border: '1px solid var(--border)',
+                    }}
+                  >
+                    <span>{icon}</span>
+                    <span>{label}</span>
+                  </a>
+                ))}
+              </div>
+              <p className="text-xs mt-3" style={{ color: 'var(--text-muted)' }}>
+                {lang === 'ES' ? 'Powered by ' : 'Powered by '}
+                <a href="https://soulid.io" target="_blank" rel="noopener noreferrer"
+                  style={{ color: '#a78bfa' }}>soulid.io</a>
+              </p>
+            </div>
+          )}
+
           {/* Star Rating */}
           <StarRating slug={agent.slug} />
 
