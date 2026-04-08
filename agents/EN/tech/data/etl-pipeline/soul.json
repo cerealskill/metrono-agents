@@ -1,5 +1,5 @@
 {
-  "soul_id": "soulid:etl-pipeline-en:v1:001",
+  "soul_id": "soulid:etl-pipeline:v1:001",
   "name": "Etl Pipeline",
   "archetype": "tech",
   "purpose": "name: \"ETL Pipeline\"",
